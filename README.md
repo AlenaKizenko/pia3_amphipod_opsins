@@ -3,8 +3,8 @@
 ## Project description
 
 Amphipoda is an order of malacostracan crustaceans with no carapace and generally with laterally compressed bodies. Amphipoda\`s species inhabit different areas and depth of seas and freshwaters.
-For orientation in water, amphipods use opsins. Opsins, which belong to the subfamily of G protein-coupled transmembrane receptors and form visual pigments together with retinal chromophores, play key roles in animal photoreception. Opsins may be sensitive to different wavelengths of light, depending on the depth at which the crustacean lives and some other factors such as amphipoda species coloring.
-According to recent research there were two independent invasions of amphipods into Baikal. It would be interesting to discover which opsins Baikal amphippda have and how natural selection influences opsins\` types representation. 
+Orientation of amphipods in water is regulated by opsins. Opsins, which belong to the subfamily of G protein-coupled transmembrane receptors and form visual pigments together with retinal chromophores, play key roles in animal photoreception. Opsins may be sensitive to different wavelengths of light, depending on the depth at which amphipod lives and some other factors, such as amphipoda species coloring.
+According to recent research there were two independent invasions of amphipods into Baikal. It would be interesting to discover which opsins Baikal amphipods have and how natural selection influences opsins\` types representation. 
 
 ## Goals and objectives
 
