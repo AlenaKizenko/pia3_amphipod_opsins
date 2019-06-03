@@ -20,12 +20,12 @@ The goal of this project is to assess the diversity of opsins in transcriptomes 
 All work was performed on server.
 
 ### Identification of opsin genes of Baikal amphipodes
-Transcriptomes\` assemblies were downloaded and renamed manually. Quality control was done using BUSCO (Benchmarking Universal Single-Copy Orthologs, default parameters). Result statistics were summarized using `extract_statistics_busco.py` script, then .txt file was converted to .csv file; family names were added manually as a new column in this .csv file and histogramm, depicting taxonomy/quality relations, were plotted using `family_and_quality.R` script. Two rounds of PIA (phylogenetically-informed annotation) were performed: first time with E-value 10e-20, second time with E-value 10e-10.
+Transcriptomes\` assemblies \[2] were downloaded and renamed manually. Quality control was done using BUSCO (Benchmarking Universal Single-Copy Orthologs, default parameters) \[4]. Result statistics were summarized using ***`extract_statistics_busco.py`*** script, then .txt file was converted to .csv file; family names were added manually as a new column in this .csv file and histogramm, depicting taxonomy/quality relations, were plotted using ***`family_and_quality.R`*** script. Two rounds of PIA \[3] (phylogenetically-informed annotation) were performed: first time with E-value 10e-20, second time with E-value 10e-10.
 Results of PIA pipeline - identified opsins - were counted and quality/quantity histograms were plotted using script.
-Filtered opsins were used for gblocks processing and further phylogenetic Bayesian tree building using IQTree (parameters: -st AA -m TEST -bb 1100 -abayes -nt AUTO). Final Baeysian tree was visualized and colored using iTOL (Interactive tree of life).
+Filtered opsins were used for gblocks processing and further phylogenetic Bayesian tree building using IQTree (parameters: -st AA -m TEST -bb 1100 -abayes -nt AUTO). Final Baeysian tree was visualized and colored using iTOL (Interactive tree of life) \[5].
 
 ### Article results repeating
-Three pairs of reads were downloaded from SRA using `sra_download` bash script. Then reads were processed with Trimmomatic using `trimmomatic.sh` bash script. PIA pipeline was applied with default parameters.
+Three pairs of reads were downloaded from SRA using ***`sra_download.sh`*** bash script. Then reads were processed with Trimmomatic \[1] using ***`trimmomatic.sh`*** bash script. PIA pipeline was applied with default parameters.
 
 ## Results
 
