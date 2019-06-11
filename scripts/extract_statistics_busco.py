@@ -15,16 +15,9 @@
 	315	Missing BUSCOs (M)
 	1066	Total BUSCO groups searched'''
 import os
-#import csv
 os.chdir('/home/alena/Documents/IB/project_opsins/busco/')
-#with open('/home/alena/Documents/IB/project_opsins/stats.csv', 'w', newline='') as csvfile:
-    #fieldnames = ['Species', 'Stats']
-    #writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-    #writer.writeheader()
 for filename in os.listdir('/home/alena/Documents/IB/project_opsins/busco/'):
     with open(filename) as file:
         gam = file.readlines()
         filename = filename[14:]
-        #filename = filename[:-17]
-        #writer.writerow({'Species': file_name, 'Stats': gam[7]})
         print(filename, gam[7]) # stdout was redirected to file "statistics.txt"
