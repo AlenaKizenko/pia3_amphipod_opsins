@@ -1,0 +1,97 @@
+---
+title: "Diversity of opsins in transcriptomes of Baikal endemic amphipods"
+author: "*Alena Kizenko*"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#### **Attaching required libraries and loading data table**
+
+```{r}
+library(tidyr)
+library(ggplot2) 
+library(scales)
+df = read.csv('./data/PIA_both_eValues_results.csv')
+```
+
+
+#### **Investigating data structure**
+
+```{r}
+str(df)
+head(df)
+```
+Data table consists of 9 columns and 67 rows. Rows represent different amphipod\`s species. Columns represent different metrics and statistics:
+**eValue_e-10** - amount of opsins\` genes found using E-Value = e-10;
+**eValue_e-20** - amount of opsins\` genes found using E-Value = e-20;
+**Complete_BUSCOs** - percentage of Complete BUSCOs;
+**Complete_and_single-copy_BUSCOs** - percentage of only single-copy BUSCOs in Complete BUSCOs;
+**Complete_and_duplicated_BUSCOs** - percentage of duplicated BUSCOs in Complete BUSCOs;
+**Fragmented_BUSCOs** - percentage of Fragmented BUSCOs;
+**Missing_BUSCOs** - percentage of Missing BUSCOs;
+**Family** - amphipod\`s Family name.
+
+
+
+
+#### Comparing results with different E-values: e-10 and e-20
+
+```{r}
+df_cut = df[,1:3]
+df1 = df_cut %>% gather(key = eValue,value = Opsins,-Species)
+ggplot(df1, aes(x = Opsins, fill = eValue)) + 
+  geom_histogram(position="dodge", alpha=0.6, binwidth = 1) +
+  labs( title = 'Number of opsins` genes identified using different E-values',
+        y = 'Quantity of transcriptomes',
+        x = 'Quantity of opsins` genes ') +
+  scale_x_continuous(breaks= pretty_breaks()) +
+  scale_fill_discrete(name = "eValue", labels = c("e-10", "e-20")) +
+  scale_fill_manual(values = c('palevioletred4', 'bisque2')) +
+  theme_classic()
+```
+
+Using E-value = e-10 more opsins have been found in transcriptomes.
+
+
+
+
+#### **Checking if quality of transcriptome assembly depends on taxonomic position of amphipod**
+
+```{r}
+ggplot(df, aes(fill = Family, x = Species, y = Missing_BUSCOs)) +
+  geom_bar(stat = 'identity', position = 'dodge') +
+  theme_classic() +
+  theme(axis.text.x=element_blank(),
+       axis.ticks.x=element_blank()) +
+  facet_grid(. ~ Family, space = 'free_x', scales = 'free_x') +
+ theme(
+    strip.background = element_blank(),
+    strip.text.x = element_blank()
+  ) +
+ scale_fill_manual(values = c("#FF6666", "#999999", "#FF9966", "#00CC99", "#CC3300", "#CC6699", "#336600", "#FFCC66", "#3399CC")) +
+ labs( title = 'The ratio between transcriptomes` qualities and amphipodes` Families',
+        y = 'Percents of missing BUSCOs',
+        x = 'Species')
+```
+
+Taxonomic position does not influence the quality of transcriptome assembly in this case.
+
+
+
+
+#### **Checking if the amount of identified opsins` genes depends on quality of transcriptome assembly**
+
+```{r}
+ggplot(df, aes(Missing_BUSCOs, eValue_e.10, colour = Family)) +
+  geom_point(size = 2) +
+  scale_y_continuous(breaks= pretty_breaks()) +
+  labs( title = 'The ratio between transcriptomes` qualities and number of identified opsins` genes (E-value = e-10)',
+        y = 'Quantity of opsins` genes',
+        x = 'Percents of missing BUSCOs') +
+  theme_classic()
+```
+
+Quality of transcriptome assembly influences final amount of identified opsins` genes. The less percentage of Missing BUSCOs is, the more opsins have been found in transcriptome.
