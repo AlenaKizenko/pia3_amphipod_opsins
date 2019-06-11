@@ -36,7 +36,9 @@ We tested if quality of trancriptomes depends on taxonomic position. We plotted 
 ![alt text](https://github.com/AlenaKizenko/diversity_of_opsins_in_amphipods/blob/master/results/family_stats.jpg)
 
 Then we performed PIA pipeline on Baikal amphipods assemblies with different E-value. After second round of PIA, we filtered identified opsins, by removing species with more than 20% of Missing BUSCOs.
-![alt text](https://github.com/AlenaKizenko/diversity_of_opsins_in_amphipods/blob/master/results/opsins_eValue.jpg)
+![alt text](https://github.com/AlenaKizenko/diversity_of_opsins_in_amphipods/blob/master/results/opsins_eValues.jpeg)
+
+![alt text](https://github.com/AlenaKizenko/diversity_of_opsins_in_amphipods/blob/master/results/opsins_and_quality.jpeg)
 
 Finally, we built phylogenetic tree using Bayesian method. We identified long-wave sensitive opsins and opsin-like proteins. Probaly, Baikal endemic amphipods lost short-wave and ultra-violet sensitive opsins due to the natural selection.
 
