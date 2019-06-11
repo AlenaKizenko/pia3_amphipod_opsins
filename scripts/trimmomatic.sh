@@ -1,7 +1,7 @@
 #!/bin/bash
-lst=("SRR3532634" "SRR3532641" "SRR3532642")
+lst=("SRR3532634" "SRR3532641" "SRR3532642") #listing reads` names
 for i in ${!lst[@]};
-do
+do #performing Trimmomatic operations on listed reads
 	name=${lst[$i]}
 	echo $name
 	textfastq1='_1.fastq.gz'
