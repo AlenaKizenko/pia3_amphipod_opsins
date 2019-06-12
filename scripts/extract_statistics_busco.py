@@ -14,10 +14,14 @@
 	219	Fragmented BUSCOs (F)
 	315	Missing BUSCOs (M)
 	1066	Total BUSCO groups searched'''
+
 import os
+
+
 os.chdir('/home/alena/Documents/IB/project_opsins/busco/')
 for filename in os.listdir('/home/alena/Documents/IB/project_opsins/busco/'):
     with open(filename) as file:
         gam = file.readlines()
-        filename = filename[14:]
-        print(filename, gam[7]) # stdout was redirected to file "statistics.txt"
+        filename = filename[14:] # get amphipode name from file name
+        print(filename, gam[7]) # get line with statistics
+	# stdout was redirected to file "statistics.txt"
