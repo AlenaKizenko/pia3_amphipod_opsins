@@ -20,8 +20,8 @@ The goal of this project is to assess the diversity of opsins in transcriptomes 
 All work was performed on server.
 
 ### Identification of opsin genes of Baikal amphipodes
-Transcriptomes\` assemblies \[2] (PRJNA321360) were downloaded and renamed manually. Quality control was done using BUSCO (Benchmarking Universal Single-Copy Orthologs, default parameters) \[4]. Result statistics were summarized using ***`extract_statistics_busco.py`*** script, then .txt file was converted to .csv file; family names were added manually as a new column in this .csv file and histogramm, depicting taxonomy/quality relations, were plotted using ***`family_and_quality.R`*** script. Two rounds of PIA \[3] (phylogenetically-informed annotation) were performed: first time with E-value 10e-20, second time with E-value 10e-10.
-Results of PIA pipeline - identified opsins - were counted and quality/quantity histograms were plotted using script.
+Transcriptomes\` assemblies \[2] (PRJNA321360) were downloaded and renamed manually. Quality control was done using BUSCO (Benchmarking Universal Single-Copy Orthologs, default parameters) \[4]. Result statistics were summarized using ***`extract_statistics_busco.py`*** script, then .txt file was converted to .csv file; family names were added manually as a new column in this .csv file. Two rounds of PIA \[3] (phylogenetically-informed annotation) were performed: first time with E-value 10e-20, second time with E-value 10e-10. Information about the amount of identified opsins was added to .csv file.
+Results of PIA pipeline - identified opsins - were counted and quality/quantity histograms were plotted using ***` 	amphipods_opsins`*** R-project scripts.
 Filtered opsins were used for gblocks processing and further phylogenetic Bayesian tree building using IQTree (parameters: -st AA -m TEST -bb 1100 -abayes -nt AUTO). Final Baeysian tree was visualized and colored using iTOL (Interactive tree of life) \[5].
 
 ### Article results repeating
