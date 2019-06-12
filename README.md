@@ -3,8 +3,8 @@
 ## Project description
 
 Amphipoda is an order of malacostracan crustaceans with no carapace and generally with laterally compressed bodies. Amphipoda\`s species inhabit different areas and depth of seas and freshwaters.
-Orientation of amphipods in water is regulated by opsins. Opsins, which belong to the subfamily of G protein-coupled transmembrane receptors and form visual pigments together with retinal chromophores, play key roles in animal photoreception. Opsins may be sensitive to different wavelengths of light, depending on the depth at which amphipod lives and some other factors, such as amphipoda species coloring.
-According to recent research there were two independent invasions of amphipods into Baikal. It would be interesting to discover which opsins Baikal amphipods have and how natural selection influences opsins\` types representation. 
+Orientation of amphipods in water is regulated by opsins. Opsins, which belong to the subfamily of G protein-coupled transmembrane receptors and form visual pigments together with retinal chromophores, play key roles in animal photoreception. Various types of opsins are sensitive to different wavelengths of light, depending on the depth at which amphipod lives and some other factors, such as amphipoda species coloring.
+According to recent research there were two independent invasions of amphipods into Baikal \[2]. It would be interesting to discover which opsin genes Baikal amphipods have and how natural selection influences opsins\` types representation. 
 
 ## Goals and objectives
 
@@ -35,16 +35,27 @@ We tested if quality of trancriptomes depends on taxonomic position. We plotted 
 
 ![alt text](https://github.com/AlenaKizenko/diversity_of_opsins_in_amphipods/blob/master/results/family_stats.jpg)
 
-Then we performed PIA pipeline on Baikal amphipods assemblies with different E-value. After second round of PIA, we filtered identified opsins, by removing species with more than 20% of Missing BUSCOs.
+
+Then we performed PIA pipeline on Baikal amphipods assemblies with different E-value.
 ![alt text](https://github.com/AlenaKizenko/diversity_of_opsins_in_amphipods/blob/master/results/opsins_eValues.jpeg)
+We chose E-value = e-10, because this E-value gave us better results (more opsin genes were found).
+
+
+After second round of PIA, we filtered identified opsins, by removing species with more than 20% of Missing BUSCOs.
 
 ![alt text](https://github.com/AlenaKizenko/diversity_of_opsins_in_amphipods/blob/master/results/opsins_and_quality.jpeg)
+Filtered amphipod\`s species include various families, which live on differents depth of lake. So we can use these species for representable analysis.
 
-Finally, we built phylogenetic tree using Bayesian method. We identified long-wave sensitive opsins and opsin-like proteins. Probaly, Baikal endemic amphipods lost short-wave and ultra-violet sensitive opsins due to the natural selection.
+
+Finally, we built phylogenetic tree using Bayesian method.
 
 ![alt text](https://github.com/AlenaKizenko/diversity_of_opsins_in_amphipods/blob/master/results/bayes_tree_final.jpg)
 
-Moreover, we almost repeted article results. We identified 4 long-wave opsins, 2 short-wave opsins and 0 opsin-like proteins, whether authors of this pipeline identified 3 long-wave opsins, 2 short-wave opsins and 1 opsin-like protein. The diferences between our results and authors\` results can be explained by diferences in amount of reads  Gb, which were used for assembly. We used only 3 pairs of reads, whether author\`s used 13 pairs of reads.
+
+We identified long-wave sensitive opsins and opsin-like proteins, which are depicted in the tree picture as branches with long names.
+We did not identified any short-wave or ultra-violet opsins in amphipods\` transcriptomes. Probaly, Baikal endemic amphipods lost short-wave and ultra-violet sensitive opsins due to the natural selection.
+
+Moreover, we almost repeted article results. For this purpose we assembled transcriptome of amhpidod Hyalella azteca (SRA experiments: SRR3532634, SRR3532641, SRR3532642) using Trinity and then applied PIA pipeline. We identified 4 long-wave opsins, 2 short-wave opsins and 0 opsin-like proteins, whether authors of this pipeline identified 3 long-wave opsins, 2 short-wave opsins and 1 opsin-like protein. The diferences between our results and authors\` results can be explained by diferences in amount of reads  Gb, which were used for assembly. We used only 3 pairs of reads, whether author\`s used 13 pairs of reads.
 
 
 ## References
