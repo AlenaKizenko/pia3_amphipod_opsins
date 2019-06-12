@@ -22,7 +22,7 @@ All work was performed on server.
 ### Identification of opsin genes of Baikal amphipodes
 Transcriptomes\` assemblies \[2] (PRJNA321360) were downloaded and renamed manually. Quality control was done using BUSCO (Benchmarking Universal Single-Copy Orthologs, default parameters) \[4]. Result statistics were summarized using ***`extract_statistics_busco.py`*** script, then .txt file was converted to .csv file; family names were added manually as a new column in this .csv file. Two rounds of PIA \[3] (phylogenetically-informed annotation) were performed: first time with E-value 10e-20, second time with E-value 10e-10. Information about the amount of identified opsins was added to .csv file.
 Results of PIA pipeline - identified opsins - were counted and quality/quantity histograms were plotted using ***` 	amphipods_opsins`*** R-project scripts.
-Filtered opsins were used for gblocks processing and further phylogenetic Bayesian tree building using IQTree (parameters: -st AA -m TEST -bb 1100 -abayes -nt AUTO). Final Baeysian tree was visualized and colored using iTOL (Interactive tree of life) \[5].
+Filtered opsins were used for gblocks processing \[6] and further phylogenetic Bayesian tree building using IQTree (parameters: -st AA -m TEST -bb 1100 -abayes -nt AUTO). Final Baeysian tree was visualized and colored using iTOL (Interactive tree of life) \[5].
 
 ### Article results repeating
 Three pairs of reads were downloaded from SRA using ***`sra_download.sh`*** bash script. Then reads were processed with Trimmomatic \[1] using ***`trimmomatic.sh`*** bash script. PIA pipeline was applied with default parameters.
@@ -63,5 +63,6 @@ Moreover, we almost repeted article results. For this purpose we assembled trans
 2. Naumenko, Sergey A., Maria D. Logacheva, Nina V. Popova, Anna V. Klepikova, Aleksey A. Penin, Georgii A. Bazykin, Anna E. Etingova, Nikolai S. Mugue, Alexey S. Kondrashov, and Lev Y. Yampolsky. 2017. “Transcriptome-Based Phylogeny of Endemic Lake Baikal Amphipod Species Flock: Fast Speciation Accompanied by Frequent Episodes of Positive Selection.” Molecular Ecology 26(2):536–53.
 3. Pérez-Moreno, Jorge L., Danielle M. DeLeo, Ferran Palero, and Heather D. Bracken-Grissom. 2018. “Phylogenetic Annotation and Genomic Architecture of Opsin Genes in Crustacea.” Hydrobiologia 825(1):159–75.
 4. Simão, Felipe A., Robert M. Waterhouse, Panagiotis Ioannidis, Evgenia V. Kriventseva, and Evgeny M. Zdobnov. 2015. “BUSCO: Assessing Genome Assembly and Annotation Completeness with Single-Copy Orthologs.” Bioinformatics 31(19):3210–12.
-5. Letunic, I. and P. Bork. 2007. “Interactive Tree Of Life (ITOL): An Online Tool for Phylogenetic Tree Display and Annotation.” Bioinformatics 23(1):127–28.
+5. Letunic I. and P. Bork. 2007. “Interactive Tree Of Life (ITOL): An Online Tool for Phylogenetic Tree Display and Annotation.” Bioinformatics 23(1):127–28.
+6. Talavera G., and Castresana J. 2007. Improvement of phylogenies after removing divergent and ambiguously aligned blocks from protein sequence alignments. Systematic Biology 56, 564-577. 
 
