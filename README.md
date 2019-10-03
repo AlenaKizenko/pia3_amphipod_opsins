@@ -1,11 +1,11 @@
 # Opsins\' diversity in transcriptomes of Baikal endemic amphipods
-# Spring part story
+# Spring part
 
 ## Project description
 
 Amphipoda is an order of malacostracan crustaceans with no carapace and generally with laterally compressed bodies. Amphipoda\'s species inhabit different areas and depth of seas and freshwaters.
 Orientation of amphipods in water is regulated by opsins. Opsins, which belong to the subfamily of G protein-coupled transmembrane receptors and form visual pigments together with retinal chromophores, play key roles in animal photoreception. Various types of opsins are sensitive to different wavelengths of light, depending on the depth at which amphipod lives and some other factors, such as amphipoda species coloring.
-According to recent research there were two independent invasions of amphipods into Baikal \[2]. It would be interesting to discover which opsin genes Baikal amphipods have and how natural selection influences opsins\' types representation. 
+According to recent research there were two independent invasions of amphipods into Baikal \[2]. It would be interesting to discover which opsin genes Baikal amphipods have and how natural selection influences opsin' types representation. 
 
 ## Goals and objectives
 
@@ -21,7 +21,7 @@ The goal of this project is to assess the diversity of opsins in transcriptomes 
 All work was performed on server.
 
 ### Identification of opsin genes of Baikal amphipodes
-Transcriptomes\' assemblies \[2] (PRJNA321360) were downloaded and renamed manually. Quality control was done using BUSCO (Benchmarking Universal Single-Copy Orthologs, default parameters) \[4]. Result statistics were summarized using ***`extract_statistics_busco.py`*** script, then .txt file was converted to .csv file; family names were added manually as a new column in this .csv file. Two rounds of PIA \[3] (phylogenetically-informed annotation) were performed: first time with E-value 10e-20, second time with E-value 10e-10. Information about the amount of identified opsins was added to .csv file.
+Transcriptomes' assemblies \[2] (PRJNA321360) were downloaded and renamed manually. Quality control was done using BUSCO (Benchmarking Universal Single-Copy Orthologs, default parameters) \[4]. Result statistics were summarized using ***`extract_statistics_busco.py`*** script, then .txt file was converted to .csv file; family names were added manually as a new column in this .csv file. Two rounds of PIA \[3] (phylogenetically-informed annotation) were performed: first time with E-value 10e-20, second time with E-value 10e-10. Information about the amount of identified opsins was added to .csv file.
 Results of PIA pipeline - identified opsins - were counted and quality/quantity histograms were plotted using ***` 	amphipods_opsins`*** R-project scripts.
 Filtered opsins were used for gblocks processing \[6] and further phylogenetic Bayesian tree building using IQTree (parameters: -st AA -m TEST -bb 1100 -abayes -nt AUTO). Final Baeysian tree was visualized and colored using iTOL (Interactive tree of life) \[5].
 
@@ -54,15 +54,20 @@ Finally, we built phylogenetic tree using Bayesian method.
 
 
 We identified long-wave sensitive opsins and opsin-like proteins, which are depicted in the tree picture as branches with long names.
-We did not identified any short-wave or ultra-violet opsins in amphipods\' transcriptomes. Probaly, Baikal endemic amphipods lost short-wave and ultra-violet sensitive opsins due to the natural selection.
+We did not identified any short-wave or ultra-violet opsins in amphipods' transcriptomes. Probaly, Baikal endemic amphipods lost short-wave and ultra-violet sensitive opsins due to the natural selection.
 
-Moreover, we almost repeted article results. For this purpose we assembled transcriptome of amhpidod Hyalella azteca (SRA experiments: SRR3532634, SRR3532641, SRR3532642) using Trinity and then applied PIA pipeline. We identified 4 long-wave opsins, 2 short-wave opsins and 0 opsin-like proteins, whether authors of this pipeline identified 3 long-wave opsins, 2 short-wave opsins and 1 opsin-like protein. The diferences between our results and authors\' results can be explained by diferences in amount of reads  Gb, which were used for assembly. We used only 3 pairs of reads, whether author\'s used 13 pairs of reads.
+Moreover, we almost repeted article results. For this purpose we assembled transcriptome of amhpidod Hyalella azteca (SRA experiments: SRR3532634, SRR3532641, SRR3532642) using Trinity and then applied PIA pipeline. We identified 4 long-wave opsins, 2 short-wave opsins and 0 opsin-like proteins, whether authors of this pipeline identified 3 long-wave opsins, 2 short-wave opsins and 1 opsin-like protein. The diferences between our results and authors' results can be explained by diferences in amount of reads  Gb, which were used for assembly. We used only 3 pairs of reads, whether author's used 13 pairs of reads.
 
-# Summer part story
-
-
+# Summer part
 
 ## Transcriptome reassembly and PIA2 opsins' search
+66 transcriptomes from Naumenko et al \[2] article were reassembled. Raw reads were downloaded on server from SRA using ***`sra_download.sh`*** bash script. Transcriptomes were assembled using Trinity v2.8.5 with ***`Trinity.sh`*** bash script. After that, quality of reassembled transcriptomes was obtained and old and new assemblies were compared. New PIA2 search was also performed (e-value = 10e-10). In brief, reassembled transcriptomes possessed more Complete BUSCOs percentage; length and amount of found opsins was also higher. Summarized statistics are located in  ***`asseblies_comparison`*** folder.
+
+![alt text](https://github.com/AlenaKizenko/diversity_of_opsins_in_amphipods/blob/master/results/complete_buscos.jpg)
+
+## Opsins' search in raw reads using alignment approach
+
+Previously, we discovered that Baikal amphipods did not have short-wave sensitive and UV sensitive opsins' expression according to PIA2 pipeline results. We decided to check this assumption by alignment of reads to SWS opsins of Hyalella azteca. As a control we used LWS opsins of Hyalella azteca. We found that no reads aligned on SWS opsins, but 
 
 ## References
 1. Bolger, Anthony M., Marc Lohse, and Bjoern Usadel. 2014. “Trimmomatic: A Flexible Trimmer for Illumina Sequence Data.” Bioinformatics (Oxford, England) 30(15):2114–20.
