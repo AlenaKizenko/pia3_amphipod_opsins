@@ -61,13 +61,28 @@ Moreover, we almost repeted article results. For this purpose we assembled trans
 # Summer part
 
 ## Transcriptome reassembly and PIA2 opsins' search
-66 transcriptomes from Naumenko et al \[2] article were reassembled. Raw reads were downloaded on server from SRA using ***`sra_download.sh`*** bash script. Transcriptomes were assembled using Trinity v2.8.5 with ***`Trinity.sh`*** bash script. After that, quality of reassembled transcriptomes was obtained and old and new assemblies were compared. New PIA2 search was also performed (e-value = 10e-10). In brief, reassembled transcriptomes possessed more Complete BUSCOs percentage; length and amount of found opsins was also higher. Summarized statistics are located in  ***`asseblies_comparison`*** folder.
+66 transcriptomes from Naumenko et al \[2] article were reassembled. Raw reads were downloaded on server from SRA using ***`SRA_download_all.sh`*** bash script. Reads were trimmed from adapters and filtered as described in the article \[2] using ***`trimmomatic_reassembly.sh`*** bash script. Transcriptomes were assembled using Trinity v2.8.5 with ***`Trinity.sh`*** bash script. After that, quality of reassembled transcriptomes was obtained and old and new assemblies were compared. New PIA2 search was also performed (e-value = 10e-10). In brief, reassembled transcriptomes possessed more Complete BUSCOs percentage; length and amount of found opsins was also higher. Summarized statistics are located in  ***`asseblies_comparison`*** folder.
 
 ![alt text](https://github.com/AlenaKizenko/diversity_of_opsins_in_amphipods/blob/master/results/complete_buscos.jpg)
 
+## Phylogenetic tree of Baikal opsins (new assemblies)
+
+We rebuilt phylogenetic tree using IQ-tree programm (auto model selection; 1000 Bootstrap)
+
+![alt text](https://github.com/AlenaKizenko/diversity_of_opsins_in_amphipods/blob/master/results/baikal_tree.jpg)
+
 ## Opsins' search in raw reads using alignment approach
 
-Previously, we discovered that Baikal amphipods did not have short-wave sensitive and UV sensitive opsins' expression according to PIA2 pipeline results. We decided to check this assumption by alignment of reads to SWS opsins of Hyalella azteca. As a control we used LWS opsins of Hyalella azteca. We found that no reads aligned on SWS opsins, but 
+Previously, we discovered that Baikal amphipods did not have short-wave sensitive and UV sensitive opsins' expression according to PIA2 pipeline results. We decided to check this assumption by alignment of reads to SWS opsins of Hyalella azteca using ***`Hyalella_SWS_align.sh`*** bash script. As a control we used LWS opsins of Hyalella azteca (***`Hyalella_LWS_align`*** bash script).
+We found that no reads were aligned on SWS opsins. On the other hand, various amount of reads were aligned on Hyalella azteca LWS opsins.
+Intrestingly, we revealed, that Hyalella azteca SWS opsin was poorly covered by Hyalella azteca reads. Moreover, reads of non-Baikal amphipoda (ex. Talitrus saltator), which had expression of SWS opsins according to PIA2 results, also did not aligned on Hyalella azteca SWS opsins.
+
+## Phylogenetic tree of non-Baikal amphipods
+
+We decided to check if SWS opsins can be detected in non-Baikal amphipods' transcriptomes. We downoladed 10 transcriptomes of freshwater, marine and coast transcriptomes from NCBI Database and performed PIA2 search. SWS, UV, TMT- and melanopsin-like opsins have been identified.
+
+![alt text](https://github.com/AlenaKizenko/diversity_of_opsins_in_amphipods/blob/master/results/non-Baikal_amphipods.jpg)
+
 
 ## References
 1. Bolger, Anthony M., Marc Lohse, and Bjoern Usadel. 2014. “Trimmomatic: A Flexible Trimmer for Illumina Sequence Data.” Bioinformatics (Oxford, England) 30(15):2114–20.
