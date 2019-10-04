@@ -21,7 +21,8 @@ The goal of this project is to assess the diversity of opsins in transcriptomes 
 All work was performed on server.
 
 ### Identification of opsin genes of Baikal amphipodes
-Transcriptomes' assemblies \[2] (PRJNA321360) were downloaded and renamed manually. Quality control was done using BUSCO (Benchmarking Universal Single-Copy Orthologs, default parameters) \[4]. Result statistics were summarized using ***`extract_statistics_busco.py`*** script, then .txt file was converted to .csv file; family names were added manually as a new column in this .csv file. Two rounds of PIA \[3] (phylogenetically-informed annotation) were performed: first time with E-value 10e-20, second time with E-value 10e-10. Information about the amount of identified opsins was added to .csv file.
+Transcriptomes' assemblies \[2] (PRJNA321360) were downloaded and renamed manually. Quality control was done using BUSCO (Benchmarking Universal Single-Copy Orthologs, default parameters) \[4]. Result statistics were summarized using ***`extract_statistics_busco.py`*** script, then .txt file was converted to .csv file; family names were added manually as a new column in this .csv file. Two rounds of PIA \[3] (phylogenetically-informed annotation) were performed: first time with E-value 10e-20, second time with E-value 10e-10. Command for PIA search: bash ***`run_pia.sh`***.
+Information about the amount of identified opsins was added to .csv file.
 Results of PIA pipeline - identified opsins - were counted and quality/quantity histograms were plotted using ***` 	amphipods_opsins`*** R-project scripts.
 Filtered opsins were used for gblocks processing \[6] and further phylogenetic Bayesian tree building using IQTree (parameters: -st AA -m TEST -bb 1100 -abayes -nt AUTO). Final Baeysian tree was visualized and colored using iTOL (Interactive tree of life) \[5].
 
@@ -40,7 +41,6 @@ We tested if quality of trancriptomes depends on taxonomic position. We plotted 
 Then we performed PIA pipeline on Baikal amphipods assemblies with different E-value.
 ![alt text](https://github.com/AlenaKizenko/diversity_of_opsins_in_amphipods/blob/master/results/opsins_eValues.jpeg)
 We chose E-value = e-10, because this E-value gave us better results (more opsin genes were found).
-
 
 After second round of PIA, we filtered identified opsins, by removing species with more than 20% of Missing BUSCOs.
 
@@ -73,7 +73,7 @@ We rebuilt phylogenetic tree using IQ-tree programm (auto model selection; 1000 
 
 ## Opsins' search in raw reads using alignment approach
 
-Previously, we discovered that Baikal amphipods did not have short-wave sensitive and UV sensitive opsins' expression according to PIA2 pipeline results. We decided to check this assumption by alignment of reads to SWS opsins of Hyalella azteca using ***`Hyalella_SWS_align.sh`*** bash script. As a control we used LWS opsins of Hyalella azteca (***`Hyalella_LWS_align`*** bash script).
+Previously, we discovered that Baikal amphipods did not have short-wave sensitive and UV sensitive opsins' expression according to PIA2 pipeline results. We decided to check this assumption by alignment of reads to SWS opsins of Hyalella azteca using ***`Hyalella_SWS_align.sh`*** bash script. As a control we used LWS opsins of Hyalella azteca (***`Hyalella_LWS_align.sh`*** bash script).
 We found that no reads were aligned on SWS opsins. On the other hand, various amount of reads were aligned on Hyalella azteca LWS opsins.
 Intrestingly, we revealed, that Hyalella azteca SWS opsin was poorly covered by Hyalella azteca reads. Moreover, reads of non-Baikal amphipoda (ex. Talitrus saltator), which had expression of SWS opsins according to PIA2 results, also did not aligned on Hyalella azteca SWS opsins.
 
