@@ -5,10 +5,12 @@ Only tested on Linux systems.
 
 ### Prerequisites
 1. `python3`.
-2. `argcomplete` python package. 
-3. `Biopython` python package.
+2. Standard python packages: `os`, `argparse`, `argcomplete`, `statistics`, `time`. 
+3. Specialized python packages: `Biopython` and `ete3`.
 Be careful: it's `import Bio`, but in order to download it, you need to (e.g. `pip3 install biopython`)).
-4. 
+4. `TransDecoder`
+5. `diamond`
+6. `cd-hit`.
 
 
 ### Installation
@@ -20,7 +22,7 @@ maybe alter some paths?
 
 ### Running
 
-* adjust the database if necessary.
+* adjust the database if necessary. This one was designed for use with Amphipoda sequences.
 
 
 Intended for own use. Please feel free to use, reuse, modify and contact us if you need help.
