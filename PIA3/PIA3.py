@@ -130,9 +130,9 @@ if __name__ == "__main__":
     
     print('Analysis is done')
     
-    print('{}opsins_class.fasta is a file with amino acid sequences'.format(renaming_result[:-6]))
+    print('{}_opsins_class.fasta is a file with amino acid sequences'.format(renaming_result[:-14]))
     
-    print('{}opsins_nt.fasta is a file with nucleotide sequences'.format(renaming_result[:-6]))
+    print('{}_opsins_nt.fasta is a file with nucleotide sequences'.format(renaming_result[:-14]))
     end = time.time()
     
     print('Time for analysis:', end - start)
