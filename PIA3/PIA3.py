@@ -129,8 +129,11 @@ if __name__ == "__main__":
     match_seq = nucleotide.match_amino_nucl(file_name[:-6])
     
     print('Analysis is done')
-    print('{}opsins_class.fasta is a file with amino acid sequences'.format(renaming_result))
-    print('{}opsins_nt.fasta is a file with nucleotide sequences'.format(renaming_result))
+    
+    print('{}opsins_class.fasta is a file with amino acid sequences'.format(renaming_result[:-6]))
+    
+    print('{}opsins_nt.fasta is a file with nucleotide sequences'.format(renaming_result[:-6]))
     end = time.time()
+    
     print('Time for analysis:', end - start)
 
