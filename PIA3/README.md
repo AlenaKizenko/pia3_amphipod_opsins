@@ -18,7 +18,7 @@ Be careful: it's `import Bio`, but in order to download it, you need to (e.g. `p
 2. Allow execution of the scripts
     `chmod +x *sh`
     `chmod +x *py`
-maybe alter some paths?
+3. Write paths of all listed dependencies in `config.ini` file.
 
 ### Running
 

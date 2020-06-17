@@ -1,14 +1,11 @@
 import argparse
 import argcomplete
 import os
-from Bio import SeqIO
-from Bio.SeqRecord import SeqRecord
-import ete3
-import statistics
 import time
-
-
-start = time.time()
+import PIA.modules as modules
+import PIA.nucleotide as nucleotide
+import PIA.classification as classification
+import ete3
 
 
 def make_arguments_parser():
@@ -53,119 +50,15 @@ def make_arguments_parser():
     argcomplete.autocomplete(parser) 
                                                
     return parser.parse_args()
-    
-
-def run_transdecoder(file):   
-    os.system("TransDecoder.LongOrfs -t {}".format(file))
-    os.system("cp {}.transdecoder_dir/longest_orfs.cds orfs.fasta".format(args.input_file))
-    #os.system("sed '/^$/d' *.faa > {}_orfs.fasta".format(args.input_file))
-    transdecoder_cds = 'orfs.fasta'
-    return transdecoder_cds
-
-def blast_search(db, cds):
-    os.system('/media/secondary/apps/diamond/diamond makedb --in {} -d user_database'.format(db))
-    os.system('/media/secondary/apps/diamond/diamond blastx -q {} -d user_database -p 16 -f 6 -o blast_file.tmp -e 0.0000000001'.format(cds))
-    hits = []
-    my_records = []
-    with open('blast_file.tmp') as blast_hits:
-        for blast_hit in blast_hits:
-            hits.append(blast_hit.split()[0])
-        hits = set(hits)
-    with open(cds) as transcriptome:
-        for seq_record in SeqIO.parse(transcriptome, "fasta"):
-            for hit in hits:
-                if str(hit) == str(seq_record.id):
-                    rec = SeqRecord(seq_record.seq, seq_record.id, description = '')
-                    my_records.append(rec)
-        SeqIO.write(my_records, 'blast_hits_nt.fasta', 'fasta')
 
 
-def cd_hit_clust():
-    print('Performing clustering of found transcripts using CD-hit')
-    os.system('/media/secondary/apps/cdhit/cd-hit-est -i blast_hits_nt.fasta -o blast_hits_nt_clust.fasta -c 0.95 -n 10 -d 0 -M 16000 -T 8')
-    hits_clust = 'blast_hits_nt_clust.fasta'
-    return hits_clust
-    
-def translate_hits(hits_clust):
-    print('Translating clustered hits')
-    my_records = []
-    with open(hits_clust) as opsins_file:
-        for seq_record in SeqIO.parse(opsins_file, "fasta"):
-            aa_rec = SeqRecord(seq_record.seq.translate(to_stop = True), seq_record.id, description = '')
-            my_records.append(aa_rec)
-        SeqIO.write(my_records, path + '/' + 'blast_hits_clust_aa.fasta', 'fasta')
-    hits_res = 'blast_hits_clust_aa.fasta'
-    return hits_res
-
-def rename_hits():
-    print('Renaming translated hits')
-    with open('blast_hits_clust_aa.fasta') as file:
-        my_records = []
-        path_out = str(path+'/' + str(args.input_file[:-6]) + '_hits_aa.fasta')
-        filename = str(args.input_file[:-6]) + '_hits_aa.fasta'
-        for seq_record in SeqIO.parse(file, "fasta"):
-            name = seq_record.id
-            final = str(args.input_file[:-6])+str('_')+name
-            rec = SeqRecord(seq_record.seq, id = final, description = '')
-            my_records.append(rec)
-        SeqIO.write(my_records, path_out, 'fasta')
-        return filename
-    
-    
-def build_initial_phylogeny():
-    print('Building initial tree')
-    os.system('mafft --thread 8 --inputorder --auto /media/tertiary/Alena_Kizenko/PIA3/classification_opsins_full_aa.fasta > class_align.fasta')
-    os.system('/media/secondary/apps/iqtree-1.6.10-Linux/bin/iqtree -s class_align.fasta -nt AUTO -t RANDOM -bb 1000 -m TEST')
-    tree = 'class_align.fasta.contree'
-    return tree
-    
-def calc_median_dist(tree):
-    print('Calculating median absolute deviation of evolutionary distances')
-    tree = ete3.Tree(tree)
-    lst = []
-    for leaf in tree.iter_leaves():
-        dist = leaf.dist
-        lst.append(dist)
-    med = statistics.median(lst)
-    lst_med = []
-    for i in lst:
-        a = abs(i-med)
-        lst_med.append(a)
-    return(statistics.median(lst_med)*4)
-
-def build_phylogeny(filename):
-    print('Building phylogeny')
-    os.system('cat /media/tertiary/Alena_Kizenko/PIA3/classification_opsins_full_aa.fasta {} > query_class.fasta'.format(filename))
-    os.system('mafft --thread 8 --inputorder --auto query_class.fasta > query_class_align.fasta')
-    os.system('/media/secondary/apps/iqtree-1.6.10-Linux/bin/iqtree -s query_class_align.fasta -nt AUTO -t RANDOM -bb 1000 -m TEST')
-    tree = 'query_class_align.fasta.contree'
-    return tree
-
-
-def filter_distant_seqs(tree_query, dist_dev, query_file):
-    print('Filtering distinct hits')
-    tree_query = ete3.Tree(tree_query)
-    lst_seqs = []
-    my_records = []
-    file_prefix = query_file[:-14]
-    for leaf in tree_query.iter_leaves():
-        if file_prefix in str(leaf.name) and leaf.dist < dist_dev:
-            lst_seqs.append(str(leaf.name))
-    with open(query_file) as hits:
-        for seq_record in SeqIO.parse(hits, "fasta"):
-            for seq_name in lst_seqs:
-                seq_record.id = seq_record.id.replace(":", "_")
-                seq_record.id = seq_record.id.replace("|", "_")
-                if seq_record.id in seq_name:
-                   # print(seq_record.id)
-                    rec = SeqRecord(seq_record.seq, seq_record.id, description = '')
-                    my_records.append(rec)
-        SeqIO.write(my_records, 'PIA_results.fasta', 'fasta')
-
-    
 if __name__ == "__main__":
     
+    start = time.time()
+    
     args = make_arguments_parser()
+    
+    # ADD PATH CHECK
     
     if args.input_file:
         print('Analysis of input FASTA file')
@@ -187,16 +80,57 @@ if __name__ == "__main__":
             os.chdir(args.output_folder)
             path = os.getcwd()
             print("Output directory path: {}".format(path))
+    
+    file_name = os.path.basename(os.path.normpath(args.input_file))
+    path_out = args.output_folder+"/"+file_name
+    
+    if os.path.exists(str(args.output_folder+"/"+file_name)):
+        print('File is already in the output folder')
+    else:
+        print('Copying file to output folder...')
+        os.system("cp {} {}".format(args.input_file, args.output_folder))
+         
+    paths_dict = {'transdecoder' : '', 'iqtree' : '', 'diamond' : '', 
+              'blast' : '', 'mafft' : '', 'cdhit' : ''}
+    paths_list = []
 
-transdecoder_result = run_transdecoder(args.input_file)
-blast_result = blast_search(args.database, transdecoder_result)
-cd_hit_result = cd_hit_clust()
-translation_result = translate_hits(cd_hit_result)
-renaming_result = rename_hits()
-initial_phylogeny_result = build_initial_phylogeny()
-median_dist = calc_median_dist(initial_phylogeny_result)
-phylogeny_result = build_phylogeny(renaming_result)
-filter_results = filter_distant_seqs(phylogeny_result, median_dist, renaming_result)
+   
+    paths_dict = {'transdecoder' : 0, 'iqtree' : 0, 'diamond' : 0, 
+              'blast' : 0, 'mafft' : 0, 'cdhit' : 0}
+    paths_list = []
 
-end = time.time()
-print(end - start)
+   
+    with open('%s/config/config.ini' % os.path.dirname(os.path.realpath(__file__))) as f:
+        for line in f:
+            if not line.startswith('#') and line != "\n":
+                paths_list.append(line.rstrip('\n'))
+
+    cnt = 0
+    for key in paths_dict.keys():
+        paths_dict[key] = paths_list[cnt]
+        cnt += 1
+        
+    transdecoder_result = modules.run_transdecoder(path_out, paths_dict['transdecoder'])
+    blast_result = modules.blast_search(args.database, transdecoder_result, paths_dict['diamond'])
+    cd_hit_result = modules.cd_hit_clust(paths_dict['cdhit'])
+    translation_result = modules.translate_hits(cd_hit_result)
+    renaming_result = modules.rename_hits(file_name, args.database)
+    initial_phylogeny_result = modules.build_initial_phylogeny(args.database, paths_dict['mafft'], paths_dict['iqtree'])
+    median_dist = modules.calc_median_dist(initial_phylogeny_result)
+    phylogeny_result = modules.build_phylogeny(args.database, renaming_result, paths_dict['mafft'], paths_dict['iqtree'])
+    filter_results = modules.filter_distant_seqs(phylogeny_result, median_dist, renaming_result)
+     
+    tree = ete3.Tree(phylogeny_result)
+    ancestor = tree.search_nodes(name="RHO_Bos_taurus_AAA30674.1")[0]
+    tree.set_outgroup(ancestor)
+    classify = classification.classify_opsins(tree, file_name[:-6])
+    write_opsins = classification.write_types(file_name[:-6])
+    write_file = classification.write_into_file(file_name[:-6])
+    match_seq = nucleotide.match_amino_nucl(file_name[:-6])
+    
+    print('Analysis is done')
+    print('{}opsins_class.fasta is a file with amino acid sequences'.format(renaming_result))
+    print('{}opsins_nt.fasta is a file with nucleotide sequences'.format(renaming_result))
+    end = time.time()
+    print('Time for analysis:', end - start)
+
