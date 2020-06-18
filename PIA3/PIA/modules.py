@@ -5,15 +5,15 @@ import ete3
 import statistics
 
 
-def run_transdecoder(file, path):
-    os.system("{}TransDecoder.LongOrfs -t {}".format(path, file))
-    os.system("{}TransDecoder.Predict -t {}".format(path, file))
+def run_transdecoder(file, path1, path2):
+    os.system("{} -t {}".format(path1, file))
+    os.system("{} -t {}".format(path2, file))
     transdecoder_cds = file + '.transdecoder.cds'
     return transdecoder_cds
 
 def blast_search(db, cds, path):
-    os.system('{}diamond makedb --in {} -d user_database'.format(path, db))
-    os.system('{}diamond blastx -q {} -d user_database -p 16 -f 6 -o blast_file.tmp -e 0.0000000001'.format(path, cds))
+    os.system('{} makedb --in {} -d user_database'.format(path, db))
+    os.system('{} blastx -q {} -d user_database -p 16 -f 6 -o blast_file.tmp -e 0.0000000001'.format(path, cds))
     hits = []
     my_records = []
     with open('blast_file.tmp') as blast_hits:
@@ -31,7 +31,7 @@ def blast_search(db, cds, path):
 
 def cd_hit_clust(path):
     print('Performing clustering of found transcripts using CD-hit')
-    os.system('{}cd-hit-est -i blast_hits_nt.fasta -o blast_hits_nt_clust.fasta -c 0.95 -n 10 -d 0 -M 16000 -T 8'.format(path))
+    os.system('{} -i blast_hits_nt.fasta -o blast_hits_nt_clust.fasta -c 0.95 -n 10 -d 0 -M 16000 -T 8'.format(path))
     hits_clust = 'blast_hits_nt_clust.fasta'
     return hits_clust
     
@@ -88,7 +88,7 @@ def calc_median_dist(tree):
 
 def build_phylogeny(db, filename, path1, path2):
     print('Building phylogeny')
-    os.system(f'cat {db} {filename} > query_class.fasta')
+    os.system('cat {} {} > query_class.fasta'.format(db, filename))
     os.system('{} --thread 8 --inputorder --auto query_class.fasta > query_class_align.fasta'.format(path1))
     os.system('{} -s query_class_align.fasta -nt AUTO -t RANDOM -bb 1000 -m TEST'.format(path2))
     tree = 'query_class_align.fasta.contree'

@@ -90,12 +90,10 @@ if __name__ == "__main__":
         print('Copying file to output folder...')
         os.system("cp {} {}".format(args.input_file, args.output_folder))
          
-    paths_dict = {'transdecoder' : '', 'iqtree' : '', 'diamond' : '', 
-              'blast' : '', 'mafft' : '', 'cdhit' : ''}
     paths_list = []
 
    
-    paths_dict = {'transdecoder' : 0, 'iqtree' : 0, 'diamond' : 0, 
+    paths_dict = {'transdecoder_orf' : 0, 'transdecoder_cds': 0, 'iqtree' : 0, 'diamond' : 0, 
               'blast' : 0, 'mafft' : 0, 'cdhit' : 0}
     paths_list = []
 
@@ -105,12 +103,16 @@ if __name__ == "__main__":
             if not line.startswith('#') and line != "\n":
                 paths_list.append(line.rstrip('\n'))
 
-    cnt = 0
-    for key in paths_dict.keys():
-        paths_dict[key] = paths_list[cnt]
-        cnt += 1
+    paths_dict['transdecoder_orf'] = paths_list[0]
+    paths_dict['transdecoder_cds'] = paths_list[1]
+    paths_dict['iqtree'] = paths_list[2]
+    paths_dict['diamond'] = paths_list[3]
+    paths_dict['blast'] = paths_list[4]
+    paths_dict['mafft'] = paths_list[5]
+    paths_dict['cdhit'] = paths_list[6]
+    
         
-    transdecoder_result = modules.run_transdecoder(path_out, paths_dict['transdecoder'])
+    transdecoder_result = modules.run_transdecoder(path_out, paths_dict['transdecoder_orf'], paths_dict['transdecoder_cds'])
     blast_result = modules.blast_search(args.database, transdecoder_result, paths_dict['diamond'])
     cd_hit_result = modules.cd_hit_clust(paths_dict['cdhit'])
     translation_result = modules.translate_hits(cd_hit_result)
