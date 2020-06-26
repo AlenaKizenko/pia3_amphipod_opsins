@@ -46,21 +46,28 @@ def translate_hits(hits_clust):
     hits_res = 'blast_hits_clust_aa.fasta'
     return hits_res
 
-def rename_hits(species_name, db):
+def rename_hits(species_name, transcripts, db):
     print('Renaming translated hits')
     length_seqs = [len(seq_record2.seq) for seq_record2 in SeqIO.parse(db, "fasta")]
     mean_length = statistics.mean(length_seqs)
     my_records = []
     filename = species_name[:-6] + '_hits_aa.fasta'
     for seq_record in SeqIO.parse('blast_hits_clust_aa.fasta', "fasta"):
-        if str(seq_record.seq)[0] == 'M' and len(str(seq_record.seq)) >= mean_length: #CHANGE!!!
+        if transcripts == "cds":
+            if str(seq_record.seq)[0] == 'M' and len(str(seq_record.seq)) >= mean_length:
+                name = seq_record.id[:seq_record.id.find(" ")]
+                print(name)
+                final = species_name[:-6] + '_' + name
+                rec = SeqRecord(seq_record.seq, id = final, description = '')
+                my_records.append(rec)
+            else:
+                pass
+        elif transcripts == "all":
             name = seq_record.id[:seq_record.id.find(" ")]
             print(name)
             final = species_name[:-6] + '_' + name
             rec = SeqRecord(seq_record.seq, id = final, description = '')
             my_records.append(rec)
-        else:
-            pass
     SeqIO.write(my_records, filename, 'fasta')
     return filename
     

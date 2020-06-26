@@ -67,9 +67,11 @@ if __name__ == "__main__":
         print('Delete intermediate files')
     
     if args.all_transcripts:
+        transcripts = "all"
         print('Find all putative transcripts')
     elif args.cds_only:
-        print('Find only putative coding sequences')
+        transcripts = "cds"
+        print('Find only putative coding sequences: sequence must start from methionine and has length more or equal of mean databse length')
     
     if args.output_folder:
         try:
@@ -98,7 +100,7 @@ if __name__ == "__main__":
     paths_list = []
 
    
-    with open('%s/config/config.ini' % os.path.dirname(os.path.realpath(__file__))) as f:
+    with open('%s/config/config.ini' % os.path.dirname(os.path.abspath(__file__))) as f:
         for line in f:
             if not line.startswith('#') and line != "\n":
                 paths_list.append(line.rstrip('\n'))
@@ -116,7 +118,7 @@ if __name__ == "__main__":
     blast_result = modules.blast_search(args.database, transdecoder_result, paths_dict['diamond'])
     cd_hit_result = modules.cd_hit_clust(paths_dict['cdhit'])
     translation_result = modules.translate_hits(cd_hit_result)
-    renaming_result = modules.rename_hits(file_name, args.database)
+    renaming_result = modules.rename_hits(file_name,transcripts, args.database)
     initial_phylogeny_result = modules.build_initial_phylogeny(args.database, paths_dict['mafft'], paths_dict['iqtree'])
     median_dist = modules.calc_median_dist(initial_phylogeny_result)
     phylogeny_result = modules.build_phylogeny(args.database, renaming_result, paths_dict['mafft'], paths_dict['iqtree'])
