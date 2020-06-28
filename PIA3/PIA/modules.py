@@ -54,7 +54,7 @@ def rename_hits(species_name, transcripts, db):
     filename = species_name[:-6] + '_hits_aa.fasta'
     for seq_record in SeqIO.parse('blast_hits_clust_aa.fasta', "fasta"):
         if transcripts == "cds":
-            if str(seq_record.seq)[0] == 'M' and len(str(seq_record.seq)) >= mean_length:
+            if str(seq_record.seq)[0] == 'M' and len(str(seq_record.seq)) >= mean_length//2:
                 name = seq_record.id[:seq_record.id.find(" ")]
                 print(name)
                 final = species_name[:-6] + '_' + name
