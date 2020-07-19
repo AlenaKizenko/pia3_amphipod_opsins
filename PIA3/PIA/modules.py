@@ -122,3 +122,30 @@ def filter_distant_seqs(tree_query, dist_dev, query_file):
                     my_records.append(rec)
         SeqIO.write(my_records, 'PIA_results.fasta', 'fasta')
 
+
+def check_lysine(alignment, n=296, ref_seq_name='RHO_Bos_taurus_AAA30674.1'):
+    # calculate position in the alignment
+    with open(alignment) as aln:
+        for seq_record in SeqIO.parse(aln, "fasta"):
+            if str(seq_record.id) == ref_seq_name:  ## if the ref sequence found
+                sequence_str = seq_record.seq
+                letter_counter = 0
+                gap_counter = 0
+                for letter in sequence_str:
+                    if letter_counter < n - 1:
+                        if letter == "-":
+                            gap_counter += 1
+                        else:
+                            letter_counter += 1
+                break
+
+    number_position = gap_counter + letter_counter
+
+    not_opsins = []
+    for seq_record in SeqIO.parse(aln, "fasta"):
+            print(seq_record.id)
+            print(str(seq_record.seq)[number_position])
+            if str(seq_record.seq)[number_position] != 'K':
+                not_opsins.add(seq_record.id)
+
+    print(not_opsins)
