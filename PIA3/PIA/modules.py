@@ -12,6 +12,23 @@ def run_transdecoder(file, path1, path2):
     return transdecoder_cds
 
 def blast_search(db, cds, path):
+    os.system('{} -in {} -out user_database -parse_seqids -dbtype prot'.format(path, db))
+    os.system('{} -query {} -db user_database -num_threads 16 -outfmt 6 -out blast_file.tmp -e 0.0000000001'.format(path, cds))
+    hits = []
+    my_records = []
+    with open('blast_file.tmp') as blast_hits:
+        for blast_hit in blast_hits:
+            hits.append(blast_hit.split()[0])
+        hits = set(hits)
+    with open(cds) as transcriptome:
+        for seq_record in SeqIO.parse(transcriptome, "fasta"):
+            for hit in hits:
+                if str(hit) == str(seq_record.id):
+                    rec = SeqRecord(seq_record.seq, seq_record.id, description = '')
+                    my_records.append(rec)
+        SeqIO.write(my_records, 'blast_hits_nt.fasta', 'fasta')
+
+def diamond_search(db, cds, path):
     os.system('{} makedb --in {} -d user_database'.format(path, db))
     os.system('{} blastx -q {} -d user_database -p 16 -f 6 -o blast_file.tmp -e 0.0000000001'.format(path, cds))
     hits = []
@@ -27,7 +44,6 @@ def blast_search(db, cds, path):
                     rec = SeqRecord(seq_record.seq, seq_record.id, description = '')
                     my_records.append(rec)
         SeqIO.write(my_records, 'blast_hits_nt.fasta', 'fasta')
-
 
 def cd_hit_clust(path):
     print('Performing clustering of found transcripts using CD-hit')

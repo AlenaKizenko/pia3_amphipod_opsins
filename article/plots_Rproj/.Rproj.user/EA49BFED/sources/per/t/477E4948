@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1595428307689.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3631987918",
+    "id" : "477E4948",
+    "lastKnownWriteTime" : 1595432886,
+    "last_content_update" : 1595432886541,
+    "path" : "~/Documents/IB/project_opsins/article/plots/statistics_plots.R",
+    "project_path" : "statistics_plots.R",
+    "properties" : {
+        "cursorPosition" : "120,45",
+        "scrollLine" : "93",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
