@@ -93,8 +93,8 @@ gheatmap <- function (p, data, offset = 0, width = 1, low = "green", high = "red
 
 
 
-tr <- read.iqtree("tree_rnaspades_nt.nwk")
-#tr <- read.iqtree("tree_rnaspades_aa.nwk")
+#tr <- read.iqtree("tree_rnaspades_nt.nwk")
+tr <- read.iqtree("tree_rnaspades_aa.nwk")
 
 label <- tr@phylo$node.label
 alrt <- as.numeric(sub("/.*", "", label))
@@ -119,7 +119,8 @@ levels(meta.df[,2]) <- c(levels(meta.df[,2]), 0)
   meta.df[,2] <- relevel(meta.df[,2], ref = "0")
 
 
-  
+tr@phylo$tip.label <- gsub("_", " ", tr@phylo$tip.label)
+row.names(meta.df) <- gsub("_", " ", row.names(meta.df))
   
 # ## a stupid idea to add a gap in between...
 # meta.df[,3] <- meta.df$LWS
@@ -165,9 +166,9 @@ ptr2
 # meta.df[,2] <- relevel(meta.df[,2], ref = "0")
 
 
-ptr2 + geom_cladelabel(44, 'Baikal group 1', offset=1, offset.text=.02, 
+ptr2 + geom_cladelabel(44, 'Baikal group 2', offset=1, offset.text=.02, 
                      barsiz=1, color='#0072B2', angle=90, hjust='center') +
-  geom_cladelabel(64, 'Baikal group 2', offset=1, offset.text=.02, 
+  geom_cladelabel(64, 'Baikal group 1', offset=1, offset.text=.02, 
                   barsiz=1, color='#0072B2', angle=90, hjust='center')
 #+ geom_cladelabel(37, 'Senticaudata', offset=1.05, offset.text=.02, 
 #                        barsiz=1, color='darkgreen', angle=90, hjust='center') + 
@@ -187,5 +188,6 @@ ptr2 + geom_cladelabel(44, 'Baikal group 1', offset=1, offset.text=.02,
 
 ggsave("nt_tree.svg", width=25, height=15, units="cm")
 ggsave("nt_tree.png", width=24, height=18, units="cm")
-#ggsave("aa_tree.svg")
 
+ ggsave("aa_tree.svg", width=25, height=15, units="cm")
+ ggsave("aa_tree.png", width=24, height=18, units="cm")
