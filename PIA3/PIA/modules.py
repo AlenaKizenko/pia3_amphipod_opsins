@@ -86,12 +86,12 @@ def calc_median_dist(tree):
     for leaf in tree.iter_leaves():
         dist = leaf.dist
         lst.append(dist)
-    med = statistics.median(lst)
-    lst_med = []
+    me = statistics.mean(lst)
+    lst_me = []
     for i in lst:
-        a = abs(i-med)
-        lst_med.append(a)
-    return(statistics.median(lst_med)*4)
+        a = abs(i-me)
+        lst_me.append(a)
+    return(statistics.mean(lst_me)*4)
 
 def build_phylogeny(db, filename, path1, path2):
     print('Building phylogeny')
