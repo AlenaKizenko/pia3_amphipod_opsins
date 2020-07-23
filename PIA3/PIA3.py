@@ -3,7 +3,6 @@ import argcomplete
 import os
 import time
 import PIA.modules as modules
-import PIA.nucleotide as nucleotide
 import PIA.classification as classification
 import ete3
 
@@ -47,6 +46,9 @@ def make_arguments_parser():
                         help='Number of threads',
                         required=False, default=8,
                         type=int)
+    parser.add_argument('-aligner', '--aligner_type',
+                        default = 'blast', required = False, type=str,
+                        help='Use blast or diamond as aligner')
     argcomplete.autocomplete(parser) 
                                                
     return parser.parse_args()
@@ -111,7 +113,17 @@ if __name__ == "__main__":
     
         
         transdecoder_result = modules.run_transdecoder(path_out, paths_dict['transdecoder_orf'], paths_dict['transdecoder_cds'])
-        blast_result = modules.blast_search(args.database, transdecoder_result, paths_dict['diamond'])
+        
+     #   if args.aligner_type:
+      #      try:
+       #         if args.aligner_type == 'blast':
+        #            blast_result = modules.blast_search(args.database, transdecoder_result, paths_dict['blast'])
+         #       elif args.aligner_type == 'diamond':
+            #        blast_result = modules.blast_search(args.database, transdecoder_result, paths_dict['diamond'])
+          #  except:
+           #     print('Unknown aligner! Please specify aligner type (blast or diamond)')
+            
+        blast_result = modules.blast_search(args.database, transdecoder_result, paths_dict['blast'])    
         cd_hit_result = modules.cd_hit_clust(paths_dict['cdhit'])
         translation_result = modules.translate_hits(cd_hit_result)
         renaming_result = modules.rename_hits(file_name,transcripts, args.database)
@@ -125,7 +137,7 @@ if __name__ == "__main__":
         classify = classification.classify_opsins(tree, file_name[:-6])
         write_opsins = classification.write_types(file_name[:-6])
         write_file = classification.write_into_file(file_name[:-6])
-        match_seq = nucleotide.match_amino_nucl(file_name[:-6])
+        match_seq = modules.match_amino_nucl(file_name[:-6])
         os.system('cp query_class_align.fasta.contree {}_class_tree.contree'.format(file_name[:-6]))
         print('Analysis for {} is done'.format(renaming_result))
     
@@ -183,7 +195,7 @@ if __name__ == "__main__":
             classify = classification.classify_opsins(tree, file_name[:-6])
             write_opsins = classification.write_types(file_name[:-6])
             write_file = classification.write_into_file(file_name[:-6])
-            match_seq = nucleotide.match_amino_nucl(file_name[:-6])
+            match_seq = modules.match_amino_nucl(file_name[:-6])
             os.system('cp query_class_align.fasta.contree {}_class_tree.contree'.format(file_name[:-6]))
             print('Analysis for {} is done'.format(renaming_result))
     

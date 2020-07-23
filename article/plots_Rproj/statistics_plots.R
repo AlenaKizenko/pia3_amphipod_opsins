@@ -3,17 +3,17 @@ library(ggpubr)
 library(wesanderson)
 library(psycho)
 library(cowplot)
+library(svglite)
 
 #------------------------reading file with statistics--------------------------------------------------------------------------
 busco = read.csv('data/busco_both.csv', stringsAsFactors = F)
 
 #------------testing data normality-----------------------------------------------------------------------------------------
 shapiro.test(busco$Single_BUSCOs)
-shapiro.test(busco$Single_BUSCOs)
-shapiro.test(busco$Single_BUSCOs)
-shapiro.test(busco$Single_BUSCOs)
-shapiro.test(busco$Single_BUSCOs)
-shapiro.test(busco$Single_BUSCOs)
+shapiro.test(busco$Complete_BUSCOs)
+shapiro.test(busco$Duplicated_BUSCOs)
+shapiro.test(busco$Fragmented_BUSCOs)
+shapiro.test(busco$Missing_BUSCOs)
 
 
 #--------------------building Complete BUSCOs percentage plot----------------------------------------------------------------------------
