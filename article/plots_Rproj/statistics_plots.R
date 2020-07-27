@@ -4,6 +4,7 @@ library(wesanderson)
 library(psycho)
 library(cowplot)
 library(svglite)
+library(forcats)
 
 #------------------------reading file with statistics--------------------------------------------------------------------------
 busco = read.csv('data/busco_both.csv', stringsAsFactors = F)
@@ -17,7 +18,7 @@ shapiro.test(busco$Missing_BUSCOs)
 
 
 #--------------------building Complete BUSCOs percentage plot----------------------------------------------------------------------------
-complete_b = ggplot(busco, aes(Assembler, Complete_BUSCOs*10.66, fill = Assembler)) +
+complete_b = ggplot(busco, aes(x = fct_reorder(Assembler, Complete_BUSCOs*10.66), y = Complete_BUSCOs*10.66, fill = Assembler)) +
   geom_boxplot(width = 0.5) +
   geom_jitter(alpha=0.7, size=2, position = position_jitter(height = .05, width = .1)) +
   theme_bw() + 
@@ -28,19 +29,19 @@ complete_b = ggplot(busco, aes(Assembler, Complete_BUSCOs*10.66, fill = Assemble
         legend.position = "none",
         legend.title=element_text(size=16), 
         legend.text=element_text(size=16),
-        axis.text.x = element_text(size = 20),
+        axis.text.x = element_text(size = 20, angle=70, vjust = 1, hjust=1),
         axis.text.y = element_text(size = 20),
         axis.title=element_text(size=20)) +
   scale_fill_manual(values = wes_palette("IsleofDogs1", n = 3),
-                    labels=c("rnaSPAdes", "Trinity", "Trinity new")) +
-  scale_x_discrete(labels=c("rnaSPAdes" = "rnaSPAdes", "Trinity" = "Trinity",
-                            "Trinity285" = "Trinity new")) +
+                    labels=c("rnaSPAdes", "Trinity old v.", "Trinity new v.")) +
+  scale_x_discrete(labels=c("rnaSPAdes" = "rnaSPAdes", "Trinity" = "Trinity old v.",
+                            "Trinity285" = "Trinity new v.")) +
  stat_compare_means(method = "wilcox.test", comparisons = list(c('rnaSPAdes', 'Trinity'),
                                                                c('rnaSPAdes', 'Trinity285'), c('Trinity', 'Trinity285')), size = 4) +
  ggtitle("Complete BUSCOs")
 
 #--------------------building Single copy BUSCOs percentage plot----------------------------------------------------------------------------
-single_b = ggplot(busco, aes(Assembler, Single_BUSCOs*10.66, fill = Assembler)) +
+single_b = ggplot(busco, aes(x = fct_reorder(Assembler, Complete_BUSCOs*10.66), Single_BUSCOs*10.66, fill = Assembler)) +
   geom_boxplot(width = 0.5) +
   geom_jitter(alpha=0.7, size=2, position = position_jitter(height = .05, width = .1)) +
   theme_bw() +
@@ -51,19 +52,19 @@ single_b = ggplot(busco, aes(Assembler, Single_BUSCOs*10.66, fill = Assembler)) 
         legend.position = "right",
         legend.title=element_text(size=16), 
         legend.text=element_text(size=16),
-        axis.text.x = element_text(size = 20),
+        axis.text.x = element_text(size = 20, angle=70, vjust = 1, hjust=1),
         axis.text.y = element_text(size = 20),
         axis.title=element_text(size=20)) +
   scale_fill_manual(values = wes_palette("IsleofDogs1", n = 3),
-                    labels=c("rnaSPAdes", "Trinity", "Trinity new")) +
-  scale_x_discrete(labels=c("rnaSPAdes" = "rnaSPAdes", "Trinity" = "Trinity",
-                            "Trinity285" = "Trinity new")) +
+                    labels=c("rnaSPAdes", "Trinity old v.", "Trinity new v.")) +
+  scale_x_discrete(labels=c("rnaSPAdes" = "rnaSPAdes", "Trinity" = "Trinity old v.",
+                            "Trinity285" = "Trinity new v.")) +
   stat_compare_means(method = "wilcox.test", comparisons = list(c('rnaSPAdes', 'Trinity'),
                                                                 c('rnaSPAdes', 'Trinity285'), c('Trinity', 'Trinity285')), size = 4) +
   ggtitle("Single copy BUSCOs")
 
 #--------------------building Duplicated BUSCOs percentage plot----------------------------------------------------------------------------
-duplicated_b = ggplot(busco, aes(Assembler, Duplicated_BUSCOs*10.66, fill = Assembler)) +
+duplicated_b = ggplot(busco, aes(x = fct_reorder(Assembler, Complete_BUSCOs*10.66), Duplicated_BUSCOs*10.66, fill = Assembler)) +
   geom_boxplot(width = 0.5) +
   geom_jitter(alpha=0.7, size=2, position = position_jitter(height = .05, width = .1)) +
   theme_bw() +
@@ -74,19 +75,19 @@ duplicated_b = ggplot(busco, aes(Assembler, Duplicated_BUSCOs*10.66, fill = Asse
         legend.position = "none",
         legend.title=element_text(size=16), 
         legend.text=element_text(size=16),
-        axis.text.x = element_text(size = 20),
+        axis.text.x = element_text(size = 20, angle=70, vjust = 1, hjust=1),
         axis.text.y = element_text(size = 20),
         axis.title=element_text(size=20)) +
   scale_fill_manual(values = wes_palette("IsleofDogs1", n = 3),
-                    labels=c("rnaSPAdes", "Trinity", "Trinity new")) +
-  scale_x_discrete(labels=c("rnaSPAdes" = "rnaSPAdes", "Trinity" = "Trinity",
-                            "Trinity285" = "Trinity new")) +
+                    labels=c("rnaSPAdes", "Trinity old v.", "Trinity new")) +
+  scale_x_discrete(labels=c("rnaSPAdes" = "rnaSPAdes", "Trinity" = "Trinity old v.",
+                            "Trinity285" = "Trinity new v.")) +
   stat_compare_means(method = "wilcox.test", comparisons = list(c('rnaSPAdes', 'Trinity'),
                                                                 c('rnaSPAdes', 'Trinity285'), c('Trinity', 'Trinity285')), size = 4) +
   ggtitle("Duplicated BUSCOs")
 
 #--------------------building Fragmented BUSCOs percentage plot----------------------------------------------------------------------------
-fragmented_b = ggplot(busco, aes(Assembler, Fragmented_BUSCOs*10.66, fill = Assembler)) +
+fragmented_b = ggplot(busco, aes(x = fct_reorder(Assembler, Complete_BUSCOs*10.66), Fragmented_BUSCOs*10.66, fill = Assembler)) +
   geom_boxplot(width = 0.5) +
   geom_jitter(alpha=0.7, size=2, position = position_jitter(height = .05, width = .1)) +
   theme_bw() +
@@ -97,19 +98,19 @@ fragmented_b = ggplot(busco, aes(Assembler, Fragmented_BUSCOs*10.66, fill = Asse
         legend.position = "none",
         legend.title=element_text(size=16), 
         legend.text=element_text(size=16),
-        axis.text.x = element_text(size = 20),
+        axis.text.x = element_text(size = 20, angle=70, vjust = 1, hjust=1),
         axis.text.y = element_text(size = 20),
         axis.title=element_text(size=20)) +
   scale_fill_manual(values = wes_palette("IsleofDogs1", n = 3),
-                    labels=c("rnaSPAdes", "Trinity", "Trinity new")) +
-  scale_x_discrete(labels=c("rnaSPAdes" = "rnaSPAdes", "Trinity" = "Trinity",
-                            "Trinity285" = "Trinity new")) +
+                    labels=c("rnaSPAdes", "Trinity old v.", "Trinity new v.")) +
+  scale_x_discrete(labels=c("rnaSPAdes" = "rnaSPAdes", "Trinity" = "Trinity old v.",
+                            "Trinity285" = "Trinity new v.")) +
   stat_compare_means(method = "wilcox.test", comparisons = list(c('rnaSPAdes', 'Trinity'),
                                                                 c('rnaSPAdes', 'Trinity285'), c('Trinity', 'Trinity285')), size = 4) +
   ggtitle("Fragmented BUSCOs")
 
 #--------------------building Missing BUSCOs percentage plot--------------------------------------------------------------------------
-missing_b = ggplot(busco, aes(Assembler, Missing_BUSCOs*10.66, fill = Assembler)) +
+missing_b = ggplot(busco, aes(x = fct_reorder(Assembler, Complete_BUSCOs*10.66), Missing_BUSCOs*10.66, fill = Assembler)) +
   geom_boxplot(width = 0.5) +
   geom_jitter(alpha=0.7, size=2, position = position_jitter(height = .05, width = .1)) +
   theme_bw() +
@@ -120,13 +121,13 @@ missing_b = ggplot(busco, aes(Assembler, Missing_BUSCOs*10.66, fill = Assembler)
         legend.position = "right",
         legend.title=element_text(size=16), 
         legend.text=element_text(size=16),
-        axis.text.x = element_text(size = 20),
+        axis.text.x = element_text(size = 20, angle=70, vjust = 1, hjust=1),
         axis.text.y = element_text(size = 20),
         axis.title=element_text(size=20)) +
   scale_fill_manual(values = wes_palette("IsleofDogs1", n = 3),
-                    labels=c("rnaSPAdes", "Trinity", "Trinity new")) +
-  scale_x_discrete(labels=c("rnaSPAdes" = "rnaSPAdes", "Trinity" = "Trinity",
-                            "Trinity285" = "Trinity new")) +
+                    labels=c("rnaSPAdes", "Trinity old v.", "Trinity new v.")) +
+  scale_x_discrete(labels=c("rnaSPAdes" = "rnaSPAdes", "Trinity" = "Trinity old v.",
+                            "Trinity285" = "Trinity new v.")) +
   stat_compare_means(method = "wilcox.test", comparisons = list(c('rnaSPAdes', 'Trinity'),
                                                                 c('rnaSPAdes', 'Trinity285'), c('Trinity', 'Trinity285')), size = 4) +
   ggtitle("Missing BUSCOs")
