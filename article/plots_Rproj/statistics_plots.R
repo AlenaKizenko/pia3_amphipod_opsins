@@ -31,8 +31,12 @@ complete_b = ggplot(busco, aes(Assembler, Complete_BUSCOs*10.66, fill = Assemble
         axis.text.x = element_text(size = 20),
         axis.text.y = element_text(size = 20),
         axis.title=element_text(size=20)) +
-  scale_fill_manual(values = wes_palette("IsleofDogs1", n = 2)) +
- stat_compare_means(method = "wilcox.test", label.y = 1100, label.x = 1.2, size = 4) +
+  scale_fill_manual(values = wes_palette("IsleofDogs1", n = 3),
+                    labels=c("rnaSPAdes", "Trinity", "Trinity new")) +
+  scale_x_discrete(labels=c("rnaSPAdes" = "rnaSPAdes", "Trinity" = "Trinity",
+                            "Trinity285" = "Trinity new")) +
+ stat_compare_means(method = "wilcox.test", comparisons = list(c('rnaSPAdes', 'Trinity'),
+                                                               c('rnaSPAdes', 'Trinity285'), c('Trinity', 'Trinity285')), size = 4) +
  ggtitle("Complete BUSCOs")
 
 #--------------------building Single copy BUSCOs percentage plot----------------------------------------------------------------------------
@@ -50,8 +54,12 @@ single_b = ggplot(busco, aes(Assembler, Single_BUSCOs*10.66, fill = Assembler)) 
         axis.text.x = element_text(size = 20),
         axis.text.y = element_text(size = 20),
         axis.title=element_text(size=20)) +
-  scale_fill_manual(values = wes_palette("IsleofDogs1", n = 2)) +
-  stat_compare_means(method = "wilcox.test", label.y = 1100, label.x = 1.2, size = 4) +
+  scale_fill_manual(values = wes_palette("IsleofDogs1", n = 3),
+                    labels=c("rnaSPAdes", "Trinity", "Trinity new")) +
+  scale_x_discrete(labels=c("rnaSPAdes" = "rnaSPAdes", "Trinity" = "Trinity",
+                            "Trinity285" = "Trinity new")) +
+  stat_compare_means(method = "wilcox.test", comparisons = list(c('rnaSPAdes', 'Trinity'),
+                                                                c('rnaSPAdes', 'Trinity285'), c('Trinity', 'Trinity285')), size = 4) +
   ggtitle("Single copy BUSCOs")
 
 #--------------------building Duplicated BUSCOs percentage plot----------------------------------------------------------------------------
@@ -69,8 +77,12 @@ duplicated_b = ggplot(busco, aes(Assembler, Duplicated_BUSCOs*10.66, fill = Asse
         axis.text.x = element_text(size = 20),
         axis.text.y = element_text(size = 20),
         axis.title=element_text(size=20)) +
-  scale_fill_manual(values = wes_palette("IsleofDogs1", n = 2)) +
-  stat_compare_means(method = "wilcox.test", label.y = 1000, label.x = 1.2, size = 4) +
+  scale_fill_manual(values = wes_palette("IsleofDogs1", n = 3),
+                    labels=c("rnaSPAdes", "Trinity", "Trinity new")) +
+  scale_x_discrete(labels=c("rnaSPAdes" = "rnaSPAdes", "Trinity" = "Trinity",
+                            "Trinity285" = "Trinity new")) +
+  stat_compare_means(method = "wilcox.test", comparisons = list(c('rnaSPAdes', 'Trinity'),
+                                                                c('rnaSPAdes', 'Trinity285'), c('Trinity', 'Trinity285')), size = 4) +
   ggtitle("Duplicated BUSCOs")
 
 #--------------------building Fragmented BUSCOs percentage plot----------------------------------------------------------------------------
@@ -88,12 +100,16 @@ fragmented_b = ggplot(busco, aes(Assembler, Fragmented_BUSCOs*10.66, fill = Asse
         axis.text.x = element_text(size = 20),
         axis.text.y = element_text(size = 20),
         axis.title=element_text(size=20)) +
-  scale_fill_manual(values = wes_palette("IsleofDogs1", n = 2)) +
-  stat_compare_means(method = "wilcox.test", label.y = 350, label.x = 1.2, size = 4) +
+  scale_fill_manual(values = wes_palette("IsleofDogs1", n = 3),
+                    labels=c("rnaSPAdes", "Trinity", "Trinity new")) +
+  scale_x_discrete(labels=c("rnaSPAdes" = "rnaSPAdes", "Trinity" = "Trinity",
+                            "Trinity285" = "Trinity new")) +
+  stat_compare_means(method = "wilcox.test", comparisons = list(c('rnaSPAdes', 'Trinity'),
+                                                                c('rnaSPAdes', 'Trinity285'), c('Trinity', 'Trinity285')), size = 4) +
   ggtitle("Fragmented BUSCOs")
 
 #--------------------building Missing BUSCOs percentage plot--------------------------------------------------------------------------
-missing_b = ggplot(busco, aes(Assembler, Missing_BUSCOs, fill = Assembler)) +
+missing_b = ggplot(busco, aes(Assembler, Missing_BUSCOs*10.66, fill = Assembler)) +
   geom_boxplot(width = 0.5) +
   geom_jitter(alpha=0.7, size=2, position = position_jitter(height = .05, width = .1)) +
   theme_bw() +
@@ -107,21 +123,25 @@ missing_b = ggplot(busco, aes(Assembler, Missing_BUSCOs, fill = Assembler)) +
         axis.text.x = element_text(size = 20),
         axis.text.y = element_text(size = 20),
         axis.title=element_text(size=20)) +
-  scale_fill_manual(values = wes_palette("IsleofDogs1", n = 2)) +
-  stat_compare_means(method = "wilcox.test", label.y = 350, label.x = 1.2, size = 4) +
+  scale_fill_manual(values = wes_palette("IsleofDogs1", n = 3),
+                    labels=c("rnaSPAdes", "Trinity", "Trinity new")) +
+  scale_x_discrete(labels=c("rnaSPAdes" = "rnaSPAdes", "Trinity" = "Trinity",
+                            "Trinity285" = "Trinity new")) +
+  stat_compare_means(method = "wilcox.test", comparisons = list(c('rnaSPAdes', 'Trinity'),
+                                                                c('rnaSPAdes', 'Trinity285'), c('Trinity', 'Trinity285')), size = 4) +
   ggtitle("Missing BUSCOs")
 
 #------------------------combining Complete, Single copy and Duplicated BUSCOs in one plot--------------------------------------------
-plot_grid(complete_b + scale_y_continuous(limits = c(0, 1100), n.breaks = 5),
-          single_b + scale_y_continuous(limits = c(0, 1100), n.breaks = 5),
-          duplicated_b + scale_y_continuous(limits = c(0, 1100), n.breaks = 5),
+plot_grid(complete_b + scale_y_continuous(limits = c(0, 1300), n.breaks = 5),
+          single_b + scale_y_continuous(limits = c(0, 1300), n.breaks = 5),
+          duplicated_b + scale_y_continuous(limits = c(0, 1300), n.breaks = 5),
           rel_heights = c(1,1),
           rel_widths = c(1,1.3))
 ggsave("C_S_D.svg", width = 30, height = 30, units = "cm")
 
 #------------------------combining Fragmented and Missing BUSCOs in one plot--------------------------------------------
-plot_grid(fragmented_b + scale_y_continuous(limits = c(0, 400), n.breaks = 5),
-          missing_b + scale_y_continuous(limits = c(0, 400), n.breaks = 5),
+plot_grid(fragmented_b + scale_y_continuous(limits = c(0, 900), n.breaks = 5),
+          missing_b + scale_y_continuous(limits = c(0, 900), n.breaks = 5),
           rel_heights = c(1,1),
           rel_widths = c(1,1.4))
 
