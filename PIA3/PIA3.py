@@ -75,9 +75,10 @@ if __name__ == "__main__":
     paths_dict['transdecoder_cds'] = paths_list[1]
     paths_dict['iqtree'] = paths_list[2]
     paths_dict['diamond'] = paths_list[3]
-    paths_dict['blast'] = paths_list[4]
-    paths_dict['mafft'] = paths_list[5]
-    paths_dict['cdhit'] = paths_list[6]
+    paths_dict['makeblastdb'] = paths_list[4]
+    paths_dict['blast'] = paths_list[5]
+    paths_dict['mafft'] = paths_list[6]
+    paths_dict['cdhit'] = paths_list[7]
     
     # ADD PATH CHECK
     
@@ -123,7 +124,7 @@ if __name__ == "__main__":
           #  except:
            #     print('Unknown aligner! Please specify aligner type (blast or diamond)')
             
-        blast_result = modules.blast_search(args.database, transdecoder_result, paths_dict['blast'])    
+        blast_result = modules.blast_search(args.database, transdecoder_result, paths_dict['makeblastdb'], paths_dict['blast'])    
         cd_hit_result = modules.cd_hit_clust(paths_dict['cdhit'])
         translation_result = modules.translate_hits(cd_hit_result)
         renaming_result = modules.rename_hits(file_name,transcripts, args.database)

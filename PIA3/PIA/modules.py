@@ -12,8 +12,8 @@ def run_transdecoder(file, path1, path2):
     transdecoder_cds = file + '.transdecoder.cds'
     return transdecoder_cds
 
-def blast_search(db, cds, path):
-    os.system('{} -in {} -out user_database -parse_seqids -dbtype prot'.format(path, db))
+def blast_search(db, cds, path_db, path):
+    os.system('{} -in {} -out user_database -parse_seqids -dbtype prot'.format(path_db, db))
     os.system('{} -query {} -db user_database -num_threads 16 -outfmt 6 -out blast_file.tmp -e 0.0000000001'.format(path, cds))
     hits = []
     my_records = []
