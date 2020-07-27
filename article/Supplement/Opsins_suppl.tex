@@ -1,0 +1,75 @@
+\documentclass{article}
+
+%%% Load packages
+%\usepackage{amsthm,amsmath}
+%\RequirePackage{natbib}
+%\RequirePackage[authoryear]{natbib}% uncomment this for author-year bibliography
+%\RequirePackage{hyperref}
+\usepackage[utf8]{inputenc} %unicode support
+%\usepackage[applemac]{inputenc} %applemac support if unicode package fails
+%\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
+\usepackage{geometry} %margins
+\geometry{top=27mm} \geometry{bottom=17mm} \geometry{left=2cm}
+\geometry{right=2cm}
+%\usepackage[section]{placeins}
+\usepackage{textcomp} \usepackage{textgreek} %\usepackage{adjustbox}
+%\usepackage{enumitem} \setlist{itemsep=2pt,parsep=4pt,topsep=2pt,partopsep=4pt}
+%\usepackage[small]{caption}
+\usepackage[colorlinks=true,urlcolor=blue,citecolor=blue,linkcolor=blue]{hyperref} %\usepackage[dvipsnames]{xcolor} %for custom colors
+%
+%\usepackage{tikz} %for the colored bar
+%fonts
+%\usepackage{lmodern}
+%\usepackage{newtxtext,newtxmath}
+%\usepackage[letterspace=160,babel=true,tracking=true,kerning=true]{microtype}
+
+%Bibliography
+%% !BIB TS-program = biber
+%\usepackage{csquotes}
+%\usepackage[backend=biber,style=authoryear,useauthor=true,uniquename=false,natbib]{biblatex} 
+%\addbibresource{references.bib}
+
+%better control of floats
+\usepackage{graphicx}
+\usepackage{float}
+\renewcommand{\thefigure}{S\arabic{figure}}
+
+%\makeatletter \patchcmd{\@maketitle}{\LARGE}{\Large}{}{} \makeatother
+
+%\usepackage{titlesec} % % %\titleformat{\title}{\tiny}{\thetitle}{1em}{}
+%\titleformat{\chapter}
+%  {\normalfont\Large\bfseries}{\thechapter}{1em}{}
+%\titlespacing*{\chapter}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+%\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
+
+
+
+\newcommand{\cit}{\colorbox{pink}{[reference?]}}
+\newcommand{\mcit}{\colorbox{cyan}{[reference!]}}
+
+%item labels
+\renewcommand{\labelitemi}{$\circ$}
+
+
+%%% Begin ...
+\begin{document}
+	
+\title{Supplemental Information} %%for... title
+\author{Drozdova \textit{et al.}} %% all authors
+%%\date if need a fixed date
+\maketitle
+
+\section{Diversity of opsin transcripts and their phylogenetic distribution}
+
+\begin{figure}[H] 
+	%\includegraphics[scale=0.85]{}
+	\caption{Quality of assemblies} \end{figure}
+
+
+\begin{figure}[H] 
+	\includegraphics[scale=0.85]{../species_tree/aa_tree.png}
+	\caption{Amino acid-based species tree} \end{figure}
+	
+	
+\end{document}
+
