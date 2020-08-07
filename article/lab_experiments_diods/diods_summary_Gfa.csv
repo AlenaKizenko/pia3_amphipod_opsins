@@ -1,0 +1,862 @@
+	Xm	Ym	Species	Light	Where	Photo	Lab.acclimation
+1	30.716	0.683	Gm. fasciatus	Y	R	P6163088	short
+2	7.117	0.798	Gm. fasciatus	Y	R	P6163088	short
+3	7.463	0.831	Gm. fasciatus	Y	R	P6163088	short
+4	57.326	1.72	Gm. fasciatus	Y	R	P6163088	short
+5	25.022	2.329	Gm. fasciatus	Y	R	P6163088	short
+6	27.194	2.625	Gm. fasciatus	Y	R	P6163088	short
+7	53.524	2.806	Gm. fasciatus	Y	R	P6163088	short
+8	5.949	2.921	Gm. fasciatus	Y	R	P6163088	short
+9	27.128	3.036	Gm. fasciatus	Y	R	P6163088	short
+10	55.302	3.102	Gm. fasciatus	Y	R	P6163088	short
+11	20.71	3.184	Gm. fasciatus	Y	R	P6163088	short
+12	48.834	3.76	Gm. fasciatus	Y	R	P6163088	short
+13	5.176	4.698	Gm. fasciatus	Y	R	P6163088	short
+14	5.735	4.764	Gm. fasciatus	Y	R	P6163088	short
+15	6.196	5.143	Gm. fasciatus	Y	R	P6163088	short
+16	5.834	5.208	Gm. fasciatus	Y	R	P6163088	short
+17	37.463	5.768	Gm. fasciatus	Y	R	P6163088	short
+18	52.948	5.949	Gm. fasciatus	Y	R	P6163088	short
+19	9.635	6.969	Gm. fasciatus	Y	R	P6163088	short
+20	10.557	7.907	Gm. fasciatus	Y	R	P6163088	short
+1	23.302	0.253	Gm. fasciatus	G	R	P6163089	short
+2	36.681	0.613	Gm. fasciatus	G	R	P6163089	short
+3	10.234	0.743	Gm. fasciatus	G	R	P6163089	short
+4	6.101	0.874	Gm. fasciatus	G	R	P6163089	short
+5	6.346	2.148	Gm. fasciatus	G	R	P6163089	short
+6	6.885	2.246	Gm. fasciatus	G	R	P6163089	short
+7	6.346	2.655	Gm. fasciatus	G	R	P6163089	short
+8	5.186	2.736	Gm. fasciatus	G	R	P6163089	short
+9	4.696	3.569	Gm. fasciatus	G	R	P6163089	short
+10	6.363	3.798	Gm. fasciatus	G	R	P6163089	short
+11	3.243	3.978	Gm. fasciatus	G	R	P6163089	short
+12	7.522	3.994	Gm. fasciatus	G	R	P6163089	short
+13	6.15	4.076	Gm. fasciatus	G	R	P6163089	short
+14	7.882	4.157	Gm. fasciatus	G	R	P6163089	short
+15	7.294	4.435	Gm. fasciatus	G	R	P6163089	short
+16	4.451	5.285	Gm. fasciatus	G	R	P6163089	short
+17	6.314	6.003	Gm. fasciatus	G	R	P6163089	short
+18	56.186	6.248	Gm. fasciatus	G	R	P6163089	short
+19	11.492	6.804	Gm. fasciatus	G	R	P6163089	short
+20	11.721	8.16	Gm. fasciatus	G	R	P6163089	short
+1	6.668	1.216	Gm. fasciatus	R	R	P6163090	short
+2	56.172	1.298	Gm. fasciatus	R	R	P6163090	short
+3	5.737	1.542	Gm. fasciatus	R	R	P6163090	short
+4	42.821	1.999	Gm. fasciatus	R	R	P6163090	short
+5	57.364	2.016	Gm. fasciatus	R	R	P6163090	short
+6	47.342	2.163	Gm. fasciatus	R	R	P6163090	short
+7	39.769	2.636	Gm. fasciatus	R	R	P6163090	short
+8	23.071	2.816	Gm. fasciatus	R	R	P6163090	short
+9	5.345	2.881	Gm. fasciatus	R	R	P6163090	short
+10	6.439	3.371	Gm. fasciatus	R	R	P6163090	short
+11	53.871	3.436	Gm. fasciatus	R	R	P6163090	short
+12	5.59	3.517	Gm. fasciatus	R	R	P6163090	short
+13	20.639	3.55	Gm. fasciatus	R	R	P6163090	short
+14	24.573	3.648	Gm. fasciatus	R	R	P6163090	short
+15	5.117	4.856	Gm. fasciatus	R	R	P6163090	short
+16	56.923	4.872	Gm. fasciatus	R	R	P6163090	short
+17	5.998	6.031	Gm. fasciatus	R	R	P6163090	short
+18	5.182	6.325	Gm. fasciatus	R	R	P6163090	short
+19	15.677	6.57	Gm. fasciatus	R	R	P6163090	short
+20	5.656	7.631	Gm. fasciatus	R	R	P6163090	short
+1	6.244	0.712	Gm. fasciatus	B	R	P6163091	short
+2	5.115	1.007	Gm. fasciatus	B	R	P6163091	short
+3	56.538	1.007	Gm. fasciatus	B	R	P6163091	short
+4	51.187	2.872	Gm. fasciatus	B	R	P6163091	short
+5	30.057	2.954	Gm. fasciatus	B	R	P6163091	short
+6	9.615	3.527	Gm. fasciatus	B	R	P6163091	short
+7	54.738	3.838	Gm. fasciatus	B	R	P6163091	short
+8	6.195	4.64	Gm. fasciatus	B	R	P6163091	short
+9	11.252	4.689	Gm. fasciatus	B	R	P6163091	short
+10	5.998	4.951	Gm. fasciatus	B	R	P6163091	short
+11	4.951	5.033	Gm. fasciatus	B	R	P6163091	short
+12	41.563	5.213	Gm. fasciatus	B	R	P6163091	short
+13	7.128	5.311	Gm. fasciatus	B	R	P6163091	short
+14	13.232	5.409	Gm. fasciatus	B	R	P6163091	short
+15	5.458	5.606	Gm. fasciatus	B	R	P6163091	short
+16	54.82	5.671	Gm. fasciatus	B	R	P6163091	short
+17	7.831	5.966	Gm. fasciatus	B	R	P6163091	short
+18	4.313	6.506	Gm. fasciatus	B	R	P6163091	short
+19	12.725	6.555	Gm. fasciatus	B	R	P6163091	short
+20	2.463	7.046	Gm. fasciatus	B	R	P6163091	short
+1	16.17	0.81	Gm. fasciatus	K	K	P6163092	short
+2	29.419	0.826	Gm. fasciatus	K	K	P6163092	short
+3	6.977	1.186	Gm. fasciatus	K	K	P6163092	short
+4	7.533	1.579	Gm. fasciatus	K	K	P6163092	short
+5	2.887	1.693	Gm. fasciatus	K	K	P6163092	short
+6	23.138	1.791	Gm. fasciatus	K	K	P6163092	short
+7	23.171	2.167	Gm. fasciatus	K	K	P6163092	short
+8	9.692	2.495	Gm. fasciatus	K	K	P6163092	short
+9	10.232	2.707	Gm. fasciatus	K	K	P6163092	short
+10	5.537	2.756	Gm. fasciatus	K	K	P6163092	short
+11	17.707	2.773	Gm. fasciatus	K	K	P6163092	short
+12	5.406	3.116	Gm. fasciatus	K	K	P6163092	short
+13	6.862	4.032	Gm. fasciatus	K	K	P6163092	short
+14	47.2	4.359	Gm. fasciatus	K	K	P6163092	short
+15	42.293	4.801	Gm. fasciatus	K	K	P6163092	short
+16	12.276	5.504	Gm. fasciatus	K	K	P6163092	short
+17	15.613	6.715	Gm. fasciatus	K	K	P6163092	short
+18	20.275	7.075	Gm. fasciatus	K	K	P6163092	short
+19	32.315	7.222	Gm. fasciatus	K	K	P6163092	short
+20	17.625	7.811	Gm. fasciatus	K	K	P6163092	short
+1	43.465	0.596	Gm. fasciatus	B	L	P6163093	short
+2	33.748	0.825	Gm. fasciatus	B	L	P6163093	short
+3	8.811	0.972	Gm. fasciatus	B	L	P6163093	short
+4	55.778	1.102	Gm. fasciatus	B	L	P6163093	short
+5	54.064	1.984	Gm. fasciatus	B	L	P6163093	short
+6	57.379	1.984	Gm. fasciatus	B	L	P6163093	short
+7	56.481	2.017	Gm. fasciatus	B	L	P6163093	short
+8	54.848	2.066	Gm. fasciatus	B	L	P6163093	short
+9	54.358	2.376	Gm. fasciatus	B	L	P6163093	short
+10	53.786	2.572	Gm. fasciatus	B	L	P6163093	short
+11	55.37	2.719	Gm. fasciatus	B	L	P6163093	short
+12	54.358	3.585	Gm. fasciatus	B	L	P6163093	short
+13	53.9	3.797	Gm. fasciatus	B	L	P6163093	short
+14	54.39	3.96	Gm. fasciatus	B	L	P6163093	short
+15	53.786	5.071	Gm. fasciatus	B	L	P6163093	short
+16	11.652	5.332	Gm. fasciatus	B	L	P6163093	short
+17	54.456	5.43	Gm. fasciatus	B	L	P6163093	short
+18	54.995	6.132	Gm. fasciatus	B	L	P6163093	short
+19	39.562	7.128	Gm. fasciatus	B	L	P6163093	short
+20	7.226	7.618	Gm. fasciatus	B	L	P6163093	short
+1	5.329	0.579	Gm. fasciatus	G	L	P6163094	short
+2	25.83	0.628	Gm. fasciatus	G	L	P6163094	short
+3	35.558	0.873	Gm. fasciatus	G	L	P6163094	short
+4	28.8	0.939	Gm. fasciatus	G	L	P6163094	short
+5	38.202	1.347	Gm. fasciatus	G	L	P6163094	short
+6	53.381	1.673	Gm. fasciatus	G	L	P6163094	short
+7	46.771	2.456	Gm. fasciatus	G	L	P6163094	short
+8	53.659	2.489	Gm. fasciatus	G	L	P6163094	short
+9	31.183	3.158	Gm. fasciatus	G	L	P6163094	short
+10	39.736	3.338	Gm. fasciatus	G	L	P6163094	short
+11	54.769	3.387	Gm. fasciatus	G	L	P6163094	short
+12	21.26	3.599	Gm. fasciatus	G	L	P6163094	short
+13	22.01	4.709	Gm. fasciatus	G	L	P6163094	short
+14	42.641	5.215	Gm. fasciatus	G	L	P6163094	short
+15	8.626	5.721	Gm. fasciatus	G	L	P6163094	short
+16	56.76	6.162	Gm. fasciatus	G	L	P6163094	short
+17	56.205	6.472	Gm. fasciatus	G	L	P6163094	short
+18	56.221	7.271	Gm. fasciatus	G	L	P6163094	short
+19	56.662	7.745	Gm. fasciatus	G	L	P6163094	short
+20	43.376	7.81	Gm. fasciatus	G	L	P6163094	short
+1	51.064	0.579	Gm. fasciatus	Y	L	P6163095	short
+2	49.023	0.628	Gm. fasciatus	Y	L	P6163095	short
+3	17.244	1.64	Gm. fasciatus	Y	L	P6163095	short
+4	54.279	1.902	Gm. fasciatus	Y	L	P6163095	short
+5	53.904	1.95	Gm. fasciatus	Y	L	P6163095	short
+6	51.145	2.114	Gm. fasciatus	Y	L	P6163095	short
+7	54.132	2.293	Gm. fasciatus	Y	L	P6163095	short
+8	27.544	2.718	Gm. fasciatus	Y	L	P6163095	short
+9	54.997	3.109	Gm. fasciatus	Y	L	P6163095	short
+10	53.659	3.24	Gm. fasciatus	Y	L	P6163095	short
+11	54.491	3.354	Gm. fasciatus	Y	L	P6163095	short
+12	20.215	3.517	Gm. fasciatus	Y	L	P6163095	short
+13	54.181	3.566	Gm. fasciatus	Y	L	P6163095	short
+14	4.334	3.909	Gm. fasciatus	Y	L	P6163095	short
+15	54.328	4.007	Gm. fasciatus	Y	L	P6163095	short
+16	54.083	4.317	Gm. fasciatus	Y	L	P6163095	short
+17	38.61	5.443	Gm. fasciatus	Y	L	P6163095	short
+18	28.262	6.064	Gm. fasciatus	Y	L	P6163095	short
+19	53.953	6.717	Gm. fasciatus	Y	L	P6163095	short
+20	51.684	7.288	Gm. fasciatus	Y	L	P6163095	short
+1	55.29	2.424	Gm. fasciatus	R	L	P6163096	short
+2	41.037	2.473	Gm. fasciatus	R	L	P6163096	short
+3	54.082	2.686	Gm. fasciatus	R	L	P6163096	short
+4	55.698	2.98	Gm. fasciatus	R	L	P6163096	short
+5	57.184	2.98	Gm. fasciatus	R	L	P6163096	short
+6	24.612	3.633	Gm. fasciatus	R	L	P6163096	short
+7	57.347	4.188	Gm. fasciatus	R	L	P6163096	short
+8	51.453	4.302	Gm. fasciatus	R	L	P6163096	short
+9	52.71	4.351	Gm. fasciatus	R	L	P6163096	short
+10	51.42	4.645	Gm. fasciatus	R	L	P6163096	short
+11	55.322	4.743	Gm. fasciatus	R	L	P6163096	short
+12	45.331	5.706	Gm. fasciatus	R	L	P6163096	short
+13	44.857	5.722	Gm. fasciatus	R	L	P6163096	short
+14	55.192	6.163	Gm. fasciatus	R	L	P6163096	short
+15	52.547	6.441	Gm. fasciatus	R	L	P6163096	short
+16	13.951	6.735	Gm. fasciatus	R	L	P6163096	short
+17	48.204	6.963	Gm. fasciatus	R	L	P6163096	short
+18	47.943	7.273	Gm. fasciatus	R	L	P6163096	short
+19	52.253	7.404	Gm. fasciatus	R	L	P6163096	short
+20	53.902	8.024	Gm. fasciatus	R	L	P6163096	short
+1	56.352	1.102	Gm. fasciatus	G	L	P6163097	short
+2	54.132	1.151	Gm. fasciatus	G	L	P6163097	short
+3	53.447	1.673	Gm. fasciatus	G	L	P6163097	short
+4	54.1	1.999	Gm. fasciatus	G	L	P6163097	short
+5	53.496	2.163	Gm. fasciatus	G	L	P6163097	short
+6	7.288	2.212	Gm. fasciatus	G	L	P6163097	short
+7	54.72	2.571	Gm. fasciatus	G	L	P6163097	short
+8	54.328	2.587	Gm. fasciatus	G	L	P6163097	short
+9	9.132	2.816	Gm. fasciatus	G	L	P6163097	short
+10	14.714	3.126	Gm. fasciatus	G	L	P6163097	short
+11	43.784	3.24	Gm. fasciatus	G	L	P6163097	short
+12	54.295	3.24	Gm. fasciatus	G	L	P6163097	short
+13	41.27	4.285	Gm. fasciatus	G	L	P6163097	short
+14	56.776	4.807	Gm. fasciatus	G	L	P6163097	short
+15	45.694	5.035	Gm. fasciatus	G	L	P6163097	short
+16	20.656	5.476	Gm. fasciatus	G	L	P6163097	short
+17	54.638	5.884	Gm. fasciatus	G	L	P6163097	short
+18	4.497	6.129	Gm. fasciatus	G	L	P6163097	short
+19	44.747	6.978	Gm. fasciatus	G	L	P6163097	short
+20	56.189	7.304	Gm. fasciatus	G	L	P6163097	short
+1	10.625	0.873	Gm. fasciatus	B	L	P6163098	short
+2	57.497	1.818	Gm. fasciatus	B	L	P6163098	short
+3	57.105	2.569	Gm. fasciatus	B	L	P6163098	short
+4	3.303	2.601	Gm. fasciatus	B	L	P6163098	short
+5	53.273	2.797	Gm. fasciatus	B	L	P6163098	short
+6	7.363	2.895	Gm. fasciatus	B	L	P6163098	short
+7	56.437	4.151	Gm. fasciatus	B	L	P6163098	short
+8	6.01	4.216	Gm. fasciatus	B	L	P6163098	short
+9	33.033	4.428	Gm. fasciatus	B	L	P6163098	short
+10	56.697	4.46	Gm. fasciatus	B	L	P6163098	short
+11	21.715	5.521	Gm. fasciatus	B	L	P6163098	short
+12	5.211	5.569	Gm. fasciatus	B	L	P6163098	short
+13	54.3	6.059	Gm. fasciatus	B	L	P6163098	short
+14	49.848	6.45	Gm. fasciatus	B	L	P6163098	short
+15	4.085	6.483	Gm. fasciatus	B	L	P6163098	short
+16	38.905	7.331	Gm. fasciatus	B	L	P6163098	short
+17	46.244	7.608	Gm. fasciatus	B	L	P6163098	short
+18	36.491	7.951	Gm. fasciatus	B	L	P6163098	short
+19	37.372	7.983	Gm. fasciatus	B	L	P6163098	short
+20	50.027	7.999	Gm. fasciatus	B	L	P6163098	short
+1	16.263	1.856	Gm. fasciatus	G	R	P6163099	short
+2	20.286	2.314	Gm. fasciatus	G	R	P6163099	short
+3	54.464	2.723	Gm. fasciatus	G	R	P6163099	short
+4	6.01	2.903	Gm. fasciatus	G	R	P6163099	short
+5	54.808	2.935	Gm. fasciatus	G	R	P6163099	short
+6	6.778	3.034	Gm. fasciatus	G	R	P6163099	short
+7	53.941	3.132	Gm. fasciatus	G	R	P6163099	short
+8	16.394	3.459	Gm. fasciatus	G	R	P6163099	short
+9	3.23	3.786	Gm. fasciatus	G	R	P6163099	short
+10	54.939	3.786	Gm. fasciatus	G	R	P6163099	short
+11	10.458	4.08	Gm. fasciatus	G	R	P6163099	short
+12	23.246	4.129	Gm. fasciatus	G	R	P6163099	short
+13	46.631	4.587	Gm. fasciatus	G	R	P6163099	short
+14	12.96	5.241	Gm. fasciatus	G	R	P6163099	short
+15	37.522	5.568	Gm. fasciatus	G	R	P6163099	short
+16	48.659	6.288	Gm. fasciatus	G	R	P6163099	short
+17	47.841	6.991	Gm. fasciatus	G	R	P6163099	short
+18	2.739	7.105	Gm. fasciatus	G	R	P6163099	short
+19	36.623	7.923	Gm. fasciatus	G	R	P6163099	short
+20	37.424	7.956	Gm. fasciatus	G	R	P6163099	short
+1	15.302	1.591	Gm. fasciatus	Y	R	P6163100	short
+2	9.916	2.31	Gm. fasciatus	Y	R	P6163100	short
+3	45.171	3.158	Gm. fasciatus	Y	R	P6163100	short
+4	53.985	3.583	Gm. fasciatus	Y	R	P6163100	short
+5	45.122	3.664	Gm. fasciatus	Y	R	P6163100	short
+6	32.816	4.089	Gm. fasciatus	Y	R	P6163100	short
+7	5.15	4.17	Gm. fasciatus	Y	R	P6163100	short
+8	5.868	4.317	Gm. fasciatus	Y	R	P6163100	short
+9	54.606	4.415	Gm. fasciatus	Y	R	P6163100	short
+10	6.472	4.448	Gm. fasciatus	Y	R	P6163100	short
+11	5.133	4.529	Gm. fasciatus	Y	R	P6163100	short
+12	6.178	4.709	Gm. fasciatus	Y	R	P6163100	short
+13	5.623	4.839	Gm. fasciatus	Y	R	P6163100	short
+14	6.472	5.101	Gm. fasciatus	Y	R	P6163100	short
+15	6.243	5.362	Gm. fasciatus	Y	R	P6163100	short
+16	55.128	5.803	Gm. fasciatus	Y	R	P6163100	short
+17	24.622	7.125	Gm. fasciatus	Y	R	P6163100	short
+18	29.437	7.369	Gm. fasciatus	Y	R	P6163100	short
+19	16.085	7.957	Gm. fasciatus	Y	R	P6163100	short
+20	7.125	8.218	Gm. fasciatus	Y	R	P6163100	short
+1	5.835	0.661	Gm. fasciatus	R	R	P6163101	short
+2	15.857	0.759	Gm. fasciatus	R	R	P6163101	short
+3	7.81	1.281	Gm. fasciatus	R	R	P6163101	short
+4	34.562	1.314	Gm. fasciatus	R	R	P6163101	short
+5	9.965	1.575	Gm. fasciatus	R	R	P6163101	short
+6	14.91	1.689	Gm. fasciatus	R	R	P6163101	short
+7	57.201	2.016	Gm. fasciatus	R	R	P6163101	short
+8	53.43	2.832	Gm. fasciatus	R	R	P6163101	short
+9	19.089	2.979	Gm. fasciatus	R	R	P6163101	short
+10	5.933	3.844	Gm. fasciatus	R	R	P6163101	short
+11	51.553	4.709	Gm. fasciatus	R	R	P6163101	short
+12	13.131	4.954	Gm. fasciatus	R	R	P6163101	short
+13	5.068	5.182	Gm. fasciatus	R	R	P6163101	short
+14	5.656	5.345	Gm. fasciatus	R	R	P6163101	short
+15	6.651	5.59	Gm. fasciatus	R	R	P6163101	short
+16	55.258	6.472	Gm. fasciatus	R	R	P6163101	short
+17	2.783	7.076	Gm. fasciatus	R	R	P6163101	short
+18	21.749	7.125	Gm. fasciatus	R	R	P6163101	short
+19	23.496	7.533	Gm. fasciatus	R	R	P6163101	short
+20	21.586	8.218	Gm. fasciatus	R	R	P6163101	short
+1	50.607	0.841	Gm. fasciatus	K	K	P6163102	short
+2	18.436	1.428	Gm. fasciatus	K	K	P6163102	short
+3	57.625	1.722	Gm. fasciatus	K	K	P6163102	short
+4	19.121	1.902	Gm. fasciatus	K	K	P6163102	short
+5	28.915	3.011	Gm. fasciatus	K	K	P6163102	short
+6	41.727	3.028	Gm. fasciatus	K	K	P6163102	short
+7	45.351	3.142	Gm. fasciatus	K	K	P6163102	short
+8	47.146	3.191	Gm. fasciatus	K	K	P6163102	short
+9	10.258	3.338	Gm. fasciatus	K	K	P6163102	short
+10	47.163	3.583	Gm. fasciatus	K	K	P6163102	short
+11	12.348	4.056	Gm. fasciatus	K	K	P6163102	short
+12	43.033	4.089	Gm. fasciatus	K	K	P6163102	short
+13	4.48	4.187	Gm. fasciatus	K	K	P6163102	short
+14	46.967	4.415	Gm. fasciatus	K	K	P6163102	short
+15	54.393	4.497	Gm. fasciatus	K	K	P6163102	short
+16	10.977	4.905	Gm. fasciatus	K	K	P6163102	short
+17	43.474	6.863	Gm. fasciatus	K	K	P6163102	short
+18	34.758	6.994	Gm. fasciatus	K	K	P6163102	short
+19	28.849	7.223	Gm. fasciatus	K	K	P6163102	short
+20	23.545	7.582	Gm. fasciatus	K	K	P6163102	short
+1	21.152	0.4	Gm. fasciatus	R	L	P6163103	short
+2	8.946	0.989	Gm. fasciatus	R	L	P6163103	short
+3	54.142	1.953	Gm. fasciatus	R	L	P6163103	short
+4	8.619	2.165	Gm. fasciatus	R	L	P6163103	short
+5	49.583	2.443	Gm. fasciatus	R	L	P6163103	short
+6	5.384	2.525	Gm. fasciatus	R	L	P6163103	short
+7	9.698	2.917	Gm. fasciatus	R	L	P6163103	short
+8	42.868	3.064	Gm. fasciatus	R	L	P6163103	short
+9	42.884	3.521	Gm. fasciatus	R	L	P6163103	short
+10	52.443	3.603	Gm. fasciatus	R	L	P6163103	short
+11	40.743	3.652	Gm. fasciatus	R	L	P6163103	short
+12	10.433	4.028	Gm. fasciatus	R	L	P6163103	short
+13	52.296	4.877	Gm. fasciatus	R	L	P6163103	short
+14	42.819	5.074	Gm. fasciatus	R	L	P6163103	short
+15	47.492	5.139	Gm. fasciatus	R	L	P6163103	short
+16	48.374	6.185	Gm. fasciatus	R	L	P6163103	short
+17	47.835	7.949	Gm. fasciatus	R	L	P6163103	short
+18	56.005	7.998	Gm. fasciatus	R	L	P6163103	short
+19	52.998	8.194	Gm. fasciatus	R	L	P6163103	short
+20	41.217	8.979	Gm. fasciatus	R	L	P6163103	short
+1	44.468	0.499	Gm. fasciatus	G	L	P6163104	short
+2	24.512	0.613	Gm. fasciatus	G	L	P6163104	short
+3	24.676	0.957	Gm. fasciatus	G	L	P6163104	short
+4	54.087	1.137	Gm. fasciatus	G	L	P6163104	short
+5	51.927	1.284	Gm. fasciatus	G	L	P6163104	short
+6	49.212	1.84	Gm. fasciatus	G	L	P6163104	short
+7	22.484	1.938	Gm. fasciatus	G	L	P6163104	short
+8	45.384	2.02	Gm. fasciatus	G	L	P6163104	short
+9	54.054	2.544	Gm. fasciatus	G	L	P6163104	short
+10	53.776	2.789	Gm. fasciatus	G	L	P6163104	short
+11	30.384	4.785	Gm. fasciatus	G	L	P6163104	short
+12	45.777	4.997	Gm. fasciatus	G	L	P6163104	short
+13	6.077	5.439	Gm. fasciatus	G	L	P6163104	short
+14	41.197	5.815	Gm. fasciatus	G	L	P6163104	short
+15	51.077	6.24	Gm. fasciatus	G	L	P6163104	short
+16	54.381	6.339	Gm. fasciatus	G	L	P6163104	short
+17	22.222	6.895	Gm. fasciatus	G	L	P6163104	short
+18	7.206	7.058	Gm. fasciatus	G	L	P6163104	short
+19	49.245	7.435	Gm. fasciatus	G	L	P6163104	short
+20	18.77	8.007	Gm. fasciatus	G	L	P6163104	short
+1	55.529	0.725	Gm. fasciatus	Y	L	P6163105	short
+2	42.028	0.871	Gm. fasciatus	Y	L	P6163105	short
+3	55.774	1.034	Gm. fasciatus	Y	L	P6163105	short
+4	15.611	1.523	Gm. fasciatus	Y	L	P6163105	short
+5	48.982	1.539	Gm. fasciatus	Y	L	P6163105	short
+6	5.057	1.718	Gm. fasciatus	Y	L	P6163105	short
+7	53.265	2.402	Gm. fasciatus	Y	L	P6163105	short
+8	50.806	2.972	Gm. fasciatus	Y	L	P6163105	short
+9	52.06	3.282	Gm. fasciatus	Y	L	P6163105	short
+10	53.77	3.461	Gm. fasciatus	Y	L	P6163105	short
+11	54.78	3.607	Gm. fasciatus	Y	L	P6163105	short
+12	54.275	4.031	Gm. fasciatus	Y	L	P6163105	short
+13	30.318	4.275	Gm. fasciatus	Y	L	P6163105	short
+14	53.998	4.308	Gm. fasciatus	Y	L	P6163105	short
+15	4.927	4.552	Gm. fasciatus	Y	L	P6163105	short
+16	13.477	5.383	Gm. fasciatus	Y	L	P6163105	short
+17	5.252	5.936	Gm. fasciatus	Y	L	P6163105	short
+18	54.422	6.23	Gm. fasciatus	Y	L	P6163105	short
+19	9.943	6.344	Gm. fasciatus	Y	L	P6163105	short
+20	29.943	7.712	Gm. fasciatus	Y	L	P6163105	short
+1	44.032	0.285	Gm. fasciatus	B	L	P6163106	short
+2	27.926	0.724	Gm. fasciatus	B	L	P6163106	short
+3	9.086	1.993	Gm. fasciatus	B	L	P6163106	short
+4	54.168	2.204	Gm. fasciatus	B	L	P6163106	short
+5	15.057	2.383	Gm. fasciatus	B	L	P6163106	short
+6	5.409	2.758	Gm. fasciatus	B	L	P6163106	short
+7	54.249	3.294	Gm. fasciatus	B	L	P6163106	short
+8	46.375	3.539	Gm. fasciatus	B	L	P6163106	short
+9	57.389	3.831	Gm. fasciatus	B	L	P6163106	short
+10	34.027	4.189	Gm. fasciatus	B	L	P6163106	short
+11	41.315	4.254	Gm. fasciatus	B	L	P6163106	short
+12	13.446	4.677	Gm. fasciatus	B	L	P6163106	short
+13	3.636	5.019	Gm. fasciatus	B	L	P6163106	short
+14	45.935	5.052	Gm. fasciatus	B	L	P6163106	short
+15	54.298	5.767	Gm. fasciatus	B	L	P6163106	short
+16	8.501	5.816	Gm. fasciatus	B	L	P6163106	short
+17	9.786	6.174	Gm. fasciatus	B	L	P6163106	short
+18	4.515	6.288	Gm. fasciatus	B	L	P6163106	short
+19	54.086	6.451	Gm. fasciatus	B	L	P6163106	short
+20	5.719	7.834	Gm. fasciatus	B	L	P6163106	short
+1	46.878	0.54	Gm. fasciatus	K		P7293466_K	long
+2	44.071	0.638	Gm. fasciatus	K		P7293466_K	long
+3	43.131	0.974	Gm. fasciatus	K		P7293466_K	long
+4	40.046	1.644	Gm. fasciatus	K		P7293466_K	long
+5	46.019	2.053	Gm. fasciatus	K		P7293466_K	long
+6	44.268	2.822	Gm. fasciatus	K		P7293466_K	long
+7	10.161	3.174	Gm. fasciatus	K		P7293466_K	long
+8	35.858	4.091	Gm. fasciatus	K		P7293466_K	long
+9	20.584	4.221	Gm. fasciatus	K		P7293466_K	long
+10	54.208	4.23	Gm. fasciatus	K		P7293466_K	long
+11	24.663	5.367	Gm. fasciatus	K		P7293466_K	long
+12	49.25	5.784	Gm. fasciatus	K		P7293466_K	long
+13	25.568	6.522	Gm. fasciatus	K		P7293466_K	long
+14	54.036	6.578	Gm. fasciatus	K		P7293466_K	long
+15	13.319	7.298	Gm. fasciatus	K		P7293466_K	long
+16	15.74	7.314	Gm. fasciatus	K		P7293466_K	long
+17	23.071	7.778	Gm. fasciatus	K		P7293466_K	long
+18	32.649	8.011	Gm. fasciatus	K		P7293466_K	long
+19	17.295	8.05	Gm. fasciatus	K		P7293466_K	long
+20	47.44	8.508	Gm. fasciatus	K		P7293466_K	long
+1	6.305	1.113	Gm. fasciatus	B	L	P7293467_BL_cnt	long
+2	20.199	1.334	Gm. fasciatus	B	L	P7293467_BL_cnt	long
+3	57.488	1.415	Gm. fasciatus	B	L	P7293467_BL_cnt	long
+4	6.109	1.44	Gm. fasciatus	B	L	P7293467_BL_cnt	long
+5	57.513	1.996	Gm. fasciatus	B	L	P7293467_BL_cnt	long
+6	55.967	2.023	Gm. fasciatus	B	L	P7293467_BL_cnt	long
+7	55.476	2.119	Gm. fasciatus	B	L	P7293467_BL_cnt	long
+8	39.672	2.264	Gm. fasciatus	B	L	P7293467_BL_cnt	long
+9	55.476	2.593	Gm. fasciatus	B	L	P7293467_BL_cnt	long
+10	57.701	3.379	Gm. fasciatus	B	L	P7293467_BL_cnt	long
+11	17.393	4.009	Gm. fasciatus	B	L	P7293467_BL_cnt	long
+12	48.209	4.146	Gm. fasciatus	B	L	P7293467_BL_cnt	long
+13	55.687	4.999	Gm. fasciatus	B	L	P7293467_BL_cnt	long
+14	24.265	5.22	Gm. fasciatus	B	L	P7293467_BL_cnt	long
+15	26.351	6.365	Gm. fasciatus	B	L	P7293467_BL_cnt	long
+16	42.323	6.504	Gm. fasciatus	B	L	P7293467_BL_cnt	long
+17	39.586	6.512	Gm. fasciatus	B	L	P7293467_BL_cnt	long
+18	42.083	6.774	Gm. fasciatus	B	L	P7293467_BL_cnt	long
+19	34.59	7.134	Gm. fasciatus	B	L	P7293467_BL_cnt	long
+20	37.917	7.189	Gm. fasciatus	B	L	P7293467_BL_cnt	long
+1	47.439	0.711	Gm. fasciatus	K		P7293468_K_cnt	long
+2	12.836	1.144	Gm. fasciatus	K		P7293468_K_cnt	long
+3	2.656	1.79	Gm. fasciatus	K		P7293468_K_cnt	long
+4	3.639	1.831	Gm. fasciatus	K		P7293468_K_cnt	long
+5	26.271	2.92	Gm. fasciatus	K		P7293468_K_cnt	long
+6	25.638	3.52	Gm. fasciatus	K		P7293468_K_cnt	long
+7	7.475	4.151	Gm. fasciatus	K		P7293468_K_cnt	long
+8	56.862	4.707	Gm. fasciatus	K		P7293468_K_cnt	long
+9	24.441	5.028	Gm. fasciatus	K		P7293468_K_cnt	long
+10	48.175	5.108	Gm. fasciatus	K		P7293468_K_cnt	long
+11	57.597	5.296	Gm. fasciatus	K		P7293468_K_cnt	long
+12	24.615	5.535	Gm. fasciatus	K		P7293468_K_cnt	long
+13	44.986	5.567	Gm. fasciatus	K		P7293468_K_cnt	long
+14	24.075	6.45	Gm. fasciatus	K		P7293468_K_cnt	long
+15	36.35	6.538	Gm. fasciatus	K		P7293468_K_cnt	long
+16	28.848	6.701	Gm. fasciatus	K		P7293468_K_cnt	long
+17	50.087	6.832	Gm. fasciatus	K		P7293468_K_cnt	long
+18	31.91	7.006	Gm. fasciatus	K		P7293468_K_cnt	long
+19	56.094	7.404	Gm. fasciatus	K		P7293468_K_cnt	long
+20	27.932	7.584	Gm. fasciatus	K		P7293468_K_cnt	long
+1	54.873	0.349	Gm. fasciatus	Y	L	P7293469_YL_cnt	long
+2	55.743	1.5	Gm. fasciatus	Y	L	P7293469_YL_cnt	long
+3	55.232	1.598	Gm. fasciatus	Y	L	P7293469_YL_cnt	long
+4	35.276	1.688	Gm. fasciatus	Y	L	P7293469_YL_cnt	long
+5	57.472	1.805	Gm. fasciatus	Y	L	P7293469_YL_cnt	long
+6	3.033	2.03	Gm. fasciatus	Y	L	P7293469_YL_cnt	long
+7	56.222	2.522	Gm. fasciatus	Y	L	P7293469_YL_cnt	long
+8	8.203	2.83	Gm. fasciatus	Y	L	P7293469_YL_cnt	long
+9	56.015	2.978	Gm. fasciatus	Y	L	P7293469_YL_cnt	long
+10	55.395	3.37	Gm. fasciatus	Y	L	P7293469_YL_cnt	long
+11	55.776	3.588	Gm. fasciatus	Y	L	P7293469_YL_cnt	long
+12	55.591	3.904	Gm. fasciatus	Y	L	P7293469_YL_cnt	long
+13	55.016	3.99	Gm. fasciatus	Y	L	P7293469_YL_cnt	long
+14	55.254	4.349	Gm. fasciatus	Y	L	P7293469_YL_cnt	long
+15	25.703	4.575	Gm. fasciatus	Y	L	P7293469_YL_cnt	long
+16	13.047	5.472	Gm. fasciatus	Y	L	P7293469_YL_cnt	long
+17	53.199	6.132	Gm. fasciatus	Y	L	P7293469_YL_cnt	long
+18	46.871	6.996	Gm. fasciatus	Y	L	P7293469_YL_cnt	long
+19	14.229	7.143	Gm. fasciatus	Y	L	P7293469_YL_cnt	long
+20	2.878	7.274	Gm. fasciatus	Y	L	P7293469_YL_cnt	long
+1	46.837	0.448	Gm. fasciatus	G	L	P7293471_GL_cnt	long
+2	30.322	1.223	Gm. fasciatus	G	L	P7293471_GL_cnt	long
+3	38.692	1.311	Gm. fasciatus	G	L	P7293471_GL_cnt	long
+4	53.725	2.114	Gm. fasciatus	G	L	P7293471_GL_cnt	long
+5	56.078	2.333	Gm. fasciatus	G	L	P7293471_GL_cnt	long
+6	56.205	2.687	Gm. fasciatus	G	L	P7293471_GL_cnt	long
+7	55.603	2.828	Gm. fasciatus	G	L	P7293471_GL_cnt	long
+8	10.869	3.025	Gm. fasciatus	G	L	P7293471_GL_cnt	long
+9	42.313	3.236	Gm. fasciatus	G	L	P7293471_GL_cnt	long
+10	12.135	3.299	Gm. fasciatus	G	L	P7293471_GL_cnt	long
+11	51.103	3.785	Gm. fasciatus	G	L	P7293471_GL_cnt	long
+12	20.196	4.086	Gm. fasciatus	G	L	P7293471_GL_cnt	long
+13	41.06	4.702	Gm. fasciatus	G	L	P7293471_GL_cnt	long
+14	55.494	5.407	Gm. fasciatus	G	L	P7293471_GL_cnt	long
+15	33.375	5.8	Gm. fasciatus	G	L	P7293471_GL_cnt	long
+16	55.881	5.79	Gm. fasciatus	G	L	P7293471_GL_cnt	long
+17	7.482	6.531	Gm. fasciatus	G	L	P7293471_GL_cnt	long
+18	6.204	6.773	Gm. fasciatus	G	L	P7293471_GL_cnt	long
+19	27.372	7.297	Gm. fasciatus	G	L	P7293471_GL_cnt	long
+20	16.303	7.676	Gm. fasciatus	G	L	P7293471_GL_cnt	long
+1	30.131	0.54	Gm. fasciatus	K		P7293472_K_cnt	long
+2	46.439	0.638	Gm. fasciatus	K		P7293472_K_cnt	long
+3	5.749	1.891	Gm. fasciatus	K		P7293472_K_cnt	long
+4	41.336	2.307	Gm. fasciatus	K		P7293472_K_cnt	long
+5	51.886	3.599	Gm. fasciatus	K		P7293472_K_cnt	long
+6	33.648	3.975	Gm. fasciatus	K		P7293472_K_cnt	long
+7	11.843	4.155	Gm. fasciatus	K		P7293472_K_cnt	long
+8	34.335	4.449	Gm. fasciatus	K		P7293472_K_cnt	long
+9	54.503	4.776	Gm. fasciatus	K		P7293472_K_cnt	long
+10	54.962	4.776	Gm. fasciatus	K		P7293472_K_cnt	long
+11	32.895	4.989	Gm. fasciatus	K		P7293472_K_cnt	long
+12	46.504	6.003	Gm. fasciatus	K		P7293472_K_cnt	long
+13	57.022	6.281	Gm. fasciatus	K		P7293472_K_cnt	long
+14	37.46	7.083	Gm. fasciatus	K		P7293472_K_cnt	long
+15	16.178	7.639	Gm. fasciatus	K		P7293472_K_cnt	long
+16	37.917	7.704	Gm. fasciatus	K		P7293472_K_cnt	long
+17	54.569	7.721	Gm. fasciatus	K		P7293472_K_cnt	long
+18	39.225	7.868	Gm. fasciatus	K		P7293472_K_cnt	long
+19	51.362	7.917	Gm. fasciatus	K		P7293472_K_cnt	long
+20	31.031	8.195	Gm. fasciatus	K		P7293472_K_cnt	long
+1	36.83	1.303	Gm. fasciatus	R	L	P7293473_RL_cnt	long
+2	38.481	1.573	Gm. fasciatus	R	L	P7293473_RL_cnt	long
+3	53.829	2.052	Gm. fasciatus	R	L	P7293473_RL_cnt	long
+4	54.36	2.257	Gm. fasciatus	R	L	P7293473_RL_cnt	long
+5	55.142	2.29	Gm. fasciatus	R	L	P7293473_RL_cnt	long
+6	25.872	2.491	Gm. fasciatus	R	L	P7293473_RL_cnt	long
+7	37.579	2.801	Gm. fasciatus	R	L	P7293473_RL_cnt	long
+8	26.263	2.849	Gm. fasciatus	R	L	P7293473_RL_cnt	long
+9	55.838	3.071	Gm. fasciatus	R	L	P7293473_RL_cnt	long
+10	32.477	3.495	Gm. fasciatus	R	L	P7293473_RL_cnt	long
+11	56.304	3.615	Gm. fasciatus	R	L	P7293473_RL_cnt	long
+12	56.662	3.918	Gm. fasciatus	R	L	P7293473_RL_cnt	long
+13	57.151	4.092	Gm. fasciatus	R	L	P7293473_RL_cnt	long
+14	56.294	4.439	Gm. fasciatus	R	L	P7293473_RL_cnt	long
+15	56.076	5.308	Gm. fasciatus	R	L	P7293473_RL_cnt	long
+16	15.924	5.666	Gm. fasciatus	R	L	P7293473_RL_cnt	long
+17	54.47	5.959	Gm. fasciatus	R	L	P7293473_RL_cnt	long
+18	55.142	6.1	Gm. fasciatus	R	L	P7293473_RL_cnt	long
+19	26.133	6.79	Gm. fasciatus	R	L	P7293473_RL_cnt	long
+20	31.653	7.153	Gm. fasciatus	R	L	P7293473_RL_cnt	long
+1	30.783	1.039	Gm. fasciatus	Y	L	P7293490_YL_cnt	long
+2	45.868	1.145	Gm. fasciatus	Y	L	P7293490_YL_cnt	long
+3	5.203	2.062	Gm. fasciatus	Y	L	P7293490_YL_cnt	long
+4	25.46	2.476	Gm. fasciatus	Y	L	P7293490_YL_cnt	long
+5	36.471	2.577	Gm. fasciatus	Y	L	P7293490_YL_cnt	long
+6	43.327	2.683	Gm. fasciatus	Y	L	P7293490_YL_cnt	long
+7	36.177	2.765	Gm. fasciatus	Y	L	P7293490_YL_cnt	long
+8	25.775	2.892	Gm. fasciatus	Y	L	P7293490_YL_cnt	long
+9	19.414	3.019	Gm. fasciatus	Y	L	P7293490_YL_cnt	long
+10	30.487	3.195	Gm. fasciatus	Y	L	P7293490_YL_cnt	long
+11	30.642	4.242	Gm. fasciatus	Y	L	P7293490_YL_cnt	long
+12	54.334	4.925	Gm. fasciatus	Y	L	P7293490_YL_cnt	long
+13	42.007	5.4	Gm. fasciatus	Y	L	P7293490_YL_cnt	long
+14	29.889	5.608	Gm. fasciatus	Y	L	P7293490_YL_cnt	long
+15	41.211	5.629	Gm. fasciatus	Y	L	P7293490_YL_cnt	long
+16	38.934	6.872	Gm. fasciatus	Y	L	P7293490_YL_cnt	long
+17	35.49	6.987	Gm. fasciatus	Y	L	P7293490_YL_cnt	long
+18	46.763	7.085	Gm. fasciatus	Y	L	P7293490_YL_cnt	long
+19	47.925	7.543	Gm. fasciatus	Y	L	P7293490_YL_cnt	long
+20	41.376	7.801	Gm. fasciatus	Y	L	P7293490_YL_cnt	long
+1	30.783	1.039	Gm. fasciatus	K		P7293491_K_cnt	long
+2	45.868	1.145	Gm. fasciatus	K		P7293491_K_cnt	long
+3	5.203	2.062	Gm. fasciatus	K		P7293491_K_cnt	long
+4	25.46	2.476	Gm. fasciatus	K		P7293491_K_cnt	long
+5	36.471	2.577	Gm. fasciatus	K		P7293491_K_cnt	long
+6	43.327	2.683	Gm. fasciatus	K		P7293491_K_cnt	long
+7	36.177	2.765	Gm. fasciatus	K		P7293491_K_cnt	long
+8	25.775	2.892	Gm. fasciatus	K		P7293491_K_cnt	long
+9	19.414	3.019	Gm. fasciatus	K		P7293491_K_cnt	long
+10	30.487	3.195	Gm. fasciatus	K		P7293491_K_cnt	long
+11	30.642	4.242	Gm. fasciatus	K		P7293491_K_cnt	long
+12	54.334	4.925	Gm. fasciatus	K		P7293491_K_cnt	long
+13	42.007	5.4	Gm. fasciatus	K		P7293491_K_cnt	long
+14	29.889	5.608	Gm. fasciatus	K		P7293491_K_cnt	long
+15	41.211	5.629	Gm. fasciatus	K		P7293491_K_cnt	long
+16	38.934	6.872	Gm. fasciatus	K		P7293491_K_cnt	long
+17	35.49	6.987	Gm. fasciatus	K		P7293491_K_cnt	long
+18	46.763	7.085	Gm. fasciatus	K		P7293491_K_cnt	long
+19	47.925	7.543	Gm. fasciatus	K		P7293491_K_cnt	long
+20	41.376	7.801	Gm. fasciatus	K		P7293491_K_cnt	long
+1	6.17	0.434	Gm. fasciatus	Y	R	P7293492_YR_cnt	long
+2	7.3	1.178	Gm. fasciatus	Y	R	P7293492_YR_cnt	long
+3	49.853	1.178	Gm. fasciatus	Y	R	P7293492_YR_cnt	long
+4	6.277	1.555	Gm. fasciatus	Y	R	P7293492_YR_cnt	long
+5	8.981	1.714	Gm. fasciatus	Y	R	P7293492_YR_cnt	long
+6	3.871	2.136	Gm. fasciatus	Y	R	P7293492_YR_cnt	long
+7	46.26	2.275	Gm. fasciatus	Y	R	P7293492_YR_cnt	long
+8	6.751	2.3	Gm. fasciatus	Y	R	P7293492_YR_cnt	long
+9	47.84	2.471	Gm. fasciatus	Y	R	P7293492_YR_cnt	long
+10	26.886	3.502	Gm. fasciatus	Y	R	P7293492_YR_cnt	long
+11	20.72	3.732	Gm. fasciatus	Y	R	P7293492_YR_cnt	long
+12	4.083	4.255	Gm. fasciatus	Y	R	P7293492_YR_cnt	long
+13	9.525	5.282	Gm. fasciatus	Y	R	P7293492_YR_cnt	long
+14	4.705	6.334	Gm. fasciatus	Y	R	P7293492_YR_cnt	long
+15	4.746	6.915	Gm. fasciatus	Y	R	P7293492_YR_cnt	long
+16	43.372	6.972	Gm. fasciatus	Y	R	P7293492_YR_cnt	long
+17	2.664	7.058	Gm. fasciatus	Y	R	P7293492_YR_cnt	long
+18	18.511	7.062	Gm. fasciatus	Y	R	P7293492_YR_cnt	long
+19	12.962	7.418	Gm. fasciatus	Y	R	P7293492_YR_cnt	long
+20	44.223	7.602	Gm. fasciatus	Y	R	P7293492_YR_cnt	long
+1	47.764	0.311	Gm. fasciatus	G	L	P7293493_GL_cnt	long
+2	39.029	0.983	Gm. fasciatus	G	L	P7293493_GL_cnt	long
+3	22.428	1.659	Gm. fasciatus	G	L	P7293493_GL_cnt	long
+4	36.843	1.757	Gm. fasciatus	G	L	P7293493_GL_cnt	long
+5	4.505	2.326	Gm. fasciatus	G	L	P7293493_GL_cnt	long
+6	57.243	2.719	Gm. fasciatus	G	L	P7293493_GL_cnt	long
+7	55.479	3.21	Gm. fasciatus	G	L	P7293493_GL_cnt	long
+8	49.533	3.423	Gm. fasciatus	G	L	P7293493_GL_cnt	long
+9	46.639	3.915	Gm. fasciatus	G	L	P7293493_GL_cnt	long
+10	54.98	3.964	Gm. fasciatus	G	L	P7293493_GL_cnt	long
+11	45.913	4.062	Gm. fasciatus	G	L	P7293493_GL_cnt	long
+12	54.464	4.177	Gm. fasciatus	G	L	P7293493_GL_cnt	long
+13	46.175	4.259	Gm. fasciatus	G	L	P7293493_GL_cnt	long
+14	45.651	5.176	Gm. fasciatus	G	L	P7293493_GL_cnt	long
+15	55.717	5.651	Gm. fasciatus	G	L	P7293493_GL_cnt	long
+16	41.441	5.667	Gm. fasciatus	G	L	P7293493_GL_cnt	long
+17	20.115	6.208	Gm. fasciatus	G	L	P7293493_GL_cnt	long
+18	56.413	6.265	Gm. fasciatus	G	L	P7293493_GL_cnt	long
+19	8.19	6.896	Gm. fasciatus	G	L	P7293493_GL_cnt	long
+20	56.794	6.912	Gm. fasciatus	G	L	P7293493_GL_cnt	long
+21	16.372	7.69	Gm. fasciatus	G	L	P7293493_GL_cnt	long
+1	24.141	1.154	Gm. fasciatus	K		P7293494_K_cnt	long
+2	8.625	1.989	Gm. fasciatus	K		P7293494_K_cnt	long
+3	24.026	2.07	Gm. fasciatus	K		P7293494_K_cnt	long
+4	4.141	2.275	Gm. fasciatus	K		P7293494_K_cnt	long
+5	8.822	2.381	Gm. fasciatus	K		P7293494_K_cnt	long
+6	20.237	2.43	Gm. fasciatus	K		P7293494_K_cnt	long
+7	31.326	2.455	Gm. fasciatus	K		P7293494_K_cnt	long
+8	23.813	2.52	Gm. fasciatus	K		P7293494_K_cnt	long
+9	6.023	2.537	Gm. fasciatus	K		P7293494_K_cnt	long
+10	21.448	2.578	Gm. fasciatus	K		P7293494_K_cnt	long
+11	55.831	2.639	Gm. fasciatus	K		P7293494_K_cnt	long
+12	15.81	3.494	Gm. fasciatus	K		P7293494_K_cnt	long
+13	26.08	3.535	Gm. fasciatus	K		P7293494_K_cnt	long
+14	15.982	3.83	Gm. fasciatus	K		P7293494_K_cnt	long
+15	26.007	5.548	Gm. fasciatus	K		P7293494_K_cnt	long
+16	34.264	6.178	Gm. fasciatus	K		P7293494_K_cnt	long
+17	51.948	6.481	Gm. fasciatus	K		P7293494_K_cnt	long
+18	11.375	6.628	Gm. fasciatus	K		P7293494_K_cnt	long
+19	11.809	7.365	Gm. fasciatus	K		P7293494_K_cnt	long
+20	30.119	8.326	Gm. fasciatus	K		P7293494_K_cnt	long
+1	5.19	0.578	Gm. fasciatus	G	R	P7293495_GR_cnt	long
+2	13.686	0.918	Gm. fasciatus	G	R	P7293495_GR_cnt	long
+3	24.38	1.671	Gm. fasciatus	G	R	P7293495_GR_cnt	long
+4	9.536	1.889	Gm. fasciatus	G	R	P7293495_GR_cnt	long
+5	2.535	2.896	Gm. fasciatus	G	R	P7293495_GR_cnt	long
+6	11.928	3.125	Gm. fasciatus	G	R	P7293495_GR_cnt	long
+7	4.747	3.293	Gm. fasciatus	G	R	P7293495_GR_cnt	long
+8	12.071	3.429	Gm. fasciatus	G	R	P7293495_GR_cnt	long
+9	5.124	3.535	Gm. fasciatus	G	R	P7293495_GR_cnt	long
+10	57.215	5.451	Gm. fasciatus	G	R	P7293495_GR_cnt	long
+11	2.928	5.472	Gm. fasciatus	G	R	P7293495_GR_cnt	long
+12	56.887	6.09	Gm. fasciatus	G	R	P7293495_GR_cnt	long
+13	29.967	6.152	Gm. fasciatus	G	R	P7293495_GR_cnt	long
+14	3.994	6.206	Gm. fasciatus	G	R	P7293495_GR_cnt	long
+15	51.242	6.267	Gm. fasciatus	G	R	P7293495_GR_cnt	long
+16	12.125	6.575	Gm. fasciatus	G	R	P7293495_GR_cnt	long
+17	6.182	6.619	Gm. fasciatus	G	R	P7293495_GR_cnt	long
+18	2.872	6.881	Gm. fasciatus	G	R	P7293495_GR_cnt	long
+19	26.182	6.89	Gm. fasciatus	G	R	P7293495_GR_cnt	long
+20	16.929	7.82	Gm. fasciatus	G	R	P7293495_GR_cnt	long
+1	18.919	0.504	Gm. fasciatus	R	L	P7293496_RL_cnt	long
+2	49.795	0.7	Gm. fasciatus	R	L	P7293496_RL_cnt	long
+3	32.948	0.876	Gm. fasciatus	R	L	P7293496_RL_cnt	long
+4	18.735	1.978	Gm. fasciatus	R	L	P7293496_RL_cnt	long
+5	24.668	2.473	Gm. fasciatus	R	L	P7293496_RL_cnt	long
+6	14.803	2.674	Gm. fasciatus	R	L	P7293496_RL_cnt	long
+7	15.332	2.928	Gm. fasciatus	R	L	P7293496_RL_cnt	long
+8	56.085	2.957	Gm. fasciatus	R	L	P7293496_RL_cnt	long
+9	14.959	2.998	Gm. fasciatus	R	L	P7293496_RL_cnt	long
+10	37.969	3.759	Gm. fasciatus	R	L	P7293496_RL_cnt	long
+11	56.085	4.095	Gm. fasciatus	R	L	P7293496_RL_cnt	long
+12	55.651	4.341	Gm. fasciatus	R	L	P7293496_RL_cnt	long
+13	56.446	4.349	Gm. fasciatus	R	L	P7293496_RL_cnt	long
+14	38.714	4.668	Gm. fasciatus	R	L	P7293496_RL_cnt	long
+15	8.223	5.098	Gm. fasciatus	R	L	P7293496_RL_cnt	long
+16	32.105	5.184	Gm. fasciatus	R	L	P7293496_RL_cnt	long
+17	29.562	5.516	Gm. fasciatus	R	L	P7293496_RL_cnt	long
+18	32.048	5.553	Gm. fasciatus	R	L	P7293496_RL_cnt	long
+19	39.828	6.749	Gm. fasciatus	R	L	P7293496_RL_cnt	long
+20	36.757	7.568	Gm. fasciatus	R	L	P7293496_RL_cnt	long
+1	3.407	0.803	Gm. fasciatus	K		P7293497_K_cnt	long
+2	3.669	1.048	Gm. fasciatus	K		P7293497_K_cnt	long
+3	40.512	1.568	Gm. fasciatus	K		P7293497_K_cnt	long
+4	43.993	1.708	Gm. fasciatus	K		P7293497_K_cnt	long
+5	40.191	1.843	Gm. fasciatus	K		P7293497_K_cnt	long
+6	27.458	2.162	Gm. fasciatus	K		P7293497_K_cnt	long
+7	15.79	2.555	Gm. fasciatus	K		P7293497_K_cnt	long
+8	55.627	4.021	Gm. fasciatus	K		P7293497_K_cnt	long
+9	56.208	4.316	Gm. fasciatus	K		P7293497_K_cnt	long
+10	18.444	4.477	Gm. fasciatus	K		P7293497_K_cnt	long
+11	9.795	5.23	Gm. fasciatus	K		P7293497_K_cnt	long
+12	20.029	5.319	Gm. fasciatus	K		P7293497_K_cnt	long
+13	24.73	5.5	Gm. fasciatus	K		P7293497_K_cnt	long
+14	54.644	5.708	Gm. fasciatus	K		P7293497_K_cnt	long
+15	53.833	6.085	Gm. fasciatus	K		P7293497_K_cnt	long
+16	19.853	6.77	Gm. fasciatus	K		P7293497_K_cnt	long
+17	30.59	6.855	Gm. fasciatus	K		P7293497_K_cnt	long
+18	39.316	7.686	Gm. fasciatus	K		P7293497_K_cnt	long
+19	22.007	7.805	Gm. fasciatus	K		P7293497_K_cnt	long
+20	22.31	8.247	Gm. fasciatus	K		P7293497_K_cnt	long
+1	48.568	0.523	Gm. fasciatus	R	R	P7293498_RR_cnt	long
+2	6.837	0.936	Gm. fasciatus	R	R	P7293498_RR_cnt	long
+3	7.73	1.807	Gm. fasciatus	R	R	P7293498_RR_cnt	long
+4	7.915	2.177	Gm. fasciatus	R	R	P7293498_RR_cnt	long
+5	11.715	2.395	Gm. fasciatus	R	R	P7293498_RR_cnt	long
+6	3.288	2.853	Gm. fasciatus	R	R	P7293498_RR_cnt	long
+7	15.569	2.951	Gm. fasciatus	R	R	P7293498_RR_cnt	long
+8	19.271	3.038	Gm. fasciatus	R	R	P7293498_RR_cnt	long
+9	16.244	3.092	Gm. fasciatus	R	R	P7293498_RR_cnt	long
+10	34.104	3.326	Gm. fasciatus	R	R	P7293498_RR_cnt	long
+11	6.652	3.343	Gm. fasciatus	R	R	P7293498_RR_cnt	long
+12	35.171	4.262	Gm. fasciatus	R	R	P7293498_RR_cnt	long
+13	56.038	4.377	Gm. fasciatus	R	R	P7293498_RR_cnt	long
+14	23.647	4.769	Gm. fasciatus	R	R	P7293498_RR_cnt	long
+15	29.695	4.943	Gm. fasciatus	R	R	P7293498_RR_cnt	long
+16	26.946	5.416	Gm. fasciatus	R	R	P7293498_RR_cnt	long
+17	57.224	5.575	Gm. fasciatus	R	R	P7293498_RR_cnt	long
+18	56.935	6.119	Gm. fasciatus	R	R	P7293498_RR_cnt	long
+19	38.253	6.892	Gm. fasciatus	R	R	P7293498_RR_cnt	long
+20	6.304	7.098	Gm. fasciatus	R	R	P7293498_RR_cnt	long
+1	18.462	1.1	Gm. fasciatus	B	L	P7293499_BL_cnt	long
+2	55.868	1.402	Gm. fasciatus	B	L	P7293499_BL_cnt	long
+3	52.553	1.774	Gm. fasciatus	B	L	P7293499_BL_cnt	long
+4	56.044	1.766	Gm. fasciatus	B	L	P7293499_BL_cnt	long
+5	52.095	2.076	Gm. fasciatus	B	L	P7293499_BL_cnt	long
+6	55.381	2.084	Gm. fasciatus	B	L	P7293499_BL_cnt	long
+7	55.782	2.076	Gm. fasciatus	B	L	P7293499_BL_cnt	long
+8	20.375	2.097	Gm. fasciatus	B	L	P7293499_BL_cnt	long
+9	34.234	2.191	Gm. fasciatus	B	L	P7293499_BL_cnt	long
+10	56.06	2.371	Gm. fasciatus	B	L	P7293499_BL_cnt	long
+11	56.861	2.935	Gm. fasciatus	B	L	P7293499_BL_cnt	long
+12	55.104	3.392	Gm. fasciatus	B	L	P7293499_BL_cnt	long
+13	55.014	4.594	Gm. fasciatus	B	L	P7293499_BL_cnt	long
+14	55.659	4.872	Gm. fasciatus	B	L	P7293499_BL_cnt	long
+15	23.53	4.958	Gm. fasciatus	B	L	P7293499_BL_cnt	long
+16	19.574	5.775	Gm. fasciatus	B	L	P7293499_BL_cnt	long
+17	57.008	5.918	Gm. fasciatus	B	L	P7293499_BL_cnt	long
+18	40.349	5.939	Gm. fasciatus	B	L	P7293499_BL_cnt	long
+19	52.251	6.033	Gm. fasciatus	B	L	P7293499_BL_cnt	long
+20	17.351	7.52	Gm. fasciatus	B	L	P7293499_BL_cnt	long
+1	6.095	0.343	Gm. fasciatus	K		P7293500_K_cnt	long
+2	50.466	0.743	Gm. fasciatus	K		P7293500_K_cnt	long
+3	54.395	0.833	Gm. fasciatus	K		P7293500_K_cnt	long
+4	5.114	1.018	Gm. fasciatus	K		P7293500_K_cnt	long
+5	17.7	1.034	Gm. fasciatus	K		P7293500_K_cnt	long
+6	27.459	1.74	Gm. fasciatus	K		P7293500_K_cnt	long
+7	48.824	2.026	Gm. fasciatus	K		P7293500_K_cnt	long
+8	34.216	2.047	Gm. fasciatus	K		P7293500_K_cnt	long
+9	47.026	2.103	Gm. fasciatus	K		P7293500_K_cnt	long
+10	7.786	2.157	Gm. fasciatus	K		P7293500_K_cnt	long
+11	29.714	3.031	Gm. fasciatus	K		P7293500_K_cnt	long
+12	3.856	4.472	Gm. fasciatus	K		P7293500_K_cnt	long
+13	40.882	5.523	Gm. fasciatus	K		P7293500_K_cnt	long
+14	33.725	7.168	Gm. fasciatus	K		P7293500_K_cnt	long
+15	12.692	7.488	Gm. fasciatus	K		P7293500_K_cnt	long
+16	29.714	7.721	Gm. fasciatus	K		P7293500_K_cnt	long
+17	12.451	7.745	Gm. fasciatus	K		P7293500_K_cnt	long
+18	46.711	7.745	Gm. fasciatus	K		P7293500_K_cnt	long
+19	33.73	7.774	Gm. fasciatus	K		P7293500_K_cnt	long
+20	48.028	8.203	Gm. fasciatus	K		P7293500_K_cnt	long
+1	5.403	1.004	Gm. fasciatus	B	R	P7293501_BR_cnt	long
+2	3.419	1.143	Gm. fasciatus	B	R	P7293501_BR_cnt	long
+3	8.308	1.2	Gm. fasciatus	B	R	P7293501_BR_cnt	long
+4	2.693	1.257	Gm. fasciatus	B	R	P7293501_BR_cnt	long
+5	9.124	1.485	Gm. fasciatus	B	R	P7293501_BR_cnt	long
+6	6.015	1.575	Gm. fasciatus	B	R	P7293501_BR_cnt	long
+7	7.157	2.53	Gm. fasciatus	B	R	P7293501_BR_cnt	long
+8	3.166	2.709	Gm. fasciatus	B	R	P7293501_BR_cnt	long
+9	6.912	2.767	Gm. fasciatus	B	R	P7293501_BR_cnt	long
+10	6.096	4.032	Gm. fasciatus	B	R	P7293501_BR_cnt	long
+11	17.987	4.265	Gm. fasciatus	B	R	P7293501_BR_cnt	long
+12	3.15	4.276	Gm. fasciatus	B	R	P7293501_BR_cnt	long
+13	12.645	4.276	Gm. fasciatus	B	R	P7293501_BR_cnt	long
+14	10.316	5.19	Gm. fasciatus	B	R	P7293501_BR_cnt	long
+15	48.036	5.615	Gm. fasciatus	B	R	P7293501_BR_cnt	long
+16	56.801	6.472	Gm. fasciatus	B	R	P7293501_BR_cnt	long
+17	20.06	7.28	Gm. fasciatus	B	R	P7293501_BR_cnt	long
+18	7.463	7.822	Gm. fasciatus	B	R	P7293501_BR_cnt	long
+19	7.806	7.945	Gm. fasciatus	B	R	P7293501_BR_cnt	long
+20	44.701	8.096	Gm. fasciatus	B	R	P7293501_BR_cnt	long
+1	17.705	0.992	Gm. fasciatus	K		P7293503_K_cnt	long
+2	33.906	1.276	Gm. fasciatus	K		P7293503_K_cnt	long
+3	25.833	1.395	Gm. fasciatus	K		P7293503_K_cnt	long
+4	6.868	1.439	Gm. fasciatus	K		P7293503_K_cnt	long
+5	25.909	1.739	Gm. fasciatus	K		P7293503_K_cnt	long
+6	24.317	2.175	Gm. fasciatus	K		P7293503_K_cnt	long
+7	9.289	2.257	Gm. fasciatus	K		P7293503_K_cnt	long
+8	5.211	2.409	Gm. fasciatus	K		P7293503_K_cnt	long
+9	17.138	2.551	Gm. fasciatus	K		P7293503_K_cnt	long
+10	10.335	3.162	Gm. fasciatus	K		P7293503_K_cnt	long
+11	26.193	3.701	Gm. fasciatus	K		P7293503_K_cnt	long
+12	21.014	3.81	Gm. fasciatus	K		P7293503_K_cnt	long
+13	26.564	3.827	Gm. fasciatus	K		P7293503_K_cnt	long
+14	39.771	5.691	Gm. fasciatus	K		P7293503_K_cnt	long
+15	19.231	6.028	Gm. fasciatus	K		P7293503_K_cnt	long
+16	32.238	7.097	Gm. fasciatus	K		P7293503_K_cnt	long
+17	14.129	7.195	Gm. fasciatus	K		P7293503_K_cnt	long
+18	12.2	7.49	Gm. fasciatus	K		P7293503_K_cnt	long
+19	34.516	7.544	Gm. fasciatus	K		P7293503_K_cnt	long
+20	15.176	7.653	Gm. fasciatus	K		P7293503_K_cnt	long
+1	12.547	1.059	Gm. fasciatus	G	R	P7293504_GR_cnt	long
+2	11.262	2.093	Gm. fasciatus	G	R	P7293504_GR_cnt	long
+3	3.712	2.11	Gm. fasciatus	G	R	P7293504_GR_cnt	long
+4	11.545	2.736	Gm. fasciatus	G	R	P7293504_GR_cnt	long
+5	4.35	2.756	Gm. fasciatus	G	R	P7293504_GR_cnt	long
+6	8.258	2.895	Gm. fasciatus	G	R	P7293504_GR_cnt	long
+7	3.778	3.107	Gm. fasciatus	G	R	P7293504_GR_cnt	long
+8	23.614	3.712	Gm. fasciatus	G	R	P7293504_GR_cnt	long
+9	11.435	3.782	Gm. fasciatus	G	R	P7293504_GR_cnt	long
+10	8.516	4.763	Gm. fasciatus	G	R	P7293504_GR_cnt	long
+11	13.692	4.926	Gm. fasciatus	G	R	P7293504_GR_cnt	long
+12	11.296	5.155	Gm. fasciatus	G	R	P7293504_GR_cnt	long
+13	57.097	5.666	Gm. fasciatus	G	R	P7293504_GR_cnt	long
+14	34.46	6.823	Gm. fasciatus	G	R	P7293504_GR_cnt	long
+15	36.554	7.151	Gm. fasciatus	G	R	P7293504_GR_cnt	long
+16	30.319	7.244	Gm. fasciatus	G	R	P7293504_GR_cnt	long
+17	3.794	7.261	Gm. fasciatus	G	R	P7293504_GR_cnt	long
+18	25.74	7.31	Gm. fasciatus	G	R	P7293504_GR_cnt	long
+19	16.963	7.588	Gm. fasciatus	G	R	P7293504_GR_cnt	long
+20	10.935	7.817	Gm. fasciatus	G	R	P7293504_GR_cnt	long
+1	7.081	1.332	Gm. fasciatus	B	R	P7293505_BR_cnt	long
+2	6.743	1.454	Gm. fasciatus	B	R	P7293505_BR_cnt	long
+3	6.552	1.732	Gm. fasciatus	B	R	P7293505_BR_cnt	long
+4	7.124	1.904	Gm. fasciatus	B	R	P7293505_BR_cnt	long
+5	6.671	2.055	Gm. fasciatus	B	R	P7293505_BR_cnt	long
+6	29.935	2.276	Gm. fasciatus	B	R	P7293505_BR_cnt	long
+7	44.6	3.276	Gm. fasciatus	B	R	P7293505_BR_cnt	long
+8	13.714	3.497	Gm. fasciatus	B	R	P7293505_BR_cnt	long
+9	26.385	3.574	Gm. fasciatus	B	R	P7293505_BR_cnt	long
+10	9.064	3.975	Gm. fasciatus	B	R	P7293505_BR_cnt	long
+11	57.447	4.547	Gm. fasciatus	B	R	P7293505_BR_cnt	long
+12	6.503	4.956	Gm. fasciatus	B	R	P7293505_BR_cnt	long
+13	6.377	5.698	Gm. fasciatus	B	R	P7293505_BR_cnt	long
+14	45.433	5.752	Gm. fasciatus	B	R	P7293505_BR_cnt	long
+15	57.162	5.768	Gm. fasciatus	B	R	P7293505_BR_cnt	long
+16	40.523	5.792	Gm. fasciatus	B	R	P7293505_BR_cnt	long
+17	10.6	5.903	Gm. fasciatus	B	R	P7293505_BR_cnt	long
+18	45.278	6.168	Gm. fasciatus	B	R	P7293505_BR_cnt	long
+19	18.096	6.405	Gm. fasciatus	B	R	P7293505_BR_cnt	long
+20	39.191	8.047	Gm. fasciatus	B	R	P7293505_BR_cnt	long
+1	17.76	0.409	Gm. fasciatus	K		P7293506_K_cnt	long
+2	51.104	0.654	Gm. fasciatus	K		P7293506_K_cnt	long
+3	53.459	1.39	Gm. fasciatus	K		P7293506_K_cnt	long
+4	17.629	1.789	Gm. fasciatus	K		P7293506_K_cnt	long
+5	8.493	2.082	Gm. fasciatus	K		P7293506_K_cnt	long
+6	12.145	2.671	Gm. fasciatus	K		P7293506_K_cnt	long
+7	12.254	3.031	Gm. fasciatus	K		P7293506_K_cnt	long
+8	14.064	3.097	Gm. fasciatus	K		P7293506_K_cnt	long
+9	13.868	3.457	Gm. fasciatus	K		P7293506_K_cnt	long
+10	25.293	3.511	Gm. fasciatus	K		P7293506_K_cnt	long
+11	16.397	3.969	Gm. fasciatus	K		P7293506_K_cnt	long
+12	34.44	4.262	Gm. fasciatus	K		P7293506_K_cnt	long
+13	42.442	5.048	Gm. fasciatus	K		P7293506_K_cnt	long
+14	41.384	5.233	Gm. fasciatus	K		P7293506_K_cnt	long
+15	14.631	5.516	Gm. fasciatus	K		P7293506_K_cnt	long
+16	33.197	5.897	Gm. fasciatus	K		P7293506_K_cnt	long
+17	50.662	6.77	Gm. fasciatus	K		P7293506_K_cnt	long
+18	8.111	7.467	Gm. fasciatus	K		P7293506_K_cnt	long
+19	12.167	7.482	Gm. fasciatus	K		P7293506_K_cnt	long
+20	14.98	7.49	Gm. fasciatus	K		P7293506_K_cnt	long
+1	5.146	0.506	Gm. fasciatus	Y	R	P7293507_YR_cnt	long
+2	44.4	0.8	Gm. fasciatus	Y	R	P7293507_YR_cnt	long
+3	47.662	0.849	Gm. fasciatus	Y	R	P7293507_YR_cnt	long
+4	10.569	0.861	Gm. fasciatus	Y	R	P7293507_YR_cnt	long
+5	47.263	0.919	Gm. fasciatus	Y	R	P7293507_YR_cnt	long
+6	7.784	0.972	Gm. fasciatus	Y	R	P7293507_YR_cnt	long
+7	24.879	1.16	Gm. fasciatus	Y	R	P7293507_YR_cnt	long
+8	10.798	1.171	Gm. fasciatus	Y	R	P7293507_YR_cnt	long
+9	5.317	1.625	Gm. fasciatus	Y	R	P7293507_YR_cnt	long
+10	5.913	1.977	Gm. fasciatus	Y	R	P7293507_YR_cnt	long
+11	19.603	2.222	Gm. fasciatus	Y	R	P7293507_YR_cnt	long
+12	42.407	2.439	Gm. fasciatus	Y	R	P7293507_YR_cnt	long
+13	7.743	2.753	Gm. fasciatus	Y	R	P7293507_YR_cnt	long
+14	5.775	2.883	Gm. fasciatus	Y	R	P7293507_YR_cnt	long
+15	39.707	3.475	Gm. fasciatus	Y	R	P7293507_YR_cnt	long
+16	10.863	3.916	Gm. fasciatus	Y	R	P7293507_YR_cnt	long
+17	29.177	4.99	Gm. fasciatus	Y	R	P7293507_YR_cnt	long
+18	7.637	5.309	Gm. fasciatus	Y	R	P7293507_YR_cnt	long
+19	57.076	5.521	Gm. fasciatus	Y	R	P7293507_YR_cnt	long
+20	9.845	7.155	Gm. fasciatus	Y	R	P7293507_YR_cnt	long
