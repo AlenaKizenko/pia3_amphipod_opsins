@@ -1,0 +1,38 @@
+import glob
+import os
+
+pia_args = list(filter(lambda x: x != 'db' and x != 'in_dir' and x != 'out_dir' and config[x], config.keys()))
+pia_args = list(map(lambda x: f'--{x}', pia_args))
+
+db = config['db']
+in_dir = config['in_dir']
+out_dir = config['out_dir']
+refs = list(map(lambda x: re.sub('.fasta', '', os.path.basename(x)), glob.glob(f"{in_dir}/*fasta")))
+
+rule all:
+    input: expand("{out_dir}/{reference}", reference=refs, out_dir=out_dir),
+
+rule build_initial_tree:
+    output: class_al="{out_dir}/class_align.fasta", tree="{out_dir}/class_align.fasta.contree"
+    benchmark: "{out_dir}/benchmarks/build_initial_tree.txt"
+    conda: "config/opsins.yml"
+    log: "{out_dir}/logs/build_initial_tree.txt"
+    params: bb=1000, db=db, mode="TEST", nt="AUTO", t="RANDOM"
+    threads: 8
+    shell:
+         """
+         (mafft --thread {threads} --inputorder --auto {params.db} > {output.class_al}) 2> {log}
+         iqtree -s {output.class_al} -nt {params.nt} -t {params.t} -bb {params.bb} -m {params.mode} 2>> {log}
+         """
+
+rule pia_analysis:
+    input: ref=lambda wildcards: f"{in_dir}/{wildcards.reference}.fasta",
+           tree=rules.build_initial_tree.output.tree
+    output: ref_out_dir=directory("{out_dir}/{reference}")
+    conda: "config/opsins.yml"
+    benchmark: "{out_dir}/benchmarks/pia_{reference}.txt"
+    log: "{out_dir}/logs/pia_{reference}.txt"
+    params: args=' '.join(pia_args), db=db
+    threads: 8
+    shell:
+         "python3 PIA3.py -i {input.ref} -o {output.ref_out_dir} -db {params.db} -in_phylo {input.tree} {params.args} 2> {log}"
