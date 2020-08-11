@@ -35,8 +35,6 @@ Be careful: it's `import Bio`, but you need to install it as `biopython` (e.g. `
                         Input FASTA file OR folder with FASTA files
   -db DATABASE, --database DATABASE
                         Path to database for blast search and EPA
-  -s, --single          Analyse one FASTA file
-  -m, --multiple        Analyse multiple FASTA file
   -all, --all_transcripts
                         Perform BLAST search on all transcripts
   -cds, --cds_only      Perform BLAST search only on coding sequences
