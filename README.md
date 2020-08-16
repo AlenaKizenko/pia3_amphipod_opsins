@@ -14,17 +14,23 @@ Companion scripts to the manuscript ... submitted to ...
 
 Snakemake is required for pipeline running. You can
 
-1) Create and activate new conda environment named `smk`
+**A:** Create and activate new conda environment named `smk`
 
 ```commandline
 conda create -y -n smk snakemake -c bioconda
 conda activate smk
 ```
 
-2) Install snakemake in your activated environment
+**B:** Install snakemake in your activated environment
 
 ```commandline
 conda install -y -c bioconda snakemake=5.20.1
+```
+
+**C:** Install conda environment named smk from `smk.yml` file
+
+```commandline
+conda env create -y -n smk --file smk.yml
 ```
 
 ### Run pipeline
