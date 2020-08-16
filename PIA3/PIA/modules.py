@@ -19,14 +19,14 @@ def run_transdecoder(file, out_dir):
     return transdecoder_cds  # return name of Transdecoder's result file with cds
 
 
-def blast_search(db, cds, num_threads=16, e_val=1e-20):
+def blast_search(out_dir: str, db, cds, num_threads=16, e_val=1e-20):
     os.system(f'makeblastdb -in {db} -out user_database -parse_seqids -dbtype prot')  # make blast database
     os.system(
         f'blastx -query {cds} -db user_database -num_threads {num_threads} -outfmt 6 '
-        f'-out blast_file.tmp -evalue {e_val}')  # perform blast search
+        f'-out {out_dir}/blast_file.tmp -evalue {e_val}')  # perform blast search
     hits = set()  # create set for blast hits: since names can be repeated, there is no need to use list
     my_records = []  # create list for hits to write them to .fasta file
-    with open('blast_file.tmp') as blast_hits:  # open blast file
+    with open(f'{out_dir}/blast_file.tmp') as blast_hits:  # open blast file
         for blast_hit in blast_hits:
             hits.add(blast_hit.split()[
                          0])  # write blast hits' name to the file (split because of Transdecoder's prolonged names)
@@ -36,7 +36,7 @@ def blast_search(db, cds, num_threads=16, e_val=1e-20):
                 if str(hit) == str(seq_record.id):  # if names are equal
                     rec = SeqRecord(seq_record.seq, seq_record.id, description='')  # make SeqRecord object
                     my_records.append(rec)  # write seq record to list my_records
-        SeqIO.write(my_records, 'blast_hits_nt.fasta', 'fasta')  # write records to .fasta file
+        SeqIO.write(my_records, f'{out_dir}/blast_hits_nt.fasta', 'fasta')  # write records to .fasta file
 
 
 def diamond_search(db, cds, num_threads=16, e_val=1e-20):  # the same but for Diamond
@@ -56,25 +56,25 @@ def diamond_search(db, cds, num_threads=16, e_val=1e-20):  # the same but for Di
         SeqIO.write(my_records, 'blast_hits_nt.fasta', 'fasta')
 
 
-def cd_hit_clust(c=0.95, n=10, d=0, m=1600, num_threads=8):
+def cd_hit_clust(out_dir: str, c=0.95, n=10, d=0, m=1600, num_threads=8):
     print('Performing clustering of found transcripts using CD-hit')
+    hits_clust = f'{out_dir}/blast_hits_nt_clust.fasta'  # define CD-HIT result file name
     os.system(
-        f'cd-hit-est -i blast_hits_nt.fasta -o blast_hits_nt_clust.fasta '
+        f'cd-hit-est -i {out_dir}/blast_hits_nt.fasta -o {hits_clust} '
         f'-c {c} -n {n} -d {d} -M {m} -T {num_threads}')  # run CD-HIT
-    hits_clust = 'blast_hits_nt_clust.fasta'  # define CD-HIT result file name
     return hits_clust  # return D-HIT redult file name
 
 
-def translate_hits(hits_clust):
+def translate_hits(out_dir: str, hits_clust):
     print('Translating clustered hits')
     my_records = []  # create file for translated hits
+    hits_res = f'{out_dir}/blast_hits_clust_aa.fasta'  # define name of file with translated hits
     with open(hits_clust) as hits_file:  # open file with clustered hits
         for seq_record in SeqIO.parse(hits_file, "fasta"):  # parse file with hits usinf SeqIO
             aa_rec = SeqRecord(seq_record.seq.translate(to_stop=True), seq_record.id,
                                description='')  # translate clustered hit
             my_records.append(aa_rec)  # append list with translated hit
-        SeqIO.write(my_records, 'blast_hits_clust_aa.fasta', 'fasta')  # write translated hits to file
-    hits_res = 'blast_hits_clust_aa.fasta'  # define name of file with translated hits
+        SeqIO.write(my_records, hits_res, 'fasta')  # write translated hits to file
     return hits_res  # return name of file with translated hits
 
 
@@ -86,18 +86,18 @@ def rename_hits(species_name, out_dir, transcripts, db):
     my_records = []  # create list for writing of renamed hits
     base_name = os.path.splitext(os.path.basename(os.path.normpath(species_name)))[0]
     filename = f'{out_dir}/{base_name}_hits_aa.fasta'  # define file name of translated hits (merged with with initial filename)
-    for seq_record in SeqIO.parse('blast_hits_clust_aa.fasta', "fasta"):  # parse file with blast hits
+    for seq_record in SeqIO.parse(f'{out_dir}/blast_hits_clust_aa.fasta', "fasta"):  # parse file with blast hits
         if transcripts == "cds":  # if cds mode has been chosen - rename hits and filter them
             if str(seq_record.seq)[0] == 'M' and len(str(seq_record.seq)) >= \
                     mean_length // 2:  # if seq starts with Met and its len is longer than 1/2 of mean len
                 name = seq_record.id[:seq_record.id.find(" ")]  # take part of record name before space
-                final = os.path.splitext(species_name)[0] + '_' + name  # define final name of sequence
+                final = f'{base_name}_{name}'  # define final name of sequence
                 rec = SeqRecord(seq_record.seq, id=final, description='')  # create SeqRecord object
                 my_records.append(rec)  # append list with sequence records
         elif transcripts == "all":  # if all mode has been chosen - just rename hits
             name = seq_record.id[:seq_record.id.find(" ")]
             print(name)
-            final = species_name[:-6] + '_' + name
+            final = f'{base_name}_{name}'  # define final name of sequence
             rec = SeqRecord(seq_record.seq, id=final, description='')
             my_records.append(rec)
     SeqIO.write(my_records, filename, 'fasta')
@@ -119,23 +119,23 @@ def calc_mean_dist(tree):
     return statistics.mean(lst_me) * 4  # return mean absolute deviation * 4
 
 
-def build_phylogeny(db, filename, num_threads=8):
+def build_phylogeny(out_dir: str, db, filename, num_threads=8):
     print('Building phylogeny')
-    os.system(f'cat {db} {filename} > query_class.fasta')  # merge database and hits in one .fatsa file
+    os.system(f'cat {db} {filename} > {out_dir}/query_class.fasta')  # merge database and hits in one .fatsa file
     os.system(
-        f'mafft --thread {num_threads} --inputorder --auto query_class.fasta > '
-        f'query_class_align.fasta')  # align database sequences with mafft
-    os.system(f'iqtree -s query_class_align.fasta -nt AUTO -t RANDOM -bb 1000 -m TEST')  # build phylogeny with IQ-Tree
-    tree = 'query_class_align.fasta.contree'  # define tree name
+        f'mafft --thread {num_threads} --inputorder --auto {out_dir}/query_class.fasta > '
+        f'{out_dir}/query_class_align.fasta')  # align database sequences with mafft
+    os.system(f'iqtree -s {out_dir}/query_class_align.fasta -nt AUTO -t RANDOM -bb 1000 -m TEST')  # build phylogeny with IQ-Tree
+    tree = f'{out_dir}/query_class_align.fasta.contree'  # define tree name
     return tree  # return tree name
 
 
-def filter_distant_seqs(tree_query, dist_dev, query_file):
+def filter_distant_seqs(input_file, tree_query, dist_dev, query_file):
     print('Filtering distinct hits')
     tree_query = ete3.Tree(tree_query)  # assign Ete3 tree object
     lst_seqs = []  # create list for selected leaves (distance less than 4*absolute mean deviation)
     my_records = []  # create list for
-    file_prefix = query_file[:-14]  # define file prefix (without _hits_aa.fasta)
+    file_prefix = os.path.splitext(os.path.basename(os.path.normpath(input_file)))[0]  # define file prefix (without _hits_aa.fasta)
     for leaf in tree_query.iter_leaves():  # iterate on leaves of query tree
         if file_prefix in str(
                 leaf.name) and leaf.dist < dist_dev:  # if seq name from file == seq name from tree and distance is OK

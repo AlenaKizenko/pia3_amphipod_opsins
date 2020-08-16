@@ -76,20 +76,20 @@ if __name__ == "__main__":
     file_name = os.path.basename(os.path.normpath(args.input_file))
     transdecoder_result = modules.run_transdecoder(args.input_file, args.output_folder)  # run Transdecoder
     if args.aligner_type == 'blast':  # if blast has been chosen
-        align_result = modules.blast_search(args.database, transdecoder_result, args.threads)  # run blast
+        align_result = modules.blast_search(args.output_folder, args.database, transdecoder_result, args.threads)  # run blast
     elif args.aligner_type == 'diamond':  # if diamond has been chosen
         align_result = modules.diamond_search(args.database, transdecoder_result, args.threads)  # run diamond
     else:
         assert False, "Unknown aligner! " \
                               "Please specify aligner type (blast or diamond)"  # if aligner type has been misspelled
-    cd_hit_result = modules.cd_hit_clust(num_threads=args.threads)  # run CD-HIT
-    translation_result = modules.translate_hits(cd_hit_result)  # translate CDS from clustered hits
+    cd_hit_result = modules.cd_hit_clust(out_dir=args.output_folder, num_threads=args.threads)  # run CD-HIT
+    translation_result = modules.translate_hits(args.output_folder, cd_hit_result)  # translate CDS from clustered hits
     renaming_result = modules.rename_hits(args.input_file, args.output_folder,
                                           transcripts, args.database)  # rename hits according to the filename and filter if CDS mode has been chosen
     mean_dist = modules.calc_mean_dist(args.initial_phylo)  # calculating absolute mean deviation of branch length
-    phylogeny_result = modules.build_phylogeny(args.database, renaming_result,
+    phylogeny_result = modules.build_phylogeny(args.output_folder, args.database, renaming_result,
                                                args.threads)  # build phyogeny with target hits
-    filter_results = modules.filter_distant_seqs(phylogeny_result, mean_dist,
+    filter_results = modules.filter_distant_seqs(args.input_file, phylogeny_result, mean_dist,
                                                  renaming_result)  # remove branches with lengths more than 4* absolute mean deviation
     tree = ete3.Tree(phylogeny_result)  # make Ete3 tree object
     ancestor = tree.search_nodes(name="RHO_Bos_taurus_AAA30674.1")[
@@ -105,7 +105,7 @@ if __name__ == "__main__":
 
     print(f'Analysis for {renaming_result} is done')
     print(f'{renaming_result[:-14]}_opsins_class.fasta is a file with amino acid sequences')
-    print(f'{renaming_result[:-14]}_opsins_nt.fasta is a file with nucleotide sequences')
+    print(f'{renaming_result[:-14]}_opsins_nucl.fasta is a file with nucleotide sequences')
 
     if args.delete_intermediate:
         print('Delete intermediate files')  # remove unnecessary files

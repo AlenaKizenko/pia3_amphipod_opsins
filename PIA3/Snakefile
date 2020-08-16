@@ -1,5 +1,6 @@
 import glob
 import os
+import re
 
 pia_args = list(filter(lambda x: x != 'db' and x != 'in_dir' and x != 'out_dir' and config[x], config.keys()))
 pia_args = list(map(lambda x: f'--{x}', pia_args))

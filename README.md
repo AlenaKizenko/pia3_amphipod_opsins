@@ -50,6 +50,6 @@ snakemake -j 8 --use-conda --conda-prefix /path/to/new/conda --config in_dir=/pa
 
 * results correspond to `test_data/header.fasta` file: `/path/diversity_of_opsins_in_amphipods/PIA3/test_out/header`
 
-* results correspond to `test_data/tail.fasta` file: `/path/diversity_of_opsins_in_amphipods/PIA3/test_out/header`
+* results correspond to `test_data/tail.fasta` file: `/path/diversity_of_opsins_in_amphipods/PIA3/test_out/tail`
 
 * conda environemnt with all required packages: `/path/to/new/conda`
