@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  pipeline:
+    build:
+      context: .
+    volumes:
+      - ./PIA3:/home/PIA3
+    command: >
+      sh -c "snakemake -j 8 --use-conda --conda-prefix /home --config in_dir=/home/PIA3/test_data out_dir=/home/out db=/home/PIA3/classification_opsins_full_aa.fasta cds=True --verbose"
