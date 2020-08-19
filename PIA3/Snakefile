@@ -2,12 +2,18 @@ import glob
 import os
 import re
 
-pia_args = list(filter(lambda x: x != 'db' and x != 'in_dir' and x != 'out_dir' and config[x], config.keys()))
+
+pia_args = list(filter(lambda x: x != 'db' and x != 'in_dir' and x != 'out_dir' and x != 'model' and x != 'outgroup' and config[x], config.keys()))
 pia_args = list(map(lambda x: f'--{x}', pia_args))
 
 db = config['db']
 in_dir = config['in_dir']
 out_dir = config['out_dir']
+if 'model' in config.keys():
+    model = config['model']
+else:
+    model = 'TEST'
+outgroup = config['outgroup']
 refs = list(map(lambda x: re.sub('.fasta', '', os.path.basename(x)), glob.glob(f"{in_dir}/*fasta")))
 
 rule all:
@@ -18,12 +24,12 @@ rule build_initial_tree:
     benchmark: "{out_dir}/benchmarks/build_initial_tree.txt"
     conda: "config/opsins.yml"
     log: "{out_dir}/logs/build_initial_tree.txt"
-    params: bb=1000, db=db, mode="TEST", nt="AUTO", t="RANDOM"
+    params: bb=1000, db=db, model=model, nt="AUTO", t="RANDOM"
     threads: 8
     shell:
          """
          (mafft --thread {threads} --inputorder --auto {params.db} > {output.class_al}) 2> {log}
-         iqtree -s {output.class_al} -nt {params.nt} -t {params.t} -bb {params.bb} -m {params.mode} 2>> {log}
+         iqtree -s {output.class_al} -nt {params.nt} -t {params.t} -bb {params.bb} -m {params.model} 2>> {log}
          """
 
 rule pia_analysis:
@@ -33,7 +39,7 @@ rule pia_analysis:
     conda: "config/opsins.yml"
     benchmark: "{out_dir}/benchmarks/pia_{reference}.txt"
     log: "{out_dir}/logs/pia_{reference}.txt"
-    params: args=' '.join(pia_args), db=db
+    params: args=' '.join(pia_args), db=db, model=model, outgroup=outgroup
     threads: 8
     shell:
-         "python3 PIA3.py -i {input.ref} -o {output.ref_out_dir} -db {params.db} -in_phylo {input.tree} {params.args} 2> {log}"
+         "python3 PIA3.py -i {input.ref} -o {output.ref_out_dir} -db {params.db} -in_phylo {input.tree} -model {params.model} -outgroup {params.outgroup} {params.args} 2> {log}"
