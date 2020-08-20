@@ -17,7 +17,7 @@ Snakemake is required for pipeline running. You can
 **A:** Create and activate new conda environment named `smk`
 
 ```commandline
-conda create -y -n smk snakemake=5.21.0 -c bioconda
+conda create -y -n smk snakemake=5.21.0 -c bioconda -c conda-forge
 conda activate smk
 ```
 
