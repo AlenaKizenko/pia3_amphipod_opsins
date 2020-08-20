@@ -17,20 +17,15 @@ Snakemake is required for pipeline running. You can
 **A:** Create and activate new conda environment named `smk`
 
 ```commandline
-conda create -y -n smk snakemake -c bioconda
+conda create -y -n smk snakemake=5.21.0 -c bioconda
 conda activate smk
 ```
 
-**B:** Install snakemake in your activated environment
+**B:** Install conda environment named smk from `smk.yml` file
 
 ```commandline
-conda install -y -c bioconda snakemake=5.20.1
-```
-
-**C:** Install conda environment named smk from `smk.yml` file
-
-```commandline
-conda env create -y -n smk --file smk.yml
+conda env create -n smk --file smk.yml
+conda activate smk
 ```
 
 ### Run pipeline
@@ -56,6 +51,6 @@ snakemake -j 8 --use-conda --conda-prefix /path/to/new/conda --config in_dir=/pa
 
 * results correspond to `test_data/header.fasta` file: `/path/diversity_of_opsins_in_amphipods/PIA3/test_out/header`
 
-* results correspond to `test_data/tail.fasta` file: `/path/diversity_of_opsins_in_amphipods/PIA3/test_out/tail`
+* results correspond to `test_data/Parhyale_hawaiensis_test.fasta` file: `/path/diversity_of_opsins_in_amphipods/PIA3/test_out/Parhyale_hawaiensis_test`
 
 * conda environemnt with all required packages: `/path/to/new/conda`
