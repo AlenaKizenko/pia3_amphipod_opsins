@@ -35,14 +35,21 @@ Be careful: it's `import Bio`, but you need to install it as `biopython` (e.g. `
                         Input FASTA file OR folder with FASTA files
   -db DATABASE, --database DATABASE
                         Path to database for blast search and EPA
-  -all, --all_transcripts
-                        Perform BLAST search on all transcripts
+  -opsin, --opsins_search
+                        Searching for opsin sequences (MWS, LWS, UV, Vertebrate-like)                      
   -cds, --cds_only      Perform BLAST search only on coding sequences
   -del, --delete_intermediate
                         Delete intermediate files
+  -model MODEL, --model_iqtree MODEL
+                        Model for IQ-Tree maximum likelihood tree building (if known)
+  -aligner ALIGNER, --aligner_type ALIGNER
+                        Use blast or diamond as aligner
+  -outgroup OUTGROUP, --tree_outgroup OUTGROUP
+                        Outgroup for phylogenetic tree building; if not defined by user, first sequence from database FASTA file is taken
   -o OUTPUT_FOLDER, --output OUTPUT_FOLDER
                         Output folder name
   -t THREADS, --threads THREADS
-                        Number of threads ```
+                        Number of threads
+                        ```
 
 Intended for own use. Please feel free to use, reuse, modify and contact us if you need help.
