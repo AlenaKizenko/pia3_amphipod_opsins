@@ -22,11 +22,7 @@ def make_arguments_parser():
                         help='Path to database for blast search and EPA',
                         required=True,
                         type=str)
-    group_seqs = parser.add_mutually_exclusive_group(required=True)
-    group_seqs.add_argument('-all', '--all_transcripts',
-                            help='Perform BLAST search on all transcripts',
-                            action="store_true")
-    group_seqs.add_argument('-cds', '--cds_only',
+    parser.add_argument('-cds', '--cds_only',
                             help='Perform BLAST search only on coding sequences',
                             action="store_true")
     parser.add_argument('-del', '--delete_intermediate',
@@ -67,14 +63,14 @@ if __name__ == "__main__":
     args = make_arguments_parser()  # making argparse arguments
     # check of argparse arguments
 
-    if args.all_transcripts:
-        transcripts = "all"  # assign variable "transcripts" as "all" for function rename_hits
-        print('Find all putative transcripts')
-    elif args.cds_only:
+    if args.cds_only:
         transcripts = "cds"  # assign variable "transcripts" as "cds" for function rename_hits
         print(
             'Find only putative coding sequences:'
             'sequence must start from methionine and has length more or equal of 1/2 of mean database length')
+    else:
+        transcripts = "all"  # assign variable "transcripts" as "all" for function rename_hits
+        print('Find all putative transcripts')
 
     try:
         os.mkdir(args.output_folder)  # try to create folder
@@ -110,7 +106,7 @@ if __name__ == "__main__":
         filter_results = modules.filter_distant_seqs(base_name, phylogeny_result, mean_dist,
                                                  opsins_check)  # remove branches with lengths more than 4* absolute mean deviation
         
-        if args.tree_outgroup:
+        if args.tree_outgroup != 'file':
             outgroup_name = args.tree_outgroup
         else:
             outgroup_name = [seq_record.id for seq_record in

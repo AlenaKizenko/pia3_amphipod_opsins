@@ -13,7 +13,10 @@ if 'model' in config.keys():
     model = config['model']
 else:
     model = 'TEST'
-outgroup = config['outgroup']
+if 'outgroup' in config.keys():
+	outgroup = config['outgroup']
+else:
+	outgroup = 'file'
 refs = list(map(lambda x: re.sub('.fasta', '', os.path.basename(x)), glob.glob(f"{in_dir}/*fasta")))
 
 rule all:
