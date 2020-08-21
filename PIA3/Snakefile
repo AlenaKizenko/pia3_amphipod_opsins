@@ -3,20 +3,24 @@ import os
 import re
 
 
-pia_args = list(filter(lambda x: x != 'db' and x != 'in_dir' and x != 'out_dir' and x != 'model' and x != 'outgroup' and config[x], config.keys()))
+pia_args = list(filter(lambda x: x != 'db' and x != 'in_dir' and x != 'out_dir' and x != 'model' and x != 'outgroup' and x != 'aligner' and config[x], config.keys()))
 pia_args = list(map(lambda x: f'--{x}', pia_args))
 
 db = config['db']
 in_dir = config['in_dir']
 out_dir = config['out_dir']
+if 'aligner' in config.keys():
+    aligner = config['aligner']
+else:
+    aligner = 'blast'
 if 'model' in config.keys():
     model = config['model']
 else:
     model = 'TEST'
 if 'outgroup' in config.keys():
-	outgroup = config['outgroup']
+    outgroup = config['outgroup']
 else:
-	outgroup = 'file'
+    outgroup = 'file'
 refs = list(map(lambda x: re.sub('.fasta', '', os.path.basename(x)), glob.glob(f"{in_dir}/*fasta")))
 
 rule all:
@@ -42,7 +46,7 @@ rule pia_analysis:
     conda: "config/opsins.yml"
     benchmark: "{out_dir}/benchmarks/pia_{reference}.txt"
     log: "{out_dir}/logs/pia_{reference}.txt"
-    params: args=' '.join(pia_args), db=db, model=model, outgroup=outgroup
+    params: args=' '.join(pia_args), db=db, model=model, outgroup=outgroup, aligner=aligner
     threads: 8
     shell:
-         "python3 PIA3.py -i {input.ref} -o {output.ref_out_dir} -db {params.db} -in_phylo {input.tree} -model {params.model} -outgroup {params.outgroup} {params.args} 2> {log}"
+         "python3 PIA3.py -i {input.ref} -o {output.ref_out_dir} -db {params.db} -in_phylo {input.tree} -model {params.model} -outgroup {params.outgroup} -aligner {params.aligner} {params.args} 2> {log}"

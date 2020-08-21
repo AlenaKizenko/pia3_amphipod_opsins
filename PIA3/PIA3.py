@@ -38,9 +38,8 @@ def make_arguments_parser():
                         required=False, default=8,
                         type=int)
     parser.add_argument('-aligner', '--aligner_type',
-                        default='blast',
                         required=False, type=str,
-                        help='Use blast or diamond as aligner')
+                        help='Use BLAST or DIAMOND for database search')
     parser.add_argument('-in_phylo', '--initial_phylo',
                         required=True, type=str,
                         help='Initial phylogeny based on input database')
@@ -87,7 +86,7 @@ if __name__ == "__main__":
     if args.aligner_type == 'blast':  # if blast has been chosen
         align_result = modules.blast_search(base_name, args.output_folder, args.database, transdecoder_result, args.threads)  # run blast
     elif args.aligner_type == 'diamond':  # if diamond has been chosen
-        align_result = modules.diamond_search(base_name, args.database, transdecoder_result, args.threads)  # run diamond
+        align_result = modules.diamond_search(base_name, args.output_folder, args.database, transdecoder_result, args.threads)  # run diamond
     else:
         assert False, "Unknown aligner! " \
                               "Please specify aligner type (blast or diamond)"  # if aligner type has been misspelled
