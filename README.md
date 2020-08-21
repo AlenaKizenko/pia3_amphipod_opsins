@@ -92,7 +92,7 @@ Before first run you shoul test is PIA3 was installed completely.
 ```commandline
 cd PIA3
 
-snakemake -j 8 --use-conda --conda-prefix /home/alena/Apps/PIA3_conda --config in_dir=/home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/test_data out_dir=/home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/test_out db=/home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/classification_opsins_full_aa.fasta cds=True del=False opsin=True model=LG+F+G4 outgroup=RHO_Bos_taurus_AAA30674.1
+snakemake -j 8 --use-conda --conda-prefix CONDA_PREFIX --config in_dir=/path/to/PIA3/test_data out_dir=/path/to/PIA3/test_out db=/path/to/PIA3/classification_opsins_full_aa.fasta cds=True del=False opsin=True model=LG+F+G4 outgroup=RHO_Bos_taurus_AAA30674.1
 ```
 **2.** Run unit test
 
