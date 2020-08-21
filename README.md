@@ -14,7 +14,7 @@ Companion scripts to the manuscript ... submitted to ...
 
 Conda is required for pipeline running. If it is not installed on your computer, you need:
 
-**1.** Download Anaconda package from [https://www.anaconda.com/products/individual]
+**1.** Download [Anaconda](https://www.anaconda.com/products/individual)
 
 **2.** Run bash installation script
 
