@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.24)  27 JUL 2020 20:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.24)  21 SEP 2020 20:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1170,48 +1170,84 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 61.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 61.
-<../species_tree/aa_tree.png, id=8, 682.7106pt x 511.9125pt>
-File: ../species_tree/aa_tree.png Graphic file (type png)
-<use ../species_tree/aa_tree.png>
-Package pdftex.def Info: ../species_tree/aa_tree.png  used on input line 70.
+<./FigS1_assembly_comparison.pdf, id=8, 710.655pt x 710.655pt>
+File: ./FigS1_assembly_comparison.pdf Graphic file (type pdf)
+<use ./FigS1_assembly_comparison.pdf>
+Package pdftex.def Info: ./FigS1_assembly_comparison.pdf  used on input line 65
+.
+(pdftex.def)             Requested size: 568.52477pt x 568.52477pt.
+
+Overfull \hbox (39.58803pt too wide) in paragraph at lines 65--66
+[] []
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<FigS2_aa_tree.png, id=18, 682.7106pt x 511.9125pt>
+File: FigS2_aa_tree.png Graphic file (type png)
+<use FigS2_aa_tree.png>
+Package pdftex.def Info: FigS2_aa_tree.png  used on input line 70.
 (pdftex.def)             Requested size: 580.30675pt x 435.12769pt.
 
 Overfull \hbox (79.82275pt too wide) in paragraph at lines 70--71
 [][]
  []
 
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}pdfTeX warning (ext4): desti
-nation with the same identifier (name{figure.1}) has been already used, duplica
-te ignored
+[2pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
+has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.72 
-     ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 74.
- [2pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
+      <./FigS1_assembly_comparison.pdf>]
+<./FigS3_gDNA_PCR_Gmfa_Ecy_Gla.png, id=36, 597.6729pt x 845.19765pt>
+File: ./FigS3_gDNA_PCR_Gmfa_Ecy_Gla.png Graphic file (type png)
+<use ./FigS3_gDNA_PCR_Gmfa_Ecy_Gla.png>
+Package pdftex.def Info: ./FigS3_gDNA_PCR_Gmfa_Ecy_Gla.png  used on input line 
+75.
+(pdftex.def)             Requested size: 448.25357pt x 633.89668pt.
+ [3pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.74 \end{document}
-                    <../species_tree/aa_tree.png (PNG copy)>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 74.
+l.77 
+      <./FigS2_aa_tree.png (PNG copy)>]
+<./FigS4_cDNA_diff_body_parts.png, id=43, 366.77025pt x 369.66106pt>
+File: ./FigS4_cDNA_diff_body_parts.png Graphic file (type png)
+<use ./FigS4_cDNA_diff_body_parts.png>
+Package pdftex.def Info: ./FigS4_cDNA_diff_body_parts.png  used on input line 7
+9.
+(pdftex.def)             Requested size: 238.39783pt x 240.27684pt.
+ [4pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
+ has been already used, duplicate ignored
 
-(./Opsins_suppl.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 74.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 74.
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.81 
+      <./FigS3_gDNA_PCR_Gmfa_Ecy_Gla.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 84.
+ [5pdfTeX warning (ext4): destination with the same identifier (name{figure.4})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.84 \end{document}
+                    <./FigS4_cDNA_diff_body_parts.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 84.
+ (./Opsins_suppl.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 84.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 84.
 Package rerunfilecheck Info: File `Opsins_suppl.out' has not changed.
 (rerunfilecheck)             Checksum: 2B85A5B6237022E210AD659A8B00E00E;101.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 74.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 84.
  ) 
 Here is how much of TeX's memory you used:
- 7437 strings out of 492982
- 109287 string characters out of 6134896
+ 7456 strings out of 492982
+ 109826 string characters out of 6134896
  183926 words of memory out of 5000000
- 10925 multiletter control sequences out of 15000+600000
+ 10937 multiletter control sequences out of 15000+600000
  7627 words of font info for 27 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  28i,7n,28p,467b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1220,10 +1256,10 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Opsins_suppl.pdf (2 pages, 470266 bytes).
+Output written on Opsins_suppl.pdf (5 pages, 1642062 bytes).
 PDF statistics:
- 45 PDF objects out of 1000 (max. 8388607)
- 34 compressed objects within 1 object stream
- 6 named destinations out of 1000 (max. 500000)
- 14 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 78 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
+ 11 named destinations out of 1000 (max. 500000)
+ 29 words of extra memory for PDF output out of 10000 (max. 10000000)
 
