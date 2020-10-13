@@ -54,7 +54,7 @@ We recommend that you test your PIA3 installation
 ```commandline
 cd PIA3
 
-snakemake -j 8 --use-conda --conda-prefix CONDA_PREFIX --config in_dir=/path/to/PIA3/test_data out_dir=/path/to/PIA3/test_out db=/path/to/PIA3/test_data/classification_opsins_full_aa.fasta cds=True del=False opsin=True model=LG+F+G4 outgroup=RHO_Bos_taurus_AAA30674.1
+snakemake -j 8 --use-conda --conda-prefix CONDA_PREFIX --config in_dir=/path/to/PIA3/test_data out_dir=/path/to/PIA3/test_out/transcriptome db=/path/to/PIA3/test_data/classification_opsins_full_aa.fasta cds=True del=False opsin=True model=LG+F+G4 outgroup=RHO_Bos_taurus_AAA30674.1
 ```
 **2.** Run unit test
 
