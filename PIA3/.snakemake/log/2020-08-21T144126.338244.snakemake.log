@@ -1,0 +1,49 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	build_initial_tree
+	1	pia_analysis
+	3
+
+[Fri Aug 21 14:41:26 2020]
+rule build_initial_tree:
+    output: /home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/test_out/class_align.fasta, /home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/test_out/class_align.fasta.contree
+    log: /home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/test_out/logs/build_initial_tree.txt
+    jobid: 2
+    benchmark: /home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/test_out/benchmarks/build_initial_tree.txt
+    wildcards: out_dir=/home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/test_out
+    threads: 8
+
+Activating conda environment: /home/alena/Apps/PIA3_conda/43b82d8a
+[Fri Aug 21 14:44:37 2020]
+Finished job 2.
+1 of 3 steps (33%) done
+
+[Fri Aug 21 14:44:37 2020]
+rule pia_analysis:
+    input: /home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/test_data/test_Hyalella_azteca.fasta, /home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/test_out/class_align.fasta.contree
+    output: /home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/test_out/test_Hyalella_azteca
+    log: /home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/test_out/logs/pia_test_Hyalella_azteca.txt
+    jobid: 1
+    benchmark: /home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/test_out/benchmarks/pia_test_Hyalella_azteca.txt
+    wildcards: out_dir=/home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/test_out, reference=test_Hyalella_azteca
+    threads: 8
+
+Activating conda environment: /home/alena/Apps/PIA3_conda/43b82d8a
+[Fri Aug 21 14:48:45 2020]
+Finished job 1.
+2 of 3 steps (67%) done
+
+[Fri Aug 21 14:48:45 2020]
+localrule all:
+    input: /home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/test_out/test_Hyalella_azteca
+    jobid: 0
+
+[Fri Aug 21 14:48:45 2020]
+Finished job 0.
+3 of 3 steps (100%) done
+Complete log: /home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/.snakemake/log/2020-08-21T144126.338244.snakemake.log

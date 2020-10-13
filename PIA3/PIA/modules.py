@@ -9,14 +9,17 @@ from Bio.SeqRecord import SeqRecord
 
 
 def run_transdecoder(input_file, out_dir):
+    print('Running Transdecoder to define CDS in contigs')
     os.system(f"TransDecoder.LongOrfs -t {input_file}")  # run TransDecoder.LongOrfs script
-    os.system(f"TransDecoder.Predict -t {input_file}")  # run TransDecoder.Predict script
+    os.system(f"TransDecoder.Predict -t {input_file} --single_best_only")  # run TransDecoder.Predict script
     file_name = os.path.basename(os.path.normpath(input_file))
     transdecoder_pep = f'{out_dir}/{file_name}.transdecoder.pep'  # define the name of Transdecoder's result file with cds
+    print('Transdecoder run is completed')
     return transdecoder_pep  # return name of Transdecoder's result file with cds
 
 
 def blast_search(basename, out_dir: str, db, cds, num_threads=16, e_val=1e-10):
+    print('Performing BLAST search to define CDS in contigs')
     os.system(f'makeblastdb -in {db} -out user_database -parse_seqids -dbtype prot')  # make blast database
     os.system(
         f'blastp -query {cds} -db user_database -num_threads {num_threads} -outfmt 6 '
@@ -33,9 +36,11 @@ def blast_search(basename, out_dir: str, db, cds, num_threads=16, e_val=1e-10):
                 rec = SeqRecord(seq_record.seq, seq_record.id, description='')  # make SeqRecord object
                 my_records.append(rec)  # write seq record to list my_records
     SeqIO.write(my_records, f'{out_dir}/{basename}_blast_hits.fasta', 'fasta')  # write records to .fasta file
+    print('BLAST search is completed')
 
 
 def diamond_search(basename, out_dir: str, db, cds, num_threads=16, e_val=1e-10):  # the same but for Diamond
+    print('Performing DIAMOND search to define CDS in contigs')
     os.system(f'diamond makedb --in {db} -d user_database')
     os.system(f'diamond blastp -q {cds} -d user_database -p {num_threads} -f 6 -o {out_dir}/{basename}_blast_file.tmp -e {e_val}')
     hits = set()
@@ -49,6 +54,7 @@ def diamond_search(basename, out_dir: str, db, cds, num_threads=16, e_val=1e-10)
                 rec = SeqRecord(seq_record.seq, seq_record.id, description='')
                 my_records.append(rec)
     SeqIO.write(my_records, f'{out_dir}/{basename}_blast_hits.fasta', 'fasta')
+    print('DIAMOND search is completed')
 
 
 def cd_hit_clust(basename, out_dir: str, c=0.95, n=5, m=2000, num_threads=8):
@@ -57,6 +63,7 @@ def cd_hit_clust(basename, out_dir: str, c=0.95, n=5, m=2000, num_threads=8):
     os.system(
         f'cd-hit -i {out_dir}/{basename}_blast_hits.fasta -o {hits_clust} '
         f'-c {c} -n {n} -M {m} -T {num_threads}')  # run CD-HIT
+    print('CD-HIT clustering is completed')
     return hits_clust  # return D-HIT redult file name
 
 
@@ -82,6 +89,7 @@ def rename_hits(species_name, out_dir, transcripts, db, basename):
             rec = SeqRecord(seq_record.seq, id=final, description='')
             my_records.append(rec)
     SeqIO.write(my_records, filename, 'fasta')
+    print('Renaming is completed')
     return filename
 
 
@@ -97,6 +105,7 @@ def calc_mean_dist(tree):
     for i in lst:
         a = abs(i - me)  # from each distance subtract mean and take absolute value
         lst_me.append(a)  # append list with absolute deviation from mean
+    print('Calculations are completed')
     return statistics.mean(lst_me) * 4  # return mean absolute deviation * 4
 
 
@@ -106,6 +115,7 @@ def mafft_align(out_dir: str, db, filename, num_threads=8):
     os.system(
         f'mafft --thread {num_threads} --inputorder --auto {out_dir}/query_class.fasta > '
         f'{out_dir}/query_class_align.fasta')  # align database sequences with mafft
+    print('Aligning is completed')
     
 
 def build_phylogeny(out_dir: str, db, filename, num_threads=8, model = 'TEST', opsins = False):
@@ -120,6 +130,7 @@ def build_phylogeny(out_dir: str, db, filename, num_threads=8, model = 'TEST', o
                 f'{out_dir}/query_class_opsins_align.fasta')  # align database sequences with mafft
         os.system(f'iqtree -s {out_dir}/query_class_opsins_align.fasta -nt AUTO -t RANDOM -bb 1000 -m {model}')  # build phylogeny with IQ-Tree
         tree = f'{out_dir}/query_class_opsins_align.fasta.contree'  # define tree name
+    print('Building of phylogenetic tree is completed')
     return tree  # return tree name
 
 
@@ -140,11 +151,12 @@ def filter_distant_seqs(input_file, tree_query, dist_dev, query_file):
                 rec = SeqRecord(seq_record.seq, seq_record.id, description='')  # create SeqRecord object
                 my_records.append(rec)  # append list with seq records
     SeqIO.write(my_records, f'{input_file}_PIA3_aa.fasta', 'fasta')  # write seq records to file
+    print('Filtering is completed')
 
 
 
-def check_lysine(out_dir, alignment, filename, ref_seq_name = 'RHO_Bos_taurus_AAA30674.1', n=296):
-    # calculate position in the alignment
+def check_lysine(out_dir, alignment, filename, ref_seq_name = 'RHO_Bos_taurus_AAA30674.1', n=296): # calculate position in the alignment
+    print('Checking lysine position in opsins\' sequences')
     with open(alignment) as aln:
         for record in AlignIO.read(aln, "fasta"):
             if str(record.id) == ref_seq_name:  # if the ref sequence found
@@ -173,10 +185,12 @@ def check_lysine(out_dir, alignment, filename, ref_seq_name = 'RHO_Bos_taurus_AA
             if opsin in seq_record.id:
                 query_opsins.append(seq_record)
     SeqIO.write(query_opsins, f'{filename}_opsins.fasta', 'fasta')
+    print('Checking lysine position is completed')
     return f'{filename}_opsins.fasta'
 
 
 def classify_opsins(tree, species):
+    print('Classifying opsins by sensitivity')
     global opsins_class  # assign global variable
     opsins_class = {}  # create dictionary for opsins' types classification
     for leaf in tree.iter_leaves():  # iterate on leaves
@@ -219,10 +233,12 @@ def classify_opsins(tree, species):
             type_opsin = str(parent.name)  # define type of opsin as parent node name
             opsins_class[leaf.name] = type_opsin  # write type of hit to dict
             leaf.name = str(type_opsin) + '_' + str(leaf.name)  # rename leaf name
+    print('Classification is completed')
     return tree
 
 
 def write_types(filename):
+    print('Writing prefixes to opsin\'s sequences')
     with open(f'{filename}_opsins.fasta') as file:  # open file with final hits
         my_records = []  # create list for seqs, which passed selection by median abs dev
         for seq_record in SeqIO.parse(file, "fasta"):  # parse file with final hits
@@ -232,16 +248,14 @@ def write_types(filename):
                     final = f'{value}_{name}'  # concatenate opsin type and sequence name
                     rec = SeqRecord(seq_record.seq, id=final, description='')  # create SeqRecord object
                     my_records.append(rec)  # append list with seq records
-        SeqIO.write(my_records, f'{filename}_opsins_class.fasta', 'fasta')  # write classified sequences to file
+        SeqIO.write(my_records, f'{filename}_PIA3_aa.fasta', 'fasta')  # write classified sequences to file
+        os.system(f'rm {filename}_opsins.fasta')
+    print('Writing prefixes is completed')
         
 def match_amino_nucl(filename, opsins = False):
     print('Matching protein sequence to nucleotide CDS')
-    if opsins:
-        file_hits_set = {title for title, seq in SimpleFastaParser(
-                open(f'{os.path.splitext(filename)[0]}_opsins_class.fasta'))}  # create set from seq names from classified opsins' file
-    else:
-        file_hits_set = {title for title, seq in SimpleFastaParser(
-                open(f'{os.path.splitext(filename)[0]}_PIA3_aa.fasta'))}  # create set from seq names from classified opsins' file
+    file_hits_set = {title for title, seq in SimpleFastaParser(
+            open(f'{os.path.splitext(filename)[0]}_PIA3_aa.fasta'))}  # create set from seq names from classified opsins' file
     my_records = []  # create list for
     cnt = 1  # count
     for seq_record in SeqIO.parse(f'{filename}.transdecoder.cds', "fasta"):  # parse file with clustered blast hits
@@ -254,24 +268,19 @@ def match_amino_nucl(filename, opsins = False):
                 my_records.append(rec)  # append list with seq records
                 cnt += 1
     SeqIO.write(my_records, f'{os.path.splitext(filename)[0]}_PIA3_nucl.fasta', 'fasta')  # write seq records to file
+    print('Matching protein sequences to nucleotide CDS is completed')
 
 def match_amino_contig(filename, transcriptome, opsins = False):
     print('Matching protein sequence to contig in transcriptome')
-    if opsins:
-        file_hits_set = {title for title, seq in SimpleFastaParser(
-                open(f'{os.path.splitext(filename)[0]}_opsins_class.fasta'))}  # create set from seq names from classified opsins' file
-    else:
-        file_hits_set = {title for title, seq in SimpleFastaParser(
-                open(f'{os.path.splitext(filename)[0]}_PIA3_aa.fasta'))}  # create set from seq names from classified opsins' file
+    file_hits_set = {title for title, seq in SimpleFastaParser(
+            open(f'{os.path.splitext(filename)[0]}_PIA3_aa.fasta'))}  # create set from seq names from classified opsins' file
     my_records = []  # create list for
-    cnt = 1  # count
     for seq_record in SeqIO.parse(transcriptome, "fasta"):  # parse transcriptome file
         for opsin in file_hits_set:  # iterate on names from classified opsins' file
             seq_record_id = str(seq_record.id).replace("|", "_")  # replacement because of IQ-Tree specificity
             seq_record_id = seq_record_id.replace(":", "_")  # replacement because of IQ-Tree specificity
             if seq_record_id.split()[0][:-1] in opsin:  # if seq names are equal
-                name = opsin + str(cnt)  # cnt to avoid similar names
-                rec = SeqRecord(seq_record.seq, id=name, description='')  # create SeqRecord object
+                rec = SeqRecord(seq_record.seq, id=opsin, description='')  # create SeqRecord object
                 my_records.append(rec)  # append list with seq records
-                cnt += 1
     SeqIO.write(my_records, f'{os.path.splitext(filename)[0]}_PIA3_contigs.fasta', 'fasta')  # write seq records to file
+    print('Matching protein sequences to contigs is completed')

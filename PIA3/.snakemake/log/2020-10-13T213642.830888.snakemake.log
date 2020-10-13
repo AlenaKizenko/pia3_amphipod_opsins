@@ -1,0 +1,6 @@
+TypeError in line 24 of /home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/Snakefile:
+expected str, bytes or os.PathLike object, not generator
+  File "/home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/Snakefile", line 24, in <module>
+  File "/home/alena/anaconda3/envs/smk/lib/python3.6/glob.py", line 20, in glob
+  File "/home/alena/anaconda3/envs/smk/lib/python3.6/glob.py", line 40, in _iglob
+  File "/home/alena/anaconda3/envs/smk/lib/python3.6/posixpath.py", line 107, in split

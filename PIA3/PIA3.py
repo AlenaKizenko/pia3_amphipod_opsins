@@ -7,6 +7,7 @@ import time
 import PIA.modules as modules
 import ete3
 from Bio import SeqIO
+import sys
 
 
 def make_arguments_parser():
@@ -58,7 +59,7 @@ def make_arguments_parser():
 if __name__ == "__main__":
 
     start = time.time()  # start timer
-
+    
     args = make_arguments_parser()  # making argparse arguments
     # check of argparse arguments
 
@@ -80,6 +81,11 @@ if __name__ == "__main__":
         path = os.getcwd()  # get working directory path
         print("Output directory path: {}".format(path))
     
+    used_command = " ".join(sys.argv)
+    file_w_path = open(f'{args.output_folder}/reproduce_command.txt', "w")
+    file_w_path.write(used_command)
+    file_w_path.close()
+
     file_name = os.path.basename(os.path.normpath(args.input_file))
     base_name = os.path.splitext(file_name)[0]
     transdecoder_result = modules.run_transdecoder(args.input_file, args.output_folder)  # run Transdecoder
@@ -134,10 +140,8 @@ if __name__ == "__main__":
     print(f'{base_name}_PIA3_aa.fasta is a file with amino acid sequences')
     print(f'{base_name}_PIA3_nucl.fasta is a file with nucleotide sequences')
     print(f'{base_name}_PIA3_contigs.fasta is a file with contig sequences')
-    
-    if args.opsins_search:
-        print(f'{base_name}_opsins_class.fasta is a file with amino acid sequences of opsins classified by light sensitivity')
-        print(f'{base_name}_class_tree.contree is a maximum likelihood phylogenetic tree with target sequences')
+    print(f'{base_name}_class_tree.contree is a maximum likelihood phylogenetic tree with target sequences')
+    print(f'To reproduce this analysis run command from file reproduce_command.txt')
 
     if args.delete_intermediate:
         print('Delete intermediate files')  # remove unnecessary files

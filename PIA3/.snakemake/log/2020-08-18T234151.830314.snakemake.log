@@ -1,0 +1,38 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	build_initial_tree
+	1	pia_analysis
+	3
+
+[Tue Aug 18 23:41:51 2020]
+rule build_initial_tree:
+    output: /home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/test_out/class_align.fasta, /home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/test_out/class_align.fasta.contree
+    log: /home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/test_out/logs/build_initial_tree.txt
+    jobid: 2
+    benchmark: /home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/test_out/benchmarks/build_initial_tree.txt
+    wildcards: out_dir=/home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/test_out
+    threads: 8
+
+Activating conda environment: /home/alena/Apps/PIA3_conda/43b82d8a
+[Tue Aug 18 23:45:20 2020]
+Finished job 2.
+1 of 3 steps (33%) done
+
+[Tue Aug 18 23:45:20 2020]
+rule pia_analysis:
+    input: /home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/test_data/Parhyale_hawaiensis_m.fasta, /home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/test_out/class_align.fasta.contree
+    output: /home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/test_out/Parhyale_hawaiensis_m
+    log: /home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/test_out/logs/pia_Parhyale_hawaiensis_m.txt
+    jobid: 1
+    benchmark: /home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/test_out/benchmarks/pia_Parhyale_hawaiensis_m.txt
+    wildcards: out_dir=/home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/test_out, reference=Parhyale_hawaiensis_m
+    threads: 8
+
+Activating conda environment: /home/alena/Apps/PIA3_conda/43b82d8a
+Terminating processes on user request, this might take some time.
+Cancelling snakemake on user request.

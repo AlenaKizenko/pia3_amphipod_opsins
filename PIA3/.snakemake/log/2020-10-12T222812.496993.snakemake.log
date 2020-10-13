@@ -1,0 +1,17 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1
+
+[Mon Oct 12 22:28:12 2020]
+localrule all:
+    jobid: 0
+
+[Mon Oct 12 22:28:12 2020]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: /home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/.snakemake/log/2020-10-12T222812.496993.snakemake.log
