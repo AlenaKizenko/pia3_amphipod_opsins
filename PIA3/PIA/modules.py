@@ -181,7 +181,6 @@ def check_lysine(out_dir, alignment, filename, ref_seq_name = 'RHO_Bos_taurus_AA
     query_opsins = []
     for seq_record in SeqIO.parse(f'{out_dir}/{filename}_hits.fasta', 'fasta'):
         for opsin in all_opsins:
-            opsin = str(opsin).replace("|", "_")
             if opsin in seq_record.id:
                 query_opsins.append(seq_record)
     SeqIO.write(query_opsins, f'{filename}_opsins.fasta', 'fasta')
@@ -249,7 +248,7 @@ def write_types(filename):
                     rec = SeqRecord(seq_record.seq, id=final, description='')  # create SeqRecord object
                     my_records.append(rec)  # append list with seq records
         SeqIO.write(my_records, f'{filename}_PIA3_aa.fasta', 'fasta')  # write classified sequences to file
-        os.system(f'rm {filename}_opsins.fasta')
+    os.system(f'rm {filename}_opsins.fasta')
     print('Writing prefixes is completed')
         
 def match_amino_nucl(filename, opsins = False):
