@@ -231,7 +231,7 @@ def classify_opsins(tree, species):
                 parent = parent.up  # move to the root of the tree
             type_opsin = str(parent.name)  # define type of opsin as parent node name
             opsins_class[leaf.name] = type_opsin  # write type of hit to dict
-            leaf.name = str(type_opsin) + '_' + str(leaf.name)  # rename leaf name
+            leaf.name = f'{type_opsin}_{leaf.name}'  # rename leaf name
     print('Classification is completed')
     return tree
 
@@ -256,16 +256,11 @@ def match_amino_nucl(filename, opsins = False):
     file_hits_set = {title for title, seq in SimpleFastaParser(
             open(f'{os.path.splitext(filename)[0]}_PIA3_aa.fasta'))}  # create set from seq names from classified opsins' file
     my_records = []  # create list for
-    cnt = 1  # count
     for seq_record in SeqIO.parse(f'{filename}.transdecoder.cds', "fasta"):  # parse file with clustered blast hits
         for opsin in file_hits_set:  # iterate on names from classified opsins' file
-            seq_record_id = str(seq_record.id).replace("|", "_")  # replacement because of IQ-Tree specificity
-            seq_record_id = seq_record_id.replace(":", "_")  # replacement because of IQ-Tree specificity
-            if seq_record_id.split()[0][:-1] in opsin:  # if seq names are equal
-                name = opsin + str(cnt)  # cnt to avoid similar names
-                rec = SeqRecord(seq_record.seq, id=name, description='')  # create SeqRecord object
+            if seq_record.id.split()[0][:-1] in opsin:  # if seq names are equal
+                rec = SeqRecord(seq_record.seq, id=opsin, description='')  # create SeqRecord object
                 my_records.append(rec)  # append list with seq records
-                cnt += 1
     SeqIO.write(my_records, f'{os.path.splitext(filename)[0]}_PIA3_nucl.fasta', 'fasta')  # write seq records to file
     print('Matching protein sequences to nucleotide CDS is completed')
 
@@ -276,9 +271,7 @@ def match_amino_contig(filename, transcriptome, opsins = False):
     my_records = []  # create list for
     for seq_record in SeqIO.parse(transcriptome, "fasta"):  # parse transcriptome file
         for opsin in file_hits_set:  # iterate on names from classified opsins' file
-            seq_record_id = str(seq_record.id).replace("|", "_")  # replacement because of IQ-Tree specificity
-            seq_record_id = seq_record_id.replace(":", "_")  # replacement because of IQ-Tree specificity
-            if seq_record_id.split()[0][:-1] in opsin:  # if seq names are equal
+            if seq_record.id.split()[0][:-1] in opsin:  # if seq names are equal
                 rec = SeqRecord(seq_record.seq, id=opsin, description='')  # create SeqRecord object
                 my_records.append(rec)  # append list with seq records
     SeqIO.write(my_records, f'{os.path.splitext(filename)[0]}_PIA3_contigs.fasta', 'fasta')  # write seq records to file
