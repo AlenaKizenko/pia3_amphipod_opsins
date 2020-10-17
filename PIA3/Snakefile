@@ -22,7 +22,7 @@ if 'outgroup' in config.keys():
 else:
     outgroup = 'file'
 
-refs = {re.sub(r'\.(fasta|fna|fsa_nt|fa)', '', f): re.sub('.*\.', '', f) for f in os.listdir('data') if
+refs = {re.sub(r'\.(fasta|fna|fsa_nt|fa)', '', f): re.sub('.*\.', '', f) for f in os.listdir(in_dir) if
         re.search(r'\.(fa|fasta|fna|fsa_nt)$', f)}
 
 rule all:
