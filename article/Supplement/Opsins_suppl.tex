@@ -31,7 +31,7 @@
 
 %better control of floats
 \usepackage{graphicx}
-\usepackage{float}
+\usepackage{float,caption}
 \renewcommand{\thefigure}{S\arabic{figure}}
 
 %\makeatletter \patchcmd{\@maketitle}{\LARGE}{\Large}{}{} \makeatother
@@ -65,10 +65,17 @@
 \hskip -1cm \includegraphics[scale=0.8]{./FigS1_assembly_comparison.pdf}
 	\caption{Quality of assemblies} \end{figure}
 
+\begin{figure}[H] 
+	\vskip -18mm
+	\includegraphics[scale=0.85]{FigS2a_opsin_tree.pdf}
+	\caption{(A) Amino acid-based tree of all found opsin sequences.} 
+\end{figure}
 
 \begin{figure}[H] 
+	\ContinuedFloat
 	\includegraphics[scale=0.85]{FigS2_aa_tree.png}
-	\caption{Amino acid-based species tree} \end{figure}
+	\caption{(B) Amino acid-based species tree (B).} 
+\end{figure}
 
 
 \begin{figure}[H] 
