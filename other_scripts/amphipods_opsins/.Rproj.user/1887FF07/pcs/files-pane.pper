@@ -1,9 +1,0 @@
-{
-    "path" : "~/git/diversity_of_opsins_in_amphipods/scripts/amphipods_opsins",
-    "sortOrder" : [
-        {
-            "ascending" : true,
-            "columnIndex" : 2
-        }
-    ]
-}
