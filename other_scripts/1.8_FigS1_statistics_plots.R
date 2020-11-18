@@ -7,7 +7,7 @@ library(svglite)
 library(forcats)   ##for fct_reorder
 
 #------------------------reading file with statistics--------------------------------------------------------------------------
-busco = read.csv('data/busco_both.csv', stringsAsFactors = F)
+busco = read.csv('data/1.8_busco_both.csv', stringsAsFactors = F)
 
 #------------testing data normality-----------------------------------------------------------------------------------------
 shapiro.test(busco$Single_BUSCOs)

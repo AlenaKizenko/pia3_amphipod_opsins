@@ -76,9 +76,9 @@ lva[network$translate$node] <- c("\U2B24")
 #        col = "#6929C4")
 
 
-## Supplement; all opsins (?) or all LWS (?)
+## Supplement; all opsins (excluding non-opsins)
 
-network <- read.nexus.networx("146opsins.best.fas.nex")
+network <- read.nexus.networx("144opsins.best.fas.nex")
 nn <- 4511 #nvertices #can get eg with grep nvertices
 
 
