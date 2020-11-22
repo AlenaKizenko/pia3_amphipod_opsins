@@ -1,3 +1,0 @@
-NameError in line 13 of /home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/Snakefile:
-name 'model' is not defined
-  File "/home/alena/Documents/IB/project_opsins/diversity_of_opsins_in_amphipods/PIA3/Snakefile", line 13, in <module>
