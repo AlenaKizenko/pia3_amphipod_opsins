@@ -1,6 +1,6 @@
 #!/bin/bash
 
-  cat data/SRA_gammaridae.csv| while IFS=, read -r col1 col2
+  cat data/1.1_SRA_gammaridae.csv| while IFS=, read -r col1 col2
   do
 	if [ -d "${PATH_TO_DIR}/${col2}" ] # if directory already exists
 	then

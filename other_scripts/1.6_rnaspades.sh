@@ -1,11 +1,11 @@
 #!/bin/bash
 
-  ls /media/quartemary/rnaseq_reads/Naumenko_trimmed | while read i;
+  ls $PATH_TO_TRIMMED_READS_DIR | while read i;
   do
-	IFS=' ' read -r -a files <<< $(ls /media/quartemary/rnaseq_reads/Naumenko_trimmed/${i})
+	IFS=' ' read -r -a files <<< $(ls ${PATH_TO_TRIMMED_READS_DIR}/${i})
 	read1=${files[0]::-9}_1P.fastq
 	read2=${files[0]::-9}_2P.fastq
-	mkdir /media/tertiary/Alena_Kizenko/rnaspades/${i}_rnaspades
-	/media/secondary/apps/SPAdes-3.13.1-Linux/bin/rnaspades.py -t 8 -1 /media/quartemary/rnaseq_reads/Naumenko_trimmed/${i}/${read1} -2 /media/quartemary/rnaseq_reads/Naumenko_trimmed/${i}/${read2} -o /media/tertiary/Alena_Kizenko/rnaspades/${i}_rnaspades
+	mkdir ${PATH_TO_TRIMMED_READS_DIR}/${i}_rnaspades
+	rnaspades.py -t 8 -1 ${PATH_TO_TRIMMED_READS_DIR}/${i}/${read1} -2 ${PATH_TO_TRIMMED_READS_DIR}/${i}/${read2} -o ${PATH_TO_TRIMMED_READS_DIR}/${i}_rnaspades
 	echo ${i}
   done

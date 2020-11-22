@@ -10,5 +10,5 @@ do #performing Trimmomatic operations on listed reads
 	read1=$name$textfastq1
 	read2=$name$textfastq2
 	output=$name$textfastqout
-	java -jar /media/secondary/apps/Trimmomatic-0.36/trimmomatic-0.36.jar PE /media/tertiary/Alena_Kizenko/hyalella_azteca_reads/$read1 /media/tertiary/Alena_Kizenko/hyalella_azteca_reads/$read2 -baseout /media/tertiary/Alena_Kizenko/hyalella_azteca_trim/$output CROP:140 HEADCROP:20 LEADING:15 TRAILING:15 SLIDINGWINDOW:4:20 MINLEN:36
+	java -jar trimmomatic-0.36.jar PE ${PATH_TO_READS_DIR}/$read1 ${PATH_TO_READS_DIR}/$read2 -baseout ${PATH_TO_OUTPUT_DIR}/$output CROP:140 HEADCROP:20 LEADING:15 TRAILING:15 SLIDINGWINDOW:4:20 MINLEN:36
 done

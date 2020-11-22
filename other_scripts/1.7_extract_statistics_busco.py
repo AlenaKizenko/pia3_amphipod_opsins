@@ -18,8 +18,8 @@
 import os
 
 
-os.chdir('/home/alena/Documents/IB/project_opsins/busco/')
-for filename in os.listdir('/home/alena/Documents/IB/project_opsins/busco/'):
+os.chdir('PATH_TO_BUSCO_STATISTICS')
+for filename in os.listdir('PATH_TO_BUSCO_STATISTICS'):
     with open(filename) as file:
         gam = file.readlines()
         filename = filename[14:] # get amphipode name from file name
