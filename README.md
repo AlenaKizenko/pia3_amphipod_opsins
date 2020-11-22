@@ -1,14 +1,14 @@
-# Opsin diversity in amphipod transcriptomes
+# Opsins' diversity in transcriptomes of Baikal amphipods
 
 Companion scripts to the manuscript ... submitted to ... 
 
 ## Content
 
-* PIA3
+* `PIA3`: modified phylogenetically-informed annotation pipeline
+* `article/Supplement`: Supplement figures
 * `other_scripts`: other useful pieces of code for the analysis.
-* `results`: raw data for the figures.
+* docker files for Travis testing
 * packed pia3 versions.
 
-### Identification of opsin genes of Baikal amphipodes
 
 
