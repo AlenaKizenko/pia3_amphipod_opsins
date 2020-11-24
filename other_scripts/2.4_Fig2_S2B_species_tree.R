@@ -1,21 +1,20 @@
+## Sometimes makes life easier, and it's default in the new R anyway, 
+## so for the sake of version independency:
 options(stringsAsFactors = F)
+
+## Load the necessary packages
 library(ggtree)
 library(ggplot2)
-## if installing ggtree doesn't work
+## if ggtree isn't installed AND if installing ggtree doesn't work
 #install.packages("tidytree") #it is on CRAN!
 ## install the main package
-#if (!requireNamespace("BiocManager", quietly = TRUE))
-#  install.packages("BiocManager")
-#BiocManager::install("ggtree")
 library(magrittr)
 library(tidyr)
-
 library(RColorBrewer)
-##install.packages("gridSVG")
 library(gridSVG)
 
 
-
+## We need to tweak the gheatmap function to get borders around the boxes
 gheatmap <- function (p, data, offset = 0, width = 1, low = "green", high = "red", 
                       color = "white", colnames = TRUE, colnames_position = "bottom", 
                       colnames_angle = 0, colnames_level = NULL, colnames_offset_x = 0, 
@@ -90,28 +89,28 @@ gheatmap <- function (p, data, offset = 0, width = 1, low = "green", high = "red
 }
 
 
-
+## Switch to build either the nucleotide or amino acid tree
 tr <- read.iqtree("data/2.4_Fig2_tree_rnaspades_nt.nwk")
 #tr <- read.iqtree("data/2.4_FigS2_tree_rnaspades_aa.nwk")
 
+## aLRT > 70% or aBayes >0.7 => a red dot
 label <- tr@phylo$node.label
+## Get aLRT from newick and identify large values
 alrt <- as.numeric(sub("/.*", "", label))
 bigalrt <- alrt > 70 & !is.na(alrt)
-##the first number
+## Get aBayes from newick and identify large values
 bayes <- as.numeric(sub(".*/", "", label))
 bigbayes <- bayes > 0.7 & !is.na(bayes)
-## subset
-#newlabel <- ifelse(bigalrt & bigbayes, intToUtf8(9679), "")
+## add red dots where appropriate
 newlabel <- ifelse(bigalrt & bigbayes, "red3", "#00000000")
-#newlabel <- ifelse(bigalrt & bigbayes, label, "")
 tr@phylo$node.label <- newlabel
-#tr@phylo$tip.label <- gsub("_", " ", tr@phylo$tip.label, )
 
+## Add metadata (the number of opsins) to the tree
 meta.df <- read.csv("data/2.4_metadata.csv", row.names = 2)[, 2:4]
-meta.df[,2] <- as.factor(meta.df[,2])
+## make it a factor with the right order of levels
 meta.df[,1] <- as.factor(meta.df[,1])
+meta.df[,2] <- as.factor(meta.df[,2])
 meta.df[,3] <- as.factor(meta.df[,3])
-
 levels(meta.df[,1]) <- c(levels(meta.df[,1]), 2, 3)
 meta.df[,1] <- relevel(meta.df[,1], ref = "0")
 levels(meta.df[,2]) <- c(levels(meta.df[,2]), 0)
@@ -119,37 +118,23 @@ meta.df[,2] <- relevel(meta.df[,2], ref = "0")
 levels(meta.df[,3]) <- c(levels(meta.df[,3]), 0)
 meta.df[,3] <- relevel(meta.df[,3], ref = "0")
 
-
+## Get rid of underscores in the species names
 tr@phylo$tip.label <- gsub("_", " ", tr@phylo$tip.label)
 row.names(meta.df) <- gsub("_", " ", row.names(meta.df))
 
-# ## a stupid idea to add a gap in between...
-# meta.df[,3] <- meta.df$LWS
-# meta.df[,2] <- "0"
-# names(meta.df) <- c("MWS", "", "LWS")
-
-ptr <- ggtree(tr) + geom_tiplab(align = T, fontface = "italic", offset = .15, linetype = "dotted", linesize = .2) +   #geom_nodelab(size = 2, nudge_x = -0.003, color="red", nudge_y = 0.2, geom="text") 
-  geom_nodepoint(size = 1, color = newlabel) #+ #, nudge_x = -0.005, nudge_y = -0.3, geom="text") 
-#  xlim(0, 3)
+## Build the initial tree
+ptr <- ggtree(tr) + geom_tiplab(align = T, fontface = "italic", offset = .15, linetype = "dotted", linesize = .2) + 
+  geom_nodepoint(size = 1, color = newlabel) 
+## Take a look (totally optional)
 ptr
-
+## Flip two branches for easier comprehension
 ptr3 <- flip(ptr, 67, 64)
 
-#colors <- c("grey100", "grey67", "grey33", "grey0")
 
-#colors <- c("#FFFFFF", "#F6F2FF", "#BE95FF", "#6929C4", "#1C0F30")
-
-# library("RColorBrewer")
-colors <- c("#FFFFFF", brewer.pal(n = 6, name = 'Purples')[2:6])
-display.brewer.pal(n=5, name='Purples')
-
-#colors <- c("#FFFFFF", "#F6F2FF", "#BE95FF", "#6929C4", "#1C0F30", "#000000")
-#lighter
-##https://www.color-hex.com/color/6929c4
-##darker
+## Color scheme (violets)
 colors <- c("#FFFFFF", "#d2beed", "#a57edb", "#6929c4", "#491c89", "#000000")
 names(colors) <- c("0", "1", "2", "3", "4", "5")
-
+## Add the heatmap (or rather the table) to the tree
 ptr2 <- gheatmap(p = ptr3, meta.df, color = "black",
                  width=.18, offset=-0.01, colnames=T, colnames_position = "top", 
                  colnames_offset_y = .25, colnames_offset_x = c(-1/60, 0, 1/60), 
@@ -160,28 +145,10 @@ ptr2 <- gheatmap(p = ptr3, meta.df, color = "black",
   annotate("text", x=0.06, y=36, label = "Found opsins") + 
   annotate("text", x=0.01, y=20.8, label = intToUtf8(9679), col = "red3") +
   annotate("text", x=0.12, y=20, label = "aBayes > 0.7 & \n aLRT > 70%") 
-
+## Again, take a look
 ptr2 
 
-# facet_plot(ptr3, panel = "lskdf", data = meta.df, geom=geom_tile, )
-
-# library(reshape2)
-# meta.df <- read.csv("metadata.csv", row.names = 2)[, 2:3]
-# meta.df
-# molten.df <- melt(meta.df)
-# meta.df[,2] <- as.factor(meta.df[,2])
-# meta.df[,1] <- as.factor(meta.df[,1])
-# 
-# levels(meta.df[,1]) <- c(levels(meta.df[,1]), 2, 3)
-# meta.df[,1] <- relevel(meta.df[,1], ref = "0")
-# levels(meta.df[,2]) <- c(levels(meta.df[,2]), 0)
-# meta.df[,2] <- relevel(meta.df[,2], ref = "0")
-
-
-
-#ptr2 + geom_text(aes(label=node), hjust=-.3, size=3)
-## the ones I need are 62 and 64
-
+## Add clade labels, and this is the final tree!
 ptr2 + geom_cladelabel(44, 'Baikal group 2', offset=.9, offset.text=.02, extend = .5,
                        barsiz=1, color='#0072B2', angle=90, hjust='center', alpha = 1) +
   geom_hilight(44, fill = '#0072B2', alpha = .2) +
@@ -197,16 +164,8 @@ ptr2 + geom_cladelabel(44, 'Baikal group 2', offset=.9, offset.text=.02, extend 
   geom_cladelabel(39, 'Gammaridae', offset=1, offset.text=.02, extend = .5,
                   barsiz=1, color='darkgreen', angle=90, hjust='center')
 
-##facet_plot(ptr2, panel="dot", data=meta.df)
-
-
-
-# gridsvg(name = "nt_tree_test.svg")
-# ptr2
-# dev.off()
-
+## Save the image (again, a switch between nucleotide / aa tree)
 ggsave("nt_tree.svg", width=24, height=18, units="cm")
 ggsave("nt_tree.png", width=24, height=18, units="cm")
-
 #ggsave("aa_tree.svg", width=24, height=18, units="cm")
 #ggsave("aa_tree.png", width=24, height=18, units="cm")

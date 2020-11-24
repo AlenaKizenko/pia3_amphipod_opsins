@@ -70,6 +70,8 @@ for pos in range(len(aln_list[0])):
 
 cnt = 0
 
+## Small switches to check co-occurrence of different substitutions
+
 #for record in aln_list:
 #    if record.seq[255] == "A" and record.seq[295] == "A":
 #        print(record.id)

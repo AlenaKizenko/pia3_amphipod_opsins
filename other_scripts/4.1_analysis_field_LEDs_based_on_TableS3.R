@@ -1,6 +1,7 @@
 library(openxlsx)
 
-results <- read.xlsx("../Table_S3_field_exp_LEDs.xlsx")
+## read the data (Table S3)
+results <- read.xlsx("Table_S3_field_exp_LEDs.xlsx")
 
 
 allInDiods <- sum(results[results$Diod.color %in% c("B", "G", "Y", "R", "K"), "Quantity"])

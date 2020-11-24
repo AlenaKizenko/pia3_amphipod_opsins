@@ -1,35 +1,33 @@
 library(openxlsx)
 library(ggbeeswarm)
+library(ggpubr)
 
 ## Gmfa for the main figure
-diodsG <- read.delim("summary_Gfa_LED.tsv.csv", stringsAsFactors = F)
+## read the data
+diodsG <- read.delim("data/4.1_summary_Gfa_LED.csv", stringsAsFactors = F)
 
+## Add new variables for the groups (useful for plotting)
 diodsG$Experiment <- paste0(diodsG$Photo, "_", diodsG$Light, "_", diodsG$Where)
 diodsG$Type <- paste0(diodsG$Light, "_", diodsG$Where, "_", substr(diodsG$Photo, 7, 10))
-
 diodsG$Light <- factor(diodsG$Light, levels = c("K", "B", "G", "Y", "R"))
 
-## for the suppl
-ggplot(diodsG, aes(x=Experiment, y=Xm, col=Light)) + expand_limits(y=c(0, 60)) + 
-  geom_boxplot(outlier.shape = NA) + geom_beeswarm() + 
-  scale_color_manual(values = c("black", "blue", "green", "orange", "red")) +
-  geom_hline(yintercept = c(30), linetype = "dotted") + 
-  coord_flip() +
-  theme_bw(base_size = 14)
+## A way to plot each experiment as one panel
+#ggplot(diodsG, aes(x=Experiment, y=Xm, col=Light)) + expand_limits(y=c(0, 60)) + 
+#  geom_boxplot(outlier.shape = NA) + geom_beeswarm() + 
+#  scale_color_manual(values = c("black", "blue", "green", "orange", "red")) +
+#  geom_hline(yintercept = c(30), linetype = "dotted") + 
+#  coord_flip() +
+#  theme_bw(base_size = 14)
 
+## Correct for the cases where the light sources was on the right wall of the tank
 diodsG[diodsG$Where=="R", "Xm"] <- 60-diodsG[diodsG$Where=="R", "Xm"]
-#diodsG[diodsG$Light=="K", "Xm"] <- 60-diodsG[diodsG$Where=="K", "Xm"]
 
-#diodsG.med <- aggregate(formula=Xm~Experiment+Light, data=diodsG, FUN="median")
+## Compute medians to compare and plot
 diodsG.med <- aggregate(formula=Xm~Experiment+Light+Lab.acclimation+Where, data=diodsG, FUN="median")
 
-
-##pairwise wilcox test?
+## Test the significance of the differences
 pairwise.wilcox.test(diodsG.med$Xm, diodsG.med$Light)
-## with holm: everything significant except for UV (probably not enough replicas)
-
 # data:  diods.med$Xm and diods.med$Light 
-
 #K      B      G      Y     
 #B 0.0107 -      -      -     
 #  G 0.0023 1.0000 -      -     
@@ -37,7 +35,7 @@ pairwise.wilcox.test(diodsG.med$Xm, diodsG.med$Light)
 #  R 0.0107 1.0000 1.0000 1.0000
 
 
-
+## And plot
 pB <- 
 ggplot(diodsG.med, aes(x=Light, y=Xm, col=Light)) + expand_limits(y=c(0, 60)) + 
   geom_boxplot(outlier.shape = NA) + geom_jitter(width = .1) +#, aes(shape=Lab.acclimation)) +  or shape=Where
@@ -53,37 +51,38 @@ ggplot(diodsG.med, aes(x=Light, y=Xm, col=Light)) + expand_limits(y=c(0, 60)) +
             label = c("*", "**", "*", "*", ""), size = 5, nudge_x = -.1)
 pB
 
-# ggsave("diods_counts_Gfa.svg", width = 8, height = 3)
-# ggsave("diods_counts_Gfa.png", width = 8, height = 3)
-
-
-
 ## Ecy for the main figure
-diodsE <- read.delim("summary_Ecy_LED.csv", stringsAsFactors = F)
+## The same code as before; added purely for reproducibility
+diodsE <- read.delim("data/4.1_summary_Ecy_LED.csv", stringsAsFactors = F)
 
+## Add new variables for the groups (useful for plotting)
 diodsE$Experiment <- paste0(diodsE$Photo, "_", diodsE$Light, "_", diodsE$Where)
 diodsE$Type <- paste0(diodsE$Light, "_", diodsE$Where, "_", substr(diodsE$Photo, 7, 10))
-
 diodsE$Light <- factor(diodsE$Light, levels = c("K", "B", "G", "Y", "R"))
 
-## for the suppl
-ggplot(diodsE, aes(x=Experiment, y=Xm, col=Light)) + expand_limits(y=c(0, 60)) + 
-  geom_boxplot(outlier.shape = NA) + geom_beeswarm() + 
-  scale_color_manual(values = c("black", "blue", "green", "orange", "red")) +
-  geom_hline(yintercept = c(30), linetype = "dotted") + 
-  coord_flip() +
-  theme_bw(base_size = 14)
+## A way to plot each experiment as one panel
+#ggplot(diodsE, aes(x=Experiment, y=Xm, col=Light)) + expand_limits(y=c(0, 60)) + 
+#  geom_boxplot(outlier.shape = NA) + geom_beeswarm() + 
+#  scale_color_manual(values = c("black", "blue", "green", "orange", "red")) +
+#  geom_hline(yintercept = c(30), linetype = "dotted") + 
+#  coord_flip() +
+#  theme_bw(base_size = 14)
 
+## Correct for the cases where the light sources was on the right wall of the tank
 diodsE[diodsE$Where=="R", "Xm"] <- 60-diodsE[diodsE$Where=="R", "Xm"]
-#diodsE[diodsE$Light=="K", "Xm"] <- 60-diodsE[diodsE$Where=="K", "Xm"]
 
+## Compute medians to compare and plot
 diodsE.med <- aggregate(formula=Xm~Experiment+Light+Lab.acclimation+Where, data=diodsE, FUN="median")
 
-##pairwise wilcox test?
+## Test the significance of the differences
 pairwise.wilcox.test(diodsE.med$Xm, diodsE.med$Light)
-## with holm: everything significant except for UV (probably not enough replicas)
+#     K       B       G       Y      
+#  B 0.00016 -       -       -      
+#  G 0.00016 1.00000 -       -      
+#  Y 0.00016 0.03497 0.24895 -      
+#  R 0.00016 0.00093 0.11251 1.00000
 
-
+## And plot
 pA <- 
   ggplot(diodsE.med, aes(x=Light, y=Xm, col=Light)) + expand_limits(y=c(0, 60)) + 
   geom_boxplot(outlier.shape = NA) + geom_jitter(width = .1) +#, aes(shape=Lab.acclimation)) +  or shape = Where
@@ -99,31 +98,13 @@ pA <-
            label = c("***", "***", "***", "***", ""), size = 5, nudge_x = -.1)
 pA
 
-# ggsave("diods_counts_Ecy.svg", width = 8, height = 3)
-# ggsave("diods_counts_Ecy.png", width = 8, height = 3)
 
-
-##pairwise wilcox test?
-pairwise.wilcox.test(diods.med$Xm, diods.med$Light)
-
-# data:  diods.med$Xm and diods.med$Light 
-
-# K       B       G       Y      
-# B 9e-06   -       -       -      
-#   G 9e-06   1.00000 -       -      
-#   Y 9e-06   0.03497 0.24895 -      
-#   R 0.00019 0.00093 0.11251 1.00000
-# 
-# P value adjustment method: holm 
-
-
-### does acclimation matter?
-summary(glm(data=diodsG.med, Xm~Light+Lab.acclimation+Where))
-
-summary(glm(data=diodsE.med, Xm~Light+Lab.acclimation+Where))
-
-
-library(ggpubr)
-#ggarrange(pA, pB, nrow = 2, labels = c("A", "B"))
+## Finally save the figure
 ggarrange(pA, pB + theme(axis.text.y = element_blank(), axis.ticks.y = element_blank()) + xlab(""), ncol = 2, widths = c(1, 0.7), labels = c("A", "B"))
 ggsave("Ecy_Gmfa_diods.png", width = 8, height = 3)
+
+### A few more things to know
+## Do the acclimation and position of the diod (left/right) matter?
+summary(glm(data=diodsG.med, Xm~Light+Lab.acclimation+Where))
+summary(glm(data=diodsE.med, Xm~Light+Lab.acclimation+Where))
+## No, they don't.

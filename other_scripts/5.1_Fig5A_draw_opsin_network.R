@@ -1,16 +1,16 @@
 library("phangorn")
 
-## main text, Gammaridae only
-
+## main text (Fig. 5A), Baikal gammarids only
 ## This nexus file was created with Splitstree 4
-network <- read.nexus.networx("BaikalGammaridaeLWSntandGmi.best.fas.best.fas.nex")
+network <- read.nexus.networx("data/5.1_Fig5A_BaikalGammaridaeLWSntandGmi.best.fas.best.fas")
 nn <- 2446 #nvertices #can get eg with grep nvertices
 
-lva <- rep("", nn)
-lva[network$translate$node] <- c("\U25CF") #c("\U2727") #c("\U2B24") 
+## Vector of color(s)
 lvc <- adjustcolor(rep("#6929C4", nn), alpha.f=1)
-
-##correct for the older group
+## Make a vector to store node symbols
+lva <- rep("", nn)
+lva[network$translate$node] <- c("\U25CF") ## the default value
+##correct for the Baikal 1 group
 lva[network$translate$node[c(grep("Micruropus", network$translate$label, fixed=TRUE))]] <- c("\U25B2")
 lva[network$translate$node[c(grep("Gmelinoides", network$translate$label, fixed=TRUE))]] <- c("\U25B2")
 lva[network$translate$node[c(grep("Crypturopus", network$translate$label, fixed=TRUE))]] <- c("\U25B2")
@@ -18,14 +18,12 @@ lva[network$translate$node[c(grep("Linevichella", network$translate$label, fixed
 lva[network$translate$node[c(grep("Asprogammarus", network$translate$label, fixed=TRUE))]] <- c("\U25B2")
 lva[network$translate$node[c(grep("Baikalogammarus", network$translate$label, fixed=TRUE))]] <- c("\U25B2")
 lva[network$translate$node[c(grep("Macrohectopus", network$translate$label, fixed=TRUE))]] <- c("\U25B2")
-
-# ## and G. minus
+## and G. minus
 lva[network$translate$node[c(grep("minus", network$translate$label, fixed=TRUE))]] <- c("\U2739")
-
-## If only one opsin, according to Table S...:
+## If only one opsin, according to Table S1, then the symbols should be empty:
 lva[network$translate$node[c(grep("Asprogammarus_rhodophthalmus", network$translate$label, fixed=TRUE))]] <- c("\U25B3")
 lva[network$translate$node[c(grep("Micruropus_parvulus", network$translate$label, fixed=TRUE))]] <- c("\U25B3")
-
+## The same for the Baikal 2 group:
 lva[network$translate$node[c(grep("Boeckaxelia_carpenterii", network$translate$label, fixed=TRUE))]] <- c("\U25CB")
 lva[network$translate$node[c(grep("Carinurus_bicarinatus", network$translate$label, fixed=TRUE))]] <- c("\U25CB")
 lva[network$translate$node[c(grep("Eulimnogammarus_ussolzewii", network$translate$label, fixed=TRUE))]] <- c("\U25CB")
@@ -36,7 +34,7 @@ lva[network$translate$node[c(grep("Pachyschesis_branchialis", network$translate$
 lva[network$translate$node[c(grep("Parapallasea_borowskii", network$translate$label, fixed=TRUE))]] <- c("\U25CB")
 lva[network$translate$node[c(grep("Parapallasea_wosnessenskii", network$translate$label, fixed=TRUE))]] <- c("\U25CB")
 
-
+## Save the result (Figure 5A)
 svg("network.svg", width = 5, height = 5)
 plot(network, type="2D", show.tip.label=FALSE, show.node.label=TRUE, node.label=lva, 
      edge.width=0.5, cex=1.5, tip.color=adjustcolor(lvc, alpha.f=0.5) )
@@ -47,58 +45,22 @@ legend("topleft", border = FALSE, bty = "n" ,
 dev.off()
 
 
-# library(ggnetworx)
-# ggplot(network, aes(x, y)) + geom_splitnet()
 
-nn <- 6877 #nvertices #can get eg with grep nvertices
-
-lva <- rep("", nn)
-lva[network$translate$node] <- c("\U2B24")
-# lvc <- adjustcolor(rep("black", nn), alpha.f=1)
-# 
-# ##Baikal2
-# lvc[network$translate$node[c(grep("Eulimnogammarus", network$translate$label, fixed=TRUE))]] <- "#0072B2"
-# lvc[network$translate$node[c(grep("Gmelinoides", network$translate$label, fixed=TRUE))]] <- "#5fb2e6"
-# #All (other) gammarids
-# lvc[network$translate$node[c(grep("Gammarus", network$translate$label, fixed=TRUE))]] <- "darkgreen"
-# 
-# lvc[network$translate$node[c(grep("pulex", network$translate$label, fixed=TRUE))]] <- "#E69F00"
-# #Talitridae
-# lvc[network$translate$node[c(grep("Parhyale", network$translate$label, fixed=TRUE))]] <- '#CC79A7'
-# lvc[network$translate$node[c(grep("Hyalella", network$translate$label, fixed=TRUE))]] <- '#CC79A7'
-
-# plot(network, type="2D", show.tip.label=FALSE, show.node.label=TRUE, node.label=lva, 
-#      edge.width=0.5, cex=0.5, tip.color=adjustcolor(lvc, alpha.f=0.75))
-# 
-# 
-# legend("topleft", border = FALSE, bty = "n" ,
-#        legend = c("\U25B2 Baikal 1", "\U25CF Baikal 2", "\U2739 G. minus"),
-#        col = "#6929C4")
-
-
-## Supplement; all opsins (excluding non-opsins)
-
+## Supplement; all opsins (excluding non-opsins, thus 144 instead of 146)
+## read the network file created with Splitstree4
 network <- read.nexus.networx("144opsins.best.fas.nex")
 nn <- 4511 #nvertices #can get eg with grep nvertices
 
-
+## Vector of colors
+lvc <- adjustcolor(rep("black", nn), alpha.f=1)
+## Make a vector to store node symbols
 lva <- rep("", nn)
 lva[network$translate$node] <- c("\U25CF") #c("\U2727") #c("\U2B24") 
 lvc <- adjustcolor(rep("#6929C4", nn), alpha.f=1)
-
-#MWS 
+## Adjust for MWS 
 lva[network$translate$node[c(grep("MWS", network$translate$label, fixed=TRUE))]] <- c("\U2727")
 lva[network$translate$node[c(grep("SWS", network$translate$label, fixed=TRUE))]] <- c("\U2602")
 lva[network$translate$node[c(grep("VERL", network$translate$label, fixed=TRUE))]] <- c("\U2605")
-
-# network$tip.label <- gsub("_rnaspades.+", "", network$tip.label)
-# network$tip.label <- gsub("_underscore.+", "", network$tip.label)
-# network$tip.label <- gsub("_T285.+", "", network$tip.label)
-# #  gsub("NODE*i0", "", network$translate$label)
-
-
-lvc <- adjustcolor(rep("black", nn), alpha.f=1)
-
 ##Baikal2
 lvc[network$translate$node[c(grep("Eulimnogammarus", network$translate$label, fixed=TRUE))]] <- "#0072B2"
 lvc[network$translate$node[c(grep("allasea", network$translate$label, fixed=TRUE))]] <- "#0072B2"
@@ -120,7 +82,6 @@ lvc[network$translate$node[c(grep("Hyalellopsis", network$translate$label, fixed
 lvc[network$translate$node[c(grep("Odontogammarus", network$translate$label, fixed=TRUE))]] <- "#0072B2"
 lvc[network$translate$node[c(grep("Macropereiopus", network$translate$label, fixed=TRUE))]] <- "#0072B2"
 lvc[network$translate$node[c(grep("canth", network$translate$label, fixed=TRUE))]] <- "#0072B2"
-
 #Baikal 1
 lvc[network$translate$node[c(grep("Gmelinoides", network$translate$label, fixed=TRUE))]] <- "#5fb2e6"
 lvc[network$translate$node[c(grep("Micruropus", network$translate$label, fixed=TRUE))]] <- "#5fb2e6"
@@ -131,14 +92,13 @@ lvc[network$translate$node[c(grep("Linevichella", network$translate$label, fixed
 lvc[network$translate$node[c(grep("Gammarus", network$translate$label, fixed=TRUE))]] <- "darkgreen"
 lvc[network$translate$node[c(grep("Echinogammarus", network$translate$label, fixed=TRUE))]] <- "darkgreen"
 lvc[network$translate$node[c(grep("Marinogammarus", network$translate$label, fixed=TRUE))]] <- "darkgreen"
-
 #Talitridae
 lvc[network$translate$node[c(grep("Parhyale", network$translate$label, fixed=TRUE))]] <- '#CC79A7'
 lvc[network$translate$node[c(grep("Hyalella", network$translate$label, fixed=TRUE))]] <- '#CC79A7'
 lvc[network$translate$node[c(grep("Talitrus", network$translate$label, fixed=TRUE))]] <- '#CC79A7'
 
 
-
+## Save the result (Figure S5)
 svg("all_opsins_network.svg", width = 10, height = 5)
 plot(network, type="2D", show.tip.label=FALSE, show.node.label=TRUE, node.label=lva, 
      edge.width=0.5, cex=1, cex.edge.label = 0.05, tip.color = lvc)

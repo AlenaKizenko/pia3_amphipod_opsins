@@ -4,64 +4,62 @@
 ## Thus, we would need to choose an adequate number of assemblies to proceed.
 ## Criteria: 
 ## * only one species per genus (excluding the formal genus Gammarus; there, only one per species);
-## * only assemblies with > 50% BUSCO completeness;
+## * only assemblies with > 50% BUSCO completeness (original TSA assembly);
 ## * only assemblies with at least one opsin found.
 
 ## Get all necessary assemblies.
+## Reproducibility: the assemblies are available from Dryad.
 
-export assemblydir=/media/tertiary/Alena_Kizenko/transcriptome_assemblies/rnaspades_reassemblies/
+#export ${DIR_WITH_ASSEMBLIES}=/enter/your/path/here
 
-cp $assemblydir/Acanthogammarus_godlewskii_rnaspades.fasta .
-cp $assemblydir/Asprogammarus_rhodophthalmus_rnaspades.fasta .
-cp $assemblydir/Boeckaxelia_carpenterii_rnaspades.fasta .
-cp $assemblydir/Brandtia_latissima_rnaspades.fasta .
-cp $assemblydir/Caprella_sp_rnaspades.fasta .
-cp $assemblydir/Carinurus_bicarinatus_rnaspades.fasta .
-cp $assemblydir/Dorogostaiskia_parasitica_rnaspades.fasta .
-cp $assemblydir/Echinogammarus_berilloni_rnaspades.fasta .
-cp $assemblydir/Echiuropus_macronychus_rnaspades.fasta .
-cp $assemblydir/Eulimnogammarus_cyaneus_rnaspades.fasta .
-cp $assemblydir/Gammarus_chevreuxi_rnaspades.fasta .
-cp $assemblydir/Gammarus_fossarum_rnaspades.fasta .
-cp $assemblydir/Gammarus_lacustris_rnaspades.fasta .
-cp $assemblydir/Gammarus_minus_rnaspades.fasta .
-cp $assemblydir/Gammarus_pisinnus_rnaspades.fasta .
-cp $assemblydir/Gammarus_pulex_rnaspades.fasta .
-cp $assemblydir/Gammarus_wautieri_rnaspades.fasta .
-cp $assemblydir/Gmelinoides_fasciatus_rnaspades.fasta .
-cp $assemblydir/Heterogammarus_sophianosii_rnaspades.fasta .
-cp $assemblydir/Hirondellea_gigas_rnaspades.fasta .
-cp $assemblydir/Homalogammarus_brandtii_rnaspades.fasta .
-cp $assemblydir/Hyalellopsis_costata_rnaspades.fasta .
-cp $assemblydir/Linevichella_vortex_rnaspades.fasta .
-cp $assemblydir/Macropereiopus_parvus_rnaspades.fasta .
-cp $assemblydir/Marinogammarus_marinus_rnaspades.fasta .
-cp $assemblydir/Micruropus_wahlii_rnaspades.fasta .
-cp $assemblydir/Odontogammarus_calcaratus_rnaspades.fasta .
-cp $assemblydir/Ommatogammarus_albinus_rnaspades.fasta .
-cp $assemblydir/Oxyacanthus_curtus_rnaspades.fasta .
-cp $assemblydir/Pachyschesis_branchialis_rnaspades.fasta .
-cp $assemblydir/Palicarinus_puzyllii_rnaspades.fasta .
-cp $assemblydir/Pallasea_cancelloides_rnaspades.fasta .
-cp $assemblydir/Parapallasea_wosnessenskii_rnaspades.fasta .
-cp $assemblydir/Parhyale_hawaiensis_rnaspades.fasta .
-cp $assemblydir/Poekilogammarus_pictoides_rnaspades.fasta .
-cp $assemblydir/Talitrus_saltator_rnaspades.fasta .
-
-## Let's get to business
-cd /media/main/sandbox/drozdovapb/Opsins/Tree
+cp ${DIR_WITH_ASSEMBLIES}/Acanthogammarus_godlewskii_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Asprogammarus_rhodophthalmus_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Boeckaxelia_carpenterii_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Brandtia_latissima_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Caprella_sp_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Carinurus_bicarinatus_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Dorogostaiskia_parasitica_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Echinogammarus_berilloni_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Echiuropus_macronychus_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Eulimnogammarus_cyaneus_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Gammarus_chevreuxi_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Gammarus_fossarum_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Gammarus_lacustris_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Gammarus_minus_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Gammarus_pisinnus_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Gammarus_pulex_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Gammarus_wautieri_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Gmelinoides_fasciatus_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Heterogammarus_sophianosii_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Hirondellea_gigas_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Homalogammarus_brandtii_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Hyalellopsis_costata_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Linevichella_vortex_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Macropereiopus_parvus_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Marinogammarus_marinus_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Micruropus_wahlii_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Odontogammarus_calcaratus_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Ommatogammarus_albinus_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Oxyacanthus_curtus_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Pachyschesis_branchialis_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Palicarinus_puzyllii_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Pallasea_cancelloides_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Parapallasea_wosnessenskii_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Parhyale_hawaiensis_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Poekilogammarus_pictoides_rnaspades.fasta .
+cp ${DIR_WITH_ASSEMBLIES}/Talitrus_saltator_rnaspades.fasta .
 
 ## Predict proteins with TransDecoder
-for assembly in *_rnaspades.fasta; do $appdir/TransDecoder-TransDecoder-v5.5.0/TransDecoder.LongOrfs -t $assembly; $appdir/TransDecoder-TransDecoder-v5.5.0/TransDecoder.Predict -t $assembly --single_best_only; done
+for assembly in *_rnaspades.fasta; do TransDecoder.LongOrfs -t $assembly; TransDecoder.Predict -t $assembly --single_best_only; done
 
-## Cluster very similar proteins
-for opsinlist in *pep; do $appdir/cd-hit-v4.8.1-2019-0228/cd-hit -i $opsinlist -c .95 -o $opsinlist.repr.faa; done
+## Cluster very similar proteins ## .95 is the best option according to the analysis of G. minus opsins
+for opsinlist in *pep; do cd-hit -i $opsinlist -c .95 -o $opsinlist.repr.faa; done
 mkdir cdhit_aa
 mv *faa cdhit_aa/
 mv *clstr cdhit_aa/
 
 ## Build orthologous groups
-$appdir/proteinortho_v6.0b/proteinortho6.pl  *faa -cpus=6 -project=36amph
+proteinortho6.pl  *faa -cpus=6 -project=36amph
 
 
 			```{r}
@@ -86,7 +84,7 @@ $appdir/proteinortho_v6.0b/proteinortho6.pl  *faa -cpus=6 -project=36amph
 			writeLines(oo[i, 4:ncol(onetoone)], paste0("families_tree/family", as.character(i), ".names.txt"))
 			}
 			```
-#420. Not that bad...
+#420 single-copy orhologs present in 36 species. Not that bad...
 
 
 ## now extract the sequences from all fasta files (by species so far)
@@ -104,7 +102,7 @@ for names in family*names.txt; do xargs faidx all.fasta < $names > $names.fasta 
 for multifasta in family*fasta; do mafft --auto $multifasta >$multifasta.aln; done
 
 ##trim alignment and make it single-line
-for alignment in *fasta.aln; do $appdir/trimal/source/trimal -automated1 -in $alignment -out $alignment.trim.aln; done
+for alignment in *fasta.aln; do trimal -automated1 -in $alignment -out $alignment.trim.aln; done
 for tralignment in *trim.aln; do seqkit seq -w 0 $tralignment > $tralignment.sl.aln; done
 
 ##concatenate...
@@ -112,51 +110,11 @@ for tralignment in *trim.aln; do seqkit seq -w 0 $tralignment > $tralignment.sl.
 for file in *sl.aln; do seqkit replace -p ".*" -r '{nr}' --line-width 0 $file >$file.nums.aln; done
 seqkit concat *sl.aln.nums.aln >all_concat.aln
 
-#faSize -detailed all_concat.aln #455k
+#faSize -detailed all_concat.aln #455k, and all have the same length
 
 nano species.tbl
 
-seqkit replace -p "(.*)" -r '{kv}' --kv-file species.tbl all_concat.aln >all_concat_species.aln
-
-## finally build the tree! 
-$appdir/iqtree-1.6.10-Linux/bin/iqtree -s all_concat_species.aln -abayes -pre all_concat_species_sorted -nt 6 -alrt 1000 -o Caprella_sp
-
-
-chi-sq failed
-
-#todo make protein!!!
-cd ../
-mkdir aa_alignment
-for file in *pep; do xargs faidx $file < cdhit_aa/$(basename $file ".pep").pep.repr.faa.names.txt | fasta_formatter >aa_alignment/$file.oto.fa ; done
-
-## and now extract for each protein group one-by-one
-cd aa_alignment
-cat *oto.fa>all.fasta
-cp ../cdhit_aa/families_tree/family*names.txt .
-for names in family*names.txt; do xargs faidx all.fasta < $names > $names.fasta ; done
-
-## align each protein group
-for multifasta in family*fasta; do mafft --auto $multifasta >$multifasta.aln; done
-
-##trim alignment and make it single-line
-for alignment in *fasta.aln; do $appdir/trimal/source/trimal -automated1 -in $alignment -out $alignment.trim.aln; done
-for tralignment in *trim.aln; do seqkit seq -w 0 $tralignment > $tralignment.sl.aln; done
-
-##concatenate...
-##rename each sequence
-for file in *sl.aln; do seqkit replace -p ".*" -r '{nr}' --line-width 0 $file >$file.nums.aln; done
-seqkit concat *sl.aln.nums.aln >all_concat.aln
-
-#faSize -detailed all_concat.aln #455k
-
-nano species.tbl
-
-seqkit replace -p "(.*)" -r '{kv}' --kv-file species.tbl all_concat.aln >all_concat_species.aln
-
-## finally build the tree! 
-$appdir/iqtree-1.6.10-Linux/bin/iqtree -s all_concat_species.aln -abayes -pre all_concat_species_sorted -nt 6 -alrt 1000 -o Caprella_sp
-
-
+## here how this file should look
 cat species.tbl
 
 # 1       Acanthogammarus_godlewskii
@@ -195,4 +153,44 @@ cat species.tbl
 # 34      Parhyale_hawaiensis
 # 35      Poekilogammarus_pictoides
 # 36      Talitrus_saltator
+
+seqkit replace -p "(.*)" -r '{kv}' --kv-file species.tbl all_concat.aln >all_concat_species.aln
+
+## finally build the tree! 
+iqtree -s all_concat_species.aln -abayes -pre all_concat_species_sorted -nt 6 -alrt 1000 -o Caprella_sp
+
+
+chi-sq failed
+
+#also make a protein-based tree
+cd ../
+mkdir aa_alignment
+for file in *pep; do xargs faidx $file < cdhit_aa/$(basename $file ".pep").pep.repr.faa.names.txt | fasta_formatter >aa_alignment/$file.oto.fa ; done
+
+## and now extract for each protein group one-by-one
+cd aa_alignment
+cat *oto.fa>all.fasta
+cp ../cdhit_aa/families_tree/family*names.txt .
+for names in family*names.txt; do xargs faidx all.fasta < $names > $names.fasta ; done
+
+## align each protein group
+for multifasta in family*fasta; do mafft --auto $multifasta >$multifasta.aln; done
+
+##trim alignment and make it single-line
+for alignment in *fasta.aln; do trimal -automated1 -in $alignment -out $alignment.trim.aln; done
+for tralignment in *trim.aln; do seqkit seq -w 0 $tralignment > $tralignment.sl.aln; done
+
+##concatenate...
+##rename each sequence
+for file in *sl.aln; do seqkit replace -p ".*" -r '{nr}' --line-width 0 $file >$file.nums.aln; done
+seqkit concat *sl.aln.nums.aln >all_concat.aln
+
+#faSize -detailed all_concat.aln #455k
+
+nano species.tbl
+
+seqkit replace -p "(.*)" -r '{kv}' --kv-file species.tbl all_concat.aln >all_concat_species.aln
+
+## finally build the tree! 
+iqtree -s all_concat_species.aln -abayes -pre all_concat_species_sorted -nt 6 -alrt 1000 -o Caprella_sp
 
