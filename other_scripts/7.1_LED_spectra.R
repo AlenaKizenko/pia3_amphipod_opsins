@@ -12,6 +12,7 @@ ggplot(data=B, aes(x=V1, y=V2)) +
   geom_line(data = G, col = "#00D302") +
   geom_line(data = Y, col = "#FFAC38") +
   geom_line(data = R, col = "#CD022D") +
+  scale_x_continuous(breaks = scales::pretty_breaks(n = 10)) +
   geom_vline(xintercept = c(380, 760), linetype = "dotted") +  ## approx. borders of the human-visible light spectrum
   theme_bw(base_size = 14)
 ggsave("4 spectra.png", width = 8, height = 3)
