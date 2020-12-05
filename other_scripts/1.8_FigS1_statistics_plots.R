@@ -17,8 +17,8 @@ shapiro.test(busco$Fragmented_BUSCOs)
 shapiro.test(busco$Missing_BUSCOs)
 
 ## A convenience list to plot 
-plot.details <- list(geom_boxplot(width = 0.5),
-                     geom_jitter(alpha=0.7, size=2, position = position_jitter(height = .05, width = .1)),
+plot.details <- list(geom_boxplot(width = 0.5, outlier.alpha = 0),
+                     geom_jitter(alpha=0.7, size=1.5, position = position_jitter(height = .05, width = .1)),
                      theme_bw(),
                      labs(fill = 'Assembler', 
                           y = '',
@@ -135,4 +135,4 @@ plot_grid(complete_b +  theme(legend.position = 'none'),
           rel_widths = c(1,1,1.5))
 
 ggsave("Assemblies.pdf", width = 25, height = 25, units = "cm")
-ggsave("Assemblies.svg", width = 30, height = 20, units = "cm")
+ggsave("Assemblies.svg", width = 25, height = 25, units = "cm")
