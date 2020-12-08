@@ -46,7 +46,6 @@ Companion scripts to the manuscript "One class to see them all: The diversity of
 ## Content
     
 * `PIA3`: modified phylogenetically-informed annotation pipeline. **All (dependencies) included!**
-* `article/Supplement`: Supplementary figures for the manuscript (including the editable versions).
 * `other_scripts`: other useful pieces of code for the analysis.
 * docker files for Travis testing
 * packed pia3 versions.
