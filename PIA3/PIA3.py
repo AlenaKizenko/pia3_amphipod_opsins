@@ -54,6 +54,9 @@ def make_arguments_parser():
     parser.add_argument('-opsin', '--opsins_search',
                         required=False, action='store_true',
                         help='Searching for opsin sequences (MWS, LWS, UV, Vertebrate-like)')
+    parser.add_argument('-cdhit', '--cdhit_threshold',
+                        required=False, default=0.95,
+                        help='CD-HIT similarity rate threshold for merging transcripts')
     return parser.parse_args()
 
 
@@ -97,7 +100,7 @@ if __name__ == "__main__":
     else:
         assert False, "Unknown aligner! " \
                               "Please specify aligner type (blast or diamond)"  # if aligner type has been misspelled
-    cd_hit_result = modules.cd_hit_clust(base_name, out_dir=args.output_folder, num_threads=args.threads)  # run CD-HIT
+    cd_hit_result = modules.cd_hit_clust(base_name, out_dir=args.output_folder, c = args.cdhit, num_threads=args.threads)  # run CD-HIT
     renaming_result = modules.rename_hits(base_name, args.output_folder,
                                           transcripts, args.database, base_name)  # rename hits according to the filename and filter if CDS mode has been chosen
     mean_dist = modules.calc_mean_dist(args.initial_phylo)  # calculating absolute mean deviation of branch length
