@@ -91,6 +91,9 @@ snakemake -j 8 --use-conda --conda-prefix /path/to/new/conda --config in_dir=/pa
 * `outgroup`: outgroup for phylogenetic tree building; if not defined by user, first sequence from database FASTA file is taken
 
 * `opsin`: searching for opsin sequences (MWS, LWS, UV, Vertebrate-like) **default True**
+
+* `cdhit`: CH-HIT clustering treshhold (if choose 1, CH-HIT clusters only identical sequences)**default 0.95**
+
  
 
 ### Understanding output files
