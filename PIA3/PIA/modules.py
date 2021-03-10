@@ -61,7 +61,7 @@ def diamond_search(basename, out_dir: str, db, cds, num_threads=16, e_val=1e-10)
     print('DIAMOND search is completed')
 
 
-def cd_hit_clust(basename, out_dir: str, c=0.95, n=5, m=2000, num_threads=8):
+def cd_hit_clust(basename, out_dir: str, c, n=5, m=2000, num_threads=8):
     print('Performing clustering of found transcripts using CD-hit')
     hits_clust = f'{out_dir}/{basename}_blast_hits_clust.fasta'  # define CD-HIT result file name
     os.system(
