@@ -43,7 +43,7 @@ conda env create -n smk --file smk.yml
 conda activate smk
 ```
 
-It takes some time, but 
+Please be patient, if solving environment takes some time.
 
 ### Testing
 
@@ -54,7 +54,7 @@ We recommend that you test your PIA3 installation
 ```commandline
 cd PIA3
 
-snakemake -j 8 --use-conda --conda-prefix CONDA_PREFIX --config in_dir=/path/to/PIA3/test_data out_dir=/path/to/PIA3/test_out/transcriptome db=/path/to/PIA3/test_data/classification_opsins_full_aa.fasta cds=True del=False opsin=True model=LG+F+G4 outgroup=RHO_Bos_taurus_AAA30674.1
+snakemake -j 8 --use-conda --conda-prefix CONDA_PREFIX --config in_dir=test_data out_dir=test_out db=classification_opsins_full_aa.fasta cds=True del=False opsin=True model=LG+F+G4 outgroup=RHO_Bos_taurus_AAA30674.1
 ```
 **2.** Run unit test
 
@@ -92,7 +92,7 @@ snakemake -j 8 --use-conda --conda-prefix /path/to/new/conda --config in_dir=/pa
 
 * `opsin`: searching for opsin sequences (MWS, LWS, UV, Vertebrate-like) **default True**
 
-* `cdhit`: CH-HIT clustering treshhold (if choose 1, CH-HIT clusters only identical sequences)**default 0.95**
+* `cd_h`: CH-HIT clustering treshhold (if choose 1, CH-HIT clusters only identical sequences) **default 0.95**
 
  
 
