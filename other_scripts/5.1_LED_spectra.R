@@ -1,10 +1,10 @@
 library(ggplot2)
 library(scales)
 
-B <- read.delim("data/7.1_blue.txt", skip=16, head=F, dec=",")
-G <- read.delim("data/7.1_green.txt", skip=16, head=F, dec=",")
-Y <- read.delim("data/7.1_yellow.txt", skip=16, head=F, dec=",")
-R <- read.delim("data/7.1_red.txt", skip=16, head=F, dec=",")
+B <- read.delim("data/5.1_blue.txt", skip=16, head=F, dec=",")
+G <- read.delim("data/5.1_green.txt", skip=16, head=F, dec=",")
+Y <- read.delim("data/5.1_yellow.txt", skip=16, head=F, dec=",")
+R <- read.delim("data/5.1_red.txt", skip=16, head=F, dec=",")
 
 ## Plot the wavelengths
 ggplot(data=B, aes(x=V1, y=V2)) + 

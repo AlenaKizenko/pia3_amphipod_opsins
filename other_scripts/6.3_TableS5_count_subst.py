@@ -5,7 +5,7 @@ from Bio import AlignIO
 #from Bio.SeqRecord import
 
 
-alignment = "Baikal_and_MWS_Gammaridae_all_opsins_Bta_Tpa.aln" 
+alignment = "data/6.3_Baikal_and_MWS_Gammaridae_all_opsins_Bta_Tpa.aln" 
 ref_seq_name = "RHO_Bos_taurus_AAA30674.1"
 
 

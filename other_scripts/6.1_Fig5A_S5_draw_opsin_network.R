@@ -2,7 +2,7 @@ library("phangorn")
 
 ## main text (Fig. 5A), Baikal gammarids only
 ## This nexus file was created with Splitstree 4
-network <- read.nexus.networx("data/5.1_Fig5A_BaikalGammaridaeLWSntandGmi.best.fas.best.fas")
+network <- read.nexus.networx("data/6.1_Fig5A_BaikalGammaridaeLWSntandGmi.best.fas.best.fas.nex")
 nn <- 2446 #nvertices #can get eg with grep nvertices
 
 ## Vector of color(s)
@@ -48,7 +48,7 @@ dev.off()
 
 ## Supplement; all opsins (excluding non-opsins, thus 144 instead of 146)
 ## read the network file created with Splitstree4
-network <- read.nexus.networx("144opsins.best.fas.nex")
+network <- read.nexus.networx("data/6.1_FigS6_144opsins.best.fas.nex")
 nn <- 4511 #nvertices #can get eg with grep nvertices
 
 ## Vector of colors
