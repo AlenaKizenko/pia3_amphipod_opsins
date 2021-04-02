@@ -54,10 +54,6 @@ def make_arguments_parser():
     parser.add_argument('-opsin', '--opsins_search',
                         required=False, action='store_true',
                         help='Searching for opsin sequences (MWS, LWS, UV, Vertebrate-like)')
-    parser.add_argument('-cd_h', '--cd_hit', dest='cd_hit',
-                        help='Clustering identity threshold',
-                        required=False,
-                        type=float)
     return parser.parse_args()
 
 
@@ -87,7 +83,7 @@ if __name__ == "__main__":
         print("Output directory path: {}".format(path))
     
     used_command = " ".join(sys.argv)
-    file_w_path = open('reproduce_command.txt', "w")
+    file_w_path = open(f'{args.output_folder}/reproduce_command.txt', "w")
     file_w_path.write(used_command)
     file_w_path.close()
 
@@ -101,7 +97,7 @@ if __name__ == "__main__":
     else:
         assert False, "Unknown aligner! " \
                               "Please specify aligner type (blast or diamond)"  # if aligner type has been misspelled
-    cd_hit_result = modules.cd_hit_clust(base_name, args.cd_hit, out_dir=args.output_folder, num_threads=args.threads)  # run CD-HIT
+    cd_hit_result = modules.cd_hit_clust(base_name, out_dir=args.output_folder, num_threads=args.threads)  # run CD-HIT
     renaming_result = modules.rename_hits(base_name, args.output_folder,
                                           transcripts, args.database, base_name)  # rename hits according to the filename and filter if CDS mode has been chosen
     mean_dist = modules.calc_mean_dist(args.initial_phylo)  # calculating absolute mean deviation of branch length
@@ -146,7 +142,7 @@ if __name__ == "__main__":
     print(f'{base_name}_PIA3_nucl.fasta is a file with nucleotide sequences')
     print(f'{base_name}_PIA3_contigs.fasta is a file with contig sequences')
     print(f'{base_name}_class_tree.contree is a maximum likelihood phylogenetic tree with target sequences')
-    print('To reproduce this analysis run command from file reproduce_command.txt')
+    print(f'To reproduce this analysis run command from file reproduce_command.txt')
 
     if args.delete_intermediate:
         print('Delete intermediate files')  # remove unnecessary files
