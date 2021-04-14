@@ -30,3 +30,14 @@ cols = c("black", "red")
 plot(pd, fsize=0.8, cex = 0.4, ftype="i", ylim=c(-2,Ntip(my.tree)))
 add.simmap.legend(colors=cols,prompt=FALSE, x=0, y=0, vertical=TRUE, leg = c("zero MWS opsins", "one MWS opsin"), fsize = 0.8)
 dev.off()
+
+
+## try LWS?
+mtrees <- make.simmap(my.tree, LWSs, nsim = 1000, model="ARD")
+pdL <- summary(mtrees)
+
+svg("FigS2D.svg")
+cols <- c("#FFFFFF", "#d2beed", "#a57edb", "#6929c4", "#491c89", "#000000")
+plot(pdL, fsize=0.8, cex = 0.4, ftype="i", ylim=c(-2,Ntip(my.tree)))
+add.simmap.legend(colors=1:5, prompt=FALSE, x=0, y=2, vertical=TRUE, leg = c("1","2", "3", "4", "5"), fsize = 0.8)
+dev.off()
