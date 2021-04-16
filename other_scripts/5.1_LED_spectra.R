@@ -54,8 +54,11 @@ ggplot(data=data.frame(V1=NA, V2=NA), aes(x=V1, y=V2)) +
   geom_line(data = R, col = "#CD022D") +
   geom_segment(inherit.aes = FALSE, aes(x = fwhm(R)[2], xend = fwhm(R)[3], y=fwhm(R)[1], yend=fwhm(R)[1]), col = "#CD022D") + 
   geom_segment(x = centerR, xend = centerR, y = -10000, yend = max(R$V2), col = "#CD022D", linetype = "dotted") +
-##  scale_x_continuous(breaks = scales::pretty_breaks(n = 10)) +
-  scale_x_continuous(breaks = c(380, round(centerB), round(centerG), round(centerY), round(centerR), 760)) +
+  scale_x_continuous(breaks = scales::pretty_breaks(n = 10)) +
+#  scale_x_continuous(breaks = c(380, round(centerB), round(centerG), round(centerY), round(centerR), 760)) +
+  annotate(geom = "text", x = c(round(centerB), round(centerG), round(centerY), round(centerR)), 
+           y = c(32500, 9500, 18000, 26000), 
+           label = c(round(centerB), round(centerG), round(centerY), round(centerR))) + 
   geom_vline(xintercept = c(380, 760), linetype = "dotted") +  ## approx. borders of the human-visible light spectrum
   theme_bw(base_size = 14)
 
