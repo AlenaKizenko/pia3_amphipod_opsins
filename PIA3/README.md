@@ -27,16 +27,7 @@ source ~/.bashrc
 **4.**
 `Snakemake` is also required for pipeline running. There are two options; use whichever works for you:
 
-**A:** Create and activate new conda environment named `smk`
-
-```commandline
-conda create -y -n smk snakemake=5.21.0 -c bioconda -c conda-forge
-conda activate smk
-```
-
-or 
-
-**B:** Install conda environment named smk from the `smk.yml` file
+Install conda environment named smk from the `smk.yml` file
 
 ```commandline
 conda env create -n smk --file smk.yml
