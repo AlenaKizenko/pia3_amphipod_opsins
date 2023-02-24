@@ -45,7 +45,7 @@ We recommend that you test your PIA3 installation
 ```commandline
 cd PIA3
 
-snakemake -j 8 --use-conda --conda-prefix CONDA_PREFIX --config in_dir=/ABS_PATH_TO_DIR/test_data out_dir=/ABS_PATH_TO_DIR/test_out db=/ABS_PATH_TO_FILE/classification_opsins_full_aa.fasta cds=True del=False opsin=True model=LG+F+G4 outgroup=RHO_Bos_taurus_AAA30674.1
+snakemake -j 8 --use-conda --conda-prefix PIA3 --config in_dir=/ABS_PATH_TO_DIR/test_data out_dir=/ABS_PATH_TO_DIR/test_out db=/ABS_PATH_TO_FILE/classification_opsins_full_aa.fasta cds=True del=False opsin=True model=LG+F+G4 outgroup=RHO_Bos_taurus_AAA30674.1
 ```
 **2.** Run unit test
 
@@ -60,7 +60,7 @@ Intended for own use. Please feel free to use, reuse, modify and contact us if y
 
 ```commandline
 cd PIA3
-snakemake -j 8 --use-conda --conda-prefix /path/to/new/conda --config in_dir=/ABS_PATH_TO_DIR/data_folder out_dir=/ABS_PATH_TO_DIR/out_foldet db=/ABS_PATH_TO_DIR/sequences.fasta.fasta cds=True del=True opsins=False
+snakemake -j 8 --use-conda --conda-prefix PIA3 --config in_dir=/ABS_PATH_TO_DIR/data_folder out_dir=/ABS_PATH_TO_DIR/out_foldet db=/ABS_PATH_TO_DIR/sequences.fasta.fasta cds=True del=True opsins=False
 ```
 
 * `conda-prefix`: where do you want to install env with all required packages **required**
