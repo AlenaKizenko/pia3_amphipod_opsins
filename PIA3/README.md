@@ -31,6 +31,9 @@ Install conda environment named smk from the `smk.yml` file
 
 ```commandline
 conda env create -n smk --file smk.yml
+```
+
+```commandline
 conda activate smk
 ```
 
@@ -44,7 +47,9 @@ We recommend that you test your PIA3 installation
 
 ```commandline
 cd PIA3
+```
 
+```commandline
 snakemake -j 8 --use-conda --conda-prefix PIA3 --config in_dir=/ABS_PATH_TO_DIR/test_data out_dir=/ABS_PATH_TO_DIR/test_out db=/ABS_PATH_TO_FILE/classification_opsins_full_aa.fasta cds=True del=False opsin=True model=LG+F+G4 outgroup=RHO_Bos_taurus_AAA30674.1
 ```
 **2.** Run unit test
@@ -60,6 +65,8 @@ Intended for own use. Please feel free to use, reuse, modify and contact us if y
 
 ```commandline
 cd PIA3
+```
+```commandline
 snakemake -j 8 --use-conda --conda-prefix PIA3 --config in_dir=/ABS_PATH_TO_DIR/data_folder out_dir=/ABS_PATH_TO_DIR/out_foldet db=/ABS_PATH_TO_DIR/sequences.fasta.fasta cds=True del=True opsins=False
 ```
 
@@ -94,7 +101,5 @@ snakemake -j 8 --use-conda --conda-prefix PIA3 --config in_dir=/ABS_PATH_TO_DIR/
 * results correspond to `test_data/header.fasta` file: `/path/diversity_of_opsins_in_amphipods/PIA3/test_out/header`
 
 * results correspond to `test_data/Parhyale_hawaiensis_test.fasta` file: `/path/diversity_of_opsins_in_amphipods/PIA3/test_out/Parhyale_hawaiensis_test`
-
-* conda environemnt with all required packages: `/path/to/new/conda`
 
 
