@@ -9,7 +9,7 @@ This pipeline requires `Conda`. If it is not installed on your computer, you nee
 
 **1.** Download [Anaconda](https://www.anaconda.com/products/individual) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html) (look [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html#anaconda-or-miniconda) to decide which is right for you).
 
-**2.** Run bash installation script like 
+**2.** Run bash installation script like.
 ```commandline
 bash Anaconda3-2020.02-Linux-x86_64.sh
 ``` 
@@ -27,23 +27,23 @@ source ~/.bashrc
 **4.**
 `Snakemake` is also required for pipeline running. There are two options; use whichever works for you:
 
-Install conda environment named smk from the `smk.yml` file
+Install conda environment named *smk* from the `smk.yml` file.
 
 ```commandline
 conda env create -n smk --file smk.yml
 ```
+Please be patient, if solving environment takes some time.
 
+Activate *smk* conda environment.
 ```commandline
 conda activate smk
 ```
 
-Please be patient, if solving environment takes some time.
-
 ### Testing
 
-We recommend that you test your PIA3 installation
+We recommend that you test your PIA3 installation.
 
-**1.** Run PIA3 on test data
+**1.** Run PIA3 on test data.
 
 ```commandline
 cd PIA3
@@ -52,7 +52,7 @@ cd PIA3
 ```commandline
 snakemake -j 8 --use-conda --conda-prefix PIA3 --config in_dir=/ABS_PATH_TO_DIR/test_data out_dir=/ABS_PATH_TO_DIR/test_out db=/ABS_PATH_TO_FILE/classification_opsins_full_aa.fasta cds=True del=False opsin=True model=LG+F+G4 outgroup=RHO_Bos_taurus_AAA30674.1
 ```
-**2.** Run unit test
+**2.** Run unit test.
 
 ```commandline
  python -m unittest test_PIA3.py
