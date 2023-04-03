@@ -4,52 +4,69 @@ import re
 from snakemake.utils import validate
 
 
-#configfile: "config.yaml"
-#validate(config, 'config.schema.yaml')
-
 db = config['db']
 in_dir = config['in_dir']
 out_dir = config['out_dir']
-model = config['model']
-outgroup = config['outgroup']
-aligner = config['aligner']
-cd_h = config['cd_h']
-e_val = config['e_val']
+if 'aligner' in config.keys():
+    aligner = config['aligner']
+else:
+    aligner = 'blast'
+if 'model' in config.keys():
+    model = config['model']
+else:
+    model = 'TEST'
+if 'outgroup' in config.keys():
+    outgroup = config['outgroup']
+else:
+    outgroup = 'file'
+if 'cd_h' in config.keys():
+    cd_h = config['cd_h']
+else:
+    cd_h = 0.95
+if 'e_val' in config.keys():
+    e_val = config['e_val']
+else:
+    e_val = 1e-10
 
-workdir: out_dir
+#validate(config, 'config.schema.yaml')
+
+#workdir: out_dir
+
+fasta_names = ['.fasta', '.fna', '.ffn', '.fa', 'fsa_nt']
 
 refs = os.listdir(in_dir)
+print(refs)
 
 rule all:
-    input: expand("{out_dir}/{reference}", reference=refs, out_dir=out_dir),
+    input: expand("{out_dir}/{reference}", reference=refs, out_dir=out_dir)
 
-rule build_initial_tree:
-    output: class_al="{out_dir}/class_align.fasta", tree="{out_dir}/class_align.fasta.contree"
-    benchmark: "{out_dir}/benchmarks/build_initial_tree.txt"
-    conda: "config/opsins.yml"
-    log: "{out_dir}/logs/build_initial_tree.txt"
-    params: bb=1000, db=db, mode="TEST", nt="AUTO", t="RANDOM"
-    threads: 8
-    shell:
-         """
-         (mafft --thread {threads} --inputorder --auto {params.db} > {output.class_al}) 2> {log}
-         iqtree -s {output.class_al} -nt {params.nt} -t {params.t} -bb {params.bb} -m {params.mode} 2>> {log}
-         """
+# rule build_initial_tree:
+#     output: class_al="{out_dir}/class_align.fasta", tree="{out_dir}/class_align.fasta.contree"
+#     benchmark: "{out_dir}/benchmarks/build_initial_tree.txt"
+#     conda: "config/opsins.yml"
+#     log: "{out_dir}/logs/build_initial_tree.txt"
+#     params: bb=1000, db=db, mode="TEST", nt="AUTO", t="RANDOM"
+#     threads: 8
+#     shell:
+#          """
+#          (mafft --thread {threads} --inputorder --auto {params.db} > {output.class_al}) 2> {log}
+#          iqtree -s {output.class_al} -nt {params.nt} -t {params.t} -bb {params.bb} -m {params.mode} 2>> {log}
+#          """
 
-rule pia_analysis:
-    input: ref=lambda wildcards: f"{in_dir}/{wildcards.reference}",
-           tree=rules.build_initial_tree.output.tree
-    output: ref_out_dir=directory("{out_dir}/{reference}")
-    conda: "config/opsins.yml"
-    benchmark: "{out_dir}/benchmarks/pia_{reference}.txt"
-    log: "{out_dir}/logs/pia_{reference}.txt"
-    params: args=' '.join(pia_args), db=db, model=model, outgroup=outgroup, cd_h=cd_h, aligner=aligner
-    threads: 8
-    message: """
-             Start PIA analysis, input reference: {input.ref}, input tree: {input.tree},
-             db = {params.db}, parameters: {params.args}, model: {params.model}, outgroup: {outgroup}, aligner: {aligner}, cd_h: {params.cd_h}
-             """
-    shell: """
-           python3 PIA3.py -i {input.ref} -o {output.ref_out_dir} -db {params.db} \
-           -in_phylo {input.tree} -model {params.model} -outgroup {params.outgroup} -aligner {params.aligner} -cd_h {params.cd_h} {params.args} 2> {log}
-           """
+# rule pia_analysis:
+#     input: ref=lambda wildcards: f"{in_dir}/{wildcards.reference}",
+#            tree=rules.build_initial_tree.output.tree
+#     output: ref_out_dir=directory("{out_dir}/{reference}")
+#     conda: "config/opsins.yml"
+#     benchmark: "{out_dir}/benchmarks/pia_{reference}.txt"
+#     log: "{out_dir}/logs/pia_{reference}.txt"
+#     params: args=' '.join(pia_args), db=db, model=model, outgroup=outgroup, cd_h=cd_h, aligner=aligner
+#     threads: 8
+#     message: """
+#              Start PIA analysis, input reference: {input.ref}, input tree: {input.tree},
+#              db = {params.db}, parameters: {params.args}, model: {params.model}, outgroup: {outgroup}, aligner: {aligner}, cd_h: {params.cd_h}
+#              """
+#     shell: """
+#            python3 PIA3.py -i {input.ref} -o {output.ref_out_dir} -db {params.db} \
+#            -in_phylo {input.tree} -model {params.model} -outgroup {params.outgroup} -aligner {params.aligner} -cd_h {params.cd_h} {params.args} 2> {log}
+#            """
