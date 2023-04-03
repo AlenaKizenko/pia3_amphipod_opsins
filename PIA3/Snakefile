@@ -4,9 +4,10 @@ import re
 from snakemake.utils import validate
 
 
-db = config['db']
-in_dir = config['in_dir']
-out_dir = config['out_dir']
+db = os.path.abspath(config['db'])
+in_dir = os.path.abspath(config['in_dir'])
+out_dir = os.path.abspath(config['out_dir'])
+
 if 'aligner' in config.keys():
     aligner = config['aligner']
 else:
