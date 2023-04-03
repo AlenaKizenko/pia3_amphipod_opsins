@@ -1,31 +1,22 @@
 import glob
 import os
 import re
+from snakemake.utils import validate
 
-pia_args = list(filter(
-    lambda x: x != 'db' and x != 'in_dir' and x != 'out_dir' and x != 'model' and x != 'outgroup' and x != 'aligner' and x != 'cd_h' and
-              config[x], config.keys()))
-pia_args = list(map(lambda x: f'--{x}', pia_args))
+
+#configfile: "config.yaml"
+#validate(config, 'config.schema.yaml')
 
 db = config['db']
 in_dir = config['in_dir']
 out_dir = config['out_dir']
-if 'aligner' in config.keys():
-    aligner = config['aligner']
-else:
-    aligner = 'blast'
-if 'model' in config.keys():
-    model = config['model']
-else:
-    model = 'TEST'
-if 'outgroup' in config.keys():
-    outgroup = config['outgroup']
-else:
-    outgroup = 'file'
-if 'cd_h' in config.keys():
-    cd_h = config['cd_h']
-else:
-    cd_h = 0.95
+model = config['model']
+outgroup = config['outgroup']
+aligner = config['aligner']
+cd_h = config['cd_h']
+e_val = config['e_val']
+
+workdir: out_dir
 
 refs = os.listdir(in_dir)
 
