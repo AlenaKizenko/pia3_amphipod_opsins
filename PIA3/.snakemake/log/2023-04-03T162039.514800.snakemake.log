@@ -1,0 +1,29 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count    min threads    max threads
+-----  -------  -------------  -------------
+all          1              1              1
+total        1              1              1
+
+Select jobs to execute...
+
+[Mon Apr  3 16:20:39 2023]
+rule all:
+    output: /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/test_out/Parhyale_hawaiensis_test, /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/test_out/test_Hyalella_azteca
+    jobid: 0
+    reason: Missing output files: /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/test_out/test_Hyalella_azteca, /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/test_out/Parhyale_hawaiensis_test
+    resources: tmpdir=/tmp
+
+ImproperOutputException in rule all in file /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/Snakefile, line 62:
+Outputs of incorrect type (directories when expecting files or vice versa). Output directories must be flagged with directory(). for rule all:
+    output: /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/test_out/Parhyale_hawaiensis_test, /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/test_out/test_Hyalella_azteca
+    affected files:
+        /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/test_out/Parhyale_hawaiensis_test
+Removing output files of failed job all since they might be corrupted:
+/home/akizenko/Apps/pia3_amphipod_opsins/PIA3/test_out/Parhyale_hawaiensis_test, /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/test_out/test_Hyalella_azteca
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-04-03T162039.514800.snakemake.log

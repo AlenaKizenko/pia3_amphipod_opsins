@@ -1,0 +1,4 @@
+TypeError in file /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/Snakefile, line 39:
+expected string or bytes-like object, got 'list'
+  File "/home/akizenko/Apps/pia3_amphipod_opsins/PIA3/Snakefile", line 39, in <module>
+  File "/home/akizenko/anaconda3/envs/snakemake/lib/python3.11/re/__init__.py", line 185, in sub

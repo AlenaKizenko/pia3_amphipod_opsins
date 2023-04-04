@@ -1,0 +1,5 @@
+TypeError in file /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/Snakefile, line 39:
+unhashable type: 'list'
+  File "/home/akizenko/Apps/pia3_amphipod_opsins/PIA3/Snakefile", line 39, in <module>
+  File "/home/akizenko/anaconda3/envs/snakemake/lib/python3.11/re/__init__.py", line 185, in sub
+  File "/home/akizenko/anaconda3/envs/snakemake/lib/python3.11/re/__init__.py", line 277, in _compile

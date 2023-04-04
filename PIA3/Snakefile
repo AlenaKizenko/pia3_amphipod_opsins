@@ -3,10 +3,22 @@ import os
 import re
 from snakemake.utils import validate
 
+# check if database is in FASTA format
+try:
+    db = os.path.abspath(config['db'])
+    if os.stat(config['db']).st_size > 0:
+        print('Database file looks good')
+    else:
+        raise Exception('Database file must contain at least one sequence!')
+except:
+    raise Exception(f'No {db} file was detected!')
 
-db = os.path.abspath(config['db'])
-in_dir = os.path.abspath(config['in_dir'])
-out_dir = os.path.abspath(config['out_dir'])
+try:
+    in_dir = os.path.abspath(config['in_dir'])
+except:
+    raise Exception(f'{in_dir} no such file or directory!')
+
+out_dir = config['out_dir']
 
 if 'aligner' in config.keys():
     aligner = config['aligner']
@@ -33,13 +45,17 @@ else:
 
 #workdir: out_dir
 
-fasta_names = ['.fasta', '.fna', '.ffn', '.fa', 'fsa_nt']
+fasta_names ='\.fasta|\.fna|\.ffn|\.fa|\.fsa_nt'
 
 refs = os.listdir(in_dir)
-print(refs)
+refs_sub = [re.sub(fasta_names, '', ref) for ref in refs]
 
 rule all:
-    input: expand("{out_dir}/{reference}", reference=refs, out_dir=out_dir)
+    output: expand("{out_dir}/{reference}", reference=refs_sub, out_dir=out_dir)
+    shell:
+        """
+        mkdir {output}
+        """
 
 # rule build_initial_tree:
 #     output: class_al="{out_dir}/class_align.fasta", tree="{out_dir}/class_align.fasta.contree"

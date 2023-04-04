@@ -1,0 +1,3 @@
+Exception in file /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/Snakefile, line 12:
+Database file must contain at least one sequence!
+  File "/home/akizenko/Apps/pia3_amphipod_opsins/PIA3/Snakefile", line 12, in <module>
