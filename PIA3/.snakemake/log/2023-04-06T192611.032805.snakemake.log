@@ -1,0 +1,42 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                    count    min threads    max threads
+-------------------  -------  -------------  -------------
+all                        1              1              1
+mafft_align_db_seqs        1              8              8
+total                      2              1              8
+
+Select jobs to execute...
+
+[Thu Apr  6 19:26:11 2023]
+rule mafft_align_db_seqs:
+    input: classification_opsins_full_aa.fasta
+    output: test_out/db_align.fasta
+    log: test_out/logs/build_initial_tree.txt
+    jobid: 1
+    benchmark: test_out/benchmarks/build_initial_tree.txt
+    reason: Missing output files: test_out/db_align.fasta
+    wildcards: out_dir=test_out
+    threads: 8
+    resources: tmpdir=/tmp
+
+[Thu Apr  6 19:26:11 2023]
+Error in rule mafft_align_db_seqs:
+    jobid: 1
+    input: classification_opsins_full_aa.fasta
+    output: test_out/db_align.fasta
+    log: test_out/logs/build_initial_tree.txt (check log file(s) for error details)
+    conda-env: /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/.snakemake/conda/60efbe961946dd9eba8821320e7d2a0a_
+    shell:
+        mafft --thread 8 --inputorder --auto classification_opsins_full_aa.fasta > test_out/db_align.fasta
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job mafft_align_db_seqs since they might be corrupted:
+test_out/db_align.fasta
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-04-06T192611.032805.snakemake.log

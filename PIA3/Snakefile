@@ -1,6 +1,5 @@
 import os
-import re
-import pathlib
+#import pathlib
 from snakemake.utils import validate
 
 configfile: "config.yaml"
@@ -9,26 +8,43 @@ configfile: "config.yaml"
 
 #workdir: out_dir
 
-fasta_names ='\.fasta|\.fna|\.ffn|\.fa|\.fsa_nt'
+#fasta_names ='\.fasta|\.fna|\.ffn|\.fa|\.fsa_nt'
 
-refs = os.listdir(in_dir)
-refs_sub = [re.sub(fasta_names, '', ref) for ref in refs]
+#refs = os.listdir(in_dir)
+#refs_sub = [re.sub(fasta_names, '', ref) for ref in refs]
+
+#rule all:
+#    input: expand("{out_dir}/{reference}", reference=refs_sub, out_dir=out_dir)
+
+out_dir = config["out_dir"]
 
 rule all:
-    input: expand("{out_dir}/{reference}", reference=refs_sub, out_dir=out_dir)
+    input: f"{out_dir}/db_align.fasta"
 
-rule build_database_tree:
-    output: class_al="{out_dir}/{re.sub(fasta_names, '', os.path.basename(db))}_align.fasta", tree="{out_dir}/{re.sub(fasta_names, '', os.path.basename(db))}.contree"
+rule mafft_align_db_seqs:
+    input: config["db"],
+    output: "{out_dir}/db_align.fasta"
     benchmark: "{out_dir}/benchmarks/build_initial_tree.txt"
-    conda: "config/opsins.yml"
+    conda: "pia3.yml"
     log: "{out_dir}/logs/build_initial_tree.txt"
-    params: bb=1000, db=db, mode="TEST", nt="AUTO", t="RANDOM"
     threads: 8
-    shell:
-         """
-         (mafft --thread {threads} --inputorder --auto {params.db} > {output.class_al}) 2> {log}
-         iqtree -s {output.class_al} -nt {params.nt} -t {params.t} -bb {params.bb} -m {params.mode} 2>> {log}
-         """
+    shell: "mafft --thread {threads} --auto {input} > {output}"
+
+# rule iqtree_build_db_tree:
+#     input:
+#     output:
+#         db_tree="{out_dir}/{db}_align.fasta.contree"
+#     benchmark:
+#     conda:
+#     log:
+#         "{out_dir}/logs/iqtree_build_db_tree.txt"
+#     params: bb=1000,
+#             mode="TEST",
+#             nt="AUTO",
+#             t="RANDOM"
+#     threads:
+#     shell:
+#         "iqtree -s {output.db_align} -nt {params.nt} -t {params.t} -bb {params.bb} -m {params.mode} 2> {log.iqtree_log}"
 
 # rule pia_analysis:
 #     input: ref=lambda wildcards: f"{in_dir}/{wildcards.reference}",
