@@ -1,45 +1,9 @@
-import glob
 import os
 import re
+import pathlib
 from snakemake.utils import validate
 
-# check if database is in FASTA format
-try:
-    db = os.path.abspath(config['db'])
-    if os.stat(config['db']).st_size > 0:
-        print('Database file looks good')
-    else:
-        raise Exception('Database file must contain at least one sequence!')
-except:
-    raise Exception(f'No {db} file was detected!')
-
-try:
-    in_dir = os.path.abspath(config['in_dir'])
-except:
-    raise Exception(f'{in_dir} no such file or directory!')
-
-out_dir = config['out_dir']
-
-if 'aligner' in config.keys():
-    aligner = config['aligner']
-else:
-    aligner = 'blast'
-if 'model' in config.keys():
-    model = config['model']
-else:
-    model = 'TEST'
-if 'outgroup' in config.keys():
-    outgroup = config['outgroup']
-else:
-    outgroup = 'file'
-if 'cd_h' in config.keys():
-    cd_h = config['cd_h']
-else:
-    cd_h = 0.95
-if 'e_val' in config.keys():
-    e_val = config['e_val']
-else:
-    e_val = 1e-10
+configfile: "config.yaml"
 
 #validate(config, 'config.schema.yaml')
 
@@ -51,24 +15,20 @@ refs = os.listdir(in_dir)
 refs_sub = [re.sub(fasta_names, '', ref) for ref in refs]
 
 rule all:
-    output: expand("{out_dir}/{reference}", reference=refs_sub, out_dir=out_dir)
-    shell:
-        """
-        mkdir {output}
-        """
+    input: expand("{out_dir}/{reference}", reference=refs_sub, out_dir=out_dir)
 
-# rule build_initial_tree:
-#     output: class_al="{out_dir}/class_align.fasta", tree="{out_dir}/class_align.fasta.contree"
-#     benchmark: "{out_dir}/benchmarks/build_initial_tree.txt"
-#     conda: "config/opsins.yml"
-#     log: "{out_dir}/logs/build_initial_tree.txt"
-#     params: bb=1000, db=db, mode="TEST", nt="AUTO", t="RANDOM"
-#     threads: 8
-#     shell:
-#          """
-#          (mafft --thread {threads} --inputorder --auto {params.db} > {output.class_al}) 2> {log}
-#          iqtree -s {output.class_al} -nt {params.nt} -t {params.t} -bb {params.bb} -m {params.mode} 2>> {log}
-#          """
+rule build_database_tree:
+    output: class_al="{out_dir}/{re.sub(fasta_names, '', os.path.basename(db))}_align.fasta", tree="{out_dir}/{re.sub(fasta_names, '', os.path.basename(db))}.contree"
+    benchmark: "{out_dir}/benchmarks/build_initial_tree.txt"
+    conda: "config/opsins.yml"
+    log: "{out_dir}/logs/build_initial_tree.txt"
+    params: bb=1000, db=db, mode="TEST", nt="AUTO", t="RANDOM"
+    threads: 8
+    shell:
+         """
+         (mafft --thread {threads} --inputorder --auto {params.db} > {output.class_al}) 2> {log}
+         iqtree -s {output.class_al} -nt {params.nt} -t {params.t} -bb {params.bb} -m {params.mode} 2>> {log}
+         """
 
 # rule pia_analysis:
 #     input: ref=lambda wildcards: f"{in_dir}/{wildcards.reference}",
