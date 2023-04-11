@@ -1,0 +1,39 @@
+{
+  "build": "py310h06a4308_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "matplotlib-base >=3.7.1,<3.7.2.0a0",
+    "pyqt >=5",
+    "python >=3.10,<3.11.0a0",
+    "tornado >=5"
+  ],
+  "extracted_package_dir": "/home/akizenko/anaconda3/pkgs/matplotlib-3.7.1-py310h06a4308_1",
+  "features": "",
+  "files": [],
+  "fn": "matplotlib-3.7.1-py310h06a4308_1.conda",
+  "legacy_bz2_md5": "a399b93535f4a634c11372b23fe70ce7",
+  "legacy_bz2_size": 7781,
+  "license": "LicenseRef-PSF-based",
+  "license_family": "PSF",
+  "link": {
+    "source": "/home/akizenko/anaconda3/pkgs/matplotlib-3.7.1-py310h06a4308_1",
+    "type": 1
+  },
+  "md5": "54ba9684d6aa92c6fb8a35f189ea4c8f",
+  "name": "matplotlib",
+  "package_tarball_full_path": "/home/akizenko/anaconda3/pkgs/matplotlib-3.7.1-py310h06a4308_1.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "matplotlib==3.7.1=py310h06a4308_1",
+  "sha256": "6b3495e95bab4777cbbee2a90e449c9e56498d502d2f23fb15e982da15393183",
+  "size": 8153,
+  "subdir": "linux-64",
+  "timestamp": 1679593840686,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/matplotlib-3.7.1-py310h06a4308_1.conda",
+  "version": "3.7.1"
+}

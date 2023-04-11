@@ -1,0 +1,119 @@
+{
+  "build": "py310h6a678d5_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/anaconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0",
+    "libstdcxx-ng >=11.2.0",
+    "python >=3.10,<3.11.0a0",
+    "unixodbc >=2.3.9,<2.4.0a0"
+  ],
+  "extracted_package_dir": "/home/akizenko/anaconda3/pkgs/pyodbc-4.0.34-py310h6a678d5_0",
+  "features": "",
+  "files": [
+    "lib/python3.10/site-packages/pyodbc-4.0.34.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/pyodbc-4.0.34.dist-info/LICENSE.txt",
+    "lib/python3.10/site-packages/pyodbc-4.0.34.dist-info/METADATA",
+    "lib/python3.10/site-packages/pyodbc-4.0.34.dist-info/RECORD",
+    "lib/python3.10/site-packages/pyodbc-4.0.34.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/pyodbc-4.0.34.dist-info/WHEEL",
+    "lib/python3.10/site-packages/pyodbc-4.0.34.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/pyodbc-4.0.34.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/pyodbc.cpython-310-x86_64-linux-gnu.so",
+    "pyodbc.pyi"
+  ],
+  "fn": "pyodbc-4.0.34-py310h6a678d5_0.tar.bz2",
+  "license": "MIT-0",
+  "license_family": "MIT",
+  "link": {
+    "source": "/home/akizenko/anaconda3/pkgs/pyodbc-4.0.34-py310h6a678d5_0",
+    "type": 1
+  },
+  "md5": "dd46683dce5bc0f82b0cb236d3b90f04",
+  "name": "pyodbc",
+  "package_tarball_full_path": "/home/akizenko/anaconda3/pkgs/pyodbc-4.0.34-py310h6a678d5_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.10/site-packages/pyodbc-4.0.34.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyodbc-4.0.34.dist-info/LICENSE.txt",
+        "path_type": "hardlink",
+        "sha256": "9859c85770c91b7866b0f769c938e36d64d0260141b529b947b4ead96883eab4",
+        "sha256_in_prefix": "9859c85770c91b7866b0f769c938e36d64d0260141b529b947b4ead96883eab4",
+        "size_in_bytes": 868
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyodbc-4.0.34.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "f4ebe68430014851ed8685ef564eb0741d884f8f1844a47bea6fd49ed11f5011",
+        "sha256_in_prefix": "f4ebe68430014851ed8685ef564eb0741d884f8f1844a47bea6fd49ed11f5011",
+        "size_in_bytes": 2719
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyodbc-4.0.34.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "786a379fb5d4bc25229a06efbf5d4b866f6f4611f3d97e4547f500a626fbca52",
+        "sha256_in_prefix": "786a379fb5d4bc25229a06efbf5d4b866f6f4611f3d97e4547f500a626fbca52",
+        "size_in_bytes": 841
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyodbc-4.0.34.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyodbc-4.0.34.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "9d3cbf67c8af18407aa85c152e0eff87aaead09b74254e4fcf670bdbf16348c4",
+        "sha256_in_prefix": "9d3cbf67c8af18407aa85c152e0eff87aaead09b74254e4fcf670bdbf16348c4",
+        "size_in_bytes": 105
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyodbc-4.0.34.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "de9f2f9f14055a82ea265460556c7d82bb713ea7f31c51ab2a77eff2323f5540",
+        "sha256_in_prefix": "de9f2f9f14055a82ea265460556c7d82bb713ea7f31c51ab2a77eff2323f5540",
+        "size_in_bytes": 93
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyodbc-4.0.34.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "df48ef61c0ae97aff0036e8e4f9734ebc1801f3a902e977d59f4349924ac0d35",
+        "sha256_in_prefix": "df48ef61c0ae97aff0036e8e4f9734ebc1801f3a902e977d59f4349924ac0d35",
+        "size_in_bytes": 7
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyodbc.cpython-310-x86_64-linux-gnu.so",
+        "path_type": "hardlink",
+        "sha256": "9315c653b4bdc0558fe54047ab2898ea59bb526f81ea49527c7a6bc531219df5",
+        "sha256_in_prefix": "9315c653b4bdc0558fe54047ab2898ea59bb526f81ea49527c7a6bc531219df5",
+        "size_in_bytes": 693952
+      },
+      {
+        "_path": "pyodbc.pyi",
+        "path_type": "hardlink",
+        "sha256": "70bb8b6a7492d15af2f5a514be7fa2d65a43c4788370c430405ca9196a83fff1",
+        "sha256_in_prefix": "70bb8b6a7492d15af2f5a514be7fa2d65a43c4788370c430405ca9196a83fff1",
+        "size_in_bytes": 13127
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "pyodbc==4.0.34=py310h6a678d5_0",
+  "sha256": "5cec950667adb05343b0b819106fd06527cca324a5f62d836035d96db91f76cb",
+  "size": 312998,
+  "subdir": "linux-64",
+  "timestamp": 1659513877591,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/anaconda/linux-64/pyodbc-4.0.34-py310h6a678d5_0.tar.bz2",
+  "version": "4.0.34"
+}

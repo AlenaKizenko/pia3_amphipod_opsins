@@ -1,0 +1,1388 @@
+{
+  "build": "py310h3c18c91_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "dal 2023.0.1.*",
+    "dal >=2023.0.1,<2024.0a0",
+    "libgcc-ng >=11.2.0",
+    "libstdcxx-ng >=11.2.0",
+    "mpich >=3.3.2,<3.4.0a0",
+    "numpy >=1.21.5,<2.0a0",
+    "python >=3.10,<3.11.0a0"
+  ],
+  "extracted_package_dir": "/home/akizenko/anaconda3/pkgs/daal4py-2023.0.2-py310h3c18c91_0",
+  "features": "",
+  "files": [
+    "lib/python3.10/site-packages/daal4py-2023.0.2-py3.10.egg-info/PKG-INFO",
+    "lib/python3.10/site-packages/daal4py-2023.0.2-py3.10.egg-info/SOURCES.txt",
+    "lib/python3.10/site-packages/daal4py-2023.0.2-py3.10.egg-info/dependency_links.txt",
+    "lib/python3.10/site-packages/daal4py-2023.0.2-py3.10.egg-info/requires.txt",
+    "lib/python3.10/site-packages/daal4py-2023.0.2-py3.10.egg-info/top_level.txt",
+    "lib/python3.10/site-packages/daal4py/__init__.py",
+    "lib/python3.10/site-packages/daal4py/__main__.py",
+    "lib/python3.10/site-packages/daal4py/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/__pycache__/__main__.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/_daal4py.cpython-310-x86_64-linux-gnu.so",
+    "lib/python3.10/site-packages/daal4py/mpi_transceiver.cpython-310-x86_64-linux-gnu.so",
+    "lib/python3.10/site-packages/daal4py/oneapi/__init__.py",
+    "lib/python3.10/site-packages/daal4py/oneapi/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/__init__.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/__pycache__/_device_offload.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/__pycache__/_utils.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/_device_offload.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/_utils.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/cluster/__init__.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/cluster/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/cluster/__pycache__/_dbscan.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/cluster/__pycache__/_k_means_0_22.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/cluster/__pycache__/_k_means_0_23.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/cluster/__pycache__/dbscan.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/cluster/__pycache__/k_means.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/cluster/_dbscan.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/cluster/_k_means_0_22.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/cluster/_k_means_0_23.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/cluster/dbscan.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/cluster/k_means.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/cluster/tests/__pycache__/test_dbscan.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/cluster/tests/test_dbscan.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/decomposition/__init__.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/decomposition/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/decomposition/__pycache__/_pca.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/decomposition/_pca.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/ensemble/AdaBoostClassifier.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/ensemble/GBTDAAL.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/ensemble/__init__.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/ensemble/__pycache__/AdaBoostClassifier.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/ensemble/__pycache__/GBTDAAL.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/ensemble/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/ensemble/__pycache__/_forest.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/ensemble/_forest.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/ensemble/tests/__pycache__/test_decision_forest.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/ensemble/tests/test_decision_forest.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/linear_model/__init__.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/linear_model/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/linear_model/__pycache__/_coordinate_descent.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/linear_model/__pycache__/_linear.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/linear_model/__pycache__/_ridge.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/linear_model/__pycache__/coordinate_descent.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/linear_model/__pycache__/linear.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/linear_model/__pycache__/logistic_loss.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/linear_model/__pycache__/logistic_path.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/linear_model/__pycache__/ridge.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/linear_model/_coordinate_descent.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/linear_model/_linear.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/linear_model/_ridge.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/linear_model/coordinate_descent.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/linear_model/linear.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/linear_model/logistic_loss.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/linear_model/logistic_path.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/linear_model/ridge.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/linear_model/tests/__pycache__/test_linear.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/linear_model/tests/test_linear.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/manifold/__init__.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/manifold/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/manifold/__pycache__/_t_sne.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/manifold/_t_sne.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/metrics/__init__.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/metrics/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/metrics/__pycache__/_pairwise.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/metrics/__pycache__/_ranking.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/metrics/_pairwise.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/metrics/_ranking.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/model_selection/__init__.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/model_selection/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/model_selection/__pycache__/_split.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/model_selection/_split.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/model_selection/tests/__pycache__/test_split.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/model_selection/tests/test_split.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/monkeypatch/__init__.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/monkeypatch/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/monkeypatch/__pycache__/dispatcher.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/monkeypatch/dispatcher.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/monkeypatch/tests/__pycache__/_models_info.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/monkeypatch/tests/__pycache__/test_monkeypatch.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/monkeypatch/tests/__pycache__/test_patching.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/monkeypatch/tests/_models_info.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/monkeypatch/tests/test_monkeypatch.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/monkeypatch/tests/test_patching.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/monkeypatch/tests/utils/__pycache__/_launch_algorithms.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/monkeypatch/tests/utils/_launch_algorithms.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/neighbors/__init__.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/neighbors/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/neighbors/__pycache__/_base.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/neighbors/__pycache__/_classification.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/neighbors/__pycache__/_regression.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/neighbors/__pycache__/_unsupervised.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/neighbors/_base.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/neighbors/_classification.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/neighbors/_regression.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/neighbors/_unsupervised.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/neighbors/tests/__pycache__/test_kneighbors.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/neighbors/tests/test_kneighbors.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/svm/__init__.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/svm/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/svm/__pycache__/_svm_0_22.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/svm/__pycache__/_svm_0_23.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/svm/__pycache__/svm.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/svm/_svm_0_22.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/svm/_svm_0_23.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/svm/svm.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/utils/__init__.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/utils/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/utils/__pycache__/base.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/utils/__pycache__/validation.cpython-310.pyc",
+    "lib/python3.10/site-packages/daal4py/sklearn/utils/base.py",
+    "lib/python3.10/site-packages/daal4py/sklearn/utils/validation.py",
+    "lib/python3.10/site-packages/onedal/__init__.py",
+    "lib/python3.10/site-packages/onedal/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/onedal/_onedal_py_host.cpython-310-x86_64-linux-gnu.so",
+    "lib/python3.10/site-packages/onedal/common/__pycache__/_estimator_checks.cpython-310.pyc",
+    "lib/python3.10/site-packages/onedal/common/__pycache__/_mixin.cpython-310.pyc",
+    "lib/python3.10/site-packages/onedal/common/__pycache__/_policy.cpython-310.pyc",
+    "lib/python3.10/site-packages/onedal/common/_estimator_checks.py",
+    "lib/python3.10/site-packages/onedal/common/_mixin.py",
+    "lib/python3.10/site-packages/onedal/common/_policy.py",
+    "lib/python3.10/site-packages/onedal/common/tests/__pycache__/test_policy.cpython-310.pyc",
+    "lib/python3.10/site-packages/onedal/common/tests/test_policy.py",
+    "lib/python3.10/site-packages/onedal/datatypes/__init__.py",
+    "lib/python3.10/site-packages/onedal/datatypes/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/onedal/datatypes/__pycache__/_data_conversion.cpython-310.pyc",
+    "lib/python3.10/site-packages/onedal/datatypes/__pycache__/validation.cpython-310.pyc",
+    "lib/python3.10/site-packages/onedal/datatypes/_data_conversion.py",
+    "lib/python3.10/site-packages/onedal/datatypes/tests/__pycache__/test_data.cpython-310.pyc",
+    "lib/python3.10/site-packages/onedal/datatypes/tests/test_data.py",
+    "lib/python3.10/site-packages/onedal/datatypes/validation.py",
+    "lib/python3.10/site-packages/onedal/neighbors/__init__.py",
+    "lib/python3.10/site-packages/onedal/neighbors/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/onedal/neighbors/__pycache__/neighbors.cpython-310.pyc",
+    "lib/python3.10/site-packages/onedal/neighbors/neighbors.py",
+    "lib/python3.10/site-packages/onedal/neighbors/tests/__pycache__/test_knn_classification.cpython-310.pyc",
+    "lib/python3.10/site-packages/onedal/neighbors/tests/test_knn_classification.py",
+    "lib/python3.10/site-packages/onedal/primitives/__init__.py",
+    "lib/python3.10/site-packages/onedal/primitives/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/onedal/primitives/__pycache__/kernel_functions.cpython-310.pyc",
+    "lib/python3.10/site-packages/onedal/primitives/kernel_functions.py",
+    "lib/python3.10/site-packages/onedal/primitives/tests/__pycache__/test_kernel_functions.cpython-310.pyc",
+    "lib/python3.10/site-packages/onedal/primitives/tests/test_kernel_functions.py",
+    "lib/python3.10/site-packages/onedal/svm/__init__.py",
+    "lib/python3.10/site-packages/onedal/svm/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/onedal/svm/__pycache__/svm.cpython-310.pyc",
+    "lib/python3.10/site-packages/onedal/svm/svm.py",
+    "lib/python3.10/site-packages/onedal/svm/tests/__pycache__/test_csr_svm.cpython-310.pyc",
+    "lib/python3.10/site-packages/onedal/svm/tests/__pycache__/test_nusvc.cpython-310.pyc",
+    "lib/python3.10/site-packages/onedal/svm/tests/__pycache__/test_nusvr.cpython-310.pyc",
+    "lib/python3.10/site-packages/onedal/svm/tests/__pycache__/test_svc.cpython-310.pyc",
+    "lib/python3.10/site-packages/onedal/svm/tests/__pycache__/test_svr.cpython-310.pyc",
+    "lib/python3.10/site-packages/onedal/svm/tests/test_csr_svm.py",
+    "lib/python3.10/site-packages/onedal/svm/tests/test_nusvc.py",
+    "lib/python3.10/site-packages/onedal/svm/tests/test_nusvr.py",
+    "lib/python3.10/site-packages/onedal/svm/tests/test_svc.py",
+    "lib/python3.10/site-packages/onedal/svm/tests/test_svr.py",
+    "lib/python3.10/site-packages/onedal/tests/utils/__pycache__/_device_selection.cpython-310.pyc",
+    "lib/python3.10/site-packages/onedal/tests/utils/_device_selection.py"
+  ],
+  "fn": "daal4py-2023.0.2-py310h3c18c91_0.conda",
+  "legacy_bz2_md5": "574b75fbe086f4550dc14bbf8efc55f7",
+  "legacy_bz2_size": 13932802,
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "link": {
+    "source": "/home/akizenko/anaconda3/pkgs/daal4py-2023.0.2-py310h3c18c91_0",
+    "type": 1
+  },
+  "md5": "86494487b009fce5973a016c5f2a7c73",
+  "name": "daal4py",
+  "package_tarball_full_path": "/home/akizenko/anaconda3/pkgs/daal4py-2023.0.2-py310h3c18c91_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.10/site-packages/daal4py-2023.0.2-py3.10.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "e807b201646e4580203fc55647358adf6e269e200c9d7932f05ba577501c6a48",
+        "sha256_in_prefix": "e807b201646e4580203fc55647358adf6e269e200c9d7932f05ba577501c6a48",
+        "size_in_bytes": 12790
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py-2023.0.2-py3.10.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "5d8b9309bd13c70fe22fbfcfdffb9fdd37ed9b2ccc757768081a73660fd5a889",
+        "sha256_in_prefix": "5d8b9309bd13c70fe22fbfcfdffb9fdd37ed9b2ccc757768081a73660fd5a889",
+        "size_in_bytes": 3474
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py-2023.0.2-py3.10.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py-2023.0.2-py3.10.egg-info/requires.txt",
+        "path_type": "hardlink",
+        "sha256": "00d2bb6ce6629d961f172e7ccef68cd2e836a831fc146f553bafa22e2f42a7ae",
+        "sha256_in_prefix": "00d2bb6ce6629d961f172e7ccef68cd2e836a831fc146f553bafa22e2f42a7ae",
+        "size_in_bytes": 147
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py-2023.0.2-py3.10.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "cc8d91630a7ca7d159628d74be38d94574b599a9d953e64572841ad3dec7cbf2",
+        "sha256_in_prefix": "cc8d91630a7ca7d159628d74be38d94574b599a9d953e64572841ad3dec7cbf2",
+        "size_in_bytes": 15
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "b3c359255598e957eb60230c6ea7015c6abded440df8aaf1031481f296b322f4",
+        "sha256_in_prefix": "b3c359255598e957eb60230c6ea7015c6abded440df8aaf1031481f296b322f4",
+        "size_in_bytes": 2027
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/__main__.py",
+        "path_type": "hardlink",
+        "sha256": "c2c782843f2ab67c8fb5e074f6129ef5188a07394c2021c0e44a53190fcaa859",
+        "sha256_in_prefix": "c2c782843f2ab67c8fb5e074f6129ef5188a07394c2021c0e44a53190fcaa859",
+        "size_in_bytes": 2003
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7b8957c494c0f344d60a19f2880a7bfe8555e91e286469b79191b483b262b7d0",
+        "sha256_in_prefix": "7b8957c494c0f344d60a19f2880a7bfe8555e91e286469b79191b483b262b7d0",
+        "size_in_bytes": 1088
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/__pycache__/__main__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "1c5099166baea7a51f68f8e6e55be01f066b9f8ba8c0feac75ed7772abe4399a",
+        "sha256_in_prefix": "1c5099166baea7a51f68f8e6e55be01f066b9f8ba8c0feac75ed7772abe4399a",
+        "size_in_bytes": 1349
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/_daal4py.cpython-310-x86_64-linux-gnu.so",
+        "path_type": "hardlink",
+        "sha256": "aebf9c6f0db75e367f6093838ee85f05fe7d716c6f238c29a472e16f9ab8f7b9",
+        "sha256_in_prefix": "aebf9c6f0db75e367f6093838ee85f05fe7d716c6f238c29a472e16f9ab8f7b9",
+        "size_in_bytes": 14257512
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/mpi_transceiver.cpython-310-x86_64-linux-gnu.so",
+        "path_type": "hardlink",
+        "sha256": "ebc8edef7057202416ffe7142fc97002ab79c340715843d4c29eb98f1e00ae17",
+        "sha256_in_prefix": "ebc8edef7057202416ffe7142fc97002ab79c340715843d4c29eb98f1e00ae17",
+        "size_in_bytes": 29728
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/oneapi/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "7bc1d1a56e4d3e6c14c612006f790c410f176f188b67607609775bbcc162a840",
+        "sha256_in_prefix": "7bc1d1a56e4d3e6c14c612006f790c410f176f188b67607609775bbcc162a840",
+        "size_in_bytes": 2705
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/oneapi/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c09e1545d4f2b316bd614aa7e084d4403a06db5f6bc96f73e3d2491a2a10c88c",
+        "sha256_in_prefix": "c09e1545d4f2b316bd614aa7e084d4403a06db5f6bc96f73e3d2491a2a10c88c",
+        "size_in_bytes": 1494
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "acd4711a7d9b4c547aa81df87518eb0fa1d5f66bb95295f42e556a23abb69b00",
+        "sha256_in_prefix": "acd4711a7d9b4c547aa81df87518eb0fa1d5f66bb95295f42e556a23abb69b00",
+        "size_in_bytes": 1361
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "994ddc4f7d250c12450a57e1b45ef6586d4d0ff305bcdbd2688bea5901d2fdd1",
+        "sha256_in_prefix": "994ddc4f7d250c12450a57e1b45ef6586d4d0ff305bcdbd2688bea5901d2fdd1",
+        "size_in_bytes": 602
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/__pycache__/_device_offload.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "e72a18cd094241749e70592b48290d3646ecd1206db43578ed7385f65ffc8be6",
+        "sha256_in_prefix": "e72a18cd094241749e70592b48290d3646ecd1206db43578ed7385f65ffc8be6",
+        "size_in_bytes": 2902
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/__pycache__/_utils.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "da92de60d0710f3d2510168da580d57622a6c6c3f00ed24f5b3c15027bdfa321",
+        "sha256_in_prefix": "da92de60d0710f3d2510168da580d57622a6c6c3f00ed24f5b3c15027bdfa321",
+        "size_in_bytes": 5868
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/_device_offload.py",
+        "path_type": "hardlink",
+        "sha256": "ef63c22b0bebfbfac469744afbb281487bbc901ff5b9cd8ff6dcd678a23ee991",
+        "sha256_in_prefix": "ef63c22b0bebfbfac469744afbb281487bbc901ff5b9cd8ff6dcd678a23ee991",
+        "size_in_bytes": 3454
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/_utils.py",
+        "path_type": "hardlink",
+        "sha256": "b78347ed524c466f61de1e167b3a02822b63573a99e84ef1d1d9e244368beb59",
+        "sha256_in_prefix": "b78347ed524c466f61de1e167b3a02822b63573a99e84ef1d1d9e244368beb59",
+        "size_in_bytes": 6505
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/cluster/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "71526eee99b6b69bbe52178d00da464bc99c8b7fb068c221d858ce5f295d1d42",
+        "sha256_in_prefix": "71526eee99b6b69bbe52178d00da464bc99c8b7fb068c221d858ce5f295d1d42",
+        "size_in_bytes": 852
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/cluster/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "83a4bba4e54a6c11f49642cb3513015499c5cb36450d0dcb6088884d2f9ed1fa",
+        "sha256_in_prefix": "83a4bba4e54a6c11f49642cb3513015499c5cb36450d0dcb6088884d2f9ed1fa",
+        "size_in_bytes": 261
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/cluster/__pycache__/_dbscan.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "e974031bc9abd7708825baf7299b48cc4803311f38e77f8aeb025704093c3a93",
+        "sha256_in_prefix": "e974031bc9abd7708825baf7299b48cc4803311f38e77f8aeb025704093c3a93",
+        "size_in_bytes": 10543
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/cluster/__pycache__/_k_means_0_22.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "f369ba5d1de315e43d5ca55a8c60c4c6c784ef9ded47384617c2ed76c8ec7dd7",
+        "sha256_in_prefix": "f369ba5d1de315e43d5ca55a8c60c4c6c784ef9ded47384617c2ed76c8ec7dd7",
+        "size_in_bytes": 11469
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/cluster/__pycache__/_k_means_0_23.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "0d0dff7687f4c5dec3eee2d548ac64e3aea1033aec345c22983782298f8081a1",
+        "sha256_in_prefix": "0d0dff7687f4c5dec3eee2d548ac64e3aea1033aec345c22983782298f8081a1",
+        "size_in_bytes": 15059
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/cluster/__pycache__/dbscan.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "cc8b38c69d22d2d428bde1e8a7e18707e855a807f249e13aee03a5f1bafb326d",
+        "sha256_in_prefix": "cc8b38c69d22d2d428bde1e8a7e18707e855a807f249e13aee03a5f1bafb326d",
+        "size_in_bytes": 179
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/cluster/__pycache__/k_means.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "0dda8f7d73f470fd5733da3ce8c5a8d5adf84d4d0ca3e6642aa2c3d37faef3df",
+        "sha256_in_prefix": "0dda8f7d73f470fd5733da3ce8c5a8d5adf84d4d0ca3e6642aa2c3d37faef3df",
+        "size_in_bytes": 304
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/cluster/_dbscan.py",
+        "path_type": "hardlink",
+        "sha256": "2866c5b1c7198bc1cde2925ee67e3a262358655e82c4f05400d2d7fad6e49398",
+        "sha256_in_prefix": "2866c5b1c7198bc1cde2925ee67e3a262358655e82c4f05400d2d7fad6e49398",
+        "size_in_bytes": 11633
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/cluster/_k_means_0_22.py",
+        "path_type": "hardlink",
+        "sha256": "e366138c3cfa0ea275b308502cd90fb3cebb644bff26d7eaa7d3f2b962542c34",
+        "sha256_in_prefix": "e366138c3cfa0ea275b308502cd90fb3cebb644bff26d7eaa7d3f2b962542c34",
+        "size_in_bytes": 15861
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/cluster/_k_means_0_23.py",
+        "path_type": "hardlink",
+        "sha256": "8b77b6ffd1a13bc9d2c712fc4f18f12f0e089f2aad0fe4513c22d30dd0926ecf",
+        "sha256_in_prefix": "8b77b6ffd1a13bc9d2c712fc4f18f12f0e089f2aad0fe4513c22d30dd0926ecf",
+        "size_in_bytes": 22167
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/cluster/dbscan.py",
+        "path_type": "hardlink",
+        "sha256": "656a9f50a5bb519e795f4e28e24fe5db400a7c482a91e94fae1ef996a91c56e9",
+        "sha256_in_prefix": "656a9f50a5bb519e795f4e28e24fe5db400a7c482a91e94fae1ef996a91c56e9",
+        "size_in_bytes": 767
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/cluster/k_means.py",
+        "path_type": "hardlink",
+        "sha256": "7a17d27e48a64e4f971ea1d7ba9db34138729a74396883d7b550e900b6dfb19e",
+        "sha256_in_prefix": "7a17d27e48a64e4f971ea1d7ba9db34138729a74396883d7b550e900b6dfb19e",
+        "size_in_bytes": 908
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/cluster/tests/__pycache__/test_dbscan.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "25f87e31e8d6f2b0a3dde87372980eb718943193b40f95e53a887c5069c43755",
+        "sha256_in_prefix": "25f87e31e8d6f2b0a3dde87372980eb718943193b40f95e53a887c5069c43755",
+        "size_in_bytes": 2748
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/cluster/tests/test_dbscan.py",
+        "path_type": "hardlink",
+        "sha256": "9ce58350011d75be23b47244ec908900b14f201b99dabd47232228925e198e91",
+        "sha256_in_prefix": "9ce58350011d75be23b47244ec908900b14f201b99dabd47232228925e198e91",
+        "size_in_bytes": 4031
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/decomposition/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e5ffee3fee9da5e818c8285778b0cda6fb8c89ed526a877b311530cfa55852b1",
+        "sha256_in_prefix": "e5ffee3fee9da5e818c8285778b0cda6fb8c89ed526a877b311530cfa55852b1",
+        "size_in_bytes": 807
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/decomposition/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "ad04df3f578890af92f06dff0f9111ae5ef16e95a3e159d7470d88afe8dfd008",
+        "sha256_in_prefix": "ad04df3f578890af92f06dff0f9111ae5ef16e95a3e159d7470d88afe8dfd008",
+        "size_in_bytes": 217
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/decomposition/__pycache__/_pca.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "1611911e40a9bc3c9330a9f314b9f5497401b2a8b7c8cf919f8f2ac5395cf091",
+        "sha256_in_prefix": "1611911e40a9bc3c9330a9f314b9f5497401b2a8b7c8cf919f8f2ac5395cf091",
+        "size_in_bytes": 9159
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/decomposition/_pca.py",
+        "path_type": "hardlink",
+        "sha256": "5f5c76ba0c4ea44a87d5785d1a7bc7ed3999a000587d4f7ab3076b5eb1e76b5e",
+        "sha256_in_prefix": "5f5c76ba0c4ea44a87d5785d1a7bc7ed3999a000587d4f7ab3076b5eb1e76b5e",
+        "size_in_bytes": 15909
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/ensemble/AdaBoostClassifier.py",
+        "path_type": "hardlink",
+        "sha256": "15927defa054d1f82b2b034dd8932c3b466c374460e4103786f6aae54e840751",
+        "sha256_in_prefix": "15927defa054d1f82b2b034dd8932c3b466c374460e4103786f6aae54e840751",
+        "size_in_bytes": 6940
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/ensemble/GBTDAAL.py",
+        "path_type": "hardlink",
+        "sha256": "c9facf995a4b001d215d360971a64514253bb46e17072a958a9204c4bafcbc0e",
+        "sha256_in_prefix": "c9facf995a4b001d215d360971a64514253bb46e17072a958a9204c4bafcbc0e",
+        "size_in_bytes": 11180
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/ensemble/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "eabd8f5c029348ce4e44b13f42e4f72fb9559978a407f7611f20cca742dc2ada",
+        "sha256_in_prefix": "eabd8f5c029348ce4e44b13f42e4f72fb9559978a407f7611f20cca742dc2ada",
+        "size_in_bytes": 1082
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/ensemble/__pycache__/AdaBoostClassifier.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "dd2d8661867f076799c2b7923bff0d642e2b7e2b143f3fe1b17069e938d30041",
+        "sha256_in_prefix": "dd2d8661867f076799c2b7923bff0d642e2b7e2b143f3fe1b17069e938d30041",
+        "size_in_bytes": 4009
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/ensemble/__pycache__/GBTDAAL.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "e79ba1b2a65adf24b319f715648801054d72c7c722a22ab32d13516b35d2716e",
+        "sha256_in_prefix": "e79ba1b2a65adf24b319f715648801054d72c7c722a22ab32d13516b35d2716e",
+        "size_in_bytes": 6937
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/ensemble/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "61e9688852f153738a10c1736d1d7bb4875652b0158107e42fa1a4df19238224",
+        "sha256_in_prefix": "61e9688852f153738a10c1736d1d7bb4875652b0158107e42fa1a4df19238224",
+        "size_in_bytes": 407
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/ensemble/__pycache__/_forest.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7defa6e30b09af2faab5fb6892fc622d932a8c4f980379299279dcf6d0b1c845",
+        "sha256_in_prefix": "7defa6e30b09af2faab5fb6892fc622d932a8c4f980379299279dcf6d0b1c845",
+        "size_in_bytes": 24237
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/ensemble/_forest.py",
+        "path_type": "hardlink",
+        "sha256": "e4a7fd3e85ab0ab2ee75019f14f5e92fd5c8e5c804153d5ec265ed4e845cb83e",
+        "sha256_in_prefix": "e4a7fd3e85ab0ab2ee75019f14f5e92fd5c8e5c804153d5ec265ed4e845cb83e",
+        "size_in_bytes": 46262
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/ensemble/tests/__pycache__/test_decision_forest.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "f6a8bac7bf366b1e49b49947396812eb2f8ca2416022ac6f089885cdd17d1dc9",
+        "sha256_in_prefix": "f6a8bac7bf366b1e49b49947396812eb2f8ca2416022ac6f089885cdd17d1dc9",
+        "size_in_bytes": 4567
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/ensemble/tests/test_decision_forest.py",
+        "path_type": "hardlink",
+        "sha256": "f6083b526b10c6351338d8a9b02e646f29c832862bbccbee57802b2a652dca43",
+        "sha256_in_prefix": "f6083b526b10c6351338d8a9b02e646f29c832862bbccbee57802b2a652dca43",
+        "size_in_bytes": 7515
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/linear_model/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "1f4d2dc705e1ccf236664e2e1aa8c7e346bab50461023bc10c824625143325fb",
+        "sha256_in_prefix": "1f4d2dc705e1ccf236664e2e1aa8c7e346bab50461023bc10c824625143325fb",
+        "size_in_bytes": 1108
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/linear_model/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "4edb5d7a3c8378aa235f4fcd144096385c11c4ba0b0ff6136716613729cbc0a5",
+        "sha256_in_prefix": "4edb5d7a3c8378aa235f4fcd144096385c11c4ba0b0ff6136716613729cbc0a5",
+        "size_in_bytes": 455
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/linear_model/__pycache__/_coordinate_descent.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "a612ff2af38fa5d5d859656ed1c47275144a79c3e14fa6ab85fef078dafb3e49",
+        "sha256_in_prefix": "a612ff2af38fa5d5d859656ed1c47275144a79c3e14fa6ab85fef078dafb3e49",
+        "size_in_bytes": 17645
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/linear_model/__pycache__/_linear.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "51c284244860c6a78d76fc4653b0f590e14524ed48c285f4adbc19891cd6aa0f",
+        "sha256_in_prefix": "51c284244860c6a78d76fc4653b0f590e14524ed48c285f4adbc19891cd6aa0f",
+        "size_in_bytes": 8153
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/linear_model/__pycache__/_ridge.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "6a4ad99c6c5bd67412ee87d7f0594398e885e16e0a2ff69ad4b8d639d1f83db1",
+        "sha256_in_prefix": "6a4ad99c6c5bd67412ee87d7f0594398e885e16e0a2ff69ad4b8d639d1f83db1",
+        "size_in_bytes": 7464
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/linear_model/__pycache__/coordinate_descent.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "09f3721da7845ebc4c8782408b48367dcceacffd1c0cd57a4ec241d7fc56d67a",
+        "sha256_in_prefix": "09f3721da7845ebc4c8782408b48367dcceacffd1c0cd57a4ec241d7fc56d67a",
+        "size_in_bytes": 208
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/linear_model/__pycache__/linear.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "16c83969238feff94140194b559aab2c28b7d31de0ea9c9c7822f9f10edbe196",
+        "sha256_in_prefix": "16c83969238feff94140194b559aab2c28b7d31de0ea9c9c7822f9f10edbe196",
+        "size_in_bytes": 184
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/linear_model/__pycache__/logistic_loss.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c3a6094d0a40c404282c76eedf7733b543dae08a56884edd2448fd61d3c269af",
+        "sha256_in_prefix": "c3a6094d0a40c404282c76eedf7733b543dae08a56884edd2448fd61d3c269af",
+        "size_in_bytes": 3995
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/linear_model/__pycache__/logistic_path.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "6e6dee845e7b310f4cd2090b84c1d7d009373f8f580f35eef239fe1bb2713542",
+        "sha256_in_prefix": "6e6dee845e7b310f4cd2090b84c1d7d009373f8f580f35eef239fe1bb2713542",
+        "size_in_bytes": 25573
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/linear_model/__pycache__/ridge.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "6f5ee61ab7691b494f5d6140469d613c7c2132312e8eaae100f8a2f2f95b2b7d",
+        "sha256_in_prefix": "6f5ee61ab7691b494f5d6140469d613c7c2132312e8eaae100f8a2f2f95b2b7d",
+        "size_in_bytes": 182
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/linear_model/_coordinate_descent.py",
+        "path_type": "hardlink",
+        "sha256": "dadf055ed3f5d05754329b2217fde35a3c730111b9f9e35416c9d50cd8660661",
+        "sha256_in_prefix": "dadf055ed3f5d05754329b2217fde35a3c730111b9f9e35416c9d50cd8660661",
+        "size_in_bytes": 32169
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/linear_model/_linear.py",
+        "path_type": "hardlink",
+        "sha256": "333e89b1b51ec77a46e05fdbdbeb23de67a8293031b347e09b3539867b106fcc",
+        "sha256_in_prefix": "333e89b1b51ec77a46e05fdbdbeb23de67a8293031b347e09b3539867b106fcc",
+        "size_in_bytes": 11228
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/linear_model/_ridge.py",
+        "path_type": "hardlink",
+        "sha256": "4cd342541f0c6749a68cdd6556fc4941f7aee6a2b0b5568b618209be44430e4a",
+        "sha256_in_prefix": "4cd342541f0c6749a68cdd6556fc4941f7aee6a2b0b5568b618209be44430e4a",
+        "size_in_bytes": 10284
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/linear_model/coordinate_descent.py",
+        "path_type": "hardlink",
+        "sha256": "bdffb5cfdb40bd948078499d4340de6cae6d5dee1d724987a1af445ef9cdd647",
+        "sha256_in_prefix": "bdffb5cfdb40bd948078499d4340de6cae6d5dee1d724987a1af445ef9cdd647",
+        "size_in_bytes": 779
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/linear_model/linear.py",
+        "path_type": "hardlink",
+        "sha256": "c2e10084ee20e0fe110507d5918ac60c0a12ddbd3eb30ed8f1a8aae78c1c033a",
+        "sha256_in_prefix": "c2e10084ee20e0fe110507d5918ac60c0a12ddbd3eb30ed8f1a8aae78c1c033a",
+        "size_in_bytes": 767
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/linear_model/logistic_loss.py",
+        "path_type": "hardlink",
+        "sha256": "877489321fd50b526af201a955a81cc3f2b7299a5b4a78d8a667576daa820a21",
+        "sha256_in_prefix": "877489321fd50b526af201a955a81cc3f2b7299a5b4a78d8a667576daa820a21",
+        "size_in_bytes": 5798
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/linear_model/logistic_path.py",
+        "path_type": "hardlink",
+        "sha256": "10e9d605222bbb84661f2668768779d03aff5c85302e1da71d2deff2a85a10ef",
+        "sha256_in_prefix": "10e9d605222bbb84661f2668768779d03aff5c85302e1da71d2deff2a85a10ef",
+        "size_in_bytes": 45737
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/linear_model/ridge.py",
+        "path_type": "hardlink",
+        "sha256": "3400d21ee2c4e59e399bca14d35d7453718aee04410be4602b143ee6ba0945cd",
+        "sha256_in_prefix": "3400d21ee2c4e59e399bca14d35d7453718aee04410be4602b143ee6ba0945cd",
+        "size_in_bytes": 766
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/linear_model/tests/__pycache__/test_linear.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d5cffdb70247542e904b9eff28c1313c4d2ba0115ebf242fef2bc457a3a48add",
+        "sha256_in_prefix": "d5cffdb70247542e904b9eff28c1313c4d2ba0115ebf242fef2bc457a3a48add",
+        "size_in_bytes": 3412
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/linear_model/tests/test_linear.py",
+        "path_type": "hardlink",
+        "sha256": "940acec630cec7546ec519a6ba1e0530b22e41cf18e701319fa45e60e0503447",
+        "sha256_in_prefix": "940acec630cec7546ec519a6ba1e0530b22e41cf18e701319fa45e60e0503447",
+        "size_in_bytes": 6363
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/manifold/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "d39ca62fba46118ea4ba01ed9164b42bfe49453a787334d6d3892140f273f859",
+        "sha256_in_prefix": "d39ca62fba46118ea4ba01ed9164b42bfe49453a787334d6d3892140f273f859",
+        "size_in_bytes": 811
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/manifold/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "4b097898389ff001089f18c3397ac19e928fc1159c18fe01598a26b62c32c1a8",
+        "sha256_in_prefix": "4b097898389ff001089f18c3397ac19e928fc1159c18fe01598a26b62c32c1a8",
+        "size_in_bytes": 215
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/manifold/__pycache__/_t_sne.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "fc5d8a4d579a92c50607a324e6b36ce0570f4646f9cdb873a94c4d96cb934bf4",
+        "sha256_in_prefix": "fc5d8a4d579a92c50607a324e6b36ce0570f4646f9cdb873a94c4d96cb934bf4",
+        "size_in_bytes": 8945
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/manifold/_t_sne.py",
+        "path_type": "hardlink",
+        "sha256": "b25daa66d9706fcd4a3a976fc139fec753d1600877a3954a42adfc3167b7cbdb",
+        "sha256_in_prefix": "b25daa66d9706fcd4a3a976fc139fec753d1600877a3954a42adfc3167b7cbdb",
+        "size_in_bytes": 16964
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/metrics/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "305a8144d2ca3a93d652144baf5b5286d15a7aba7fd9fd806a2221f93cdbced5",
+        "sha256_in_prefix": "305a8144d2ca3a93d652144baf5b5286d15a7aba7fd9fd806a2221f93cdbced5",
+        "size_in_bytes": 895
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/metrics/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d0f9cc12e9cfb4da2df839d5b99ce05a9d6d5e15438b0449a4b361a9fde4f56d",
+        "sha256_in_prefix": "d0f9cc12e9cfb4da2df839d5b99ce05a9d6d5e15438b0449a4b361a9fde4f56d",
+        "size_in_bytes": 295
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/metrics/__pycache__/_pairwise.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "dbab682023b23125db9eae7991d56a0b1c488348d3b6c41024b985d73942ee29",
+        "sha256_in_prefix": "dbab682023b23125db9eae7991d56a0b1c488348d3b6c41024b985d73942ee29",
+        "size_in_bytes": 8005
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/metrics/__pycache__/_ranking.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "56d71d82ee9aa979752510cef48a215a7dac36606873fc19af972726745d7e2a",
+        "sha256_in_prefix": "56d71d82ee9aa979752510cef48a215a7dac36606873fc19af972726745d7e2a",
+        "size_in_bytes": 4170
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/metrics/_pairwise.py",
+        "path_type": "hardlink",
+        "sha256": "a649981c1e51b2555d359bbc7ee0511abd36c753b9f9c5318afec8d60e67ef25",
+        "sha256_in_prefix": "a649981c1e51b2555d359bbc7ee0511abd36c753b9f9c5318afec8d60e67ef25",
+        "size_in_bytes": 9862
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/metrics/_ranking.py",
+        "path_type": "hardlink",
+        "sha256": "facc1ceeeadfa98c4f16609519b80e352635e26e0552a78d18186401088d2e27",
+        "sha256_in_prefix": "facc1ceeeadfa98c4f16609519b80e352635e26e0552a78d18186401088d2e27",
+        "size_in_bytes": 6720
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/model_selection/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "c4f0215234086e8d20c86d53e391a585a357321a178c60e99a057589ccba1a17",
+        "sha256_in_prefix": "c4f0215234086e8d20c86d53e391a585a357321a178c60e99a057589ccba1a17",
+        "size_in_bytes": 844
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/model_selection/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "77e17d775d38ad29497f74ca2c1a0b33d1e14528f871225d4db8568568c3bde0",
+        "sha256_in_prefix": "77e17d775d38ad29497f74ca2c1a0b33d1e14528f871225d4db8568568c3bde0",
+        "size_in_bytes": 240
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/model_selection/__pycache__/_split.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "2939bd5b48d36ee763a7aa376ab803c9189b3e774fc4e61a24a95117a9b8f625",
+        "sha256_in_prefix": "2939bd5b48d36ee763a7aa376ab803c9189b3e774fc4e61a24a95117a9b8f625",
+        "size_in_bytes": 5491
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/model_selection/_split.py",
+        "path_type": "hardlink",
+        "sha256": "68b2f10279c3f48ca605d1369fd00b07d0de1f7634ba941a4f43b173a1addc58",
+        "sha256_in_prefix": "68b2f10279c3f48ca605d1369fd00b07d0de1f7634ba941a4f43b173a1addc58",
+        "size_in_bytes": 10179
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/model_selection/tests/__pycache__/test_split.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "e2d39795726d44a5f5b85163202db61b3ea3295d9bd5f49b1f0970fc34759f7c",
+        "sha256_in_prefix": "e2d39795726d44a5f5b85163202db61b3ea3295d9bd5f49b1f0970fc34759f7c",
+        "size_in_bytes": 1450
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/model_selection/tests/test_split.py",
+        "path_type": "hardlink",
+        "sha256": "5e66c73e7ba2306bf68990b9e72d3081f99551e63b5268e9d4f2d30f229796f8",
+        "sha256_in_prefix": "5e66c73e7ba2306bf68990b9e72d3081f99551e63b5268e9d4f2d30f229796f8",
+        "size_in_bytes": 2082
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/monkeypatch/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/monkeypatch/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "eeb24165691ac4529eb16882cbd86604bbaefb6dee6f5bad3fcc41d13db5a8e4",
+        "sha256_in_prefix": "eeb24165691ac4529eb16882cbd86604bbaefb6dee6f5bad3fcc41d13db5a8e4",
+        "size_in_bytes": 161
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/monkeypatch/__pycache__/dispatcher.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "f7e58111249f71b321e5502922924de2ebf5260476333862a44a5c6ebd5dde84",
+        "sha256_in_prefix": "f7e58111249f71b321e5502922924de2ebf5260476333862a44a5c6ebd5dde84",
+        "size_in_bytes": 6027
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/monkeypatch/dispatcher.py",
+        "path_type": "hardlink",
+        "sha256": "dcd1c1c9b73d5c8ce651656aee48eaefcb0163f51aab4a69267e2ed404d7640e",
+        "sha256_in_prefix": "dcd1c1c9b73d5c8ce651656aee48eaefcb0163f51aab4a69267e2ed404d7640e",
+        "size_in_bytes": 8576
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/monkeypatch/tests/__pycache__/_models_info.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "bca5e7e234936568642db83f3fa63f96b2bef926a7843f8722b1096b801d134d",
+        "sha256_in_prefix": "bca5e7e234936568642db83f3fa63f96b2bef926a7843f8722b1096b801d134d",
+        "size_in_bytes": 2415
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/monkeypatch/tests/__pycache__/test_monkeypatch.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d68968303fb94e7803e0cd20e54d523e048f2dcc4ad6574bdbf922ffebe16742",
+        "sha256_in_prefix": "d68968303fb94e7803e0cd20e54d523e048f2dcc4ad6574bdbf922ffebe16742",
+        "size_in_bytes": 1278
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/monkeypatch/tests/__pycache__/test_patching.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "648b90ba1d6aead9e1c094351694ff1b079383d1c43b443935bd8a5eef2cc8ee",
+        "sha256_in_prefix": "648b90ba1d6aead9e1c094351694ff1b079383d1c43b443935bd8a5eef2cc8ee",
+        "size_in_bytes": 2066
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/monkeypatch/tests/_models_info.py",
+        "path_type": "hardlink",
+        "sha256": "f460d878a33731072273339c3e6413cfe8ec2b01846f060fc3360c42e857625f",
+        "sha256_in_prefix": "f460d878a33731072273339c3e6413cfe8ec2b01846f060fc3360c42e857625f",
+        "size_in_bytes": 4521
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/monkeypatch/tests/test_monkeypatch.py",
+        "path_type": "hardlink",
+        "sha256": "6c7fbcedc1b45a67c024b1beabc134157638efdd3cbf9803f701b181ff36b338",
+        "sha256_in_prefix": "6c7fbcedc1b45a67c024b1beabc134157638efdd3cbf9803f701b181ff36b338",
+        "size_in_bytes": 2498
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/monkeypatch/tests/test_patching.py",
+        "path_type": "hardlink",
+        "sha256": "6403bcc60b8dd1bd7d3d5f109668160dca56d8f31f24083e09f68c0f88ba99e5",
+        "sha256_in_prefix": "6403bcc60b8dd1bd7d3d5f109668160dca56d8f31f24083e09f68c0f88ba99e5",
+        "size_in_bytes": 2690
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/monkeypatch/tests/utils/__pycache__/_launch_algorithms.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "fa8e2e7299761d79514c54719006647337d89cc29d9f42eb4248d4edc0b6b433",
+        "sha256_in_prefix": "fa8e2e7299761d79514c54719006647337d89cc29d9f42eb4248d4edc0b6b433",
+        "size_in_bytes": 3043
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/monkeypatch/tests/utils/_launch_algorithms.py",
+        "path_type": "hardlink",
+        "sha256": "31a64464e22444101627d3acd57be654c64862aa5179188dcd34c7fc8bb1783a",
+        "sha256_in_prefix": "31a64464e22444101627d3acd57be654c64862aa5179188dcd34c7fc8bb1783a",
+        "size_in_bytes": 3784
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/neighbors/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "6903ca275177dc8e1f18b4894931e4dd3de08995330f6c8e5faa84ed72ffd7ea",
+        "sha256_in_prefix": "6903ca275177dc8e1f18b4894931e4dd3de08995330f6c8e5faa84ed72ffd7ea",
+        "size_in_bytes": 984
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/neighbors/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "50743d5d566d5f65feff1b99885988b1f69bd8ed0a2756bb85da73c81e58739a",
+        "sha256_in_prefix": "50743d5d566d5f65feff1b99885988b1f69bd8ed0a2756bb85da73c81e58739a",
+        "size_in_bytes": 364
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/neighbors/__pycache__/_base.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "4330574eba54c9e65c0b69284c581a1b335b93ed728928bfbd44cba17538254a",
+        "sha256_in_prefix": "4330574eba54c9e65c0b69284c581a1b335b93ed728928bfbd44cba17538254a",
+        "size_in_bytes": 10493
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/neighbors/__pycache__/_classification.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "ba40d0a8e9eba6b68021b15c23f025f2fc34f653d30100c5ce69e0d8db7fbc57",
+        "sha256_in_prefix": "ba40d0a8e9eba6b68021b15c23f025f2fc34f653d30100c5ce69e0d8db7fbc57",
+        "size_in_bytes": 6373
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/neighbors/__pycache__/_regression.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "a54fcd8dc29f62dea10a22339b394eb9ef5b149df7c58c5e69a15bb5a83500bb",
+        "sha256_in_prefix": "a54fcd8dc29f62dea10a22339b394eb9ef5b149df7c58c5e69a15bb5a83500bb",
+        "size_in_bytes": 3787
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/neighbors/__pycache__/_unsupervised.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "37d55880a3ef462d54ca4f84fa2779ba7438bd4411f764bb5725cbb584653e42",
+        "sha256_in_prefix": "37d55880a3ef462d54ca4f84fa2779ba7438bd4411f764bb5725cbb584653e42",
+        "size_in_bytes": 1777
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/neighbors/_base.py",
+        "path_type": "hardlink",
+        "sha256": "6707103e4bb7a461ff99eb0464ba35dfb1ebeadf1692a00b9b6fc64793357741",
+        "sha256_in_prefix": "6707103e4bb7a461ff99eb0464ba35dfb1ebeadf1692a00b9b6fc64793357741",
+        "size_in_bytes": 17788
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/neighbors/_classification.py",
+        "path_type": "hardlink",
+        "sha256": "0042186c8c1b5e5a68b9015eb72ab743d1229b0bcd520a3e73d1c660fd343ff2",
+        "sha256_in_prefix": "0042186c8c1b5e5a68b9015eb72ab743d1229b0bcd520a3e73d1c660fd343ff2",
+        "size_in_bytes": 8704
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/neighbors/_regression.py",
+        "path_type": "hardlink",
+        "sha256": "41e3a4fa03429855d092f24f8950a374e2ac6daad9ac7fdda0a08346ca48de72",
+        "sha256_in_prefix": "41e3a4fa03429855d092f24f8950a374e2ac6daad9ac7fdda0a08346ca48de72",
+        "size_in_bytes": 5045
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/neighbors/_unsupervised.py",
+        "path_type": "hardlink",
+        "sha256": "a3c9b52484a6e2cadf09353b0da70ccaa6a23c8d1da10a68b4f2a67791039f2b",
+        "sha256_in_prefix": "a3c9b52484a6e2cadf09353b0da70ccaa6a23c8d1da10a68b4f2a67791039f2b",
+        "size_in_bytes": 2516
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/neighbors/tests/__pycache__/test_kneighbors.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "2bf0ff0b27960f1d4555551041a29f3262e33cdee414aab0bb8e9c26f1abe62a",
+        "sha256_in_prefix": "2bf0ff0b27960f1d4555551041a29f3262e33cdee414aab0bb8e9c26f1abe62a",
+        "size_in_bytes": 2689
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/neighbors/tests/test_kneighbors.py",
+        "path_type": "hardlink",
+        "sha256": "bcb29d52dadb7814ec3e942c6672b06c49e5615def614dcfb8d7bfc110c47c58",
+        "sha256_in_prefix": "bcb29d52dadb7814ec3e942c6672b06c49e5615def614dcfb8d7bfc110c47c58",
+        "size_in_bytes": 4588
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/svm/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "fa6a2cfc9d4cece9f6067d5d5d2f34c04964ca9c54208eab36492d2b28c16295",
+        "sha256_in_prefix": "fa6a2cfc9d4cece9f6067d5d5d2f34c04964ca9c54208eab36492d2b28c16295",
+        "size_in_bytes": 806
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/svm/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "5a213c6f789fe0d3bed977f1e8c919845402e2ebfff97f8c5de50ed6552a7631",
+        "sha256_in_prefix": "5a213c6f789fe0d3bed977f1e8c919845402e2ebfff97f8c5de50ed6552a7631",
+        "size_in_bytes": 206
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/svm/__pycache__/_svm_0_22.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "4b8d191aa76765816811ed321778be88d8c554aea70dd42b26a2588afdcc3af1",
+        "sha256_in_prefix": "4b8d191aa76765816811ed321778be88d8c554aea70dd42b26a2588afdcc3af1",
+        "size_in_bytes": 16455
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/svm/__pycache__/_svm_0_23.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "33e6f9044d192bfb3bf44173cc99d97dbb100818c3ca19ed03ba5333c2233a2e",
+        "sha256_in_prefix": "33e6f9044d192bfb3bf44173cc99d97dbb100818c3ca19ed03ba5333c2233a2e",
+        "size_in_bytes": 20060
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/svm/__pycache__/svm.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "24edc686cf88ae0c21375bf18264aedf1f5068347667bd3b878aa7f80b1ccac2",
+        "sha256_in_prefix": "24edc686cf88ae0c21375bf18264aedf1f5068347667bd3b878aa7f80b1ccac2",
+        "size_in_bytes": 310
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/svm/_svm_0_22.py",
+        "path_type": "hardlink",
+        "sha256": "e796c91726ce5d7f5c47d82d905b7a8611681b37c24fef0717463f4503eedc89",
+        "sha256_in_prefix": "e796c91726ce5d7f5c47d82d905b7a8611681b37c24fef0717463f4503eedc89",
+        "size_in_bytes": 23255
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/svm/_svm_0_23.py",
+        "path_type": "hardlink",
+        "sha256": "e0cc8af4a86beb33f4875daddb05d9ca81b00b3ba20fe557002391d552fb4821",
+        "sha256_in_prefix": "e0cc8af4a86beb33f4875daddb05d9ca81b00b3ba20fe557002391d552fb4821",
+        "size_in_bytes": 27955
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/svm/svm.py",
+        "path_type": "hardlink",
+        "sha256": "0da1ca81c4a2a3caff889fbc40e314afc3bd2ea0e42e6285d48753a80b5c10c2",
+        "sha256_in_prefix": "0da1ca81c4a2a3caff889fbc40e314afc3bd2ea0e42e6285d48753a80b5c10c2",
+        "size_in_bytes": 930
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/utils/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "7a1723bfa3e02b1442062a0efc250247d94280bc7101f22c86e8ca49f364b04c",
+        "sha256_in_prefix": "7a1723bfa3e02b1442062a0efc250247d94280bc7101f22c86e8ca49f364b04c",
+        "size_in_bytes": 905
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/utils/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "ae58bf32498aa112df99f72970c48e638af136bce374441d05bebc4bc3b5542c",
+        "sha256_in_prefix": "ae58bf32498aa112df99f72970c48e638af136bce374441d05bebc4bc3b5542c",
+        "size_in_bytes": 296
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/utils/__pycache__/base.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "4b6ef8324f4ffd7a7ef2ef5e42cee5bd139f9eda40d895b7c3917bb1b9ead44c",
+        "sha256_in_prefix": "4b6ef8324f4ffd7a7ef2ef5e42cee5bd139f9eda40d895b7c3917bb1b9ead44c",
+        "size_in_bytes": 1988
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/utils/__pycache__/validation.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "118b3a2e1775fee523e57876d33a0bb744d993e4ed4b75783ad426015995db03",
+        "sha256_in_prefix": "118b3a2e1775fee523e57876d33a0bb744d993e4ed4b75783ad426015995db03",
+        "size_in_bytes": 16120
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/utils/base.py",
+        "path_type": "hardlink",
+        "sha256": "421f0ca38fed44775270b1c350f3a62ce8f6096ff07080d33a074a7b337ffe43",
+        "sha256_in_prefix": "421f0ca38fed44775270b1c350f3a62ce8f6096ff07080d33a074a7b337ffe43",
+        "size_in_bytes": 3050
+      },
+      {
+        "_path": "lib/python3.10/site-packages/daal4py/sklearn/utils/validation.py",
+        "path_type": "hardlink",
+        "sha256": "bd1b9301c00732fe40e5e08c75890b8140b14236cffe82d80d1bca16a60d7a9c",
+        "sha256_in_prefix": "bd1b9301c00732fe40e5e08c75890b8140b14236cffe82d80d1bca16a60d7a9c",
+        "size_in_bytes": 24955
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "21ca5f35621d7c25c0e6e5b132b73d4be2f8efb815f46be91727ec0851f43c8d",
+        "sha256_in_prefix": "21ca5f35621d7c25c0e6e5b132b73d4be2f8efb815f46be91727ec0851f43c8d",
+        "size_in_bytes": 1541
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "4f369eae971c96b105a8b831313d36777d4fc40ee38ac8b7f3e0506c2f8eb3e3",
+        "sha256_in_prefix": "4f369eae971c96b105a8b831313d36777d4fc40ee38ac8b7f3e0506c2f8eb3e3",
+        "size_in_bytes": 815
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/_onedal_py_host.cpython-310-x86_64-linux-gnu.so",
+        "path_type": "hardlink",
+        "sha256": "07e918c3a8e2496511d0ffa31364a85b47df8764d87dc43324d9cea39786c743",
+        "sha256_in_prefix": "07e918c3a8e2496511d0ffa31364a85b47df8764d87dc43324d9cea39786c743",
+        "size_in_bytes": 990384
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/common/__pycache__/_estimator_checks.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7d6b9b8b437d86defdd171d93db14e2e805a8c4f6d00137cde8d2ce74d87e201",
+        "sha256_in_prefix": "7d6b9b8b437d86defdd171d93db14e2e805a8c4f6d00137cde8d2ce74d87e201",
+        "size_in_bytes": 1280
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/common/__pycache__/_mixin.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "ad589a7dbc50da7ac36fb870298e2e6bbc9c6738201636867307e87d8a49c4c4",
+        "sha256_in_prefix": "ad589a7dbc50da7ac36fb870298e2e6bbc9c6738201636867307e87d8a49c4c4",
+        "size_in_bytes": 1150
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/common/__pycache__/_policy.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "a44df4190858b61d8a22c0bb3dfe999c8ec8d27ae9accab435542e48d1e9520b",
+        "sha256_in_prefix": "a44df4190858b61d8a22c0bb3dfe999c8ec8d27ae9accab435542e48d1e9520b",
+        "size_in_bytes": 2296
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/common/_estimator_checks.py",
+        "path_type": "hardlink",
+        "sha256": "211c1f9643298adff9dbc2aff90a5a359954820a117d5c7b0c876e6350b01241",
+        "sha256_in_prefix": "211c1f9643298adff9dbc2aff90a5a359954820a117d5c7b0c876e6350b01241",
+        "size_in_bytes": 1738
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/common/_mixin.py",
+        "path_type": "hardlink",
+        "sha256": "ead1585ac2bec48c8336a7aedbfe3cd0b6112d798139048606bb8eb6559ad954",
+        "sha256_in_prefix": "ead1585ac2bec48c8336a7aedbfe3cd0b6112d798139048606bb8eb6559ad954",
+        "size_in_bytes": 1410
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/common/_policy.py",
+        "path_type": "hardlink",
+        "sha256": "9b7cb7f4830af619525e25c3d4961bd6bb1f7382b568b26a788655ca67ef0dbf",
+        "sha256_in_prefix": "9b7cb7f4830af619525e25c3d4961bd6bb1f7382b568b26a788655ca67ef0dbf",
+        "size_in_bytes": 2624
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/common/tests/__pycache__/test_policy.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "e348724407354e6dc3d1353290da35cb246cc4dd12b244dfdd1bdfc92cf6a5ad",
+        "sha256_in_prefix": "e348724407354e6dc3d1353290da35cb246cc4dd12b244dfdd1bdfc92cf6a5ad",
+        "size_in_bytes": 1757
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/common/tests/test_policy.py",
+        "path_type": "hardlink",
+        "sha256": "9bc0ad743329d0181c46a1c4fc60bdd005b5515fee7e337d5f45f426dbb031ee",
+        "sha256_in_prefix": "9bc0ad743329d0181c46a1c4fc60bdd005b5515fee7e337d5f45f426dbb031ee",
+        "size_in_bytes": 2395
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/datatypes/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e8ed4ebd4cc312248cb5f30194ba02dd62869a5f329bc46943e9b3ef7c39bf89",
+        "sha256_in_prefix": "e8ed4ebd4cc312248cb5f30194ba02dd62869a5f329bc46943e9b3ef7c39bf89",
+        "size_in_bytes": 1277
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/datatypes/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "14df99e01fe53c3b5f0f63f5908d060bbec4176479757b2925f67709dd44fe28",
+        "sha256_in_prefix": "14df99e01fe53c3b5f0f63f5908d060bbec4176479757b2925f67709dd44fe28",
+        "size_in_bytes": 484
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/datatypes/__pycache__/_data_conversion.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "f5f17081b6f72ff3557bee55bab280fcef6108565fcf06b02daa74383a8f9b10",
+        "sha256_in_prefix": "f5f17081b6f72ff3557bee55bab280fcef6108565fcf06b02daa74383a8f9b10",
+        "size_in_bytes": 749
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/datatypes/__pycache__/validation.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c48a80a87b149d378615a356302b51b60367dd3d45a18ef8d0bb6c842b71a0d7",
+        "sha256_in_prefix": "c48a80a87b149d378615a356302b51b60367dd3d45a18ef8d0bb6c842b71a0d7",
+        "size_in_bytes": 8406
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/datatypes/_data_conversion.py",
+        "path_type": "hardlink",
+        "sha256": "691362dcd28edc577002a701f65abfc625ce517f28f41d71d368106d0c2fb423",
+        "sha256_in_prefix": "691362dcd28edc577002a701f65abfc625ce517f28f41d71d368106d0c2fb423",
+        "size_in_bytes": 1062
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/datatypes/tests/__pycache__/test_data.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "a0b33251e1d807937ac4a6deb819ba1f0fe836f362207cc28665b9f0268b7bf2",
+        "sha256_in_prefix": "a0b33251e1d807937ac4a6deb819ba1f0fe836f362207cc28665b9f0268b7bf2",
+        "size_in_bytes": 3358
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/datatypes/tests/test_data.py",
+        "path_type": "hardlink",
+        "sha256": "1bb1e0391912bc40e5d6fc4a6d874bb4e2c4bcd39e6915993e4ec19e19151282",
+        "sha256_in_prefix": "1bb1e0391912bc40e5d6fc4a6d874bb4e2c4bcd39e6915993e4ec19e19151282",
+        "size_in_bytes": 4933
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/datatypes/validation.py",
+        "path_type": "hardlink",
+        "sha256": "4cb84b405d7c83c96091852f3823d7732a94f92606c804c93853ac61b7b51a58",
+        "sha256_in_prefix": "4cb84b405d7c83c96091852f3823d7732a94f92606c804c93853ac61b7b51a58",
+        "size_in_bytes": 13157
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/neighbors/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "075be3bc76171d53fb42699993553af08cfd07588fd51ea8f783b2dabe9388dc",
+        "sha256_in_prefix": "075be3bc76171d53fb42699993553af08cfd07588fd51ea8f783b2dabe9388dc",
+        "size_in_bytes": 925
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/neighbors/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d565f9f24ed0ed000aa9f3e3a70f82a5da8e458fa12997b61eaef03204be0d88",
+        "sha256_in_prefix": "d565f9f24ed0ed000aa9f3e3a70f82a5da8e458fa12997b61eaef03204be0d88",
+        "size_in_bytes": 280
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/neighbors/__pycache__/neighbors.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "6916d1cfdee7c855667b5d960342a84c9c3daf76c12047e241cded1a20240914",
+        "sha256_in_prefix": "6916d1cfdee7c855667b5d960342a84c9c3daf76c12047e241cded1a20240914",
+        "size_in_bytes": 16880
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/neighbors/neighbors.py",
+        "path_type": "hardlink",
+        "sha256": "ab982c8c494063c32fa7d716e6622e29e7ab5d7065b484908221dc440da53a12",
+        "sha256_in_prefix": "ab982c8c494063c32fa7d716e6622e29e7ab5d7065b484908221dc440da53a12",
+        "size_in_bytes": 26711
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/neighbors/tests/__pycache__/test_knn_classification.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "03b2fefb7a031c1703c781ed193bc1be9814d5b84c48cadb1cf3bab66d42b878",
+        "sha256_in_prefix": "03b2fefb7a031c1703c781ed193bc1be9814d5b84c48cadb1cf3bab66d42b878",
+        "size_in_bytes": 1185
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/neighbors/tests/test_knn_classification.py",
+        "path_type": "hardlink",
+        "sha256": "ce8f6c650df2d5b3156772b61afae4206a848514cd8e28cdfe329af174d517cf",
+        "sha256_in_prefix": "ce8f6c650df2d5b3156772b61afae4206a848514cd8e28cdfe329af174d517cf",
+        "size_in_bytes": 1796
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/primitives/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "ab6249d354fd8d152ae2e767c487fad94da95f74ca2a35f1014a2385543c3673",
+        "sha256_in_prefix": "ab6249d354fd8d152ae2e767c487fad94da95f74ca2a35f1014a2385543c3673",
+        "size_in_bytes": 905
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/primitives/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "cf67b98b183b3ade27436deab2015195581939063953b3948caa4c444efc5006",
+        "sha256_in_prefix": "cf67b98b183b3ade27436deab2015195581939063953b3948caa4c444efc5006",
+        "size_in_bytes": 292
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/primitives/__pycache__/kernel_functions.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "64e1d6262bd5d05c3c30d8fd2d0e733ae4b21ecb31fa2ab5379a201f28b36272",
+        "sha256_in_prefix": "64e1d6262bd5d05c3c30d8fd2d0e733ae4b21ecb31fa2ab5379a201f28b36272",
+        "size_in_bytes": 3887
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/primitives/kernel_functions.py",
+        "path_type": "hardlink",
+        "sha256": "a251e34306282f14088fede8a5b31653990ae7447b4a5185de045d102602d44e",
+        "sha256_in_prefix": "a251e34306282f14088fede8a5b31653990ae7447b4a5185de045d102602d44e",
+        "size_in_bytes": 4643
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/primitives/tests/__pycache__/test_kernel_functions.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "b0bf6d7af9a2debbbad211d58222e7fe5cc4285de90e37e55f9c48bb17c7a53c",
+        "sha256_in_prefix": "b0bf6d7af9a2debbbad211d58222e7fe5cc4285de90e37e55f9c48bb17c7a53c",
+        "size_in_bytes": 4823
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/primitives/tests/test_kernel_functions.py",
+        "path_type": "hardlink",
+        "sha256": "f3928a0e6ca74e4296e6f5b32707da77f33dc70c7c0349fe1a13fb1106fc9b58",
+        "sha256_in_prefix": "f3928a0e6ca74e4296e6f5b32707da77f33dc70c7c0349fe1a13fb1106fc9b58",
+        "size_in_bytes": 5964
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/svm/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "fcfcc5b506b06df2629d7208a63426fede87350c97374f18ea464ac1e6c8cfca",
+        "sha256_in_prefix": "fcfcc5b506b06df2629d7208a63426fede87350c97374f18ea464ac1e6c8cfca",
+        "size_in_bytes": 848
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/svm/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "0c3605b3befcd3528aa387a3ca1e3bb1369c7e6e58308fd7e531a2bf03211cdf",
+        "sha256_in_prefix": "0c3605b3befcd3528aa387a3ca1e3bb1369c7e6e58308fd7e531a2bf03211cdf",
+        "size_in_bytes": 258
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/svm/__pycache__/svm.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c4f1059065bf0747f031f2ef5ba3545c0ec8cb73194a8b824b22b58589aedd17",
+        "sha256_in_prefix": "c4f1059065bf0747f031f2ef5ba3545c0ec8cb73194a8b824b22b58589aedd17",
+        "size_in_bytes": 14463
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/svm/svm.py",
+        "path_type": "hardlink",
+        "sha256": "c2073199f2c4cb0cfa70ad8e8180cc78a6dd654eca32a7bbe2f8845d23d813e0",
+        "sha256_in_prefix": "c2073199f2c4cb0cfa70ad8e8180cc78a6dd654eca32a7bbe2f8845d23d813e0",
+        "size_in_bytes": 19444
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/svm/tests/__pycache__/test_csr_svm.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "b2eb744d4baf5729e8a659902fa6e3a98a0b15498e3430ff766fd31213d9436b",
+        "sha256_in_prefix": "b2eb744d4baf5729e8a659902fa6e3a98a0b15498e3430ff766fd31213d9436b",
+        "size_in_bytes": 5581
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/svm/tests/__pycache__/test_nusvc.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7cd4510b73bdffe4ecd6c166b549972a35cd540106b6aed519a3f40336f416db",
+        "sha256_in_prefix": "7cd4510b73bdffe4ecd6c166b549972a35cd540106b6aed519a3f40336f416db",
+        "size_in_bytes": 5854
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/svm/tests/__pycache__/test_nusvr.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "23979778994abf37e9d210de8683137129de579c9385d2cb7f2799e1e930d457",
+        "sha256_in_prefix": "23979778994abf37e9d210de8683137129de579c9385d2cb7f2799e1e930d457",
+        "size_in_bytes": 5519
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/svm/tests/__pycache__/test_svc.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "e350603f270e0c6d9ecf7bbcf47e8229e4bce1e799cb1125bad7e389a1b5aa6a",
+        "sha256_in_prefix": "e350603f270e0c6d9ecf7bbcf47e8229e4bce1e799cb1125bad7e389a1b5aa6a",
+        "size_in_bytes": 5953
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/svm/tests/__pycache__/test_svr.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d1edd32c73364802853194d882719d85dd27d9df6114e08cf34b84c5056a29df",
+        "sha256_in_prefix": "d1edd32c73364802853194d882719d85dd27d9df6114e08cf34b84c5056a29df",
+        "size_in_bytes": 7426
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/svm/tests/test_csr_svm.py",
+        "path_type": "hardlink",
+        "sha256": "d7784ddb1a5090fc42170e19ad33ecc5e187bb43f3cb8b93018a6e8b9c8b161f",
+        "sha256_in_prefix": "d7784ddb1a5090fc42170e19ad33ecc5e187bb43f3cb8b93018a6e8b9c8b161f",
+        "size_in_bytes": 6968
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/svm/tests/test_nusvc.py",
+        "path_type": "hardlink",
+        "sha256": "a2bc0593cec8bd673a1e001784752fcc15834ee5c9c6abb77b94f97ecf0099d6",
+        "sha256_in_prefix": "a2bc0593cec8bd673a1e001784752fcc15834ee5c9c6abb77b94f97ecf0099d6",
+        "size_in_bytes": 7570
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/svm/tests/test_nusvr.py",
+        "path_type": "hardlink",
+        "sha256": "9026f62718e5d3bcac686b8c7e42c15eae223243b936b9898805e556a06e0627",
+        "sha256_in_prefix": "9026f62718e5d3bcac686b8c7e42c15eae223243b936b9898805e556a06e0627",
+        "size_in_bytes": 7637
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/svm/tests/test_svc.py",
+        "path_type": "hardlink",
+        "sha256": "658abbd2bb5169fa0ed1dd8415618da3113a0655df1476db02ff7eadf86241a0",
+        "sha256_in_prefix": "658abbd2bb5169fa0ed1dd8415618da3113a0655df1476db02ff7eadf86241a0",
+        "size_in_bytes": 7141
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/svm/tests/test_svr.py",
+        "path_type": "hardlink",
+        "sha256": "3ae3f1811f5af252b0e0fbf2382de44d0dd2a823ed6bc3578bdd4fd9d2e7577d",
+        "sha256_in_prefix": "3ae3f1811f5af252b0e0fbf2382de44d0dd2a823ed6bc3578bdd4fd9d2e7577d",
+        "size_in_bytes": 9866
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/tests/utils/__pycache__/_device_selection.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c03ee5cc7ce716958aba1f990ae28dd85e87c5621047d370f7643d8fb9572c36",
+        "sha256_in_prefix": "c03ee5cc7ce716958aba1f990ae28dd85e87c5621047d370f7643d8fb9572c36",
+        "size_in_bytes": 2055
+      },
+      {
+        "_path": "lib/python3.10/site-packages/onedal/tests/utils/_device_selection.py",
+        "path_type": "hardlink",
+        "sha256": "b3d089a5c3f6d8e0408f12f2866b8027f023508bb0cbdf78c13d486054b4f926",
+        "sha256_in_prefix": "b3d089a5c3f6d8e0408f12f2866b8027f023508bb0cbdf78c13d486054b4f926",
+        "size_in_bytes": 2464
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "daal4py==2023.0.2=py310h3c18c91_0",
+  "sha256": "89977347b5c5a862a2fe5ab575825b1c93e9ee214164e5bcf670be711863fb07",
+  "size": 12243351,
+  "subdir": "linux-64",
+  "timestamp": 1677604431121,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/daal4py-2023.0.2-py310h3c18c91_0.conda",
+  "version": "2023.0.2"
+}

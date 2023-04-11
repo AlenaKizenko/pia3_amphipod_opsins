@@ -1,0 +1,36 @@
+{
+  "build": "py310h06a4308_12",
+  "build_number": 12,
+  "channel": "https://conda.anaconda.org/anaconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "libboost 1.73.0 h28710b8_12",
+    "py-boost 1.73.0 py310h00e6091_12",
+    "python >=3.10,<3.11.0a0"
+  ],
+  "extracted_package_dir": "/home/akizenko/anaconda3/pkgs/boost-1.73.0-py310h06a4308_12",
+  "features": "",
+  "files": [],
+  "fn": "boost-1.73.0-py310h06a4308_12.tar.bz2",
+  "license": "BSL-1.0",
+  "license_family": "OTHER",
+  "link": {
+    "source": "/home/akizenko/anaconda3/pkgs/boost-1.73.0-py310h06a4308_12",
+    "type": 1
+  },
+  "md5": "029a105bb131f032ca5155f93e1d1680",
+  "name": "boost",
+  "package_tarball_full_path": "/home/akizenko/anaconda3/pkgs/boost-1.73.0-py310h06a4308_12.tar.bz2",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "boost==1.73.0=py310h06a4308_12",
+  "sha256": "9e1465b3d32f19e58f213d6d4ab9e27da74f7ec8fb2c4a8b9da900d3c72bc8e9",
+  "size": 16817,
+  "subdir": "linux-64",
+  "timestamp": 1655880137540,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/anaconda/linux-64/boost-1.73.0-py310h06a4308_12.tar.bz2",
+  "version": "1.73.0"
+}

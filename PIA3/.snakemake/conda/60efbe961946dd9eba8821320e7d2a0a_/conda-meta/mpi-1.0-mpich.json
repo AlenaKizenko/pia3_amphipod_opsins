@@ -1,0 +1,32 @@
+{
+  "build": "mpich",
+  "build_number": 8,
+  "channel": "https://conda.anaconda.org/anaconda/linux-64",
+  "constrains": [],
+  "depends": [],
+  "extracted_package_dir": "/home/akizenko/anaconda3/pkgs/mpi-1.0-mpich",
+  "features": "",
+  "files": [],
+  "fn": "mpi-1.0-mpich.tar.bz2",
+  "license": "MPICH",
+  "license_family": "Other",
+  "link": {
+    "source": "/home/akizenko/anaconda3/pkgs/mpi-1.0-mpich",
+    "type": 1
+  },
+  "md5": "c0c509697a317960877a5499ffd9cdbf",
+  "name": "mpi",
+  "package_tarball_full_path": "/home/akizenko/anaconda3/pkgs/mpi-1.0-mpich.tar.bz2",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "mpi==1.0=mpich",
+  "sha256": "c08fbeec22be3f8d6272c7952f33a8efaba50a7ad22a1a5807e4f82e62c8b5d9",
+  "size": 13200,
+  "subdir": "linux-64",
+  "timestamp": 1555635183453,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/anaconda/linux-64/mpi-1.0-mpich.tar.bz2",
+  "version": "1.0"
+}

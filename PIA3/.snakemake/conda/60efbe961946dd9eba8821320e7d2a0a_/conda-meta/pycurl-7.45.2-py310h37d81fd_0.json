@@ -1,0 +1,593 @@
+{
+  "build": "py310h37d81fd_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libcurl >=7.71.1,<8.0a0",
+    "libgcc-ng >=11.2.0",
+    "openssl >=1.1.1t,<1.1.2a",
+    "python >=3.10,<3.11.0a0"
+  ],
+  "extracted_package_dir": "/home/akizenko/anaconda3/pkgs/pycurl-7.45.2-py310h37d81fd_0",
+  "features": "",
+  "files": [
+    "lib/python3.10/site-packages/curl/__init__.py",
+    "lib/python3.10/site-packages/curl/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pycurl-7.45.2-py3.10-linux-x86_64.egg-info/PKG-INFO",
+    "lib/python3.10/site-packages/pycurl-7.45.2-py3.10-linux-x86_64.egg-info/SOURCES.txt",
+    "lib/python3.10/site-packages/pycurl-7.45.2-py3.10-linux-x86_64.egg-info/dependency_links.txt",
+    "lib/python3.10/site-packages/pycurl-7.45.2-py3.10-linux-x86_64.egg-info/native_libs.txt",
+    "lib/python3.10/site-packages/pycurl-7.45.2-py3.10-linux-x86_64.egg-info/not-zip-safe",
+    "lib/python3.10/site-packages/pycurl-7.45.2-py3.10-linux-x86_64.egg-info/top_level.txt",
+    "lib/python3.10/site-packages/pycurl.cpython-310-x86_64-linux-gnu.so",
+    "lib/python3.10/site-packages/pycurl.py",
+    "lib/python3.10/site-packages/share/doc/pycurl/AUTHORS",
+    "lib/python3.10/site-packages/share/doc/pycurl/COPYING-LGPL",
+    "lib/python3.10/site-packages/share/doc/pycurl/COPYING-MIT",
+    "lib/python3.10/site-packages/share/doc/pycurl/ChangeLog",
+    "lib/python3.10/site-packages/share/doc/pycurl/INSTALL.rst",
+    "lib/python3.10/site-packages/share/doc/pycurl/README.rst",
+    "lib/python3.10/site-packages/share/doc/pycurl/RELEASE-NOTES.rst",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/__pycache__/basicfirst.cpython-310.pyc",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/__pycache__/file_upload.cpython-310.pyc",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/__pycache__/linksys.cpython-310.pyc",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/__pycache__/multi-socket_action-select.cpython-310.pyc",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/__pycache__/opensocketexception.cpython-310.pyc",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/__pycache__/retriever-multi.cpython-310.pyc",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/__pycache__/retriever.cpython-310.pyc",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/__pycache__/sfquery.cpython-310.pyc",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/__pycache__/smtp.cpython-310.pyc",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/__pycache__/ssh_keyfunction.cpython-310.pyc",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/__pycache__/xmlrpc_curl.cpython-310.pyc",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/basicfirst.py",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/file_upload.py",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/linksys.py",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/multi-socket_action-select.py",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/opensocketexception.py",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/file_upload_buffer.cpython-310.pyc",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/file_upload_real.cpython-310.pyc",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/file_upload_real_fancy.cpython-310.pyc",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/follow_redirect.cpython-310.pyc",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/form_post.cpython-310.pyc",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/get.cpython-310.pyc",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/get_python2.cpython-310.pyc",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/get_python2_https.cpython-310.pyc",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/get_python3.cpython-310.pyc",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/get_python3_https.cpython-310.pyc",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/put_buffer.cpython-310.pyc",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/put_file.cpython-310.pyc",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/response_headers.cpython-310.pyc",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/response_info.cpython-310.pyc",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/write_file.cpython-310.pyc",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/file_upload_buffer.py",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/file_upload_real.py",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/file_upload_real_fancy.py",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/follow_redirect.py",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/form_post.py",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/get.py",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/get_python2.py",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/get_python2_https.py",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/get_python3.py",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/get_python3_https.py",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/put_buffer.py",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/put_file.py",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/response_headers.py",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/response_info.py",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/write_file.py",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/retriever-multi.py",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/retriever.py",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/sfquery.py",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/smtp.py",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/ssh_keyfunction.py",
+    "lib/python3.10/site-packages/share/doc/pycurl/examples/xmlrpc_curl.py"
+  ],
+  "fn": "pycurl-7.45.2-py310h37d81fd_0.conda",
+  "legacy_bz2_md5": "ea293d4bd48a1e218338e6d472a01c98",
+  "legacy_bz2_size": 133665,
+  "license": "LGPL-2.1-or-later OR MIT",
+  "license_family": "LGPL",
+  "link": {
+    "source": "/home/akizenko/anaconda3/pkgs/pycurl-7.45.2-py310h37d81fd_0",
+    "type": 1
+  },
+  "md5": "6b5dabbab402d968c8b5b430d9851de7",
+  "name": "pycurl",
+  "package_tarball_full_path": "/home/akizenko/anaconda3/pkgs/pycurl-7.45.2-py310h37d81fd_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.10/site-packages/curl/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "733e7e070cf33e050b57af285738c95db22db12e5e4db99513f67c7cd0309890",
+        "sha256_in_prefix": "733e7e070cf33e050b57af285738c95db22db12e5e4db99513f67c7cd0309890",
+        "size_in_bytes": 7470
+      },
+      {
+        "_path": "lib/python3.10/site-packages/curl/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "a7520baf697a52c09eec5413592a5fff3f96336664fcb69bf4732277b526fa43",
+        "sha256_in_prefix": "a7520baf697a52c09eec5413592a5fff3f96336664fcb69bf4732277b526fa43",
+        "size_in_bytes": 6677
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pycurl-7.45.2-py3.10-linux-x86_64.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "5adf1b181769419419d7e39c50c24c5612ce71eee0b0bf3377f993619e3fc78c",
+        "sha256_in_prefix": "5adf1b181769419419d7e39c50c24c5612ce71eee0b0bf3377f993619e3fc78c",
+        "size_in_bytes": 4216
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pycurl-7.45.2-py3.10-linux-x86_64.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "eab2e5ac259cd3973a2ce9ba0779620c3dabc250d64f949cb66f700bcf3cbfd5",
+        "sha256_in_prefix": "eab2e5ac259cd3973a2ce9ba0779620c3dabc250d64f949cb66f700bcf3cbfd5",
+        "size_in_bytes": 6099
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pycurl-7.45.2-py3.10-linux-x86_64.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pycurl-7.45.2-py3.10-linux-x86_64.egg-info/native_libs.txt",
+        "path_type": "hardlink",
+        "sha256": "165b4ef953958e6dd0c04e9b7b500732c51c0dc74c43e8dfb63b4f5f64fe55d6",
+        "sha256_in_prefix": "165b4ef953958e6dd0c04e9b7b500732c51c0dc74c43e8dfb63b4f5f64fe55d6",
+        "size_in_bytes": 39
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pycurl-7.45.2-py3.10-linux-x86_64.egg-info/not-zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pycurl-7.45.2-py3.10-linux-x86_64.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "9c6391f27683a289c3851c6ec74be319b038e4da68757c35353d9da65f852442",
+        "sha256_in_prefix": "9c6391f27683a289c3851c6ec74be319b038e4da68757c35353d9da65f852442",
+        "size_in_bytes": 12
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pycurl.cpython-310-x86_64-linux-gnu.so",
+        "path_type": "hardlink",
+        "sha256": "a365b68ec4fd207aabe372aa9428bc23db961579b3ca322d60f89b8d141f7411",
+        "sha256_in_prefix": "a365b68ec4fd207aabe372aa9428bc23db961579b3ca322d60f89b8d141f7411",
+        "size_in_bytes": 173200
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pycurl.py",
+        "path_type": "hardlink",
+        "sha256": "dd877d0ffd21e6494cd785b9d3e71c807832e8dc9a35d1e75ce21213e36e0862",
+        "sha256_in_prefix": "dd877d0ffd21e6494cd785b9d3e71c807832e8dc9a35d1e75ce21213e36e0862",
+        "size_in_bytes": 432
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/AUTHORS",
+        "path_type": "hardlink",
+        "sha256": "3d134317cbf3a39b0cd08cfc777bfa7af187efa35bae476b0ee927282fa5b794",
+        "sha256_in_prefix": "3d134317cbf3a39b0cd08cfc777bfa7af187efa35bae476b0ee927282fa5b794",
+        "size_in_bytes": 4730
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/COPYING-LGPL",
+        "path_type": "hardlink",
+        "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+        "sha256_in_prefix": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+        "size_in_bytes": 26530
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/COPYING-MIT",
+        "path_type": "hardlink",
+        "sha256": "9dfbea2d787fce7407ec6627578ac9e63efbbafe5570f19318829a7887ef5f2e",
+        "sha256_in_prefix": "9dfbea2d787fce7407ec6627578ac9e63efbbafe5570f19318829a7887ef5f2e",
+        "size_in_bytes": 1187
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/ChangeLog",
+        "path_type": "hardlink",
+        "sha256": "74509899479f847f4fe7f26ea8b5c5de39bc65cb5ff082ed4c451c638ee18ffc",
+        "sha256_in_prefix": "74509899479f847f4fe7f26ea8b5c5de39bc65cb5ff082ed4c451c638ee18ffc",
+        "size_in_bytes": 59851
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/INSTALL.rst",
+        "path_type": "hardlink",
+        "sha256": "902aceb4b2f602e49db5e4c645b85d79d4ef2067e241fdc48f58d87ac3a2f674",
+        "sha256_in_prefix": "902aceb4b2f602e49db5e4c645b85d79d4ef2067e241fdc48f58d87ac3a2f674",
+        "size_in_bytes": 12192
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/README.rst",
+        "path_type": "hardlink",
+        "sha256": "6ed342284b5a62128fbc0e69d1289ce744643ec1c720acf1a8458d2d88fe9f63",
+        "sha256_in_prefix": "6ed342284b5a62128fbc0e69d1289ce744643ec1c720acf1a8458d2d88fe9f63",
+        "size_in_bytes": 6502
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/RELEASE-NOTES.rst",
+        "path_type": "hardlink",
+        "sha256": "b3f274fbc2ed7c7d29a8d41d0058df584b5ceecbcc322be98a33ae53eda54d91",
+        "sha256_in_prefix": "b3f274fbc2ed7c7d29a8d41d0058df584b5ceecbcc322be98a33ae53eda54d91",
+        "size_in_bytes": 8031
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/__pycache__/basicfirst.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "299f456d9320218a235d4ead4fb114553326ae68c6e8a9add18a4f85afd02123",
+        "sha256_in_prefix": "299f456d9320218a235d4ead4fb114553326ae68c6e8a9add18a4f85afd02123",
+        "size_in_bytes": 987
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/__pycache__/file_upload.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "70405063f0b0b2b9bc4010af95075778c6c0badcf0cfabcb32fd61d5e3f433ff",
+        "sha256_in_prefix": "70405063f0b0b2b9bc4010af95075778c6c0badcf0cfabcb32fd61d5e3f433ff",
+        "size_in_bytes": 1218
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/__pycache__/linksys.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "e6507951a06db7640027833b666a2eb059e56c1dd7dbeeebe3361379a2524cbd",
+        "sha256_in_prefix": "e6507951a06db7640027833b666a2eb059e56c1dd7dbeeebe3361379a2524cbd",
+        "size_in_bytes": 25056
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/__pycache__/multi-socket_action-select.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "a4554cc9f840b5ce444c1fc629fd942b52e402f841b9689e27e28d96ffa3f8e1",
+        "sha256_in_prefix": "a4554cc9f840b5ce444c1fc629fd942b52e402f841b9689e27e28d96ffa3f8e1",
+        "size_in_bytes": 2534
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/__pycache__/opensocketexception.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3c71e25b0c8ac07f33a732ff84fa3f51b25bc9f6e87fcf0d5f3ac160f751ea18",
+        "sha256_in_prefix": "3c71e25b0c8ac07f33a732ff84fa3f51b25bc9f6e87fcf0d5f3ac160f751ea18",
+        "size_in_bytes": 1248
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/__pycache__/retriever-multi.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "e033e42957b5f1ef17ba2b4bce4eeb86847837192dc21031e21ad7367a588379",
+        "sha256_in_prefix": "e033e42957b5f1ef17ba2b4bce4eeb86847837192dc21031e21ad7367a588379",
+        "size_in_bytes": 2166
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/__pycache__/retriever.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "dbdb27e322ad8d5c4fe0906d836642281a67036ae8b1d6a0bb37e1f17d1d3429",
+        "sha256_in_prefix": "dbdb27e322ad8d5c4fe0906d836642281a67036ae8b1d6a0bb37e1f17d1d3429",
+        "size_in_bytes": 2338
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/__pycache__/sfquery.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "865886a00423f43241b7298c2994b43e4eb7a881d875cdf0f4a84ce8121251fc",
+        "sha256_in_prefix": "865886a00423f43241b7298c2994b43e4eb7a881d875cdf0f4a84ce8121251fc",
+        "size_in_bytes": 1897
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/__pycache__/smtp.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "aa69de2c99bed0e6dcd55629ec9bbc8e744e6e446a8039144043fc08c65a1494",
+        "sha256_in_prefix": "aa69de2c99bed0e6dcd55629ec9bbc8e744e6e446a8039144043fc08c65a1494",
+        "size_in_bytes": 863
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/__pycache__/ssh_keyfunction.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "5f7cc837f1cef911c2f44ffd5c4892f5b7e8ea496310b073094537755eeafd36",
+        "sha256_in_prefix": "5f7cc837f1cef911c2f44ffd5c4892f5b7e8ea496310b073094537755eeafd36",
+        "size_in_bytes": 590
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/__pycache__/xmlrpc_curl.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "5598641ef553b9f32707f38fa8f978ddef3bc7b511dea753c96698219485d4ca",
+        "sha256_in_prefix": "5598641ef553b9f32707f38fa8f978ddef3bc7b511dea753c96698219485d4ca",
+        "size_in_bytes": 2148
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/basicfirst.py",
+        "path_type": "hardlink",
+        "sha256": "a9567f8087e2c4729e71e47dc37bae61215d019fe93f8d253533859cbccccad2",
+        "sha256_in_prefix": "a9567f8087e2c4729e71e47dc37bae61215d019fe93f8d253533859cbccccad2",
+        "size_in_bytes": 545
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/file_upload.py",
+        "path_type": "hardlink",
+        "sha256": "c94d073751fe2b33fe27e4eb4eb5acc37051d77c174846b99ed1f67d4eb6ab0a",
+        "sha256_in_prefix": "c94d073751fe2b33fe27e4eb4eb5acc37051d77c174846b99ed1f67d4eb6ab0a",
+        "size_in_bytes": 1179
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/linksys.py",
+        "path_type": "hardlink",
+        "sha256": "2d0223b2d46d96de9ad9ee99f971f5a9fd3b37949004222cb908ba4231119043",
+        "sha256_in_prefix": "2d0223b2d46d96de9ad9ee99f971f5a9fd3b37949004222cb908ba4231119043",
+        "size_in_bytes": 21771
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/multi-socket_action-select.py",
+        "path_type": "hardlink",
+        "sha256": "6fceac2843022f45a1ce52819d740714d6f93a21a2812dcb0ef6886eb26df64d",
+        "sha256_in_prefix": "6fceac2843022f45a1ce52819d740714d6f93a21a2812dcb0ef6886eb26df64d",
+        "size_in_bytes": 7985
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/opensocketexception.py",
+        "path_type": "hardlink",
+        "sha256": "c1356469a1ba146a5e53b48c1396ae069fcdc7d300a5d2491107a2e140a96d9b",
+        "sha256_in_prefix": "c1356469a1ba146a5e53b48c1396ae069fcdc7d300a5d2491107a2e140a96d9b",
+        "size_in_bytes": 861
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/file_upload_buffer.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "e9c60f7b58272d7319bbab4f77e29b1f89669c6536ba62eb86dfcb9c4acbf92a",
+        "sha256_in_prefix": "e9c60f7b58272d7319bbab4f77e29b1f89669c6536ba62eb86dfcb9c4acbf92a",
+        "size_in_bytes": 482
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/file_upload_real.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "cc384a379ce22bfaccde26c80496ddfa62858c0726262057fa316a3a4510a2d8",
+        "sha256_in_prefix": "cc384a379ce22bfaccde26c80496ddfa62858c0726262057fa316a3a4510a2d8",
+        "size_in_bytes": 423
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/file_upload_real_fancy.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "efb0bd7cb8351970af485413b3f1780dbd2dae2a0622cd10f8ddccd65080ece0",
+        "sha256_in_prefix": "efb0bd7cb8351970af485413b3f1780dbd2dae2a0622cd10f8ddccd65080ece0",
+        "size_in_bytes": 515
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/follow_redirect.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "5a3f625d5606f5819605bc36b485a7d40b8cd0b33272d77b2513690380a183ba",
+        "sha256_in_prefix": "5a3f625d5606f5819605bc36b485a7d40b8cd0b33272d77b2513690380a183ba",
+        "size_in_bytes": 374
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/form_post.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "2f8bc0e26f5a4d72b1dc694c4b343cd8061ec9686077612c732e6e480d5bd445",
+        "sha256_in_prefix": "2f8bc0e26f5a4d72b1dc694c4b343cd8061ec9686077612c732e6e480d5bd445",
+        "size_in_bytes": 533
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/get.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "2a90c3c8721e819861f7dd2345d3fe3d4844fee6491aed9fc13e7fb5d27b6df4",
+        "sha256_in_prefix": "2a90c3c8721e819861f7dd2345d3fe3d4844fee6491aed9fc13e7fb5d27b6df4",
+        "size_in_bytes": 544
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/get_python2.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "74facbe9ae02ff3edc6149dfd22c77de1b75697d7886bd39a20c66fbc1a6449a",
+        "sha256_in_prefix": "74facbe9ae02ff3edc6149dfd22c77de1b75697d7886bd39a20c66fbc1a6449a",
+        "size_in_bytes": 449
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/get_python2_https.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "be4b90dac078afd0176d0de86f1a1fe038a7473c6ff055ef7505cabe8766e639",
+        "sha256_in_prefix": "be4b90dac078afd0176d0de86f1a1fe038a7473c6ff055ef7505cabe8766e639",
+        "size_in_bytes": 509
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/get_python3.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c9b7e41d088f31b073753139641ec9fc0197591304c7e1a003a33c6bf957dbbc",
+        "sha256_in_prefix": "c9b7e41d088f31b073753139641ec9fc0197591304c7e1a003a33c6bf957dbbc",
+        "size_in_bytes": 478
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/get_python3_https.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "b58f7b70151278b5bdc7d1498c0e51ad0512f085cb9567c13016f17320ea8baa",
+        "sha256_in_prefix": "b58f7b70151278b5bdc7d1498c0e51ad0512f085cb9567c13016f17320ea8baa",
+        "size_in_bytes": 538
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/put_buffer.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "4aeebbd646930d8d3b658ee28142a49a1c95ef4b16f279afefae8ae1e121d165",
+        "sha256_in_prefix": "4aeebbd646930d8d3b658ee28142a49a1c95ef4b16f279afefae8ae1e121d165",
+        "size_in_bytes": 566
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/put_file.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "a943edd0041bd39399348db38e854433460260c3a353fd1b70826e6b36b22a60",
+        "sha256_in_prefix": "a943edd0041bd39399348db38e854433460260c3a353fd1b70826e6b36b22a60",
+        "size_in_bytes": 432
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/response_headers.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "9bb8be26b4ed82bfc95dec35efd4f645b7f13b614098a9ea95796a537fec1fff",
+        "sha256_in_prefix": "9bb8be26b4ed82bfc95dec35efd4f645b7f13b614098a9ea95796a537fec1fff",
+        "size_in_bytes": 1123
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/response_info.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "863ff83dfe97af5aae605262a5afae84584320a35cbae0c15b9d2023fc9e4d53",
+        "sha256_in_prefix": "863ff83dfe97af5aae605262a5afae84584320a35cbae0c15b9d2023fc9e4d53",
+        "size_in_bytes": 594
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/__pycache__/write_file.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "4c131a2ab4a6621f45a9bf19a9914f54200444b2d15ff799fc699667b53c4620",
+        "sha256_in_prefix": "4c131a2ab4a6621f45a9bf19a9914f54200444b2d15ff799fc699667b53c4620",
+        "size_in_bytes": 429
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/file_upload_buffer.py",
+        "path_type": "hardlink",
+        "sha256": "78809b826d8a88a0042b3ab4a13543bd65f982138c0b591bbe0fd0f9df15cac2",
+        "sha256_in_prefix": "78809b826d8a88a0042b3ab4a13543bd65f982138c0b591bbe0fd0f9df15cac2",
+        "size_in_bytes": 311
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/file_upload_real.py",
+        "path_type": "hardlink",
+        "sha256": "dcc2afca04054a3d22ecfab4774cef8416581225c38b5b293c23eaff4c527026",
+        "sha256_in_prefix": "dcc2afca04054a3d22ecfab4774cef8416581225c38b5b293c23eaff4c527026",
+        "size_in_bytes": 291
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/file_upload_real_fancy.py",
+        "path_type": "hardlink",
+        "sha256": "fecbb6d8dcdb414d6974a4f9106ed094e8e1817c59375eda40f874cf9c35d9eb",
+        "sha256_in_prefix": "fecbb6d8dcdb414d6974a4f9106ed094e8e1817c59375eda40f874cf9c35d9eb",
+        "size_in_bytes": 483
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/follow_redirect.py",
+        "path_type": "hardlink",
+        "sha256": "31d129a6a04e75890ed18e066881c8fe4fcfee41518a99b2c37ebdfe80fa53a4",
+        "sha256_in_prefix": "31d129a6a04e75890ed18e066881c8fe4fcfee41518a99b2c37ebdfe80fa53a4",
+        "size_in_bytes": 250
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/form_post.py",
+        "path_type": "hardlink",
+        "sha256": "d608d732441c98e6072113b4b380db1cd26d87b1bd06ce652153ebdf10d619e9",
+        "sha256_in_prefix": "d608d732441c98e6072113b4b380db1cd26d87b1bd06ce652153ebdf10d619e9",
+        "size_in_bytes": 564
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/get.py",
+        "path_type": "hardlink",
+        "sha256": "5a5508675e8d0b65304173dfbd5c086fc49304d0b37fcb1128cc22b585e5df4a",
+        "sha256_in_prefix": "5a5508675e8d0b65304173dfbd5c086fc49304d0b37fcb1128cc22b585e5df4a",
+        "size_in_bytes": 583
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/get_python2.py",
+        "path_type": "hardlink",
+        "sha256": "9dfdbcbf76d8a1c429c1f3e6b6fa11e21ae2524b96b036a370c0e0fe523cc7e2",
+        "sha256_in_prefix": "9dfdbcbf76d8a1c429c1f3e6b6fa11e21ae2524b96b036a370c0e0fe523cc7e2",
+        "size_in_bytes": 447
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/get_python2_https.py",
+        "path_type": "hardlink",
+        "sha256": "cf46d826ced438cbaf9d6b56e27525bcf34fa85219d803ca9ba61632f9fd7856",
+        "sha256_in_prefix": "cf46d826ced438cbaf9d6b56e27525bcf34fa85219d803ca9ba61632f9fd7856",
+        "size_in_bytes": 498
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/get_python3.py",
+        "path_type": "hardlink",
+        "sha256": "63db2a8c40fe7cace4b29247cc3ffa44236bc076071623c5493c1fac4efb7ad0",
+        "sha256_in_prefix": "63db2a8c40fe7cace4b29247cc3ffa44236bc076071623c5493c1fac4efb7ad0",
+        "size_in_bytes": 403
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/get_python3_https.py",
+        "path_type": "hardlink",
+        "sha256": "bb8fc26cacd6043b516cd1ede4c11055345f3048dfc8a790a0712d269c8fd07b",
+        "sha256_in_prefix": "bb8fc26cacd6043b516cd1ede4c11055345f3048dfc8a790a0712d269c8fd07b",
+        "size_in_bytes": 454
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/put_buffer.py",
+        "path_type": "hardlink",
+        "sha256": "35a8552447e0ea41e84c49be58805286eb664ff9ec54d5574932af0bd55c4feb",
+        "sha256_in_prefix": "35a8552447e0ea41e84c49be58805286eb664ff9ec54d5574932af0bd55c4feb",
+        "size_in_bytes": 472
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/put_file.py",
+        "path_type": "hardlink",
+        "sha256": "48845017224d8f3c4be39778d9f49197675c4ec5224d0eac8469972edf712fd0",
+        "sha256_in_prefix": "48845017224d8f3c4be39778d9f49197675c4ec5224d0eac8469972edf712fd0",
+        "size_in_bytes": 300
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/response_headers.py",
+        "path_type": "hardlink",
+        "sha256": "3f480832e2f5486b810e0afc108ff5d393c7685e44da9169919005ffb0ca6081",
+        "sha256_in_prefix": "3f480832e2f5486b810e0afc108ff5d393c7685e44da9169919005ffb0ca6081",
+        "size_in_bytes": 2097
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/response_info.py",
+        "path_type": "hardlink",
+        "sha256": "34a14662ac633bb08de42eb088ad11ed1fe012cb458514642d13841aa7ed95ff",
+        "sha256_in_prefix": "34a14662ac633bb08de42eb088ad11ed1fe012cb458514642d13841aa7ed95ff",
+        "size_in_bytes": 498
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/quickstart/write_file.py",
+        "path_type": "hardlink",
+        "sha256": "2da7fefd2c17a746cf521c96f1fcb89a87e0e95dc47d5d7fda87ba9087f8a3da",
+        "sha256_in_prefix": "2da7fefd2c17a746cf521c96f1fcb89a87e0e95dc47d5d7fda87ba9087f8a3da",
+        "size_in_bytes": 357
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/retriever-multi.py",
+        "path_type": "hardlink",
+        "sha256": "a51da01e9c54d0b71624e8b6b6e7644c4f7fadcde4e80519e93c7ff4286448ea",
+        "sha256_in_prefix": "a51da01e9c54d0b71624e8b6b6e7644c4f7fadcde4e80519e93c7ff4286448ea",
+        "size_in_bytes": 3359
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/retriever.py",
+        "path_type": "hardlink",
+        "sha256": "019e5563f2acc7f40f2cecf826260736316827e98c6b8cf920aa76e14f1d15eb",
+        "sha256_in_prefix": "019e5563f2acc7f40f2cecf826260736316827e98c6b8cf920aa76e14f1d15eb",
+        "size_in_bytes": 2665
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/sfquery.py",
+        "path_type": "hardlink",
+        "sha256": "6fdeb84a7cbd47f2896531807d347c910049e7c1df941e3ecb733bcf74dbc424",
+        "sha256_in_prefix": "6fdeb84a7cbd47f2896531807d347c910049e7c1df941e3ecb733bcf74dbc424",
+        "size_in_bytes": 2457
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/smtp.py",
+        "path_type": "hardlink",
+        "sha256": "266391488a84ce0de7e71f12e3d23fd02f0ecbbb9d3f1ec3534feff6aa622979",
+        "sha256_in_prefix": "266391488a84ce0de7e71f12e3d23fd02f0ecbbb9d3f1ec3534feff6aa622979",
+        "size_in_bytes": 1099
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/ssh_keyfunction.py",
+        "path_type": "hardlink",
+        "sha256": "b7d4bc90dedb0146bb93a275427e73ec73ba50e6a4f3e793a2684940fc81673a",
+        "sha256_in_prefix": "b7d4bc90dedb0146bb93a275427e73ec73ba50e6a4f3e793a2684940fc81673a",
+        "size_in_bytes": 302
+      },
+      {
+        "_path": "lib/python3.10/site-packages/share/doc/pycurl/examples/xmlrpc_curl.py",
+        "path_type": "hardlink",
+        "sha256": "638f027b1b3ee5b7e7198d2d1ee84e65d080b8cc763df537684370f66e48e81a",
+        "sha256_in_prefix": "638f027b1b3ee5b7e7198d2d1ee84e65d080b8cc763df537684370f66e48e81a",
+        "size_in_bytes": 2179
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "pycurl==7.45.2=py310h37d81fd_0",
+  "sha256": "ce1a85006850c8b27079caf8e068a398eefae311f3c2babde7e8d30850c82014",
+  "size": 137395,
+  "subdir": "linux-64",
+  "timestamp": 1678832660507,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/pycurl-7.45.2-py310h37d81fd_0.conda",
+  "version": "7.45.2"
+}

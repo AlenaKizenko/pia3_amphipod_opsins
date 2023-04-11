@@ -1,0 +1,116 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/anaconda/noarch",
+  "constrains": [],
+  "depends": [
+    "python",
+    "requests >=1.0.0",
+    "six"
+  ],
+  "extracted_package_dir": "/home/akizenko/anaconda3/pkgs/requests-file-1.5.1-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "lib/python3.10/site-packages/requests_file-1.5.1.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/requests_file-1.5.1.dist-info/LICENSE",
+    "lib/python3.10/site-packages/requests_file-1.5.1.dist-info/METADATA",
+    "lib/python3.10/site-packages/requests_file-1.5.1.dist-info/RECORD",
+    "lib/python3.10/site-packages/requests_file-1.5.1.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/requests_file-1.5.1.dist-info/WHEEL",
+    "lib/python3.10/site-packages/requests_file-1.5.1.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/requests_file-1.5.1.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/requests_file.py",
+    "lib/python3.10/site-packages/__pycache__/requests_file.cpython-310.pyc"
+  ],
+  "fn": "requests-file-1.5.1-pyhd3eb1b0_0.tar.bz2",
+  "license": "Apache",
+  "link": {
+    "source": "/home/akizenko/anaconda3/pkgs/requests-file-1.5.1-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "5a134a0c8ca79061a91fd5ed67a30690",
+  "name": "requests-file",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/akizenko/anaconda3/pkgs/requests-file-1.5.1-pyhd3eb1b0_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/requests_file-1.5.1.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/requests_file-1.5.1.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "39ff1bc4e15ffced0047d99689d06f54bb29ce47844927a03eaa29ebb9ac0f17",
+        "sha256_in_prefix": "39ff1bc4e15ffced0047d99689d06f54bb29ce47844927a03eaa29ebb9ac0f17",
+        "size_in_bytes": 581
+      },
+      {
+        "_path": "site-packages/requests_file-1.5.1.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "6eb73ac0ddb2030c2d6a5b95dc79afcd2655ccbe46a648155d6aa67b9bf81d4f",
+        "sha256_in_prefix": "6eb73ac0ddb2030c2d6a5b95dc79afcd2655ccbe46a648155d6aa67b9bf81d4f",
+        "size_in_bytes": 596
+      },
+      {
+        "_path": "site-packages/requests_file-1.5.1.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "17d2040d3f62b3271a150b495cbfe3cbb978536e557f26a92322ea5acdc160a6",
+        "sha256_in_prefix": "17d2040d3f62b3271a150b495cbfe3cbb978536e557f26a92322ea5acdc160a6",
+        "size_in_bytes": 827
+      },
+      {
+        "_path": "site-packages/requests_file-1.5.1.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/requests_file-1.5.1.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "5b367c7308e1f25d23b542cd8d8ab51e9afe582a824603ebfbe4d7e0fe48d56a",
+        "sha256_in_prefix": "5b367c7308e1f25d23b542cd8d8ab51e9afe582a824603ebfbe4d7e0fe48d56a",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "site-packages/requests_file-1.5.1.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "020af06ff172a08c4480e797eaf99a904f133b02992c3552761a4f9f7921934e",
+        "sha256_in_prefix": "020af06ff172a08c4480e797eaf99a904f133b02992c3552761a4f9f7921934e",
+        "size_in_bytes": 99
+      },
+      {
+        "_path": "site-packages/requests_file-1.5.1.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "46bb05bb157734be884df4e5bb7e55bd73e6727da2646f6d24ae4eb9daaeeffc",
+        "sha256_in_prefix": "46bb05bb157734be884df4e5bb7e55bd73e6727da2646f6d24ae4eb9daaeeffc",
+        "size_in_bytes": 14
+      },
+      {
+        "_path": "site-packages/requests_file.py",
+        "path_type": "hardlink",
+        "sha256": "d725333ac32b52b93fe89b478b8d2141f1e2b6117c853c96c0fe9026fbd2003d",
+        "sha256_in_prefix": "d725333ac32b52b93fe89b478b8d2141f1e2b6117c853c96c0fe9026fbd2003d",
+        "size_in_bytes": 4729
+      },
+      {
+        "_path": "lib/python3.10/site-packages/__pycache__/requests_file.cpython-310.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "requests-file==1.5.1=pyhd3eb1b0_0",
+  "sha256": "1914950a6911718e414748cd8e997c525b452300f46c71ceca5e51ef17ba63aa",
+  "size": 7388,
+  "subdir": "noarch",
+  "timestamp": 1629455797708,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/anaconda/noarch/requests-file-1.5.1-pyhd3eb1b0_0.tar.bz2",
+  "version": "1.5.1"
+}

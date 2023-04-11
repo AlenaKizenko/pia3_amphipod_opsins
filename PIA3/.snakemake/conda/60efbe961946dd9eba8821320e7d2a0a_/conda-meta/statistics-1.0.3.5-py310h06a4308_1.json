@@ -1,0 +1,93 @@
+{
+  "build": "py310h06a4308_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/anaconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "docutils >=0.3",
+    "python >=3.10,<3.11.0a0"
+  ],
+  "extracted_package_dir": "/home/akizenko/anaconda3/pkgs/statistics-1.0.3.5-py310h06a4308_1",
+  "features": "",
+  "files": [
+    "lib/python3.10/site-packages/statistics-1.0.3.5-py3.10.egg-info/PKG-INFO",
+    "lib/python3.10/site-packages/statistics-1.0.3.5-py3.10.egg-info/SOURCES.txt",
+    "lib/python3.10/site-packages/statistics-1.0.3.5-py3.10.egg-info/dependency_links.txt",
+    "lib/python3.10/site-packages/statistics-1.0.3.5-py3.10.egg-info/requires.txt",
+    "lib/python3.10/site-packages/statistics-1.0.3.5-py3.10.egg-info/top_level.txt",
+    "lib/python3.10/site-packages/statistics/__init__.py",
+    "lib/python3.10/site-packages/statistics/__pycache__/__init__.cpython-310.pyc"
+  ],
+  "fn": "statistics-1.0.3.5-py310h06a4308_1.tar.bz2",
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "link": {
+    "source": "/home/akizenko/anaconda3/pkgs/statistics-1.0.3.5-py310h06a4308_1",
+    "type": 1
+  },
+  "md5": "a075181f445329986cdf7ea5fc20615e",
+  "name": "statistics",
+  "package_tarball_full_path": "/home/akizenko/anaconda3/pkgs/statistics-1.0.3.5-py310h06a4308_1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.10/site-packages/statistics-1.0.3.5-py3.10.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "2234f053b185cb3871dc58fe043eeb199f36e2049a316e8e26c2615562431c44",
+        "sha256_in_prefix": "2234f053b185cb3871dc58fe043eeb199f36e2049a316e8e26c2615562431c44",
+        "size_in_bytes": 1532
+      },
+      {
+        "_path": "lib/python3.10/site-packages/statistics-1.0.3.5-py3.10.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "1eae6b30f7e2dedd0584e5ec1aedd3a72f21ade9050b4fa331228b1f811fcaf3",
+        "sha256_in_prefix": "1eae6b30f7e2dedd0584e5ec1aedd3a72f21ade9050b4fa331228b1f811fcaf3",
+        "size_in_bytes": 221
+      },
+      {
+        "_path": "lib/python3.10/site-packages/statistics-1.0.3.5-py3.10.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python3.10/site-packages/statistics-1.0.3.5-py3.10.egg-info/requires.txt",
+        "path_type": "hardlink",
+        "sha256": "8e91f141deb632d0311d8c0b55747a51964f8a98c44ed9095f788a1c35327819",
+        "sha256_in_prefix": "8e91f141deb632d0311d8c0b55747a51964f8a98c44ed9095f788a1c35327819",
+        "size_in_bytes": 14
+      },
+      {
+        "_path": "lib/python3.10/site-packages/statistics-1.0.3.5-py3.10.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "80e37a45d92e522f955ff89d1914baf93241b17b901eefaa2984dfb33f558f18",
+        "sha256_in_prefix": "80e37a45d92e522f955ff89d1914baf93241b17b901eefaa2984dfb33f558f18",
+        "size_in_bytes": 11
+      },
+      {
+        "_path": "lib/python3.10/site-packages/statistics/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "ca7ea669d0aec78a5bf65754b387964b9b27235fe2f52352e6e3ec65f4c15761",
+        "sha256_in_prefix": "ca7ea669d0aec78a5bf65754b387964b9b27235fe2f52352e6e3ec65f4c15761",
+        "size_in_bytes": 17950
+      },
+      {
+        "_path": "lib/python3.10/site-packages/statistics/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c88666c2f89063618ae39f579e07024e4815e383886860d9b5365eb84006090b",
+        "sha256_in_prefix": "c88666c2f89063618ae39f579e07024e4815e383886860d9b5365eb84006090b",
+        "size_in_bytes": 15238
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "statistics==1.0.3.5=py310h06a4308_1",
+  "sha256": "261ad41fe970570a85de2caa8b6bf489ca9469aeeee6b2df2cd5b12e3cb264d2",
+  "size": 14134,
+  "subdir": "linux-64",
+  "timestamp": 1642511084282,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/anaconda/linux-64/statistics-1.0.3.5-py310h06a4308_1.tar.bz2",
+  "version": "1.0.3.5"
+}

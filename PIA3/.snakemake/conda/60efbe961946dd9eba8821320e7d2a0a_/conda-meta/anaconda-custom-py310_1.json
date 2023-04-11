@@ -1,0 +1,35 @@
+{
+  "build": "py310_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/anaconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "_anaconda_depends",
+    "python >=3.10,<3.11.0a0"
+  ],
+  "extracted_package_dir": "/home/akizenko/anaconda3/pkgs/anaconda-custom-py310_1",
+  "features": "",
+  "files": [],
+  "fn": "anaconda-custom-py310_1.tar.bz2",
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/akizenko/anaconda3/pkgs/anaconda-custom-py310_1",
+    "type": 1
+  },
+  "md5": "2a72402502a4fa627264f1de0b2fb9b2",
+  "name": "anaconda",
+  "package_tarball_full_path": "/home/akizenko/anaconda3/pkgs/anaconda-custom-py310_1.tar.bz2",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "anaconda==custom=py310_1",
+  "sha256": "383ed25c5a4bc7984fe21f51ce455506801b0412dc11c3325df074a073856be2",
+  "size": 7978,
+  "subdir": "linux-64",
+  "timestamp": 1674154116491,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/anaconda/linux-64/anaconda-custom-py310_1.tar.bz2",
+  "version": "custom"
+}

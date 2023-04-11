@@ -1,0 +1,53 @@
+{
+  "build": "py310h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [
+    "openssl !=1.1.1e"
+  ],
+  "depends": [
+    "bokeh >=2.4.2,<3.0",
+    "click >=7.0",
+    "cloudpickle >=1.1.1",
+    "cytoolz >=0.8.2",
+    "dask-core 2023.3.2.*",
+    "distributed 2023.3.2.*",
+    "fsspec >=0.6.0",
+    "importlib-metadata >=4.13.0",
+    "jinja2 >=2.10.3",
+    "lz4",
+    "numpy >=1.21",
+    "packaging >=20.0",
+    "pandas >=1.3",
+    "partd >=1.2.0",
+    "python >=3.10,<3.11.0a0",
+    "pyyaml >=5.3.1"
+  ],
+  "extracted_package_dir": "/home/akizenko/anaconda3/pkgs/dask-2023.3.2-py310h06a4308_0",
+  "features": "",
+  "files": [],
+  "fn": "dask-2023.3.2-py310h06a4308_0.conda",
+  "legacy_bz2_md5": "63bbd4f862e4f429dfe524b4842535a9",
+  "legacy_bz2_size": 5108,
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/akizenko/anaconda3/pkgs/dask-2023.3.2-py310h06a4308_0",
+    "type": 1
+  },
+  "md5": "7da8506a429ae4d40389ddd581c2994c",
+  "name": "dask",
+  "package_tarball_full_path": "/home/akizenko/anaconda3/pkgs/dask-2023.3.2-py310h06a4308_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "dask==2023.3.2=py310h06a4308_0",
+  "sha256": "3fb7cd721f8467762c7ae6878a86c8fd85d902708b4ecbc290553c8d9af74301",
+  "size": 5620,
+  "subdir": "linux-64",
+  "timestamp": 1680108500827,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/dask-2023.3.2-py310h06a4308_0.conda",
+  "version": "2023.3.2"
+}

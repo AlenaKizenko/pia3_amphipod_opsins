@@ -1,0 +1,149 @@
+{
+  "build": "pyhd3eb1b0_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/anaconda/noarch",
+  "constrains": [],
+  "depends": [
+    "chardet",
+    "python"
+  ],
+  "extracted_package_dir": "/home/akizenko/anaconda3/pkgs/binaryornot-0.4.4-pyhd3eb1b0_1",
+  "features": "",
+  "files": [
+    "lib/python3.10/site-packages/binaryornot-0.4.4.dist-info/AUTHORS.rst",
+    "lib/python3.10/site-packages/binaryornot-0.4.4.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/binaryornot-0.4.4.dist-info/LICENSE",
+    "lib/python3.10/site-packages/binaryornot-0.4.4.dist-info/METADATA",
+    "lib/python3.10/site-packages/binaryornot-0.4.4.dist-info/RECORD",
+    "lib/python3.10/site-packages/binaryornot-0.4.4.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/binaryornot-0.4.4.dist-info/WHEEL",
+    "lib/python3.10/site-packages/binaryornot-0.4.4.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/binaryornot-0.4.4.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/binaryornot/__init__.py",
+    "lib/python3.10/site-packages/binaryornot/check.py",
+    "lib/python3.10/site-packages/binaryornot/helpers.py",
+    "lib/python3.10/site-packages/binaryornot/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/binaryornot/__pycache__/check.cpython-310.pyc",
+    "lib/python3.10/site-packages/binaryornot/__pycache__/helpers.cpython-310.pyc"
+  ],
+  "fn": "binaryornot-0.4.4-pyhd3eb1b0_1.tar.bz2",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/akizenko/anaconda3/pkgs/binaryornot-0.4.4-pyhd3eb1b0_1",
+    "type": 1
+  },
+  "md5": "6676a376307e44c301bec8670a6e426d",
+  "name": "binaryornot",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/akizenko/anaconda3/pkgs/binaryornot-0.4.4-pyhd3eb1b0_1.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/binaryornot-0.4.4.dist-info/AUTHORS.rst",
+        "path_type": "hardlink",
+        "sha256": "da5fa2ab4180beb0b7ea6c9f9f2087dfb33dbea61da2d1f56ed756f964bd6a22",
+        "sha256_in_prefix": "da5fa2ab4180beb0b7ea6c9f9f2087dfb33dbea61da2d1f56ed756f964bd6a22",
+        "size_in_bytes": 951
+      },
+      {
+        "_path": "site-packages/binaryornot-0.4.4.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/binaryornot-0.4.4.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "cdbbda2d73827b3eb55340226f15eb7af96b9aaac197e3951c35601b7eacf987",
+        "sha256_in_prefix": "cdbbda2d73827b3eb55340226f15eb7af96b9aaac197e3951c35601b7eacf987",
+        "size_in_bytes": 1479
+      },
+      {
+        "_path": "site-packages/binaryornot-0.4.4.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "90b8401e08cf2d9e725a45917627f5b477f79beefaa7b88445525b3b4557a4ae",
+        "sha256_in_prefix": "90b8401e08cf2d9e725a45917627f5b477f79beefaa7b88445525b3b4557a4ae",
+        "size_in_bytes": 5995
+      },
+      {
+        "_path": "site-packages/binaryornot-0.4.4.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "f46747a454664142f91a9f3bc0a25e40f63ca006a0c6075a72f0c26d9f95c2d2",
+        "sha256_in_prefix": "f46747a454664142f91a9f3bc0a25e40f63ca006a0c6075a72f0c26d9f95c2d2",
+        "size_in_bytes": 1176
+      },
+      {
+        "_path": "site-packages/binaryornot-0.4.4.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/binaryornot-0.4.4.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "67e9f2629c2b712ab17ddbb1e4c6e7fc3439db988fec9d831b72601af398c934",
+        "sha256_in_prefix": "67e9f2629c2b712ab17ddbb1e4c6e7fc3439db988fec9d831b72601af398c934",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "site-packages/binaryornot-0.4.4.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "8955c901376a77e6ef060e64f508702e193cb33522460a40899b094b577cbec1",
+        "sha256_in_prefix": "8955c901376a77e6ef060e64f508702e193cb33522460a40899b094b577cbec1",
+        "size_in_bytes": 84
+      },
+      {
+        "_path": "site-packages/binaryornot-0.4.4.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "c5293b49c18ffff18887f0f671a25f264d28473829cb2aa35a2a338b9fe7be6b",
+        "sha256_in_prefix": "c5293b49c18ffff18887f0f671a25f264d28473829cb2aa35a2a338b9fe7be6b",
+        "size_in_bytes": 12
+      },
+      {
+        "_path": "site-packages/binaryornot/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "5df4971183488489419ac8940739fc9c3352500fb63f98ac787a3ab03d599721",
+        "sha256_in_prefix": "5df4971183488489419ac8940739fc9c3352500fb63f98ac787a3ab03d599721",
+        "size_in_bytes": 80
+      },
+      {
+        "_path": "site-packages/binaryornot/check.py",
+        "path_type": "hardlink",
+        "sha256": "0e887d81dfc351859d1a927c082326bb803e6ee977fe4577aa79783ac803a75d",
+        "sha256_in_prefix": "0e887d81dfc351859d1a927c082326bb803e6ee977fe4577aa79783ac803a75d",
+        "size_in_bytes": 756
+      },
+      {
+        "_path": "site-packages/binaryornot/helpers.py",
+        "path_type": "hardlink",
+        "sha256": "a7a6838a6552b4f40a65e40d1ca91036779e0fc8df4f8aa99bd842895ffc8d85",
+        "sha256_in_prefix": "a7a6838a6552b4f40a65e40d1ca91036779e0fc8df4f8aa99bd842895ffc8d85",
+        "size_in_bytes": 4737
+      },
+      {
+        "_path": "lib/python3.10/site-packages/binaryornot/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/binaryornot/__pycache__/check.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/binaryornot/__pycache__/helpers.cpython-310.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "binaryornot==0.4.4=pyhd3eb1b0_1",
+  "sha256": "c296884100790a616f04e0fe39d470e1e835199e47f9de9bc3d7cbf2b3cf41a6",
+  "size": 384275,
+  "subdir": "noarch",
+  "timestamp": 1617751563788,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/anaconda/noarch/binaryornot-0.4.4-pyhd3eb1b0_1.tar.bz2",
+  "version": "0.4.4"
+}

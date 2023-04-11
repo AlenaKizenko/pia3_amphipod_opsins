@@ -1,0 +1,114 @@
+{
+  "build": "6",
+  "build_number": 6,
+  "channel": "https://conda.anaconda.org/jmcmurray/noarch",
+  "constrains": [],
+  "depends": [],
+  "extracted_package_dir": "/home/akizenko/anaconda3/pkgs/qutil-3.2.1-6",
+  "features": "",
+  "files": [
+    "etc/conda/activate.d/qutil_activate.bat",
+    "etc/conda/activate.d/qutil_activate.sh",
+    "etc/conda/deactivate.d/qutil_deactivate.bat",
+    "etc/conda/deactivate.d/qutil_deactivate.sh",
+    "q/packages/bootstrap.q",
+    "q/packages/qutil/bootstrap.q",
+    "q/packages/qutil/config_parse.q",
+    "q/packages/qutil/init.q",
+    "q/packages/qutil/opts.q",
+    "q/q.q"
+  ],
+  "fn": "qutil-3.2.1-6.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/home/akizenko/anaconda3/pkgs/qutil-3.2.1-6",
+    "type": 1
+  },
+  "md5": "d0b68743a1ded466fd1f9d9833dcdde3",
+  "name": "qutil",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/akizenko/anaconda3/pkgs/qutil-3.2.1-6.tar.bz2",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "etc/conda/activate.d/qutil_activate.bat",
+        "path_type": "hardlink",
+        "sha256": "6c4ced855014156625dfa2d43eaa6a8a3da3a6c778a8230ede994bccaaeb5665",
+        "sha256_in_prefix": "6c4ced855014156625dfa2d43eaa6a8a3da3a6c778a8230ede994bccaaeb5665",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "etc/conda/activate.d/qutil_activate.sh",
+        "path_type": "hardlink",
+        "sha256": "4a8efabbd5b4553867388fa8fd00df7d69280633742d1af780d101f3d5534073",
+        "sha256_in_prefix": "4a8efabbd5b4553867388fa8fd00df7d69280633742d1af780d101f3d5534073",
+        "size_in_bytes": 140
+      },
+      {
+        "_path": "etc/conda/deactivate.d/qutil_deactivate.bat",
+        "path_type": "hardlink",
+        "sha256": "a307af06d4297f719a91883e75206b86bd88f2e05415c760fa2f91faa06ff144",
+        "sha256_in_prefix": "a307af06d4297f719a91883e75206b86bd88f2e05415c760fa2f91faa06ff144",
+        "size_in_bytes": 55
+      },
+      {
+        "_path": "etc/conda/deactivate.d/qutil_deactivate.sh",
+        "path_type": "hardlink",
+        "sha256": "082ddc69bdfae28875939fd39131b8dc6e78a062a414d220c050dae50b206df1",
+        "sha256_in_prefix": "082ddc69bdfae28875939fd39131b8dc6e78a062a414d220c050dae50b206df1",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "q/packages/bootstrap.q",
+        "path_type": "hardlink",
+        "sha256": "d184cc37578dbb5186cd9d4bf0fb5bae0d2d84e20252ded48425251ed4f979ec",
+        "sha256_in_prefix": "d184cc37578dbb5186cd9d4bf0fb5bae0d2d84e20252ded48425251ed4f979ec",
+        "size_in_bytes": 8353
+      },
+      {
+        "_path": "q/packages/qutil/bootstrap.q",
+        "path_type": "hardlink",
+        "sha256": "d184cc37578dbb5186cd9d4bf0fb5bae0d2d84e20252ded48425251ed4f979ec",
+        "sha256_in_prefix": "d184cc37578dbb5186cd9d4bf0fb5bae0d2d84e20252ded48425251ed4f979ec",
+        "size_in_bytes": 8353
+      },
+      {
+        "_path": "q/packages/qutil/config_parse.q",
+        "path_type": "hardlink",
+        "sha256": "aa668a95fd4e4c109331cc18c462a86c9b708616e77344191b360d51b9f5cf39",
+        "sha256_in_prefix": "aa668a95fd4e4c109331cc18c462a86c9b708616e77344191b360d51b9f5cf39",
+        "size_in_bytes": 2474
+      },
+      {
+        "_path": "q/packages/qutil/init.q",
+        "path_type": "hardlink",
+        "sha256": "a3f7e6d8b78e9ffb03eaaf32367081e3adbefd51f582e3dab74e7dbc0245784a",
+        "sha256_in_prefix": "a3f7e6d8b78e9ffb03eaaf32367081e3adbefd51f582e3dab74e7dbc0245784a",
+        "size_in_bytes": 86
+      },
+      {
+        "_path": "q/packages/qutil/opts.q",
+        "path_type": "hardlink",
+        "sha256": "ddb4b6852ccf82b046d50750ca93b9659b893f20a061c38d038b3d1f8b552f4b",
+        "sha256_in_prefix": "ddb4b6852ccf82b046d50750ca93b9659b893f20a061c38d038b3d1f8b552f4b",
+        "size_in_bytes": 6783
+      },
+      {
+        "_path": "q/q.q",
+        "path_type": "hardlink",
+        "sha256": "417a485ac49fb8962807b9675f997abe68850c9c270d5aea818069ac2edc0d39",
+        "sha256_in_prefix": "417a485ac49fb8962807b9675f997abe68850c9c270d5aea818069ac2edc0d39",
+        "size_in_bytes": 228
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "qutil==3.2.1=6",
+  "size": 13454,
+  "subdir": "noarch",
+  "timestamp": 1529330638068,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/jmcmurray/noarch/qutil-3.2.1-6.tar.bz2",
+  "version": "3.2.1"
+}

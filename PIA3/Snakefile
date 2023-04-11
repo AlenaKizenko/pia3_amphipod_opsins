@@ -4,8 +4,7 @@ from snakemake.utils import validate
 
 configfile: "config.yaml"
 
-a = 10
-b = 12
+
 #validate(config, 'config.schema.yaml')
 
 #workdir: out_dir

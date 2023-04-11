@@ -1,0 +1,113 @@
+{
+  "build": "he6710b0_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/anaconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0",
+    "libstdcxx-ng >=7.3.0"
+  ],
+  "extracted_package_dir": "/home/akizenko/anaconda3/pkgs/libaec-1.0.4-he6710b0_1",
+  "features": "",
+  "files": [
+    "bin/aec",
+    "include/libaec.h",
+    "include/szlib.h",
+    "lib/libaec.so",
+    "lib/libaec.so.0",
+    "lib/libaec.so.0.0.10",
+    "lib/libsz.so",
+    "lib/libsz.so.2",
+    "lib/libsz.so.2.0.1",
+    "share/man/man1/aec.1"
+  ],
+  "fn": "libaec-1.0.4-he6710b0_1.tar.bz2",
+  "license": "BSD-2-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/akizenko/anaconda3/pkgs/libaec-1.0.4-he6710b0_1",
+    "type": 1
+  },
+  "md5": "e911ac853b19bd7073f1047699e2118e",
+  "name": "libaec",
+  "package_tarball_full_path": "/home/akizenko/anaconda3/pkgs/libaec-1.0.4-he6710b0_1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/aec",
+        "path_type": "hardlink",
+        "sha256": "dedb7753ed6e153a48117ea3b38843d88f9df096342693f5243d43ac0456826a",
+        "sha256_in_prefix": "dedb7753ed6e153a48117ea3b38843d88f9df096342693f5243d43ac0456826a",
+        "size_in_bytes": 20520
+      },
+      {
+        "_path": "include/libaec.h",
+        "path_type": "hardlink",
+        "sha256": "b2adb7928fb05483a6dd7b70502e23ddb535b7617a023ec49611e5b85ea25e4d",
+        "sha256_in_prefix": "b2adb7928fb05483a6dd7b70502e23ddb535b7617a023ec49611e5b85ea25e4d",
+        "size_in_bytes": 5403
+      },
+      {
+        "_path": "include/szlib.h",
+        "path_type": "hardlink",
+        "sha256": "a5444a8b6eb74709144eb4c729c68734f014b83ee876fb75092f05257ead01d2",
+        "sha256_in_prefix": "a5444a8b6eb74709144eb4c729c68734f014b83ee876fb75092f05257ead01d2",
+        "size_in_bytes": 2857
+      },
+      {
+        "_path": "lib/libaec.so",
+        "path_type": "softlink",
+        "sha256": "52271bcfd233f1c72aeb05d6da94c33295f2f7fe1f51296ea4ea7adb64060e5b",
+        "size_in_bytes": 42712
+      },
+      {
+        "_path": "lib/libaec.so.0",
+        "path_type": "softlink",
+        "sha256": "52271bcfd233f1c72aeb05d6da94c33295f2f7fe1f51296ea4ea7adb64060e5b",
+        "size_in_bytes": 42712
+      },
+      {
+        "_path": "lib/libaec.so.0.0.10",
+        "path_type": "hardlink",
+        "sha256": "52271bcfd233f1c72aeb05d6da94c33295f2f7fe1f51296ea4ea7adb64060e5b",
+        "sha256_in_prefix": "52271bcfd233f1c72aeb05d6da94c33295f2f7fe1f51296ea4ea7adb64060e5b",
+        "size_in_bytes": 42712
+      },
+      {
+        "_path": "lib/libsz.so",
+        "path_type": "softlink",
+        "sha256": "78c4c61eeaafde377ea13fcc16825fdd49da9c1a07422898f8618c6152adc283",
+        "size_in_bytes": 16320
+      },
+      {
+        "_path": "lib/libsz.so.2",
+        "path_type": "softlink",
+        "sha256": "78c4c61eeaafde377ea13fcc16825fdd49da9c1a07422898f8618c6152adc283",
+        "size_in_bytes": 16320
+      },
+      {
+        "_path": "lib/libsz.so.2.0.1",
+        "path_type": "hardlink",
+        "sha256": "78c4c61eeaafde377ea13fcc16825fdd49da9c1a07422898f8618c6152adc283",
+        "sha256_in_prefix": "78c4c61eeaafde377ea13fcc16825fdd49da9c1a07422898f8618c6152adc283",
+        "size_in_bytes": 16320
+      },
+      {
+        "_path": "share/man/man1/aec.1",
+        "path_type": "hardlink",
+        "sha256": "12ebfca2c9978afa36f9d515feb8630a33930a5f1ba0a5cc03481662067d7c6a",
+        "sha256_in_prefix": "12ebfca2c9978afa36f9d515feb8630a33930a5f1ba0a5cc03481662067d7c6a",
+        "size_in_bytes": 1066
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "libaec==1.0.4=he6710b0_1",
+  "sha256": "860ecdf2e21768f806f9c0d272e92dbc521b249a7171b0def500a30937fb079a",
+  "size": 35409,
+  "subdir": "linux-64",
+  "timestamp": 1593197267510,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/anaconda/linux-64/libaec-1.0.4-he6710b0_1.tar.bz2",
+  "version": "1.0.4"
+}

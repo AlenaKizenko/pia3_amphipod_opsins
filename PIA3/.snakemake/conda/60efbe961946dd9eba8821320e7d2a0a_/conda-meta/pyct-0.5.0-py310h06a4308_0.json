@@ -1,0 +1,257 @@
+{
+  "build": "py310h06a4308_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/anaconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "param >=1.7.0",
+    "python >=3.10,<3.11.0a0",
+    "pyyaml",
+    "requests"
+  ],
+  "extracted_package_dir": "/home/akizenko/anaconda3/pkgs/pyct-0.5.0-py310h06a4308_0",
+  "features": "",
+  "files": [
+    "bin/pyct",
+    "lib/python3.10/site-packages/pyct-0.5.0.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/pyct-0.5.0.dist-info/LICENSE.txt",
+    "lib/python3.10/site-packages/pyct-0.5.0.dist-info/METADATA",
+    "lib/python3.10/site-packages/pyct-0.5.0.dist-info/RECORD",
+    "lib/python3.10/site-packages/pyct-0.5.0.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/pyct-0.5.0.dist-info/WHEEL",
+    "lib/python3.10/site-packages/pyct-0.5.0.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/pyct-0.5.0.dist-info/entry_points.txt",
+    "lib/python3.10/site-packages/pyct-0.5.0.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/pyct/.version",
+    "lib/python3.10/site-packages/pyct/__init__.py",
+    "lib/python3.10/site-packages/pyct/__main__.py",
+    "lib/python3.10/site-packages/pyct/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyct/__pycache__/__main__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyct/__pycache__/build.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyct/__pycache__/cmd.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyct/__pycache__/report.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyct/build.py",
+    "lib/python3.10/site-packages/pyct/cmd.py",
+    "lib/python3.10/site-packages/pyct/report.py",
+    "lib/python3.10/site-packages/pyct/tests/__init__.py",
+    "lib/python3.10/site-packages/pyct/tests/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyct/tests/__pycache__/test_cmd.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyct/tests/__pycache__/test_report.cpython-310.pyc",
+    "lib/python3.10/site-packages/pyct/tests/test_cmd.py",
+    "lib/python3.10/site-packages/pyct/tests/test_report.py"
+  ],
+  "fn": "pyct-0.5.0-py310h06a4308_0.tar.bz2",
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/akizenko/anaconda3/pkgs/pyct-0.5.0-py310h06a4308_0",
+    "type": 1
+  },
+  "md5": "2b2a9be6bf17df2c01ceb1e622de6fab",
+  "name": "pyct",
+  "package_tarball_full_path": "/home/akizenko/anaconda3/pkgs/pyct-0.5.0-py310h06a4308_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/pyct",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/croot/pyct_1675441480074/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
+        "sha256": "3a45c4e30a0199a30946f1f6b2ddab12a0d2002acdd12d0a4337c9928a0eb761",
+        "sha256_in_prefix": "95d08cc485bec425fed38a3955f72d90e73a4c0468c382395d5ed376d562b462",
+        "size_in_bytes": 466
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyct-0.5.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyct-0.5.0.dist-info/LICENSE.txt",
+        "path_type": "hardlink",
+        "sha256": "9a9547d15fc413a0569fe7c0ebb304852f230e571cbdc2a0e57249c6c4fc3d85",
+        "sha256_in_prefix": "9a9547d15fc413a0569fe7c0ebb304852f230e571cbdc2a0e57249c6c4fc3d85",
+        "size_in_bytes": 1479
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyct-0.5.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "d5d65e20eacc32ae965a7b1613747fc657de87f66edc02b6b84fa79602fa3dfc",
+        "sha256_in_prefix": "d5d65e20eacc32ae965a7b1613747fc657de87f66edc02b6b84fa79602fa3dfc",
+        "size_in_bytes": 7363
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyct-0.5.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "1fb2032ba1f9402a78e68218a19dd8f72539f5b536c1bf7a2151d8c2688a87a1",
+        "sha256_in_prefix": "1fb2032ba1f9402a78e68218a19dd8f72539f5b536c1bf7a2151d8c2688a87a1",
+        "size_in_bytes": 1847
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyct-0.5.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyct-0.5.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "1b5e87e00dc87a84269cead8578b9e6462928e18a95f1f3373c9eef451a5bcc0",
+        "sha256_in_prefix": "1b5e87e00dc87a84269cead8578b9e6462928e18a95f1f3373c9eef451a5bcc0",
+        "size_in_bytes": 92
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyct-0.5.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "04a88c3b5b2c1055902f9c261a11f6deae2a5277a191b2ac5ceca7c600364d2b",
+        "sha256_in_prefix": "04a88c3b5b2c1055902f9c261a11f6deae2a5277a191b2ac5ceca7c600364d2b",
+        "size_in_bytes": 64
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyct-0.5.0.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "c1ae798561e0408f40365b87d1da83f849786635a206e9a19287839e9cb1e6b4",
+        "sha256_in_prefix": "c1ae798561e0408f40365b87d1da83f849786635a206e9a19287839e9cb1e6b4",
+        "size_in_bytes": 44
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyct-0.5.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "66d9944bbe7c1bc541aa45a4d27e5bdf9f1f7a0444c589562e6eacb844197e74",
+        "sha256_in_prefix": "66d9944bbe7c1bc541aa45a4d27e5bdf9f1f7a0444c589562e6eacb844197e74",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyct/.version",
+        "path_type": "hardlink",
+        "sha256": "81c1a4634f73bd93c91746e62e2d24991cb17c294dd669b26a0223ddd3d41709",
+        "sha256_in_prefix": "81c1a4634f73bd93c91746e62e2d24991cb17c294dd669b26a0223ddd3d41709",
+        "size_in_bytes": 64
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyct/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e657112ec7ce808fc55f2d5355f52ba68a815b15b13a943b659437c83ade3bdb",
+        "sha256_in_prefix": "e657112ec7ce808fc55f2d5355f52ba68a815b15b13a943b659437c83ade3bdb",
+        "size_in_bytes": 280
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyct/__main__.py",
+        "path_type": "hardlink",
+        "sha256": "755116e13cfdb23c5c5eb35d557550c92215e72f4c5809cc4c98651c2edb3092",
+        "sha256_in_prefix": "755116e13cfdb23c5c5eb35d557550c92215e72f4c5809cc4c98651c2edb3092",
+        "size_in_bytes": 100
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyct/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d21c387e7d6942066f4eb493b752513ba44ff5c794948e38211606aa832431b7",
+        "sha256_in_prefix": "d21c387e7d6942066f4eb493b752513ba44ff5c794948e38211606aa832431b7",
+        "size_in_bytes": 329
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyct/__pycache__/__main__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "86bd3bb32ff3b6a0ff690ca868864066482ea0ddb2c7bc092f8072f5fd50eb7f",
+        "sha256_in_prefix": "86bd3bb32ff3b6a0ff690ca868864066482ea0ddb2c7bc092f8072f5fd50eb7f",
+        "size_in_bytes": 332
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyct/__pycache__/build.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "902cf55ab0a6a4df2be4155d4b7d9902e4091ab0d9ea2bdaf4b434b970aea5a7",
+        "sha256_in_prefix": "902cf55ab0a6a4df2be4155d4b7d9902e4091ab0d9ea2bdaf4b434b970aea5a7",
+        "size_in_bytes": 1831
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyct/__pycache__/cmd.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c811bfdf78506d55da37577c3a3ee9d93c40033982629565b3ef3edd768d61ec",
+        "sha256_in_prefix": "c811bfdf78506d55da37577c3a3ee9d93c40033982629565b3ef3edd768d61ec",
+        "size_in_bytes": 14758
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyct/__pycache__/report.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "954e9bc35b73231248676b60297f9bc4862b16c1dfba6de5fee8aaa2829cd04d",
+        "sha256_in_prefix": "954e9bc35b73231248676b60297f9bc4862b16c1dfba6de5fee8aaa2829cd04d",
+        "size_in_bytes": 1798
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyct/build.py",
+        "path_type": "hardlink",
+        "sha256": "0486866281a09d21ca27fc89860ea092a247de91875ee5db5878c69b07471b51",
+        "sha256_in_prefix": "0486866281a09d21ca27fc89860ea092a247de91875ee5db5878c69b07471b51",
+        "size_in_bytes": 1829
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyct/cmd.py",
+        "path_type": "hardlink",
+        "sha256": "679dc3de837e1f0f2e7ca9e60225f76a158255c3a16122e95fa6f52590a701f5",
+        "sha256_in_prefix": "679dc3de837e1f0f2e7ca9e60225f76a158255c3a16122e95fa6f52590a701f5",
+        "size_in_bytes": 18368
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyct/report.py",
+        "path_type": "hardlink",
+        "sha256": "7705a2a4c437b7e58c31b0fc1b0b113567744656e520ff290973273c8e3abd45",
+        "sha256_in_prefix": "7705a2a4c437b7e58c31b0fc1b0b113567744656e520ff290973273c8e3abd45",
+        "size_in_bytes": 2549
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyct/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyct/tests/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "48590f3fb029b0f91aa4bd7ea8b2d3fa3118e30ddd3f429c3869038c080abbba",
+        "sha256_in_prefix": "48590f3fb029b0f91aa4bd7ea8b2d3fa3118e30ddd3f429c3869038c080abbba",
+        "size_in_bytes": 144
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyct/tests/__pycache__/test_cmd.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "0ccb5fed2171306ff769a0b5cbb99d8f09ba9515d2ca87d3e54541d8e1864957",
+        "sha256_in_prefix": "0ccb5fed2171306ff769a0b5cbb99d8f09ba9515d2ca87d3e54541d8e1864957",
+        "size_in_bytes": 7352
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyct/tests/__pycache__/test_report.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "85f9d4be80cdcd710c756f7d5b40063471dbf9313411a0e8c2685af618f08b41",
+        "sha256_in_prefix": "85f9d4be80cdcd710c756f7d5b40063471dbf9313411a0e8c2685af618f08b41",
+        "size_in_bytes": 2127
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyct/tests/test_cmd.py",
+        "path_type": "hardlink",
+        "sha256": "91e95ade35f40db3a642dcc4a8d769eae7d14e3b590161311905ec015a306ea4",
+        "sha256_in_prefix": "91e95ade35f40db3a642dcc4a8d769eae7d14e3b590161311905ec015a306ea4",
+        "size_in_bytes": 9323
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pyct/tests/test_report.py",
+        "path_type": "hardlink",
+        "sha256": "eeb04f42399f029a86aad9f36192fd109bf8b6b2ac92a60b9584a860ff62b43e",
+        "sha256_in_prefix": "eeb04f42399f029a86aad9f36192fd109bf8b6b2ac92a60b9584a860ff62b43e",
+        "size_in_bytes": 1829
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "pyct==0.5.0=py310h06a4308_0",
+  "sha256": "f28841b5157e89b26186c8e6f941e4f601a0bbb20807245d88a6af6dcca800cd",
+  "size": 29492,
+  "subdir": "linux-64",
+  "timestamp": 1675441593109,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/anaconda/linux-64/pyct-0.5.0-py310h06a4308_0.tar.bz2",
+  "version": "0.5.0"
+}

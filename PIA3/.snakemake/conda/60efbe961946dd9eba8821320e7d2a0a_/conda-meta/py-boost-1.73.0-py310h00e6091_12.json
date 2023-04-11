@@ -1,0 +1,217 @@
+{
+  "build": "py310h00e6091_12",
+  "build_number": 12,
+  "channel": "https://conda.anaconda.org/anaconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "libboost >=1.73.0,<1.73.1.0a0 h28710b8_12",
+    "libgcc-ng >=7.5.0",
+    "libstdcxx-ng >=7.5.0",
+    "python >=3.10,<3.11.0a0"
+  ],
+  "extracted_package_dir": "/home/akizenko/anaconda3/pkgs/py-boost-1.73.0-py310h00e6091_12",
+  "features": "",
+  "files": [
+    "include/boost/python.hpp",
+    "lib/cmake/boost_numpy-1.73.0/boost_numpy-config-version.cmake",
+    "lib/cmake/boost_numpy-1.73.0/boost_numpy-config.cmake",
+    "lib/cmake/boost_numpy-1.73.0/libboost_numpy-variant-shared-py3.10.cmake",
+    "lib/cmake/boost_numpy-1.73.0/libboost_numpy-variant-static-py3.10.cmake",
+    "lib/cmake/boost_python-1.73.0/boost_python-config-version.cmake",
+    "lib/cmake/boost_python-1.73.0/boost_python-config.cmake",
+    "lib/cmake/boost_python-1.73.0/libboost_python-variant-shared-py3.10.cmake",
+    "lib/cmake/boost_python-1.73.0/libboost_python-variant-static-py3.10.cmake",
+    "lib/libboost_numpy.a",
+    "lib/libboost_numpy.so",
+    "lib/libboost_numpy310.a",
+    "lib/libboost_numpy310.so",
+    "lib/libboost_numpy310.so.1",
+    "lib/libboost_numpy310.so.1.73",
+    "lib/libboost_numpy310.so.1.73.0",
+    "lib/libboost_python.a",
+    "lib/libboost_python.so",
+    "lib/libboost_python310.a",
+    "lib/libboost_python310.so",
+    "lib/libboost_python310.so.1",
+    "lib/libboost_python310.so.1.73",
+    "lib/libboost_python310.so.1.73.0"
+  ],
+  "fn": "py-boost-1.73.0-py310h00e6091_12.tar.bz2",
+  "license": "BSL-1.0",
+  "license_family": "OTHER",
+  "link": {
+    "source": "/home/akizenko/anaconda3/pkgs/py-boost-1.73.0-py310h00e6091_12",
+    "type": 1
+  },
+  "md5": "73c81d845f0aece7b976567b8d5b6edc",
+  "name": "py-boost",
+  "package_tarball_full_path": "/home/akizenko/anaconda3/pkgs/py-boost-1.73.0-py310h00e6091_12.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "include/boost/python.hpp",
+        "path_type": "hardlink",
+        "sha256": "0d3b5c8e17aa97d8e0bab775412017ce0e5184071649f631dad911a91e1b7cd2",
+        "sha256_in_prefix": "0d3b5c8e17aa97d8e0bab775412017ce0e5184071649f631dad911a91e1b7cd2",
+        "size_in_bytes": 2950
+      },
+      {
+        "_path": "lib/cmake/boost_numpy-1.73.0/boost_numpy-config-version.cmake",
+        "path_type": "hardlink",
+        "sha256": "9f9faf2f12a8d82b46c97c4c70d3c4e87e64955360b07358af80c9235cb9b8b2",
+        "sha256_in_prefix": "9f9faf2f12a8d82b46c97c4c70d3c4e87e64955360b07358af80c9235cb9b8b2",
+        "size_in_bytes": 304
+      },
+      {
+        "_path": "lib/cmake/boost_numpy-1.73.0/boost_numpy-config.cmake",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/conda/conda-bld/bst_1655879425328/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+        "sha256": "ad405290c5b501ad5af7a83ff6c026b8e1148d3015edebcc233d66c7510e6ae8",
+        "sha256_in_prefix": "714b4ad4fe447910070129b88dacebce08664ebf9e2bfe79f9e3efa7e606597d",
+        "size_in_bytes": 4275
+      },
+      {
+        "_path": "lib/cmake/boost_numpy-1.73.0/libboost_numpy-variant-shared-py3.10.cmake",
+        "path_type": "hardlink",
+        "sha256": "06263cebec33595d26a7e79ef702b3e42d0e20127db3301f1b1e29b2df776b71",
+        "sha256_in_prefix": "06263cebec33595d26a7e79ef702b3e42d0e20127db3301f1b1e29b2df776b71",
+        "size_in_bytes": 3243
+      },
+      {
+        "_path": "lib/cmake/boost_numpy-1.73.0/libboost_numpy-variant-static-py3.10.cmake",
+        "path_type": "hardlink",
+        "sha256": "04bb92c17090c8223fde17054c89126aa130af93295f2b27a120b5edc2b56fdd",
+        "sha256_in_prefix": "04bb92c17090c8223fde17054c89126aa130af93295f2b27a120b5edc2b56fdd",
+        "size_in_bytes": 3034
+      },
+      {
+        "_path": "lib/cmake/boost_python-1.73.0/boost_python-config-version.cmake",
+        "path_type": "hardlink",
+        "sha256": "9f9faf2f12a8d82b46c97c4c70d3c4e87e64955360b07358af80c9235cb9b8b2",
+        "sha256_in_prefix": "9f9faf2f12a8d82b46c97c4c70d3c4e87e64955360b07358af80c9235cb9b8b2",
+        "size_in_bytes": 304
+      },
+      {
+        "_path": "lib/cmake/boost_python-1.73.0/boost_python-config.cmake",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/conda/conda-bld/bst_1655879425328/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+        "sha256": "f12ef1d2273b1c94828736d9a591f1b5dd8c61e01d72d09cfe86f18a48c2d69c",
+        "sha256_in_prefix": "240a4d3df421d3d4fffa53729c949f0dce49333b8f7f5ff6e3d7fdb112876c42",
+        "size_in_bytes": 4303
+      },
+      {
+        "_path": "lib/cmake/boost_python-1.73.0/libboost_python-variant-shared-py3.10.cmake",
+        "path_type": "hardlink",
+        "sha256": "56f4e7ecd71a1db9756ff70becee0c20319b578d6076bf891a785e8395a08adf",
+        "sha256_in_prefix": "56f4e7ecd71a1db9756ff70becee0c20319b578d6076bf891a785e8395a08adf",
+        "size_in_bytes": 3260
+      },
+      {
+        "_path": "lib/cmake/boost_python-1.73.0/libboost_python-variant-static-py3.10.cmake",
+        "path_type": "hardlink",
+        "sha256": "87dd1d392a15ef1770955bc84b83ee80b741daf3d3f1988c2f961b2919d2d3fe",
+        "sha256_in_prefix": "87dd1d392a15ef1770955bc84b83ee80b741daf3d3f1988c2f961b2919d2d3fe",
+        "size_in_bytes": 3049
+      },
+      {
+        "_path": "lib/libboost_numpy.a",
+        "path_type": "softlink",
+        "sha256": "8751062e08abe680bc27d77bbff843328523b1f4510ab18084e5743b598637c7",
+        "size_in_bytes": 126124
+      },
+      {
+        "_path": "lib/libboost_numpy.so",
+        "path_type": "softlink",
+        "sha256": "d355ddbc22658435c489843055cafad2c5e83b1fe7c64fe4061a69fdfd85f544",
+        "size_in_bytes": 68336
+      },
+      {
+        "_path": "lib/libboost_numpy310.a",
+        "path_type": "hardlink",
+        "sha256": "8751062e08abe680bc27d77bbff843328523b1f4510ab18084e5743b598637c7",
+        "sha256_in_prefix": "8751062e08abe680bc27d77bbff843328523b1f4510ab18084e5743b598637c7",
+        "size_in_bytes": 126124
+      },
+      {
+        "_path": "lib/libboost_numpy310.so",
+        "path_type": "softlink",
+        "sha256": "d355ddbc22658435c489843055cafad2c5e83b1fe7c64fe4061a69fdfd85f544",
+        "size_in_bytes": 68336
+      },
+      {
+        "_path": "lib/libboost_numpy310.so.1",
+        "path_type": "softlink",
+        "sha256": "d355ddbc22658435c489843055cafad2c5e83b1fe7c64fe4061a69fdfd85f544",
+        "size_in_bytes": 68336
+      },
+      {
+        "_path": "lib/libboost_numpy310.so.1.73",
+        "path_type": "softlink",
+        "sha256": "d355ddbc22658435c489843055cafad2c5e83b1fe7c64fe4061a69fdfd85f544",
+        "size_in_bytes": 68336
+      },
+      {
+        "_path": "lib/libboost_numpy310.so.1.73.0",
+        "path_type": "hardlink",
+        "sha256": "d355ddbc22658435c489843055cafad2c5e83b1fe7c64fe4061a69fdfd85f544",
+        "sha256_in_prefix": "d355ddbc22658435c489843055cafad2c5e83b1fe7c64fe4061a69fdfd85f544",
+        "size_in_bytes": 68336
+      },
+      {
+        "_path": "lib/libboost_python.a",
+        "path_type": "softlink",
+        "sha256": "2eaf19f3166ae5e6e549d09ca41c38aaf051fdfc7049705e3de335c181d6e225",
+        "size_in_bytes": 751690
+      },
+      {
+        "_path": "lib/libboost_python.so",
+        "path_type": "softlink",
+        "sha256": "9bee299969a4cb6e79e1c72c24e0ed33c5a74ded5cd72cbe353b23ff9e735d6d",
+        "size_in_bytes": 325104
+      },
+      {
+        "_path": "lib/libboost_python310.a",
+        "path_type": "hardlink",
+        "sha256": "2eaf19f3166ae5e6e549d09ca41c38aaf051fdfc7049705e3de335c181d6e225",
+        "sha256_in_prefix": "2eaf19f3166ae5e6e549d09ca41c38aaf051fdfc7049705e3de335c181d6e225",
+        "size_in_bytes": 751690
+      },
+      {
+        "_path": "lib/libboost_python310.so",
+        "path_type": "softlink",
+        "sha256": "9bee299969a4cb6e79e1c72c24e0ed33c5a74ded5cd72cbe353b23ff9e735d6d",
+        "size_in_bytes": 325104
+      },
+      {
+        "_path": "lib/libboost_python310.so.1",
+        "path_type": "softlink",
+        "sha256": "9bee299969a4cb6e79e1c72c24e0ed33c5a74ded5cd72cbe353b23ff9e735d6d",
+        "size_in_bytes": 325104
+      },
+      {
+        "_path": "lib/libboost_python310.so.1.73",
+        "path_type": "softlink",
+        "sha256": "9bee299969a4cb6e79e1c72c24e0ed33c5a74ded5cd72cbe353b23ff9e735d6d",
+        "size_in_bytes": 325104
+      },
+      {
+        "_path": "lib/libboost_python310.so.1.73.0",
+        "path_type": "hardlink",
+        "sha256": "9bee299969a4cb6e79e1c72c24e0ed33c5a74ded5cd72cbe353b23ff9e735d6d",
+        "sha256_in_prefix": "9bee299969a4cb6e79e1c72c24e0ed33c5a74ded5cd72cbe353b23ff9e735d6d",
+        "size_in_bytes": 325104
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "py-boost==1.73.0=py310h00e6091_12",
+  "sha256": "2e86c8c7d53aac671ea9d26526c2f0dacae8f4f0aec1af5d026a80a77e7abff3",
+  "size": 265068,
+  "subdir": "linux-64",
+  "timestamp": 1655880116025,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/anaconda/linux-64/py-boost-1.73.0-py310h00e6091_12.tar.bz2",
+  "version": "1.73.0"
+}

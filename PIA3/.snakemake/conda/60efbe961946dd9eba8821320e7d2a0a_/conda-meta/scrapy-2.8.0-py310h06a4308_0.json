@@ -1,0 +1,2954 @@
+{
+  "build": "py310h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "cryptography >=3.4.6",
+    "cssselect >=0.9.1",
+    "itemadapter >=0.1.0",
+    "itemloaders >=1.0.1",
+    "libxml2 >=2.9.2,!=2.9.11,!=2.9.12",
+    "lxml >=4.3.0",
+    "packaging",
+    "parsel >=1.5.0",
+    "protego >=0.1.15",
+    "pydispatcher >=2.0.5",
+    "pyopenssl >=21.0.0",
+    "python >=3.10,<3.11.0a0",
+    "queuelib >=1.4.2",
+    "service_identity >=18.1.0",
+    "setuptools",
+    "tldextract",
+    "twisted >=18.9.0",
+    "w3lib >=1.17.0",
+    "zope.interface >=5.1.0"
+  ],
+  "extracted_package_dir": "/home/akizenko/anaconda3/pkgs/scrapy-2.8.0-py310h06a4308_0",
+  "features": "",
+  "files": [
+    "bin/scrapy",
+    "lib/python3.10/site-packages/Scrapy-2.8.0.dist-info/AUTHORS",
+    "lib/python3.10/site-packages/Scrapy-2.8.0.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/Scrapy-2.8.0.dist-info/LICENSE",
+    "lib/python3.10/site-packages/Scrapy-2.8.0.dist-info/METADATA",
+    "lib/python3.10/site-packages/Scrapy-2.8.0.dist-info/RECORD",
+    "lib/python3.10/site-packages/Scrapy-2.8.0.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/Scrapy-2.8.0.dist-info/WHEEL",
+    "lib/python3.10/site-packages/Scrapy-2.8.0.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/Scrapy-2.8.0.dist-info/entry_points.txt",
+    "lib/python3.10/site-packages/Scrapy-2.8.0.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/scrapy/VERSION",
+    "lib/python3.10/site-packages/scrapy/__init__.py",
+    "lib/python3.10/site-packages/scrapy/__main__.py",
+    "lib/python3.10/site-packages/scrapy/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/__pycache__/__main__.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/__pycache__/cmdline.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/__pycache__/crawler.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/__pycache__/dupefilters.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/__pycache__/exceptions.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/__pycache__/exporters.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/__pycache__/extension.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/__pycache__/interfaces.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/__pycache__/item.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/__pycache__/link.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/__pycache__/logformatter.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/__pycache__/mail.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/__pycache__/middleware.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/__pycache__/pqueues.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/__pycache__/resolver.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/__pycache__/responsetypes.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/__pycache__/robotstxt.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/__pycache__/shell.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/__pycache__/signalmanager.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/__pycache__/signals.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/__pycache__/spiderloader.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/__pycache__/squeues.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/__pycache__/statscollectors.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/cmdline.py",
+    "lib/python3.10/site-packages/scrapy/commands/__init__.py",
+    "lib/python3.10/site-packages/scrapy/commands/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/commands/__pycache__/bench.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/commands/__pycache__/check.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/commands/__pycache__/crawl.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/commands/__pycache__/edit.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/commands/__pycache__/fetch.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/commands/__pycache__/genspider.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/commands/__pycache__/list.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/commands/__pycache__/parse.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/commands/__pycache__/runspider.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/commands/__pycache__/settings.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/commands/__pycache__/shell.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/commands/__pycache__/startproject.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/commands/__pycache__/version.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/commands/__pycache__/view.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/commands/bench.py",
+    "lib/python3.10/site-packages/scrapy/commands/check.py",
+    "lib/python3.10/site-packages/scrapy/commands/crawl.py",
+    "lib/python3.10/site-packages/scrapy/commands/edit.py",
+    "lib/python3.10/site-packages/scrapy/commands/fetch.py",
+    "lib/python3.10/site-packages/scrapy/commands/genspider.py",
+    "lib/python3.10/site-packages/scrapy/commands/list.py",
+    "lib/python3.10/site-packages/scrapy/commands/parse.py",
+    "lib/python3.10/site-packages/scrapy/commands/runspider.py",
+    "lib/python3.10/site-packages/scrapy/commands/settings.py",
+    "lib/python3.10/site-packages/scrapy/commands/shell.py",
+    "lib/python3.10/site-packages/scrapy/commands/startproject.py",
+    "lib/python3.10/site-packages/scrapy/commands/version.py",
+    "lib/python3.10/site-packages/scrapy/commands/view.py",
+    "lib/python3.10/site-packages/scrapy/contracts/__init__.py",
+    "lib/python3.10/site-packages/scrapy/contracts/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/contracts/__pycache__/default.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/contracts/default.py",
+    "lib/python3.10/site-packages/scrapy/core/__init__.py",
+    "lib/python3.10/site-packages/scrapy/core/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/core/__pycache__/engine.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/core/__pycache__/scheduler.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/core/__pycache__/scraper.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/core/__pycache__/spidermw.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/core/downloader/__init__.py",
+    "lib/python3.10/site-packages/scrapy/core/downloader/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/core/downloader/__pycache__/contextfactory.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/core/downloader/__pycache__/middleware.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/core/downloader/__pycache__/tls.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/core/downloader/__pycache__/webclient.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/core/downloader/contextfactory.py",
+    "lib/python3.10/site-packages/scrapy/core/downloader/handlers/__init__.py",
+    "lib/python3.10/site-packages/scrapy/core/downloader/handlers/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/core/downloader/handlers/__pycache__/datauri.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/core/downloader/handlers/__pycache__/file.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/core/downloader/handlers/__pycache__/ftp.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/core/downloader/handlers/__pycache__/http.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/core/downloader/handlers/__pycache__/http10.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/core/downloader/handlers/__pycache__/http11.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/core/downloader/handlers/__pycache__/http2.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/core/downloader/handlers/__pycache__/s3.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/core/downloader/handlers/datauri.py",
+    "lib/python3.10/site-packages/scrapy/core/downloader/handlers/file.py",
+    "lib/python3.10/site-packages/scrapy/core/downloader/handlers/ftp.py",
+    "lib/python3.10/site-packages/scrapy/core/downloader/handlers/http.py",
+    "lib/python3.10/site-packages/scrapy/core/downloader/handlers/http10.py",
+    "lib/python3.10/site-packages/scrapy/core/downloader/handlers/http11.py",
+    "lib/python3.10/site-packages/scrapy/core/downloader/handlers/http2.py",
+    "lib/python3.10/site-packages/scrapy/core/downloader/handlers/s3.py",
+    "lib/python3.10/site-packages/scrapy/core/downloader/middleware.py",
+    "lib/python3.10/site-packages/scrapy/core/downloader/tls.py",
+    "lib/python3.10/site-packages/scrapy/core/downloader/webclient.py",
+    "lib/python3.10/site-packages/scrapy/core/engine.py",
+    "lib/python3.10/site-packages/scrapy/core/http2/__init__.py",
+    "lib/python3.10/site-packages/scrapy/core/http2/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/core/http2/__pycache__/agent.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/core/http2/__pycache__/protocol.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/core/http2/__pycache__/stream.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/core/http2/agent.py",
+    "lib/python3.10/site-packages/scrapy/core/http2/protocol.py",
+    "lib/python3.10/site-packages/scrapy/core/http2/stream.py",
+    "lib/python3.10/site-packages/scrapy/core/scheduler.py",
+    "lib/python3.10/site-packages/scrapy/core/scraper.py",
+    "lib/python3.10/site-packages/scrapy/core/spidermw.py",
+    "lib/python3.10/site-packages/scrapy/crawler.py",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__init__.py",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/ajaxcrawl.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/cookies.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/decompression.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/defaultheaders.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/downloadtimeout.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/httpauth.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/httpcache.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/httpcompression.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/httpproxy.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/redirect.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/retry.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/robotstxt.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/stats.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/useragent.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/ajaxcrawl.py",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/cookies.py",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/decompression.py",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/defaultheaders.py",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/downloadtimeout.py",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/httpauth.py",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/httpcache.py",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/httpcompression.py",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/httpproxy.py",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/redirect.py",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/retry.py",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/robotstxt.py",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/stats.py",
+    "lib/python3.10/site-packages/scrapy/downloadermiddlewares/useragent.py",
+    "lib/python3.10/site-packages/scrapy/dupefilters.py",
+    "lib/python3.10/site-packages/scrapy/exceptions.py",
+    "lib/python3.10/site-packages/scrapy/exporters.py",
+    "lib/python3.10/site-packages/scrapy/extension.py",
+    "lib/python3.10/site-packages/scrapy/extensions/__init__.py",
+    "lib/python3.10/site-packages/scrapy/extensions/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/extensions/__pycache__/closespider.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/extensions/__pycache__/corestats.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/extensions/__pycache__/debug.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/extensions/__pycache__/feedexport.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/extensions/__pycache__/httpcache.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/extensions/__pycache__/logstats.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/extensions/__pycache__/memdebug.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/extensions/__pycache__/memusage.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/extensions/__pycache__/postprocessing.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/extensions/__pycache__/spiderstate.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/extensions/__pycache__/statsmailer.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/extensions/__pycache__/telnet.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/extensions/__pycache__/throttle.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/extensions/closespider.py",
+    "lib/python3.10/site-packages/scrapy/extensions/corestats.py",
+    "lib/python3.10/site-packages/scrapy/extensions/debug.py",
+    "lib/python3.10/site-packages/scrapy/extensions/feedexport.py",
+    "lib/python3.10/site-packages/scrapy/extensions/httpcache.py",
+    "lib/python3.10/site-packages/scrapy/extensions/logstats.py",
+    "lib/python3.10/site-packages/scrapy/extensions/memdebug.py",
+    "lib/python3.10/site-packages/scrapy/extensions/memusage.py",
+    "lib/python3.10/site-packages/scrapy/extensions/postprocessing.py",
+    "lib/python3.10/site-packages/scrapy/extensions/spiderstate.py",
+    "lib/python3.10/site-packages/scrapy/extensions/statsmailer.py",
+    "lib/python3.10/site-packages/scrapy/extensions/telnet.py",
+    "lib/python3.10/site-packages/scrapy/extensions/throttle.py",
+    "lib/python3.10/site-packages/scrapy/http/__init__.py",
+    "lib/python3.10/site-packages/scrapy/http/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/http/__pycache__/common.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/http/__pycache__/cookies.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/http/__pycache__/headers.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/http/common.py",
+    "lib/python3.10/site-packages/scrapy/http/cookies.py",
+    "lib/python3.10/site-packages/scrapy/http/headers.py",
+    "lib/python3.10/site-packages/scrapy/http/request/__init__.py",
+    "lib/python3.10/site-packages/scrapy/http/request/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/http/request/__pycache__/form.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/http/request/__pycache__/json_request.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/http/request/__pycache__/rpc.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/http/request/form.py",
+    "lib/python3.10/site-packages/scrapy/http/request/json_request.py",
+    "lib/python3.10/site-packages/scrapy/http/request/rpc.py",
+    "lib/python3.10/site-packages/scrapy/http/response/__init__.py",
+    "lib/python3.10/site-packages/scrapy/http/response/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/http/response/__pycache__/html.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/http/response/__pycache__/text.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/http/response/__pycache__/xml.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/http/response/html.py",
+    "lib/python3.10/site-packages/scrapy/http/response/text.py",
+    "lib/python3.10/site-packages/scrapy/http/response/xml.py",
+    "lib/python3.10/site-packages/scrapy/interfaces.py",
+    "lib/python3.10/site-packages/scrapy/item.py",
+    "lib/python3.10/site-packages/scrapy/link.py",
+    "lib/python3.10/site-packages/scrapy/linkextractors/__init__.py",
+    "lib/python3.10/site-packages/scrapy/linkextractors/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/linkextractors/__pycache__/lxmlhtml.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/linkextractors/lxmlhtml.py",
+    "lib/python3.10/site-packages/scrapy/loader/__init__.py",
+    "lib/python3.10/site-packages/scrapy/loader/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/loader/__pycache__/common.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/loader/__pycache__/processors.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/loader/common.py",
+    "lib/python3.10/site-packages/scrapy/loader/processors.py",
+    "lib/python3.10/site-packages/scrapy/logformatter.py",
+    "lib/python3.10/site-packages/scrapy/mail.py",
+    "lib/python3.10/site-packages/scrapy/middleware.py",
+    "lib/python3.10/site-packages/scrapy/mime.types",
+    "lib/python3.10/site-packages/scrapy/pipelines/__init__.py",
+    "lib/python3.10/site-packages/scrapy/pipelines/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/pipelines/__pycache__/files.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/pipelines/__pycache__/images.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/pipelines/__pycache__/media.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/pipelines/files.py",
+    "lib/python3.10/site-packages/scrapy/pipelines/images.py",
+    "lib/python3.10/site-packages/scrapy/pipelines/media.py",
+    "lib/python3.10/site-packages/scrapy/pqueues.py",
+    "lib/python3.10/site-packages/scrapy/resolver.py",
+    "lib/python3.10/site-packages/scrapy/responsetypes.py",
+    "lib/python3.10/site-packages/scrapy/robotstxt.py",
+    "lib/python3.10/site-packages/scrapy/selector/__init__.py",
+    "lib/python3.10/site-packages/scrapy/selector/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/selector/__pycache__/unified.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/selector/unified.py",
+    "lib/python3.10/site-packages/scrapy/settings/__init__.py",
+    "lib/python3.10/site-packages/scrapy/settings/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/settings/__pycache__/default_settings.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/settings/default_settings.py",
+    "lib/python3.10/site-packages/scrapy/shell.py",
+    "lib/python3.10/site-packages/scrapy/signalmanager.py",
+    "lib/python3.10/site-packages/scrapy/signals.py",
+    "lib/python3.10/site-packages/scrapy/spiderloader.py",
+    "lib/python3.10/site-packages/scrapy/spidermiddlewares/__init__.py",
+    "lib/python3.10/site-packages/scrapy/spidermiddlewares/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/spidermiddlewares/__pycache__/depth.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/spidermiddlewares/__pycache__/httperror.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/spidermiddlewares/__pycache__/offsite.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/spidermiddlewares/__pycache__/referer.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/spidermiddlewares/__pycache__/urllength.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/spidermiddlewares/depth.py",
+    "lib/python3.10/site-packages/scrapy/spidermiddlewares/httperror.py",
+    "lib/python3.10/site-packages/scrapy/spidermiddlewares/offsite.py",
+    "lib/python3.10/site-packages/scrapy/spidermiddlewares/referer.py",
+    "lib/python3.10/site-packages/scrapy/spidermiddlewares/urllength.py",
+    "lib/python3.10/site-packages/scrapy/spiders/__init__.py",
+    "lib/python3.10/site-packages/scrapy/spiders/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/spiders/__pycache__/crawl.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/spiders/__pycache__/feed.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/spiders/__pycache__/init.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/spiders/__pycache__/sitemap.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/spiders/crawl.py",
+    "lib/python3.10/site-packages/scrapy/spiders/feed.py",
+    "lib/python3.10/site-packages/scrapy/spiders/init.py",
+    "lib/python3.10/site-packages/scrapy/spiders/sitemap.py",
+    "lib/python3.10/site-packages/scrapy/squeues.py",
+    "lib/python3.10/site-packages/scrapy/statscollectors.py",
+    "lib/python3.10/site-packages/scrapy/templates/project/module/__init__.py",
+    "lib/python3.10/site-packages/scrapy/templates/project/module/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/templates/project/module/items.py.tmpl",
+    "lib/python3.10/site-packages/scrapy/templates/project/module/middlewares.py.tmpl",
+    "lib/python3.10/site-packages/scrapy/templates/project/module/pipelines.py.tmpl",
+    "lib/python3.10/site-packages/scrapy/templates/project/module/settings.py.tmpl",
+    "lib/python3.10/site-packages/scrapy/templates/project/module/spiders/__init__.py",
+    "lib/python3.10/site-packages/scrapy/templates/project/module/spiders/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/templates/project/scrapy.cfg",
+    "lib/python3.10/site-packages/scrapy/templates/spiders/basic.tmpl",
+    "lib/python3.10/site-packages/scrapy/templates/spiders/crawl.tmpl",
+    "lib/python3.10/site-packages/scrapy/templates/spiders/csvfeed.tmpl",
+    "lib/python3.10/site-packages/scrapy/templates/spiders/xmlfeed.tmpl",
+    "lib/python3.10/site-packages/scrapy/utils/__init__.py",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/asyncgen.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/benchserver.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/boto.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/conf.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/console.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/curl.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/datatypes.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/decorators.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/defer.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/deprecate.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/display.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/engine.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/ftp.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/gz.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/httpobj.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/iterators.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/job.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/log.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/misc.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/ossignal.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/project.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/python.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/reactor.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/reqser.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/request.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/response.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/serialize.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/signal.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/sitemap.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/spider.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/ssl.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/template.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/test.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/testproc.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/testsite.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/trackref.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/url.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/__pycache__/versions.cpython-310.pyc",
+    "lib/python3.10/site-packages/scrapy/utils/asyncgen.py",
+    "lib/python3.10/site-packages/scrapy/utils/benchserver.py",
+    "lib/python3.10/site-packages/scrapy/utils/boto.py",
+    "lib/python3.10/site-packages/scrapy/utils/conf.py",
+    "lib/python3.10/site-packages/scrapy/utils/console.py",
+    "lib/python3.10/site-packages/scrapy/utils/curl.py",
+    "lib/python3.10/site-packages/scrapy/utils/datatypes.py",
+    "lib/python3.10/site-packages/scrapy/utils/decorators.py",
+    "lib/python3.10/site-packages/scrapy/utils/defer.py",
+    "lib/python3.10/site-packages/scrapy/utils/deprecate.py",
+    "lib/python3.10/site-packages/scrapy/utils/display.py",
+    "lib/python3.10/site-packages/scrapy/utils/engine.py",
+    "lib/python3.10/site-packages/scrapy/utils/ftp.py",
+    "lib/python3.10/site-packages/scrapy/utils/gz.py",
+    "lib/python3.10/site-packages/scrapy/utils/httpobj.py",
+    "lib/python3.10/site-packages/scrapy/utils/iterators.py",
+    "lib/python3.10/site-packages/scrapy/utils/job.py",
+    "lib/python3.10/site-packages/scrapy/utils/log.py",
+    "lib/python3.10/site-packages/scrapy/utils/misc.py",
+    "lib/python3.10/site-packages/scrapy/utils/ossignal.py",
+    "lib/python3.10/site-packages/scrapy/utils/project.py",
+    "lib/python3.10/site-packages/scrapy/utils/python.py",
+    "lib/python3.10/site-packages/scrapy/utils/reactor.py",
+    "lib/python3.10/site-packages/scrapy/utils/reqser.py",
+    "lib/python3.10/site-packages/scrapy/utils/request.py",
+    "lib/python3.10/site-packages/scrapy/utils/response.py",
+    "lib/python3.10/site-packages/scrapy/utils/serialize.py",
+    "lib/python3.10/site-packages/scrapy/utils/signal.py",
+    "lib/python3.10/site-packages/scrapy/utils/sitemap.py",
+    "lib/python3.10/site-packages/scrapy/utils/spider.py",
+    "lib/python3.10/site-packages/scrapy/utils/ssl.py",
+    "lib/python3.10/site-packages/scrapy/utils/template.py",
+    "lib/python3.10/site-packages/scrapy/utils/test.py",
+    "lib/python3.10/site-packages/scrapy/utils/testproc.py",
+    "lib/python3.10/site-packages/scrapy/utils/testsite.py",
+    "lib/python3.10/site-packages/scrapy/utils/trackref.py",
+    "lib/python3.10/site-packages/scrapy/utils/url.py",
+    "lib/python3.10/site-packages/scrapy/utils/versions.py"
+  ],
+  "fn": "scrapy-2.8.0-py310h06a4308_0.conda",
+  "legacy_bz2_md5": "d56cf9558b13e37ee3b8864e26f9578f",
+  "legacy_bz2_size": 397892,
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/home/akizenko/anaconda3/pkgs/scrapy-2.8.0-py310h06a4308_0",
+    "type": 1
+  },
+  "md5": "fa8734ba69425c383ac88a1e28d9aa39",
+  "name": "scrapy",
+  "package_tarball_full_path": "/home/akizenko/anaconda3/pkgs/scrapy-2.8.0-py310h06a4308_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/scrapy",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/croot/scrapy_1677738182270/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_",
+        "sha256": "33d596c3daf89ebfdd95ef74757e4958f0eb6cb1a775900096c5570cfc73d70e",
+        "sha256_in_prefix": "fac437436e1d4658b47bcd1a374f463bba9a814f8dfef808f4ba3f76bd136a60",
+        "size_in_bytes": 473
+      },
+      {
+        "_path": "lib/python3.10/site-packages/Scrapy-2.8.0.dist-info/AUTHORS",
+        "path_type": "hardlink",
+        "sha256": "9d048436b1f4c9d256ead05d9f3805557ad19a48352ce2682998ef21b878cd8b",
+        "sha256_in_prefix": "9d048436b1f4c9d256ead05d9f3805557ad19a48352ce2682998ef21b878cd8b",
+        "size_in_bytes": 1284
+      },
+      {
+        "_path": "lib/python3.10/site-packages/Scrapy-2.8.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.10/site-packages/Scrapy-2.8.0.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "fd331af3ccb8776bbe7f317821e5e0b91c2ab7c73464e77425d52204f7b5d980",
+        "sha256_in_prefix": "fd331af3ccb8776bbe7f317821e5e0b91c2ab7c73464e77425d52204f7b5d980",
+        "size_in_bytes": 1517
+      },
+      {
+        "_path": "lib/python3.10/site-packages/Scrapy-2.8.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "3cdb79b3f671e8fbda7ed12cbaaff00c1629469c6c11cf78b5de05272a8690c8",
+        "sha256_in_prefix": "3cdb79b3f671e8fbda7ed12cbaaff00c1629469c6c11cf78b5de05272a8690c8",
+        "size_in_bytes": 5268
+      },
+      {
+        "_path": "lib/python3.10/site-packages/Scrapy-2.8.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "0a54184f2b9a2d6dcf9fcc0ef75fbfa23e1af4753cb644e6e032c9c0bb8a6c55",
+        "sha256_in_prefix": "0a54184f2b9a2d6dcf9fcc0ef75fbfa23e1af4753cb644e6e032c9c0bb8a6c55",
+        "size_in_bytes": 26032
+      },
+      {
+        "_path": "lib/python3.10/site-packages/Scrapy-2.8.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/Scrapy-2.8.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "6dbd8eb7db1c7251ca30e2c310763a076b227163a0ba08c529a26c4fbbf0310a",
+        "sha256_in_prefix": "6dbd8eb7db1c7251ca30e2c310763a076b227163a0ba08c529a26c4fbbf0310a",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "lib/python3.10/site-packages/Scrapy-2.8.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "20384df29db3e7e6e249606657acbec613ba12b13902537dcf3ec72f4e4712c6",
+        "sha256_in_prefix": "20384df29db3e7e6e249606657acbec613ba12b13902537dcf3ec72f4e4712c6",
+        "size_in_bytes": 66
+      },
+      {
+        "_path": "lib/python3.10/site-packages/Scrapy-2.8.0.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "9d64d60bd737af5e5ca7ce2e034869a6223299b6085fb1772f868a401cb8757b",
+        "sha256_in_prefix": "9d64d60bd737af5e5ca7ce2e034869a6223299b6085fb1772f868a401cb8757b",
+        "size_in_bytes": 50
+      },
+      {
+        "_path": "lib/python3.10/site-packages/Scrapy-2.8.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "75a409d88f09ea8f8037fb30d375cd75b0286a2155576bfdc6407b17107a75aa",
+        "sha256_in_prefix": "75a409d88f09ea8f8037fb30d375cd75b0286a2155576bfdc6407b17107a75aa",
+        "size_in_bytes": 7
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/VERSION",
+        "path_type": "hardlink",
+        "sha256": "dceb827995520dae388b7283c5bc7847ef58a16e8013318c3bb436feeb5dc51e",
+        "sha256_in_prefix": "dceb827995520dae388b7283c5bc7847ef58a16e8013318c3bb436feeb5dc51e",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "ccb7d8e2581d4310fff61bb574b46e4a8d30fbd96397bf175354a8240b4c58da",
+        "sha256_in_prefix": "ccb7d8e2581d4310fff61bb574b46e4a8d30fbd96397bf175354a8240b4c58da",
+        "size_in_bytes": 1071
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/__main__.py",
+        "path_type": "hardlink",
+        "sha256": "b52d8c1abc1aca06ced5473547e7930b9ca9c9cd81a5a41b41df86cbfa9b2064",
+        "sha256_in_prefix": "b52d8c1abc1aca06ced5473547e7930b9ca9c9cd81a5a41b41df86cbfa9b2064",
+        "size_in_bytes": 77
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "936a7b4868c378b073f35d987b1fb450e8cad07a2579919e53e9743fcd4bcb57",
+        "sha256_in_prefix": "936a7b4868c378b073f35d987b1fb450e8cad07a2579919e53e9743fcd4bcb57",
+        "size_in_bytes": 1161
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/__pycache__/__main__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7fa19558d67f7b36a6736e542163d19ab15b1c71134fd62ab022d05ffcd5f7af",
+        "sha256_in_prefix": "7fa19558d67f7b36a6736e542163d19ab15b1c71134fd62ab022d05ffcd5f7af",
+        "size_in_bytes": 230
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/__pycache__/cmdline.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "9681e407a267bf7fcdabfd0b59d3920c38eb5b3d3e92e721e31439629929f6a1",
+        "sha256_in_prefix": "9681e407a267bf7fcdabfd0b59d3920c38eb5b3d3e92e721e31439629929f6a1",
+        "size_in_bytes": 5292
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/__pycache__/crawler.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "148d255eb484e1e62547822e8786d770069eb35f40c1b620eae1b75d1a7c1925",
+        "sha256_in_prefix": "148d255eb484e1e62547822e8786d770069eb35f40c1b620eae1b75d1a7c1925",
+        "size_in_bytes": 13929
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/__pycache__/dupefilters.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "f7e014df5ef5f02a3c4d6c3c821bb49141c716e7627e0beb61d710127af28c13",
+        "sha256_in_prefix": "f7e014df5ef5f02a3c4d6c3c821bb49141c716e7627e0beb61d710127af28c13",
+        "size_in_bytes": 4942
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/__pycache__/exceptions.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "dcfd3b4a9ad7623e723b2473147fb6a3c9ddb5ec4866ab8e030346accef01b95",
+        "sha256_in_prefix": "dcfd3b4a9ad7623e723b2473147fb6a3c9ddb5ec4866ab8e030346accef01b95",
+        "size_in_bytes": 3228
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/__pycache__/exporters.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7374c0ce90a3a09b9e8dbaf6fc8ffc7b189e77fee6845896d0b9b13f0b6be977",
+        "sha256_in_prefix": "7374c0ce90a3a09b9e8dbaf6fc8ffc7b189e77fee6845896d0b9b13f0b6be977",
+        "size_in_bytes": 13603
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/__pycache__/extension.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "0e3ba569aef09c209901f4c104778a4b741ac464fdc501295ccba75c99b48f9c",
+        "sha256_in_prefix": "0e3ba569aef09c209901f4c104778a4b741ac464fdc501295ccba75c99b48f9c",
+        "size_in_bytes": 776
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/__pycache__/interfaces.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "9e915d77643b712eb71227d11989e81f94a3514c73697a725bf65e9d821128a4",
+        "sha256_in_prefix": "9e915d77643b712eb71227d11989e81f94a3514c73697a725bf65e9d821128a4",
+        "size_in_bytes": 1174
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/__pycache__/item.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "af91ff6554b2fbfda0206083e223d2aa5253fc89ce44c1428d3c37465b508603",
+        "sha256_in_prefix": "af91ff6554b2fbfda0206083e223d2aa5253fc89ce44c1428d3c37465b508603",
+        "size_in_bytes": 4909
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/__pycache__/link.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "847d1f3fd5d887cd86a3a0c1e456bfb01a0067e55a8c002096dcecce06a2a3a8",
+        "sha256_in_prefix": "847d1f3fd5d887cd86a3a0c1e456bfb01a0067e55a8c002096dcecce06a2a3a8",
+        "size_in_bytes": 2171
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/__pycache__/logformatter.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "83a8ebe8f869eea2fd1008c4fa58f67e056729d7d2e98b7f40e113798002c6b2",
+        "sha256_in_prefix": "83a8ebe8f869eea2fd1008c4fa58f67e056729d7d2e98b7f40e113798002c6b2",
+        "size_in_bytes": 4984
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/__pycache__/mail.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "a683608c28ec74a89a2f2f833c9954678c5dc8a737730bbf1a48d825a59b6a6f",
+        "sha256_in_prefix": "a683608c28ec74a89a2f2f833c9954678c5dc8a737730bbf1a48d825a59b6a6f",
+        "size_in_bytes": 5055
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/__pycache__/middleware.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "f96a5fb7cf2123e4641e0e9a9a019447aff5675ee372a083033e1fac20ccfe98",
+        "sha256_in_prefix": "f96a5fb7cf2123e4641e0e9a9a019447aff5675ee372a083033e1fac20ccfe98",
+        "size_in_bytes": 3419
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/__pycache__/pqueues.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "8df19ff3ee04bdaef06c74a6375ed2cb2b325244aa9d8445ba1ab74c88594983",
+        "sha256_in_prefix": "8df19ff3ee04bdaef06c74a6375ed2cb2b325244aa9d8445ba1ab74c88594983",
+        "size_in_bytes": 8848
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/__pycache__/resolver.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7849e2c0bce7da8590135eaba9e4460fb88df8106ba26b7d0f64b0900df1cc13",
+        "sha256_in_prefix": "7849e2c0bce7da8590135eaba9e4460fb88df8106ba26b7d0f64b0900df1cc13",
+        "size_in_bytes": 4816
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/__pycache__/responsetypes.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "8d3d53f461b88eb3f84f06e2f0cf3da18b270f0dc76de91d90aa5baf48dd45db",
+        "sha256_in_prefix": "8d3d53f461b88eb3f84f06e2f0cf3da18b270f0dc76de91d90aa5baf48dd45db",
+        "size_in_bytes": 4297
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/__pycache__/robotstxt.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "03b34443c0a952e5cb1aba1eeb56f57e4212fa0d64e3c3ae57d9877956e74c7a",
+        "sha256_in_prefix": "03b34443c0a952e5cb1aba1eeb56f57e4212fa0d64e3c3ae57d9877956e74c7a",
+        "size_in_bytes": 4460
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/__pycache__/shell.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "2ffd4d942cfacbdd4ace731bee8e1a7fd01fae66d6119f180963c60f743c665c",
+        "sha256_in_prefix": "2ffd4d942cfacbdd4ace731bee8e1a7fd01fae66d6119f180963c60f743c665c",
+        "size_in_bytes": 6659
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/__pycache__/signalmanager.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "442b8071081957ec1a58790901a6cd69bc090e028d790ec9d017cd8f0b1ede7e",
+        "sha256_in_prefix": "442b8071081957ec1a58790901a6cd69bc090e028d790ec9d017cd8f0b1ede7e",
+        "size_in_bytes": 2769
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/__pycache__/signals.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d0c840dc8744eb171bfefbb9555280c5464f207d38e5f7ba1e2607ae98097740",
+        "sha256_in_prefix": "d0c840dc8744eb171bfefbb9555280c5464f207d38e5f7ba1e2607ae98097740",
+        "size_in_bytes": 852
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/__pycache__/spiderloader.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "21fd66de34229a2645d674aa522c195a251455ac219df42243399017ccde1e3e",
+        "sha256_in_prefix": "21fd66de34229a2645d674aa522c195a251455ac219df42243399017ccde1e3e",
+        "size_in_bytes": 3598
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/__pycache__/squeues.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "2927cf08e0a7f3746a18b1fa136e956d6a2957a45069777478fc30e7db0bc9b1",
+        "sha256_in_prefix": "2927cf08e0a7f3746a18b1fa136e956d6a2957a45069777478fc30e7db0bc9b1",
+        "size_in_bytes": 5864
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/__pycache__/statscollectors.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "dcbbdc51b7189510f140a9c8d90691a8662f7299226fc54ab718fc14e58d293d",
+        "sha256_in_prefix": "dcbbdc51b7189510f140a9c8d90691a8662f7299226fc54ab718fc14e58d293d",
+        "size_in_bytes": 3915
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/cmdline.py",
+        "path_type": "hardlink",
+        "sha256": "1cd69534b625058071f92c335bd72fe61236a6bd5b20e5fe6e29c09ff3dd3042",
+        "sha256_in_prefix": "1cd69534b625058071f92c335bd72fe61236a6bd5b20e5fe6e29c09ff3dd3042",
+        "size_in_bytes": 5640
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e1da6c12f338b6d096feefdee411c19ba442f53bcd737671c81d5c9a3db82e75",
+        "sha256_in_prefix": "e1da6c12f338b6d096feefdee411c19ba442f53bcd737671c81d5c9a3db82e75",
+        "size_in_bytes": 7019
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d848b6166d86c07873f575560acaf26a5cb0a1e0c5c722ee9ced285e32465dfc",
+        "sha256_in_prefix": "d848b6166d86c07873f575560acaf26a5cb0a1e0c5c722ee9ced285e32465dfc",
+        "size_in_bytes": 7083
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/__pycache__/bench.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7adfd5b2c4d830ac0ac485f3c8185e415fd476ba3d2a489947662de5c82338f5",
+        "sha256_in_prefix": "7adfd5b2c4d830ac0ac485f3c8185e415fd476ba3d2a489947662de5c82338f5",
+        "size_in_bytes": 2560
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/__pycache__/check.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "a543f4c089277559904e06b3c7684d3ec5ac785bacc06e783f8492a436704b25",
+        "sha256_in_prefix": "a543f4c089277559904e06b3c7684d3ec5ac785bacc06e783f8492a436704b25",
+        "size_in_bytes": 3548
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/__pycache__/crawl.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "809ed95b982f290d594426e7bd097d60915b64e5a1c3613c862694a2cdda3a15",
+        "sha256_in_prefix": "809ed95b982f290d594426e7bd097d60915b64e5a1c3613c862694a2cdda3a15",
+        "size_in_bytes": 1274
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/__pycache__/edit.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "42581a4fb618e65a702122cc1a18c05a96bb9662713fe7fc4d034842fc68ec81",
+        "sha256_in_prefix": "42581a4fb618e65a702122cc1a18c05a96bb9662713fe7fc4d034842fc68ec81",
+        "size_in_bytes": 1653
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/__pycache__/fetch.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "1a05d62f55c91d438609b915d305531c634cb1b4bf5d83fd15122b837144e66a",
+        "sha256_in_prefix": "1a05d62f55c91d438609b915d305531c634cb1b4bf5d83fd15122b837144e66a",
+        "size_in_bytes": 3114
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/__pycache__/genspider.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "41b63b369d667e12df4e3c83b940c65ebb3eb16e3a68f6ab70f1970c2bce4310",
+        "sha256_in_prefix": "41b63b369d667e12df4e3c83b940c65ebb3eb16e3a68f6ab70f1970c2bce4310",
+        "size_in_bytes": 5685
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/__pycache__/list.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "59c7b632efbb780cbc2d5e6ff67b05905768ecd5f29b094792239ae18076d849",
+        "sha256_in_prefix": "59c7b632efbb780cbc2d5e6ff67b05905768ecd5f29b094792239ae18076d849",
+        "size_in_bytes": 775
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/__pycache__/parse.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "16eced9f5990963ebe537d99fb708746436d17adb67459ff57c699d1f3d67469",
+        "sha256_in_prefix": "16eced9f5990963ebe537d99fb708746436d17adb67459ff57c699d1f3d67469",
+        "size_in_bytes": 9273
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/__pycache__/runspider.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3004ac8cb80bb8abd6187e21254e8452f6607c91b15b50c7786f17fa006b80cb",
+        "sha256_in_prefix": "3004ac8cb80bb8abd6187e21254e8452f6607c91b15b50c7786f17fa006b80cb",
+        "size_in_bytes": 2266
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/__pycache__/settings.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "f25046039f0fae98dba798c1175158261e5f21d50da18897d294781a60e10850",
+        "sha256_in_prefix": "f25046039f0fae98dba798c1175158261e5f21d50da18897d294781a60e10850",
+        "size_in_bytes": 1854
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/__pycache__/shell.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "ba20d97d4462a498af887793059939ffe51493c1165e09028263bb4c03babeaa",
+        "sha256_in_prefix": "ba20d97d4462a498af887793059939ffe51493c1165e09028263bb4c03babeaa",
+        "size_in_bytes": 2893
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/__pycache__/startproject.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3d10e293c3b6c4813217aeb23a6c9246a09bb8b25a29608b3ce1237696f0a1f7",
+        "sha256_in_prefix": "3d10e293c3b6c4813217aeb23a6c9246a09bb8b25a29608b3ce1237696f0a1f7",
+        "size_in_bytes": 4357
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/__pycache__/version.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c56d9f79f94ed85e3244bc0d218d53123d73fe7121130ef2938905b64019ab83",
+        "sha256_in_prefix": "c56d9f79f94ed85e3244bc0d218d53123d73fe7121130ef2938905b64019ab83",
+        "size_in_bytes": 1560
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/__pycache__/view.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "0923bda83b88680e1fe0ae2cdd6dc55599831faa3d5545e45d302eb8a229b565",
+        "sha256_in_prefix": "0923bda83b88680e1fe0ae2cdd6dc55599831faa3d5545e45d302eb8a229b565",
+        "size_in_bytes": 1195
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/bench.py",
+        "path_type": "hardlink",
+        "sha256": "fccd69e6092627e3d209761dd79d232bcb29f001c551b670cda28ed07ea22a1e",
+        "sha256_in_prefix": "fccd69e6092627e3d209761dd79d232bcb29f001c551b670cda28ed07ea22a1e",
+        "size_in_bytes": 1578
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/check.py",
+        "path_type": "hardlink",
+        "sha256": "926381c1072ffe6b3d0755e38fa115144a00957e42363b97cef675cfaec3be9f",
+        "sha256_in_prefix": "926381c1072ffe6b3d0755e38fa115144a00957e42363b97cef675cfaec3be9f",
+        "size_in_bytes": 3572
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/crawl.py",
+        "path_type": "hardlink",
+        "sha256": "b5c7585e91c2066b7beb1cb7a86e92fe1bff51e54244932c644f80a25cee5b90",
+        "sha256_in_prefix": "b5c7585e91c2066b7beb1cb7a86e92fe1bff51e54244932c644f80a25cee5b90",
+        "size_in_bytes": 1079
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/edit.py",
+        "path_type": "hardlink",
+        "sha256": "d80772502b674088db158046aedb298a403c14f5110891fe892a9c00a3e96fe9",
+        "sha256_in_prefix": "d80772502b674088db158046aedb298a403c14f5110891fe892a9c00a3e96fe9",
+        "size_in_bytes": 1061
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/fetch.py",
+        "path_type": "hardlink",
+        "sha256": "72045c268eff7ac49cb57bdd93ee0d9342dbc78757fe98a92db994cfcbe1ec17",
+        "sha256_in_prefix": "72045c268eff7ac49cb57bdd93ee0d9342dbc78757fe98a92db994cfcbe1ec17",
+        "size_in_bytes": 2798
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/genspider.py",
+        "path_type": "hardlink",
+        "sha256": "76e00b790d8a6f677958a3b22418bc7729c59d774ad5cf8604051964e1bee161",
+        "sha256_in_prefix": "76e00b790d8a6f677958a3b22418bc7729c59d774ad5cf8604051964e1bee161",
+        "size_in_bytes": 6434
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/list.py",
+        "path_type": "hardlink",
+        "sha256": "e545791b67f4da620d0a89cb4a6bd670f45781785f6d889afb1a241dd7673a1e",
+        "sha256_in_prefix": "e545791b67f4da620d0a89cb4a6bd670f45781785f6d889afb1a241dd7673a1e",
+        "size_in_bytes": 337
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/parse.py",
+        "path_type": "hardlink",
+        "sha256": "dfc40d9b3678fcb33fb419665712a17f5afe3cf8ee7d5cc14af2736c29199e03",
+        "sha256_in_prefix": "dfc40d9b3678fcb33fb419665712a17f5afe3cf8ee7d5cc14af2736c29199e03",
+        "size_in_bytes": 11075
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/runspider.py",
+        "path_type": "hardlink",
+        "sha256": "53e3272cad800120e499da825fb738da95c8b48baa2edda913fa85f28401e1d7",
+        "sha256_in_prefix": "53e3272cad800120e499da825fb738da95c8b48baa2edda913fa85f28401e1d7",
+        "size_in_bytes": 1826
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/settings.py",
+        "path_type": "hardlink",
+        "sha256": "1ac7c133c9caca56134a53da7d930fbd2e8266b72df53b061ede15e96fdcc861",
+        "sha256_in_prefix": "1ac7c133c9caca56134a53da7d930fbd2e8266b72df53b061ede15e96fdcc861",
+        "size_in_bytes": 1897
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/shell.py",
+        "path_type": "hardlink",
+        "sha256": "7616cbc371149d54d3cd69f272fffec0a9aa255a55c6ef37b2abc301c07b661d",
+        "sha256_in_prefix": "7616cbc371149d54d3cd69f272fffec0a9aa255a55c6ef37b2abc301c07b661d",
+        "size_in_bytes": 2858
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/startproject.py",
+        "path_type": "hardlink",
+        "sha256": "328a974dc8d69f03393e09ffba739c70b86039c7ddf2034010c0407a0c4d206b",
+        "sha256_in_prefix": "328a974dc8d69f03393e09ffba739c70b86039c7ddf2034010c0407a0c4d206b",
+        "size_in_bytes": 4267
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/version.py",
+        "path_type": "hardlink",
+        "sha256": "50187fab6c65315946c5e9efda2dd400fbb06ff4ce8bce2182f03ea64898ae36",
+        "sha256_in_prefix": "50187fab6c65315946c5e9efda2dd400fbb06ff4ce8bce2182f03ea64898ae36",
+        "size_in_bytes": 978
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/commands/view.py",
+        "path_type": "hardlink",
+        "sha256": "a618c57279b26c572c653e73b9c84334721716dedda537db2c8c6d21235cd5e9",
+        "sha256_in_prefix": "a618c57279b26c572c653e73b9c84334721716dedda537db2c8c6d21235cd5e9",
+        "size_in_bytes": 576
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/contracts/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e46122e419c41e44840fb8a7bc3c91f981b508ebce8a1fe11310af3eb04386eb",
+        "sha256_in_prefix": "e46122e419c41e44840fb8a7bc3c91f981b508ebce8a1fe11310af3eb04386eb",
+        "size_in_bytes": 6119
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/contracts/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "53144b16f0132fa6975609fd7078a4fc6a26c5fd49b444a4d26b24e9f2b89948",
+        "sha256_in_prefix": "53144b16f0132fa6975609fd7078a4fc6a26c5fd49b444a4d26b24e9f2b89948",
+        "size_in_bytes": 6013
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/contracts/__pycache__/default.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "b251c8ed16ecd68c940a8861c98fbc7f6fe9369fd67c46fa7efa58f483ab4043",
+        "sha256_in_prefix": "b251c8ed16ecd68c940a8861c98fbc7f6fe9369fd67c46fa7efa58f483ab4043",
+        "size_in_bytes": 3675
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/contracts/default.py",
+        "path_type": "hardlink",
+        "sha256": "5637ccf7b26e496aa694d335018c07af649cdd432fe41d5bb617a1b259a3361b",
+        "sha256_in_prefix": "5637ccf7b26e496aa694d335018c07af649cdd432fe41d5bb617a1b259a3361b",
+        "size_in_bytes": 2946
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "a96ad97827da3b4adcd2183e316d856a6935dd2f94e55701aa627347110bf267",
+        "sha256_in_prefix": "a96ad97827da3b4adcd2183e316d856a6935dd2f94e55701aa627347110bf267",
+        "size_in_bytes": 51
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "09ca9e5078823466d06bbd722ffac204b912f2a55c7d98832c8a0eb31a356ce0",
+        "sha256_in_prefix": "09ca9e5078823466d06bbd722ffac204b912f2a55c7d98832c8a0eb31a356ce0",
+        "size_in_bytes": 201
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/__pycache__/engine.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "fd053aef61bab3d90bfef0451f69870db8485d05e8f2adb18dad6c0f071b4f4a",
+        "sha256_in_prefix": "fd053aef61bab3d90bfef0451f69870db8485d05e8f2adb18dad6c0f071b4f4a",
+        "size_in_bytes": 16363
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/__pycache__/scheduler.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "089df38c727ec0461a60385c0e520e93dd36a3ae738fcb91ceec12a80711f82e",
+        "sha256_in_prefix": "089df38c727ec0461a60385c0e520e93dd36a3ae738fcb91ceec12a80711f82e",
+        "size_in_bytes": 14192
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/__pycache__/scraper.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c5dfdc66701fe6f27eeccc726943a023fa602e1ddc19095d467e93f4562d4807",
+        "sha256_in_prefix": "c5dfdc66701fe6f27eeccc726943a023fa602e1ddc19095d467e93f4562d4807",
+        "size_in_bytes": 11031
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/__pycache__/spidermw.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "01143b7fa9bb54059de76952c40c4e62b126a3b1c93d9807b44b10e83c1a179d",
+        "sha256_in_prefix": "01143b7fa9bb54059de76952c40c4e62b126a3b1c93d9807b44b10e83c1a179d",
+        "size_in_bytes": 8721
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "291a73087f1b2a5a577afcb51055175ee8d18ae27768982164b0736f135e35e3",
+        "sha256_in_prefix": "291a73087f1b2a5a577afcb51055175ee8d18ae27768982164b0736f135e35e3",
+        "size_in_bytes": 7335
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c5e2deddcdf8a1648bf343be5c4673331fd8689b1ac9a6aa83a9df7e06c207b3",
+        "sha256_in_prefix": "c5e2deddcdf8a1648bf343be5c4673331fd8689b1ac9a6aa83a9df7e06c207b3",
+        "size_in_bytes": 6847
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/__pycache__/contextfactory.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "ae46b5c8e5ea311ecb7a2b138a03c0f5e5a1a6fccc004a83fbe277f7b5fffe65",
+        "sha256_in_prefix": "ae46b5c8e5ea311ecb7a2b138a03c0f5e5a1a6fccc004a83fbe277f7b5fffe65",
+        "size_in_bytes": 5437
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/__pycache__/middleware.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "dc941a3fae323adcda908b10f38e44fb165397b6d49a861c53c63da4d4cff655",
+        "sha256_in_prefix": "dc941a3fae323adcda908b10f38e44fb165397b6d49a861c53c63da4d4cff655",
+        "size_in_bytes": 3477
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/__pycache__/tls.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3f96ccdf17327a76f847f6f13b0aecd6036f396a9488b50d08ebffb592a9651d",
+        "sha256_in_prefix": "3f96ccdf17327a76f847f6f13b0aecd6036f396a9488b50d08ebffb592a9651d",
+        "size_in_bytes": 2800
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/__pycache__/webclient.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "5e0e2426d552b236cb62a73455b8780a07bcae1cff46ec916d45e259bc2a47e9",
+        "sha256_in_prefix": "5e0e2426d552b236cb62a73455b8780a07bcae1cff46ec916d45e259bc2a47e9",
+        "size_in_bytes": 7539
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/contextfactory.py",
+        "path_type": "hardlink",
+        "sha256": "504588ace68cab340a508b1e1596b9c6d46b4668bffa3cf61d5831d5cd2f9a7e",
+        "sha256_in_prefix": "504588ace68cab340a508b1e1596b9c6d46b4668bffa3cf61d5831d5cd2f9a7e",
+        "size_in_bytes": 6205
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/handlers/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "4eb2dc8d18992d4de2750fe5560c53dd96c20790153afe37c4d43fc0a33f1ec2",
+        "sha256_in_prefix": "4eb2dc8d18992d4de2750fe5560c53dd96c20790153afe37c4d43fc0a33f1ec2",
+        "size_in_bytes": 2947
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/handlers/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7c174b22daf4058dd2f608dc708d4f663b96d39ec51da156c3d08b2bb4fc92f5",
+        "sha256_in_prefix": "7c174b22daf4058dd2f608dc708d4f663b96d39ec51da156c3d08b2bb4fc92f5",
+        "size_in_bytes": 2782
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/handlers/__pycache__/datauri.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "032353caa3a982732361491042656478f377e18bbed0f2ccba0f8a0c66a8d41e",
+        "sha256_in_prefix": "032353caa3a982732361491042656478f377e18bbed0f2ccba0f8a0c66a8d41e",
+        "size_in_bytes": 1020
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/handlers/__pycache__/file.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "63d91d3cdae1253f4f7073acc3ba3574f30176da4fc8a400c92539a419c8af6a",
+        "sha256_in_prefix": "63d91d3cdae1253f4f7073acc3ba3574f30176da4fc8a400c92539a419c8af6a",
+        "size_in_bytes": 859
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/handlers/__pycache__/ftp.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "de41efbcf23dff3e01973dd767e882b9a952800ba53b5eb997c6cddf17f7d4ee",
+        "sha256_in_prefix": "de41efbcf23dff3e01973dd767e882b9a952800ba53b5eb997c6cddf17f7d4ee",
+        "size_in_bytes": 5374
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/handlers/__pycache__/http.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "ec4ab2bb97795f7a5e62bee6f4b29fe9a0b5e24abcc0088c00f442433390180e",
+        "sha256_in_prefix": "ec4ab2bb97795f7a5e62bee6f4b29fe9a0b5e24abcc0088c00f442433390180e",
+        "size_in_bytes": 350
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/handlers/__pycache__/http10.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "2c6d8e6f9ab8e1d3788fa7a77c24c582f4c99182806b0e6d810c53cf7d10a523",
+        "sha256_in_prefix": "2c6d8e6f9ab8e1d3788fa7a77c24c582f4c99182806b0e6d810c53cf7d10a523",
+        "size_in_bytes": 1721
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/handlers/__pycache__/http11.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "daa3df4526ab4180bd40a6f30e62b278d882fcfe707c98cc7b1f30764df239f0",
+        "sha256_in_prefix": "daa3df4526ab4180bd40a6f30e62b278d882fcfe707c98cc7b1f30764df239f0",
+        "size_in_bytes": 18641
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/handlers/__pycache__/http2.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "562cf1015e62ead55d1f52d6a7b3666d132554869138283fae39461bdf6539a0",
+        "sha256_in_prefix": "562cf1015e62ead55d1f52d6a7b3666d132554869138283fae39461bdf6539a0",
+        "size_in_bytes": 4624
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/handlers/__pycache__/s3.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "55080796f0248cc4a02ebea7ec513a5e66f917733a1eb2d5b4dc037a2ba55d4e",
+        "sha256_in_prefix": "55080796f0248cc4a02ebea7ec513a5e66f917733a1eb2d5b4dc037a2ba55d4e",
+        "size_in_bytes": 2448
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/handlers/datauri.py",
+        "path_type": "hardlink",
+        "sha256": "ecf3d56728b0ca0addeca491385fe6282c2f85b59b788525782a274f4a7ee04a",
+        "sha256_in_prefix": "ecf3d56728b0ca0addeca491385fe6282c2f85b59b788525782a274f4a7ee04a",
+        "size_in_bytes": 675
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/handlers/file.py",
+        "path_type": "hardlink",
+        "sha256": "2aee07d628453250f789f9a159dcd790d6350adca420f3f65db94d6ce760d225",
+        "sha256_in_prefix": "2aee07d628453250f789f9a159dcd790d6350adca420f3f65db94d6ce760d225",
+        "size_in_bytes": 479
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/handlers/ftp.py",
+        "path_type": "hardlink",
+        "sha256": "54d3d68727b1d218d4da2d475558d518b7095deadf7fae14c2a2c94fd46cc9c2",
+        "sha256_in_prefix": "54d3d68727b1d218d4da2d475558d518b7095deadf7fae14c2a2c94fd46cc9c2",
+        "size_in_bytes": 4638
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/handlers/http.py",
+        "path_type": "hardlink",
+        "sha256": "9b4260c2ad29e6c707c5b551a0ab9e158170ad826180a7beb0d56cd5e67ecd78",
+        "sha256_in_prefix": "9b4260c2ad29e6c707c5b551a0ab9e158170ad826180a7beb0d56cd5e67ecd78",
+        "size_in_bytes": 178
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/handlers/http10.py",
+        "path_type": "hardlink",
+        "sha256": "c9bdc0ca71bd207dcb3543df3ef70725aae142c0c56334488163225017829a82",
+        "sha256_in_prefix": "c9bdc0ca71bd207dcb3543df3ef70725aae142c0c56334488163225017829a82",
+        "size_in_bytes": 1351
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/handlers/http11.py",
+        "path_type": "hardlink",
+        "sha256": "356b07d98cde14b4e9194e38f63613a24232fb1c2a6001699f0a01abd1e2ba02",
+        "sha256_in_prefix": "356b07d98cde14b4e9194e38f63613a24232fb1c2a6001699f0a01abd1e2ba02",
+        "size_in_bytes": 24231
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/handlers/http2.py",
+        "path_type": "hardlink",
+        "sha256": "485be6177f3d845a0a088f4e71b10c2ca846ef17c680177e7224d4d83894ec13",
+        "sha256_in_prefix": "485be6177f3d845a0a088f4e71b10c2ca846ef17c680177e7224d4d83894ec13",
+        "size_in_bytes": 4410
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/handlers/s3.py",
+        "path_type": "hardlink",
+        "sha256": "f1657e3ba8d43e342292ed279cfb0ea4ee1fef82a933e661b0254a98a0d2ded9",
+        "sha256_in_prefix": "f1657e3ba8d43e342292ed279cfb0ea4ee1fef82a933e661b0254a98a0d2ded9",
+        "size_in_bytes": 3009
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/middleware.py",
+        "path_type": "hardlink",
+        "sha256": "42519554a7fdc10e4af31869575a72ae9205d1dcb482c4d43e4073f724b8d612",
+        "sha256_in_prefix": "42519554a7fdc10e4af31869575a72ae9205d1dcb482c4d43e4073f724b8d612",
+        "size_in_bytes": 3954
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/tls.py",
+        "path_type": "hardlink",
+        "sha256": "e0912852edb511b18dbb3b4005f3ea7f540150cff5893112c4431882d2469f1a",
+        "sha256_in_prefix": "e0912852edb511b18dbb3b4005f3ea7f540150cff5893112c4431882d2469f1a",
+        "size_in_bytes": 3051
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/downloader/webclient.py",
+        "path_type": "hardlink",
+        "sha256": "d5930227dc49a58427c8ee9e88920ea6a10f1b528f43f77d63832ef4b5b4e2d5",
+        "sha256_in_prefix": "d5930227dc49a58427c8ee9e88920ea6a10f1b528f43f77d63832ef4b5b4e2d5",
+        "size_in_bytes": 8080
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/engine.py",
+        "path_type": "hardlink",
+        "sha256": "b56fc56ca651799efba0b7bfd867e4cdf0b2c668c15b6e48fe0edb59b52d2032",
+        "sha256_in_prefix": "b56fc56ca651799efba0b7bfd867e4cdf0b2c668c15b6e48fe0edb59b52d2032",
+        "size_in_bytes": 18171
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/http2/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/http2/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "e937df1576941ed831ee80bae77898142f8cfcfd3aa43301f91eb65558f45332",
+        "sha256_in_prefix": "e937df1576941ed831ee80bae77898142f8cfcfd3aa43301f91eb65558f45332",
+        "size_in_bytes": 151
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/http2/__pycache__/agent.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "8e8d592c1faea1c4301bd01d8fc47ae99a0c626383047d9fc106e2b2be0d20cd",
+        "sha256_in_prefix": "8e8d592c1faea1c4301bd01d8fc47ae99a0c626383047d9fc106e2b2be0d20cd",
+        "size_in_bytes": 5791
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/http2/__pycache__/protocol.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c7744482bb7fc2964b930b37ebea56807c1fac7822167aa8950025647e9bb060",
+        "sha256_in_prefix": "c7744482bb7fc2964b930b37ebea56807c1fac7822167aa8950025647e9bb060",
+        "size_in_bytes": 14046
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/http2/__pycache__/stream.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "658de3e24475fe8f8e614ccd3066fa1accc376073ccd87a34556654789175697",
+        "sha256_in_prefix": "658de3e24475fe8f8e614ccd3066fa1accc376073ccd87a34556654789175697",
+        "size_in_bytes": 11843
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/http2/agent.py",
+        "path_type": "hardlink",
+        "sha256": "bdefe8c39d073c5df6fbd40d411d9afeea45a8afde4d261e2bda9e0f112a493f",
+        "sha256_in_prefix": "bdefe8c39d073c5df6fbd40d411d9afeea45a8afde4d261e2bda9e0f112a493f",
+        "size_in_bytes": 5903
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/http2/protocol.py",
+        "path_type": "hardlink",
+        "sha256": "2b336e578eb2721f0b329e8af25d1c4166207fd5e215b1e8f91ef1016c4878aa",
+        "sha256_in_prefix": "2b336e578eb2721f0b329e8af25d1c4166207fd5e215b1e8f91ef1016c4878aa",
+        "size_in_bytes": 16717
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/http2/stream.py",
+        "path_type": "hardlink",
+        "sha256": "bb03c69f6b8d718af652cea636f1efd3e05773d4a9e6f8d5990cd449b4550b7a",
+        "sha256_in_prefix": "bb03c69f6b8d718af652cea636f1efd3e05773d4a9e6f8d5990cd449b4550b7a",
+        "size_in_bytes": 19140
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/scheduler.py",
+        "path_type": "hardlink",
+        "sha256": "8e45e9e49f754422c745c5a243b1d34d863516314c90d5f1d680dcb57c80294b",
+        "sha256_in_prefix": "8e45e9e49f754422c745c5a243b1d34d863516314c90d5f1d680dcb57c80294b",
+        "size_in_bytes": 14001
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/scraper.py",
+        "path_type": "hardlink",
+        "sha256": "622d04824277f26ecb8fa7f307a7dc41fa85a5cc145317a182e812a0fc96f7b8",
+        "sha256_in_prefix": "622d04824277f26ecb8fa7f307a7dc41fa85a5cc145317a182e812a0fc96f7b8",
+        "size_in_bytes": 13706
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/core/spidermw.py",
+        "path_type": "hardlink",
+        "sha256": "66fdd8735e17850aaf4c582d25261fd2f420cc75a24a285374eb49b226315c7f",
+        "sha256_in_prefix": "66fdd8735e17850aaf4c582d25261fd2f420cc75a24a285374eb49b226315c7f",
+        "size_in_bytes": 14333
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/crawler.py",
+        "path_type": "hardlink",
+        "sha256": "078b43ab45802c83ff9c49e2928c9db3efad62f392746b8f173ebc6468da7a65",
+        "sha256_in_prefix": "078b43ab45802c83ff9c49e2928c9db3efad62f392746b8f173ebc6468da7a65",
+        "size_in_bytes": 14693
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "a2c9b8f19cec34f90ccc62890b749bd78df07ff0cd513d87260f388ceab1de44",
+        "sha256_in_prefix": "a2c9b8f19cec34f90ccc62890b749bd78df07ff0cd513d87260f388ceab1de44",
+        "size_in_bytes": 162
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/ajaxcrawl.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "0574b7c454e94f5b9a2f8b60f0d43159e75e60bfe9a42613f58badaef12e7548",
+        "sha256_in_prefix": "0574b7c454e94f5b9a2f8b60f0d43159e75e60bfe9a42613f58badaef12e7548",
+        "size_in_bytes": 2937
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/cookies.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "9bfe8fcd739b45d03f4904cdfd68425bae5adb8c7e712b2ab3d51e3dc3bbd5b1",
+        "sha256_in_prefix": "9bfe8fcd739b45d03f4904cdfd68425bae5adb8c7e712b2ab3d51e3dc3bbd5b1",
+        "size_in_bytes": 5407
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/decompression.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "90b1c81e0e1bc5141cf6c8bbfa53aa2e535b0143cae6fb01f418c0fe006c6667",
+        "sha256_in_prefix": "90b1c81e0e1bc5141cf6c8bbfa53aa2e535b0143cae6fb01f418c0fe006c6667",
+        "size_in_bytes": 3071
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/defaultheaders.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "ebf42dd50ee2b2c9d18d24d3f4b70dc8b7e41ac23f42f06cb40127d794145749",
+        "sha256_in_prefix": "ebf42dd50ee2b2c9d18d24d3f4b70dc8b7e41ac23f42f06cb40127d794145749",
+        "size_in_bytes": 1146
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/downloadtimeout.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "21ba60dc448e0268264fc118f358e4f36679da0f19fc0724d9fdc1137971437f",
+        "sha256_in_prefix": "21ba60dc448e0268264fc118f358e4f36679da0f19fc0724d9fdc1137971437f",
+        "size_in_bytes": 1352
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/httpauth.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "ab65ba42f73931fc3b090ddf13a9c49305c1d857e4584705d0f0568be37c8d51",
+        "sha256_in_prefix": "ab65ba42f73931fc3b090ddf13a9c49305c1d857e4584705d0f0568be37c8d51",
+        "size_in_bytes": 2095
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/httpcache.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "6d3e54314235c6a7d6a830fa15f6e13850a5114156bc8234f6d9ba1c059d8962",
+        "sha256_in_prefix": "6d3e54314235c6a7d6a830fa15f6e13850a5114156bc8234f6d9ba1c059d8962",
+        "size_in_bytes": 4577
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/httpcompression.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7e4c261a68c9a8fdd14284c7765228a8220907b66ee0e39258be97553af35166",
+        "sha256_in_prefix": "7e4c261a68c9a8fdd14284c7765228a8220907b66ee0e39258be97553af35166",
+        "size_in_bytes": 3122
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/httpproxy.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "361b9ce53452390a88c1807cab26a8191ece72db62daf20d53cfa7468e7a3524",
+        "sha256_in_prefix": "361b9ce53452390a88c1807cab26a8191ece72db62daf20d53cfa7468e7a3524",
+        "size_in_bytes": 2687
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/redirect.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "34fb2c541b5029ceafa4022272da88babfa81a5f9510c5683a4096ffe69656c8",
+        "sha256_in_prefix": "34fb2c541b5029ceafa4022272da88babfa81a5f9510c5683a4096ffe69656c8",
+        "size_in_bytes": 4585
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/retry.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "4fa48ae6f9c442cb39520b43bf1b355d7e266721ef1552dc6185681b7309cefc",
+        "sha256_in_prefix": "4fa48ae6f9c442cb39520b43bf1b355d7e266721ef1552dc6185681b7309cefc",
+        "size_in_bytes": 6097
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/robotstxt.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7a0757cacc459815c1329e0e139f3a5c81e37cc9d1fdb7b065fac1a5d5c60e50",
+        "sha256_in_prefix": "7a0757cacc459815c1329e0e139f3a5c81e37cc9d1fdb7b065fac1a5d5c60e50",
+        "size_in_bytes": 4220
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/stats.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "50c7714180da77915532128465d26656556ca209c3e391cf1544326caca6b6f3",
+        "sha256_in_prefix": "50c7714180da77915532128465d26656556ca209c3e391cf1544326caca6b6f3",
+        "size_in_bytes": 2545
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/__pycache__/useragent.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "26b1f8fadee9970826f001c818bd4b7eebc3bb8e25808a04cb2579f2cf89419b",
+        "sha256_in_prefix": "26b1f8fadee9970826f001c818bd4b7eebc3bb8e25808a04cb2579f2cf89419b",
+        "size_in_bytes": 1352
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/ajaxcrawl.py",
+        "path_type": "hardlink",
+        "sha256": "ba598100f90da4dc022fbc0eb5211ae6c4978cb2178905ea01358fa77ce6d62c",
+        "sha256_in_prefix": "ba598100f90da4dc022fbc0eb5211ae6c4978cb2178905ea01358fa77ce6d62c",
+        "size_in_bytes": 3291
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/cookies.py",
+        "path_type": "hardlink",
+        "sha256": "697c0de62713da17cbd336e7589d6944295d360c85221144209e15c97ee839eb",
+        "sha256_in_prefix": "697c0de62713da17cbd336e7589d6944295d360c85221144209e15c97ee839eb",
+        "size_in_bytes": 5208
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/decompression.py",
+        "path_type": "hardlink",
+        "sha256": "a7d006ea4058b1d64219c4eb72719cbf5c1249e917adb68786b09eda92bb5988",
+        "sha256_in_prefix": "a7d006ea4058b1d64219c4eb72719cbf5c1249e917adb68786b09eda92bb5988",
+        "size_in_bytes": 2778
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/defaultheaders.py",
+        "path_type": "hardlink",
+        "sha256": "f976306e87aa78a217fd070faae4c971c6ee15c7105a094791bdcf9178e39c8e",
+        "sha256_in_prefix": "f976306e87aa78a217fd070faae4c971c6ee15c7105a094791bdcf9178e39c8e",
+        "size_in_bytes": 559
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/downloadtimeout.py",
+        "path_type": "hardlink",
+        "sha256": "3792d421321bb33f88b592dc312eac69f4c4e0b969ddfdd89b23d63830d7e4a6",
+        "sha256_in_prefix": "3792d421321bb33f88b592dc312eac69f4c4e0b969ddfdd89b23d63830d7e4a6",
+        "size_in_bytes": 700
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/httpauth.py",
+        "path_type": "hardlink",
+        "sha256": "fd2e4ab51900237357e1f2298dd7a13dde65b6a96e4fbd441ec566a5d9a6e594",
+        "sha256_in_prefix": "fd2e4ab51900237357e1f2298dd7a13dde65b6a96e4fbd441ec566a5d9a6e594",
+        "size_in_bytes": 1989
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/httpcache.py",
+        "path_type": "hardlink",
+        "sha256": "277b23035fa02a548f4d1f5301c8a09886a3d255756020cd239d2ae7e2cbd724",
+        "sha256_in_prefix": "277b23035fa02a548f4d1f5301c8a09886a3d255756020cd239d2ae7e2cbd724",
+        "size_in_bytes": 5567
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/httpcompression.py",
+        "path_type": "hardlink",
+        "sha256": "d8fb5d687cb47675ac767c65159eef952533b7b2e73e9cda483e75a3ac617e2c",
+        "sha256_in_prefix": "d8fb5d687cb47675ac767c65159eef952533b7b2e73e9cda483e75a3ac617e2c",
+        "size_in_bytes": 3979
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/httpproxy.py",
+        "path_type": "hardlink",
+        "sha256": "7b4bca41dbb8475818cc6aea426bc8af81ac3b8ef82b72cbdd0355d851d2e2bf",
+        "sha256_in_prefix": "7b4bca41dbb8475818cc6aea426bc8af81ac3b8ef82b72cbdd0355d851d2e2bf",
+        "size_in_bytes": 3103
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/redirect.py",
+        "path_type": "hardlink",
+        "sha256": "99eccc112dbc551b4bc29ba3841eac1c435109ddf360a7c4e7e3d8f4fa74e2e8",
+        "sha256_in_prefix": "99eccc112dbc551b4bc29ba3841eac1c435109ddf360a7c4e7e3d8f4fa74e2e8",
+        "size_in_bytes": 5204
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/retry.py",
+        "path_type": "hardlink",
+        "sha256": "7cce7ec67731806f69bde63b8183f7aff1a4c9841f7648282edd6208ed58e716",
+        "sha256_in_prefix": "7cce7ec67731806f69bde63b8183f7aff1a4c9841f7648282edd6208ed58e716",
+        "size_in_bytes": 6574
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/robotstxt.py",
+        "path_type": "hardlink",
+        "sha256": "81c8f7af8b0cbd295adff447366fa53018c7e94cfa92d36b6ae7845e974508de",
+        "sha256_in_prefix": "81c8f7af8b0cbd295adff447366fa53018c7e94cfa92d36b6ae7845e974508de",
+        "size_in_bytes": 4397
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/stats.py",
+        "path_type": "hardlink",
+        "sha256": "459c59645c1059266b90379324b532a9145848543f66ec5d702e93a229645d74",
+        "sha256_in_prefix": "459c59645c1059266b90379324b532a9145848543f66ec5d702e93a229645d74",
+        "size_in_bytes": 2170
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/downloadermiddlewares/useragent.py",
+        "path_type": "hardlink",
+        "sha256": "bbcbf870691cccbf862f7e8e7402de6086964bd1c7a4e99f2fafd92c9b9224c7",
+        "sha256_in_prefix": "bbcbf870691cccbf862f7e8e7402de6086964bd1c7a4e99f2fafd92c9b9224c7",
+        "size_in_bytes": 741
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/dupefilters.py",
+        "path_type": "hardlink",
+        "sha256": "db1d8203a937e4926ed162d2be3723d43ac908cd8a28fe0ddb3200977f4e55da",
+        "sha256_in_prefix": "db1d8203a937e4926ed162d2be3723d43ac908cd8a28fe0ddb3200977f4e55da",
+        "size_in_bytes": 4467
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "2dc82db22f3307eefbbddbb4576bd79d5ae10e6dafce2a8a7e92e20f629e7339",
+        "sha256_in_prefix": "2dc82db22f3307eefbbddbb4576bd79d5ae10e6dafce2a8a7e92e20f629e7339",
+        "size_in_bytes": 1984
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/exporters.py",
+        "path_type": "hardlink",
+        "sha256": "8153e051b72df1c71e72b5a3bef09cdb93038af86aa32684fa1dc807e4460a04",
+        "sha256_in_prefix": "8153e051b72df1c71e72b5a3bef09cdb93038af86aa32684fa1dc807e4460a04",
+        "size_in_bytes": 12770
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extension.py",
+        "path_type": "hardlink",
+        "sha256": "6408f50048d51bcc075207d5dd295a42a2d24e4e2eb7395b22c4a0389af0e581",
+        "sha256_in_prefix": "6408f50048d51bcc075207d5dd295a42a2d24e4e2eb7395b22c4a0389af0e581",
+        "size_in_bytes": 397
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "2e3eb98dc92e0f0848ac671126d75c3c86b8cda5fe82191fa759e3c9abbf4019",
+        "sha256_in_prefix": "2e3eb98dc92e0f0848ac671126d75c3c86b8cda5fe82191fa759e3c9abbf4019",
+        "size_in_bytes": 151
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/__pycache__/closespider.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c02053623b0205cd2989d103d21cd4278909f92c648c6f77c7177c425ef5342e",
+        "sha256_in_prefix": "c02053623b0205cd2989d103d21cd4278909f92c648c6f77c7177c425ef5342e",
+        "size_in_bytes": 2699
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/__pycache__/corestats.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "539f9efae65888d388705c58f33e4a354367c079c11697b9f9519239d2766dad",
+        "sha256_in_prefix": "539f9efae65888d388705c58f33e4a354367c079c11697b9f9519239d2766dad",
+        "size_in_bytes": 2181
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/__pycache__/debug.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "781bb9101780771161f30c553a5ecbb6190b5e6de3aa7b72852aadeebbb36e8a",
+        "sha256_in_prefix": "781bb9101780771161f30c553a5ecbb6190b5e6de3aa7b72852aadeebbb36e8a",
+        "size_in_bytes": 2584
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/__pycache__/feedexport.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "176702f97aa8a7e341f673a5d2a50dc86f7a08da04b3eee8ae65ed25dc251234",
+        "sha256_in_prefix": "176702f97aa8a7e341f673a5d2a50dc86f7a08da04b3eee8ae65ed25dc251234",
+        "size_in_bytes": 19825
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/__pycache__/httpcache.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "08eabb260e497c922f0255fd08ed264651d07cbcdf07c4a393ff7a391712c0ca",
+        "sha256_in_prefix": "08eabb260e497c922f0255fd08ed264651d07cbcdf07c4a393ff7a391712c0ca",
+        "size_in_bytes": 12002
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/__pycache__/logstats.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "16a694f45163676b1706a2c456226d62aaee5ffb1f9c0a81d378f4c42ef7334b",
+        "sha256_in_prefix": "16a694f45163676b1706a2c456226d62aaee5ffb1f9c0a81d378f4c42ef7334b",
+        "size_in_bytes": 2073
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/__pycache__/memdebug.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "eaff7bc14524c08a16f2abe585b955a492e54c78cfc20a778440a515726a66ea",
+        "sha256_in_prefix": "eaff7bc14524c08a16f2abe585b955a492e54c78cfc20a778440a515726a66ea",
+        "size_in_bytes": 1380
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/__pycache__/memusage.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "fde7d29b4f41876c857714367089fcfa076d3795f4f52d38f3a56abd5442b83c",
+        "sha256_in_prefix": "fde7d29b4f41876c857714367089fcfa076d3795f4f52d38f3a56abd5442b83c",
+        "size_in_bytes": 4711
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/__pycache__/postprocessing.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "509e70abb6c9cf326c93529b267cf94a81f99d8727fa0c9a7e5508a1f9f9c7b6",
+        "sha256_in_prefix": "509e70abb6c9cf326c93529b267cf94a81f99d8727fa0c9a7e5508a1f9f9c7b6",
+        "size_in_bytes": 5949
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/__pycache__/spiderstate.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "06dbdaa823ce6fad9cfe6f9ec94cca18f86a4ff7015ff693fb13d9dd3f628d7c",
+        "sha256_in_prefix": "06dbdaa823ce6fad9cfe6f9ec94cca18f86a4ff7015ff693fb13d9dd3f628d7c",
+        "size_in_bytes": 1770
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/__pycache__/statsmailer.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "ed3d378320dd4945f77d38ba566ebc251512561a080ae619c2a947dc22ae6cf3",
+        "sha256_in_prefix": "ed3d378320dd4945f77d38ba566ebc251512561a080ae619c2a947dc22ae6cf3",
+        "size_in_bytes": 1785
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/__pycache__/telnet.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "1e90aef7ca4af7cd4c080658c22804998f4d7ff36ff6021535e26bed3f762bfd",
+        "sha256_in_prefix": "1e90aef7ca4af7cd4c080658c22804998f4d7ff36ff6021535e26bed3f762bfd",
+        "size_in_bytes": 4475
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/__pycache__/throttle.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "61e89518315b774dbc715792701961a7f990abb73ae2a0bcf60cd8fe370e94aa",
+        "sha256_in_prefix": "61e89518315b774dbc715792701961a7f990abb73ae2a0bcf60cd8fe370e94aa",
+        "size_in_bytes": 3142
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/closespider.py",
+        "path_type": "hardlink",
+        "sha256": "350fe585efc8275eff271991e901d2891c78b0969764fd98f3e377c64629da3b",
+        "sha256_in_prefix": "350fe585efc8275eff271991e901d2891c78b0969764fd98f3e377c64629da3b",
+        "size_in_bytes": 2609
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/corestats.py",
+        "path_type": "hardlink",
+        "sha256": "c4c9d50e628945d60ca6e78c53f766748604582c83a439ad59ddd9e05c96540e",
+        "sha256_in_prefix": "c4c9d50e628945d60ca6e78c53f766748604582c83a439ad59ddd9e05c96540e",
+        "size_in_bytes": 1834
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/debug.py",
+        "path_type": "hardlink",
+        "sha256": "2686ac1098a9d98f3689682743128ac4f56a5685afd170c86146d0c08ed9a245",
+        "sha256_in_prefix": "2686ac1098a9d98f3689682743128ac4f56a5685afd170c86146d0c08ed9a245",
+        "size_in_bytes": 1877
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/feedexport.py",
+        "path_type": "hardlink",
+        "sha256": "9376d02ad7ba2a1a4f45343dfe25d37f0611c957a7d7603d42a182e4220cfc47",
+        "sha256_in_prefix": "9376d02ad7ba2a1a4f45343dfe25d37f0611c957a7d7603d42a182e4220cfc47",
+        "size_in_bytes": 22072
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/httpcache.py",
+        "path_type": "hardlink",
+        "sha256": "1d211e3d2127515106d5e0e914b85a7bec61494cfe6bdd98a4713ea552650a8c",
+        "sha256_in_prefix": "1d211e3d2127515106d5e0e914b85a7bec61494cfe6bdd98a4713ea552650a8c",
+        "size_in_bytes": 14727
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/logstats.py",
+        "path_type": "hardlink",
+        "sha256": "77aa7980f4bdc4865bf38fcf94bd62d98da4245fcc75f2de54c245148f0015c0",
+        "sha256_in_prefix": "77aa7980f4bdc4865bf38fcf94bd62d98da4245fcc75f2de54c245148f0015c0",
+        "size_in_bytes": 1804
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/memdebug.py",
+        "path_type": "hardlink",
+        "sha256": "d672a2319fdfd9ffcb0408af91a7a05bd16fe161071e29c582215e41b37a2c85",
+        "sha256_in_prefix": "d672a2319fdfd9ffcb0408af91a7a05bd16fe161071e29c582215e41b37a2c85",
+        "size_in_bytes": 968
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/memusage.py",
+        "path_type": "hardlink",
+        "sha256": "7f24bfde408d856193da39d7ac3636641e4030401ac30e9f2ad9ed54ee485378",
+        "sha256_in_prefix": "7f24bfde408d856193da39d7ac3636641e4030401ac30e9f2ad9ed54ee485378",
+        "size_in_bytes": 5310
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/postprocessing.py",
+        "path_type": "hardlink",
+        "sha256": "389c3d39db68f19e8f1a7e95d2a8be135a0f090fef823c6053ae2d0aea16079e",
+        "sha256_in_prefix": "389c3d39db68f19e8f1a7e95d2a8be135a0f090fef823c6053ae2d0aea16079e",
+        "size_in_bytes": 4993
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/spiderstate.py",
+        "path_type": "hardlink",
+        "sha256": "ed1a55abd6c56d99cab238ce053b4d563aeef95c2cf38436f55fb251d9569c63",
+        "sha256_in_prefix": "ed1a55abd6c56d99cab238ce053b4d563aeef95c2cf38436f55fb251d9569c63",
+        "size_in_bytes": 1164
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/statsmailer.py",
+        "path_type": "hardlink",
+        "sha256": "a05d451efd189005c498c779adf4f44076a0c8e22b6a981edcd458104461b656",
+        "sha256_in_prefix": "a05d451efd189005c498c779adf4f44076a0c8e22b6a981edcd458104461b656",
+        "size_in_bytes": 1228
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/telnet.py",
+        "path_type": "hardlink",
+        "sha256": "d5b72086a1a4a66ff1a9001c3c978e247c886d110f68641206311927c3479a71",
+        "sha256_in_prefix": "d5b72086a1a4a66ff1a9001c3c978e247c886d110f68641206311927c3479a71",
+        "size_in_bytes": 4028
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/extensions/throttle.py",
+        "path_type": "hardlink",
+        "sha256": "cde4f48ac46dea1f4cd3b71ea372ac8fab9de4edb573b8ca73ba6c48891e66cf",
+        "sha256_in_prefix": "cde4f48ac46dea1f4cd3b71ea372ac8fab9de4edb573b8ca73ba6c48891e66cf",
+        "size_in_bytes": 3705
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/http/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "17803d87f1f5025b2c04df08e82012d0d06ea7c4b87dfc684a7f7c267685ad4f",
+        "sha256_in_prefix": "17803d87f1f5025b2c04df08e82012d0d06ea7c4b87dfc684a7f7c267685ad4f",
+        "size_in_bytes": 600
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/http/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "ae8f909a9a4d547f1b22575bbbc89829de31b20afb6dcd2f2c697315ebff8b5d",
+        "sha256_in_prefix": "ae8f909a9a4d547f1b22575bbbc89829de31b20afb6dcd2f2c697315ebff8b5d",
+        "size_in_bytes": 853
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/http/__pycache__/common.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "be516309380e8b169a3260234f2bf8a61fcecdd7383e081985fd058138aa31e6",
+        "sha256_in_prefix": "be516309380e8b169a3260234f2bf8a61fcecdd7383e081985fd058138aa31e6",
+        "size_in_bytes": 543
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/http/__pycache__/cookies.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "aa2e2168e867356f80f0139a6d57b5d59c9a4dddd2e4ba5d9a38b20270d483d3",
+        "sha256_in_prefix": "aa2e2168e867356f80f0139a6d57b5d59c9a4dddd2e4ba5d9a38b20270d483d3",
+        "size_in_bytes": 8007
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/http/__pycache__/headers.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "12c831e5b9fb58bfb855ba3bc17d63959c305054a07706483b425d7c45dd054d",
+        "sha256_in_prefix": "12c831e5b9fb58bfb855ba3bc17d63959c305054a07706483b425d7c45dd054d",
+        "size_in_bytes": 4332
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/http/common.py",
+        "path_type": "hardlink",
+        "sha256": "624981cb1af9730e2f8ed45d8ffe3e77946350d43ea66ff2790a45a00b2614d5",
+        "sha256_in_prefix": "624981cb1af9730e2f8ed45d8ffe3e77946350d43ea66ff2790a45a00b2614d5",
+        "size_in_bytes": 240
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/http/cookies.py",
+        "path_type": "hardlink",
+        "sha256": "b17aa7124918e0b4f8f6758f9fc4b59c9bb3b00830b31c8aef7fe35385bba447",
+        "sha256_in_prefix": "b17aa7124918e0b4f8f6758f9fc4b59c9bb3b00830b31c8aef7fe35385bba447",
+        "size_in_bytes": 5758
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/http/headers.py",
+        "path_type": "hardlink",
+        "sha256": "e03e6e63e243429e3c28ca9f5fa7fd2c4f28bf69d92ae9df52cc3acc777c48d4",
+        "sha256_in_prefix": "e03e6e63e243429e3c28ca9f5fa7fd2c4f28bf69d92ae9df52cc3acc777c48d4",
+        "size_in_bytes": 2868
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/http/request/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "758802eff86b2b9428991895b71081b33f575c33572bece89716c0cba67b3624",
+        "sha256_in_prefix": "758802eff86b2b9428991895b71081b33f575c33572bece89716c0cba67b3624",
+        "size_in_bytes": 9318
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/http/request/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c7624428a104450bea58e9dfb3d07f2cd8f4d52e3d129a56db45cc5cdf5525e2",
+        "sha256_in_prefix": "c7624428a104450bea58e9dfb3d07f2cd8f4d52e3d129a56db45cc5cdf5525e2",
+        "size_in_bytes": 8459
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/http/request/__pycache__/form.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c57b66a62ff9288d974e499fb9b7258d94c4fa67586c38b2a366b7dbc3ea33fb",
+        "sha256_in_prefix": "c57b66a62ff9288d974e499fb9b7258d94c4fa67586c38b2a366b7dbc3ea33fb",
+        "size_in_bytes": 7565
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/http/request/__pycache__/json_request.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "203459af85b752a60c65c04c2853297a14466f36b66ff96abc9e3cafef29e6aa",
+        "sha256_in_prefix": "203459af85b752a60c65c04c2853297a14466f36b66ff96abc9e3cafef29e6aa",
+        "size_in_bytes": 2224
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/http/request/__pycache__/rpc.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "45792eb2968ec44fd1eae70b85a1f8ff816766dea123f1080b888bc1bc07a5ff",
+        "sha256_in_prefix": "45792eb2968ec44fd1eae70b85a1f8ff816766dea123f1080b888bc1bc07a5ff",
+        "size_in_bytes": 1400
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/http/request/form.py",
+        "path_type": "hardlink",
+        "sha256": "dbfc342c616d5a977f6dd5fe1ec411fe8ff8e9c5d44c9873ca79a29a7a2e2a4f",
+        "sha256_in_prefix": "dbfc342c616d5a977f6dd5fe1ec411fe8ff8e9c5d44c9873ca79a29a7a2e2a4f",
+        "size_in_bytes": 8730
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/http/request/json_request.py",
+        "path_type": "hardlink",
+        "sha256": "6722dae1f65dcbcaccfad9e87172cc0aec364d481633fa5421ee3644d0f8715c",
+        "sha256_in_prefix": "6722dae1f65dcbcaccfad9e87172cc0aec364d481633fa5421ee3644d0f8715c",
+        "size_in_bytes": 2115
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/http/request/rpc.py",
+        "path_type": "hardlink",
+        "sha256": "1e59d1247980c55b8c8f8e608c318a6c162531acf1be8d65e7c35af18a1f40b4",
+        "sha256_in_prefix": "1e59d1247980c55b8c8f8e608c318a6c162531acf1be8d65e7c35af18a1f40b4",
+        "size_in_bytes": 1085
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/http/response/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "0b7ea7d5dc50fccae785cfaaa13277688c52aa37bf797eadb71e5633b237cceb",
+        "sha256_in_prefix": "0b7ea7d5dc50fccae785cfaaa13277688c52aa37bf797eadb71e5633b237cceb",
+        "size_in_bytes": 7266
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/http/response/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3a85784198ca6fd917c0e2ebc7b56f343cf4f01e6f8dd22ce7f13debb8df6a9f",
+        "sha256_in_prefix": "3a85784198ca6fd917c0e2ebc7b56f343cf4f01e6f8dd22ce7f13debb8df6a9f",
+        "size_in_bytes": 6603
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/http/response/__pycache__/html.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "5f22b8629bb63ce519363712ab16a87ce29dafd0ab961ee52238c5762aa2ae15",
+        "sha256_in_prefix": "5f22b8629bb63ce519363712ab16a87ce29dafd0ab961ee52238c5762aa2ae15",
+        "size_in_bytes": 588
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/http/response/__pycache__/text.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "bf82e0c43d4dbb23857692d59c3293ef40a8eb786e4183d8b627be059bf7f6a6",
+        "sha256_in_prefix": "bf82e0c43d4dbb23857692d59c3293ef40a8eb786e4183d8b627be059bf7f6a6",
+        "size_in_bytes": 9260
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/http/response/__pycache__/xml.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "e52b52da67c85bd65b05f72452469fdc127c6c017677e2226a043bee4c3bdcb1",
+        "sha256_in_prefix": "e52b52da67c85bd65b05f72452469fdc127c6c017677e2226a043bee4c3bdcb1",
+        "size_in_bytes": 584
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/http/response/html.py",
+        "path_type": "hardlink",
+        "sha256": "292059c560a1022fab47bde05dd4ed17cd1dd5c70cd097d8cf1297a670c9be10",
+        "sha256_in_prefix": "292059c560a1022fab47bde05dd4ed17cd1dd5c70cd097d8cf1297a670c9be10",
+        "size_in_bytes": 300
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/http/response/text.py",
+        "path_type": "hardlink",
+        "sha256": "7c4e2109766778beaf69c21aa68f1a7dc4f14b78ceb0718f166ba1398526ee75",
+        "sha256_in_prefix": "7c4e2109766778beaf69c21aa68f1a7dc4f14b78ceb0718f166ba1398526ee75",
+        "size_in_bytes": 9653
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/http/response/xml.py",
+        "path_type": "hardlink",
+        "sha256": "2f859e5f1f552edb727300dbee88949bdb485a04e9e158055f69d9c35f162b18",
+        "sha256_in_prefix": "2f859e5f1f552edb727300dbee88949bdb485a04e9e158055f69d9c35f162b18",
+        "size_in_bytes": 297
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/interfaces.py",
+        "path_type": "hardlink",
+        "sha256": "a2cb2bdd96418bfc781ceeb93a6c91ac1210cb11563418d626d9bb4c2cf3f609",
+        "sha256_in_prefix": "a2cb2bdd96418bfc781ceeb93a6c91ac1210cb11563418d626d9bb4c2cf3f609",
+        "size_in_bytes": 557
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/item.py",
+        "path_type": "hardlink",
+        "sha256": "c85ae950a8127ddf60dbdbec1c8cf3ab403e4ffeec9b9703e9c247dc92b3fb3d",
+        "sha256_in_prefix": "c85ae950a8127ddf60dbdbec1c8cf3ab403e4ffeec9b9703e9c247dc92b3fb3d",
+        "size_in_bytes": 3823
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/link.py",
+        "path_type": "hardlink",
+        "sha256": "69da28151a9e787188634997b50421c248bbb84bb6d58357106eba597c3ca188",
+        "sha256_in_prefix": "69da28151a9e787188634997b50421c248bbb84bb6d58357106eba597c3ca188",
+        "size_in_bytes": 1891
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/linkextractors/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "b4adb334bd045c7378fa460983600689c2615d2198d003fdbc4e31784638c928",
+        "sha256_in_prefix": "b4adb334bd045c7378fa460983600689c2615d2198d003fdbc4e31784638c928",
+        "size_in_bytes": 1408
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/linkextractors/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d356ca7cd15aed2a2ed3ad6348886b17e863aa6e4e2894ec2f6df375fd8bb3a2",
+        "sha256_in_prefix": "d356ca7cd15aed2a2ed3ad6348886b17e863aa6e4e2894ec2f6df375fd8bb3a2",
+        "size_in_bytes": 1286
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/linkextractors/__pycache__/lxmlhtml.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3a4e2bc9203e86e49cfb05758b8a21233c93e279abbab3899a4b057825d03a7a",
+        "sha256_in_prefix": "3a4e2bc9203e86e49cfb05758b8a21233c93e279abbab3899a4b057825d03a7a",
+        "size_in_bytes": 7804
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/linkextractors/lxmlhtml.py",
+        "path_type": "hardlink",
+        "sha256": "64fcdc1f0f709667dbb160f0416f05c4a4778d089f4d7cb62c58284dc890b008",
+        "sha256_in_prefix": "64fcdc1f0f709667dbb160f0416f05c4a4778d089f4d7cb62c58284dc890b008",
+        "size_in_bytes": 8241
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/loader/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "3c65bb69032bc096ecc5f787d9d18dfac0ff914487ccea81d2bbd9f6cbe06ca2",
+        "sha256_in_prefix": "3c65bb69032bc096ecc5f787d9d18dfac0ff914487ccea81d2bbd9f6cbe06ca2",
+        "size_in_bytes": 3491
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/loader/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "747a68570aad5699ad8d6c9be91c7095fd93b225b3ad7a2de6bec8cc71c8f247",
+        "sha256_in_prefix": "747a68570aad5699ad8d6c9be91c7095fd93b225b3ad7a2de6bec8cc71c8f247",
+        "size_in_bytes": 3753
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/loader/__pycache__/common.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "0bae85adba7f5b7bf06de430258d78f3aebfa46ba230f9690852023e91257b83",
+        "sha256_in_prefix": "0bae85adba7f5b7bf06de430258d78f3aebfa46ba230f9690852023e91257b83",
+        "size_in_bytes": 826
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/loader/__pycache__/processors.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "b7b4f360c18adfa5a79778649180c84d4d96b317284fc7439ae739f8c1e072e1",
+        "sha256_in_prefix": "b7b4f360c18adfa5a79778649180c84d4d96b317284fc7439ae739f8c1e072e1",
+        "size_in_bytes": 572
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/loader/common.py",
+        "path_type": "hardlink",
+        "sha256": "1923a0125b5f58b473910bc3d8a906caef3e9f8c3e3b1c1d07665c948777b852",
+        "sha256_in_prefix": "1923a0125b5f58b473910bc3d8a906caef3e9f8c3e3b1c1d07665c948777b852",
+        "size_in_bytes": 658
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/loader/processors.py",
+        "path_type": "hardlink",
+        "sha256": "fd21572e4995af00a8bbff0e4984e5cc3ec81eee028ecc18e8be2fca9bd9a820",
+        "sha256_in_prefix": "fd21572e4995af00a8bbff0e4984e5cc3ec81eee028ecc18e8be2fca9bd9a820",
+        "size_in_bytes": 632
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/logformatter.py",
+        "path_type": "hardlink",
+        "sha256": "b19d9ddddca0121e578d7aa56fa4f71e193dfe2dfc1e885e132c0f5da5413065",
+        "sha256_in_prefix": "b19d9ddddca0121e578d7aa56fa4f71e193dfe2dfc1e885e132c0f5da5413065",
+        "size_in_bytes": 5336
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/mail.py",
+        "path_type": "hardlink",
+        "sha256": "4fcc0f6ba4148408bd4f1f97636b96cd010a726d624c453c25cf04de7641e243",
+        "sha256_in_prefix": "4fcc0f6ba4148408bd4f1f97636b96cd010a726d624c453c25cf04de7641e243",
+        "size_in_bytes": 6099
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/middleware.py",
+        "path_type": "hardlink",
+        "sha256": "eed97e49e0174315b156a54dfc686167ba29b14a8d63d214dcf7d8df4bb52615",
+        "sha256_in_prefix": "eed97e49e0174315b156a54dfc686167ba29b14a8d63d214dcf7d8df4bb52615",
+        "size_in_bytes": 3253
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/mime.types",
+        "path_type": "hardlink",
+        "sha256": "eeabc6232a0f4b3be0f72694a4643c0eedbd3021968b8126fd6df43549d7f2a4",
+        "sha256_in_prefix": "eeabc6232a0f4b3be0f72694a4643c0eedbd3021968b8126fd6df43549d7f2a4",
+        "size_in_bytes": 20392
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/pipelines/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "be1732dfb93c489dec8b078ff9e25e2fff5dde7fb1e9d8d86022b60b4e4e4d02",
+        "sha256_in_prefix": "be1732dfb93c489dec8b078ff9e25e2fff5dde7fb1e9d8d86022b60b4e4e4d02",
+        "size_in_bytes": 798
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/pipelines/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7d679f7a8a6fbb4db400b3da5a3883d2c9a9b8f7dd05143d9f57f080ea4f7edc",
+        "sha256_in_prefix": "7d679f7a8a6fbb4db400b3da5a3883d2c9a9b8f7dd05143d9f57f080ea4f7edc",
+        "size_in_bytes": 1318
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/pipelines/__pycache__/files.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "e1f9b95677bacb09b03fe513f51cfd22ff287ef4f06f795d8869dd1ba5bff344",
+        "sha256_in_prefix": "e1f9b95677bacb09b03fe513f51cfd22ff287ef4f06f795d8869dd1ba5bff344",
+        "size_in_bytes": 18466
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/pipelines/__pycache__/images.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "19fdc6634f74345115e670d2ead215f1ee9c479b7d3999af64152d7a38c0aa45",
+        "sha256_in_prefix": "19fdc6634f74345115e670d2ead215f1ee9c479b7d3999af64152d7a38c0aa45",
+        "size_in_bytes": 7437
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/pipelines/__pycache__/media.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "eef1823d8541f5e6f9056fd59d78167f16796854d60ffc976502331d7a1f877d",
+        "sha256_in_prefix": "eef1823d8541f5e6f9056fd59d78167f16796854d60ffc976502331d7a1f877d",
+        "size_in_bytes": 8516
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/pipelines/files.py",
+        "path_type": "hardlink",
+        "sha256": "7836c79dc0bb0ceeacd7521ef0fb06652e5e2016b0625801fc277bc09495581e",
+        "sha256_in_prefix": "7836c79dc0bb0ceeacd7521ef0fb06652e5e2016b0625801fc277bc09495581e",
+        "size_in_bytes": 20548
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/pipelines/images.py",
+        "path_type": "hardlink",
+        "sha256": "f9c9bd818894de8f62094fd93108b2188d73dc6e89be93b7807f4e831d153f20",
+        "sha256_in_prefix": "f9c9bd818894de8f62094fd93108b2188d73dc6e89be93b7807f4e831d153f20",
+        "size_in_bytes": 8889
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/pipelines/media.py",
+        "path_type": "hardlink",
+        "sha256": "85063a2cdaa556c2948268eb4a1fd26663eefbf934a117b88c3ab31c16a925d1",
+        "sha256_in_prefix": "85063a2cdaa556c2948268eb4a1fd26663eefbf934a117b88c3ab31c16a925d1",
+        "size_in_bytes": 10396
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/pqueues.py",
+        "path_type": "hardlink",
+        "sha256": "dd14ce2e76dfcca330618203faada1d6f9e7940f70d988c29f5d356eddd7dc5e",
+        "sha256_in_prefix": "dd14ce2e76dfcca330618203faada1d6f9e7940f70d988c29f5d356eddd7dc5e",
+        "size_in_bytes": 7712
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/resolver.py",
+        "path_type": "hardlink",
+        "sha256": "1f622b3f75981d6e5b00857486ce51e4f7e000f6ddc5e32a95b453030e4cd6c2",
+        "sha256_in_prefix": "1f622b3f75981d6e5b00857486ce51e4f7e000f6ddc5e32a95b453030e4cd6c2",
+        "size_in_bytes": 4149
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/responsetypes.py",
+        "path_type": "hardlink",
+        "sha256": "d89a4e4447da65285398dc38785e32c58598a057304381b0dac7318f7ed8f43d",
+        "sha256_in_prefix": "d89a4e4447da65285398dc38785e32c58598a057304381b0dac7318f7ed8f43d",
+        "size_in_bytes": 4897
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/robotstxt.py",
+        "path_type": "hardlink",
+        "sha256": "ba1a484a817495dec05e5726269aa21d6ba265471c7ab1dc4c3655db483c4a5a",
+        "sha256_in_prefix": "ba1a484a817495dec05e5726269aa21d6ba265471c7ab1dc4c3655db483c4a5a",
+        "size_in_bytes": 4227
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/selector/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "197c795e542568e14f6fd4d00fd6d51b4ace91c6a45bab6a0e651a1dfde3c527",
+        "sha256_in_prefix": "197c795e542568e14f6fd4d00fd6d51b4ace91c6a45bab6a0e651a1dfde3c527",
+        "size_in_bytes": 98
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/selector/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "a1eaedf5bb9642745620d5980a11a65660c6fa14823ba93fbe8f643b9fa475b2",
+        "sha256_in_prefix": "a1eaedf5bb9642745620d5980a11a65660c6fa14823ba93fbe8f643b9fa475b2",
+        "size_in_bytes": 256
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/selector/__pycache__/unified.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "a33326b760e3d9b67b3b545b6efcfd42fcb85a8bd8e811536c97bda238b998b7",
+        "sha256_in_prefix": "a33326b760e3d9b67b3b545b6efcfd42fcb85a8bd8e811536c97bda238b998b7",
+        "size_in_bytes": 2964
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/selector/unified.py",
+        "path_type": "hardlink",
+        "sha256": "f00e6f5de815f411d59c5d4ee252597a9e5381cd5889ca2366b741f285362f8d",
+        "sha256_in_prefix": "f00e6f5de815f411d59c5d4ee252597a9e5381cd5889ca2366b741f285362f8d",
+        "size_in_bytes": 2662
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/settings/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "04d7cbed250695d2211d820847cd374aa7f46e2df881feb8bf6d485e33c60473",
+        "sha256_in_prefix": "04d7cbed250695d2211d820847cd374aa7f46e2df881feb8bf6d485e33c60473",
+        "size_in_bytes": 16481
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/settings/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "11a8271f594e0b16ae25212b397d00f8207b768f1cb0261997cc028246bc6d01",
+        "sha256_in_prefix": "11a8271f594e0b16ae25212b397d00f8207b768f1cb0261997cc028246bc6d01",
+        "size_in_bytes": 17549
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/settings/__pycache__/default_settings.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "a410d2aeb479a703554cbbb1b2768ab5915049f6b97d855775832d8f9b390416",
+        "sha256_in_prefix": "a410d2aeb479a703554cbbb1b2768ab5915049f6b97d855775832d8f9b390416",
+        "size_in_bytes": 9061
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/settings/default_settings.py",
+        "path_type": "hardlink",
+        "sha256": "b6ae3c65a5455864365b937a0d593c442afb37169822f32b9fdc92eb98733e30",
+        "sha256_in_prefix": "b6ae3c65a5455864365b937a0d593c442afb37169822f32b9fdc92eb98733e30",
+        "size_in_bytes": 9342
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/shell.py",
+        "path_type": "hardlink",
+        "sha256": "2399ea40197be9d83d8446a9a7dec0fe850dfd04818c81af23a9323afe7d6fd7",
+        "sha256_in_prefix": "2399ea40197be9d83d8446a9a7dec0fe850dfd04818c81af23a9323afe7d6fd7",
+        "size_in_bytes": 7579
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/signalmanager.py",
+        "path_type": "hardlink",
+        "sha256": "b09a690d8a88b860904036d86419f00947ac0b223ca5ee2907305e08411ec8e7",
+        "sha256_in_prefix": "b09a690d8a88b860904036d86419f00947ac0b223ca5ee2907305e08411ec8e7",
+        "size_in_bytes": 2391
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/signals.py",
+        "path_type": "hardlink",
+        "sha256": "e3de6b4dd07f36ead846651b58f320495883d8ff82c2bcf5197d64fb686ac257",
+        "sha256_in_prefix": "e3de6b4dd07f36ead846651b58f320495883d8ff82c2bcf5197d64fb686ac257",
+        "size_in_bytes": 815
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/spiderloader.py",
+        "path_type": "hardlink",
+        "sha256": "3a098b1e6d7ba806ac4b89798b61d7546bb9a16c78b5452f97ff078f7146f4c3",
+        "sha256_in_prefix": "3a098b1e6d7ba806ac4b89798b61d7546bb9a16c78b5452f97ff078f7146f4c3",
+        "size_in_bytes": 2963
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/spidermiddlewares/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/spidermiddlewares/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "6d6a53e93a53cd3e8dca90fb92fdc8240afaf1a43ccc505ed789d10dab0bb2a1",
+        "sha256_in_prefix": "6d6a53e93a53cd3e8dca90fb92fdc8240afaf1a43ccc505ed789d10dab0bb2a1",
+        "size_in_bytes": 158
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/spidermiddlewares/__pycache__/depth.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3cebb4029db6d277141fc0244ac6e40ec52f2f443704d54ce0a83cfce8136e16",
+        "sha256_in_prefix": "3cebb4029db6d277141fc0244ac6e40ec52f2f443704d54ce0a83cfce8136e16",
+        "size_in_bytes": 2571
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/spidermiddlewares/__pycache__/httperror.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "4240a1eff67d9e6817dd03d5e823f06f91c6f091007de44862d35ddfadd9309b",
+        "sha256_in_prefix": "4240a1eff67d9e6817dd03d5e823f06f91c6f091007de44862d35ddfadd9309b",
+        "size_in_bytes": 2303
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/spidermiddlewares/__pycache__/offsite.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "f6c5ba050c941968fc160953130a6fb1cc1df8cb57e6d0c6e453db2939182576",
+        "sha256_in_prefix": "f6c5ba050c941968fc160953130a6fb1cc1df8cb57e6d0c6e453db2939182576",
+        "size_in_bytes": 3669
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/spidermiddlewares/__pycache__/referer.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "396aad260c19b4073c3f6aa1be4e021e9f6e68656dc2ef212fa327a89c979866",
+        "sha256_in_prefix": "396aad260c19b4073c3f6aa1be4e021e9f6e68656dc2ef212fa327a89c979866",
+        "size_in_bytes": 14062
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/spidermiddlewares/__pycache__/urllength.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "b2f720e94f6bed26dfa2d88358f6242ea16d59a70ebb663172ff2683e2d4b428",
+        "sha256_in_prefix": "b2f720e94f6bed26dfa2d88358f6242ea16d59a70ebb663172ff2683e2d4b428",
+        "size_in_bytes": 2034
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/spidermiddlewares/depth.py",
+        "path_type": "hardlink",
+        "sha256": "35cf3cbe0b51f0958e5e6580c0da0390c29513313c1d49d14d709452e71829f3",
+        "sha256_in_prefix": "35cf3cbe0b51f0958e5e6580c0da0390c29513313c1d49d14d709452e71829f3",
+        "size_in_bytes": 2159
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/spidermiddlewares/httperror.py",
+        "path_type": "hardlink",
+        "sha256": "117dc4a8ed4605626e70748b8de61a7e29963baaa953cde6874a8450e4a43501",
+        "sha256_in_prefix": "117dc4a8ed4605626e70748b8de61a7e29963baaa953cde6874a8450e4a43501",
+        "size_in_bytes": 1950
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/spidermiddlewares/offsite.py",
+        "path_type": "hardlink",
+        "sha256": "fc444a643b4dc8b844211006de61130c295d180ee4f1d00ba0514f6d1968612f",
+        "sha256_in_prefix": "fc444a643b4dc8b844211006de61130c295d180ee4f1d00ba0514f6d1968612f",
+        "size_in_bytes": 3223
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/spidermiddlewares/referer.py",
+        "path_type": "hardlink",
+        "sha256": "c01ed02dfb12a23d41c9dbf3f0079e45750cff9102e56d5accfb51409ab16066",
+        "sha256_in_prefix": "c01ed02dfb12a23d41c9dbf3f0079e45750cff9102e56d5accfb51409ab16066",
+        "size_in_bytes": 13893
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/spidermiddlewares/urllength.py",
+        "path_type": "hardlink",
+        "sha256": "b6b80349f6f91254b0da10dec086c9123ac5e6e6b91658c0605a2e3f7bb26bae",
+        "sha256_in_prefix": "b6b80349f6f91254b0da10dec086c9123ac5e6e6b91658c0605a2e3f7bb26bae",
+        "size_in_bytes": 1339
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/spiders/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "502593bd7c95c53f32548a38f237d62c3e6d5a37580b82d05ae53b24cd3b4e7d",
+        "sha256_in_prefix": "502593bd7c95c53f32548a38f237d62c3e6d5a37580b82d05ae53b24cd3b4e7d",
+        "size_in_bytes": 3092
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/spiders/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "8f8a688612b09b9214bdd8a520d0a677166f6377748529fd03ba22a7aafe94d8",
+        "sha256_in_prefix": "8f8a688612b09b9214bdd8a520d0a677166f6377748529fd03ba22a7aafe94d8",
+        "size_in_bytes": 4012
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/spiders/__pycache__/crawl.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "f2eee62a3706157de03fd4b741f2f472239a9446b593975122102386b75a35a2",
+        "sha256_in_prefix": "f2eee62a3706157de03fd4b741f2f472239a9446b593975122102386b75a35a2",
+        "size_in_bytes": 5247
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/spiders/__pycache__/feed.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "e173b466cfb120461dfeb48ead992ecbe2fb5ea4b1705fca034e609f789ea0d3",
+        "sha256_in_prefix": "e173b466cfb120461dfeb48ead992ecbe2fb5ea4b1705fca034e609f789ea0d3",
+        "size_in_bytes": 5640
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/spiders/__pycache__/init.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7d2bae1372e8f520068a0927ff4a706db252623e1da6aae51e67b990b8246a09",
+        "sha256_in_prefix": "7d2bae1372e8f520068a0927ff4a706db252623e1da6aae51e67b990b8246a09",
+        "size_in_bytes": 1838
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/spiders/__pycache__/sitemap.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "f9a430d1ceebc393a3cd2fb8006b19a44f875b40a741238a7703d199680ac661",
+        "sha256_in_prefix": "f9a430d1ceebc393a3cd2fb8006b19a44f875b40a741238a7703d199680ac661",
+        "size_in_bytes": 3434
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/spiders/crawl.py",
+        "path_type": "hardlink",
+        "sha256": "f9f5e2d24e7b8be2a620901e00907aa9ff24f4153d12dec6ce920c2c0fca527d",
+        "sha256_in_prefix": "f9f5e2d24e7b8be2a620901e00907aa9ff24f4153d12dec6ce920c2c0fca527d",
+        "size_in_bytes": 4772
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/spiders/feed.py",
+        "path_type": "hardlink",
+        "sha256": "ce5d640081d85de09fb2ae6ee6d023c9e791fe5cb8b7c6942a7ef68f4d0d1708",
+        "sha256_in_prefix": "ce5d640081d85de09fb2ae6ee6d023c9e791fe5cb8b7c6942a7ef68f4d0d1708",
+        "size_in_bytes": 5583
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/spiders/init.py",
+        "path_type": "hardlink",
+        "sha256": "562569b9057b8c9f5f7c37a7a2108617e7ea087da2a71e21d98eb7ae09827acb",
+        "sha256_in_prefix": "562569b9057b8c9f5f7c37a7a2108617e7ea087da2a71e21d98eb7ae09827acb",
+        "size_in_bytes": 1337
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/spiders/sitemap.py",
+        "path_type": "hardlink",
+        "sha256": "da35c6ba533a0201735b63855a811e81cc5162197f029a1a6ca66d834e929e77",
+        "sha256_in_prefix": "da35c6ba533a0201735b63855a811e81cc5162197f029a1a6ca66d834e929e77",
+        "size_in_bytes": 3543
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/squeues.py",
+        "path_type": "hardlink",
+        "sha256": "7c878cf4f2361ed2dc0af70b5264f06324343b05c212c6a024dc9832d22777f7",
+        "sha256_in_prefix": "7c878cf4f2361ed2dc0af70b5264f06324343b05c212c6a024dc9832d22777f7",
+        "size_in_bytes": 6044
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/statscollectors.py",
+        "path_type": "hardlink",
+        "sha256": "83708b33ca39f1f6ba4fb56e31425e2ec5c46516d99fb4f2bb4aaabb386535e6",
+        "sha256_in_prefix": "83708b33ca39f1f6ba4fb56e31425e2ec5c46516d99fb4f2bb4aaabb386535e6",
+        "size_in_bytes": 2113
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/templates/project/module/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/templates/project/module/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "6cc07ad19df5463accc12b57de6bd2ebfd755343935762ad873d64b71859aff2",
+        "sha256_in_prefix": "6cc07ad19df5463accc12b57de6bd2ebfd755343935762ad873d64b71859aff2",
+        "size_in_bytes": 165
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/templates/project/module/items.py.tmpl",
+        "path_type": "hardlink",
+        "sha256": "369facd5801c475d43a6ad8b04c6b3f8091051f5e43f51c99bfd6cbb7a94a235",
+        "sha256_in_prefix": "369facd5801c475d43a6ad8b04c6b3f8091051f5e43f51c99bfd6cbb7a94a235",
+        "size_in_bytes": 270
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/templates/project/module/middlewares.py.tmpl",
+        "path_type": "hardlink",
+        "sha256": "1d606c94982c7c68fc41b79218a9671c441a49acc23bb163942f85d50cd8bb85",
+        "sha256_in_prefix": "1d606c94982c7c68fc41b79218a9671c441a49acc23bb163942f85d50cd8bb85",
+        "size_in_bytes": 3664
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/templates/project/module/pipelines.py.tmpl",
+        "path_type": "hardlink",
+        "sha256": "ddd01607ac71e1a48e757e92ee8b24f67ac4baa73587033d9726fefb55b4931b",
+        "sha256_in_prefix": "ddd01607ac71e1a48e757e92ee8b24f67ac4baa73587033d9726fefb55b4931b",
+        "size_in_bytes": 368
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/templates/project/module/settings.py.tmpl",
+        "path_type": "hardlink",
+        "sha256": "724b2a70336fbd4524cfd45c1e7687d5eaaf9b50d77d4202194dc21b8f9e1f2d",
+        "sha256_in_prefix": "724b2a70336fbd4524cfd45c1e7687d5eaaf9b50d77d4202194dc21b8f9e1f2d",
+        "size_in_bytes": 3364
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/templates/project/module/spiders/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "50bc1e719931dff353a61933ef2fea89acc1794a071670825a72928e80c2663d",
+        "sha256_in_prefix": "50bc1e719931dff353a61933ef2fea89acc1794a071670825a72928e80c2663d",
+        "size_in_bytes": 161
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/templates/project/module/spiders/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "2361e3fd5da4fb9cb501912389e87120e849eb3053db3f5872f79ea69782847e",
+        "sha256_in_prefix": "2361e3fd5da4fb9cb501912389e87120e849eb3053db3f5872f79ea69782847e",
+        "size_in_bytes": 173
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/templates/project/scrapy.cfg",
+        "path_type": "hardlink",
+        "sha256": "ad15def7a367023a52f3fd80b42fdf960cbbba57aab5db8b98f77e2bbdb4206e",
+        "sha256_in_prefix": "ad15def7a367023a52f3fd80b42fdf960cbbba57aab5db8b98f77e2bbdb4206e",
+        "size_in_bytes": 273
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/templates/spiders/basic.tmpl",
+        "path_type": "hardlink",
+        "sha256": "bc58639c025abf64cd991f4d01d34a03acdfd9eae57a122c9364e26f10c6e068",
+        "sha256_in_prefix": "bc58639c025abf64cd991f4d01d34a03acdfd9eae57a122c9364e26f10c6e068",
+        "size_in_bytes": 184
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/templates/spiders/crawl.tmpl",
+        "path_type": "hardlink",
+        "sha256": "daf9fcfc960a0be9a6c165162b3d903f61dde50b205d6ad6405e1117971fb79c",
+        "sha256_in_prefix": "daf9fcfc960a0be9a6c165162b3d903f61dde50b205d6ad6405e1117971fb79c",
+        "size_in_bytes": 619
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/templates/spiders/csvfeed.tmpl",
+        "path_type": "hardlink",
+        "sha256": "3ff92bbc9b430cff515301f04ae09c81523b92bac60997e98a0859aec70c60cc",
+        "sha256_in_prefix": "3ff92bbc9b430cff515301f04ae09c81523b92bac60997e98a0859aec70c60cc",
+        "size_in_bytes": 545
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/templates/spiders/xmlfeed.tmpl",
+        "path_type": "hardlink",
+        "sha256": "dc797ab2a9e4182c7c55069ab7419931661fd90b0de7c2c13bef6d0b10d100cf",
+        "sha256_in_prefix": "dc797ab2a9e4182c7c55069ab7419931661fd90b0de7c2c13bef6d0b10d100cf",
+        "size_in_bytes": 543
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d93a713e558702754dde352e742ace9483d27dbb1f3bd507c339924a271aed2a",
+        "sha256_in_prefix": "d93a713e558702754dde352e742ace9483d27dbb1f3bd507c339924a271aed2a",
+        "size_in_bytes": 146
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/asyncgen.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "1b5f501e03e82b0344771820c3bbe9809593bf7c7dbe1703c3ef0c2b25c702c4",
+        "sha256_in_prefix": "1b5f501e03e82b0344771820c3bbe9809593bf7c7dbe1703c3ef0c2b25c702c4",
+        "size_in_bytes": 744
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/benchserver.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "f2833b29b838d16ac2cc0bdba5740869840c32d764e10aeaa018cf4d6dc855d5",
+        "sha256_in_prefix": "f2833b29b838d16ac2cc0bdba5740869840c32d764e10aeaa018cf4d6dc855d5",
+        "size_in_bytes": 1851
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/boto.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "60a392dcffcbb3cb36b2e9054ba7c146f0d39bf17ccd0e5054969b7be51f2f8c",
+        "sha256_in_prefix": "60a392dcffcbb3cb36b2e9054ba7c146f0d39bf17ccd0e5054969b7be51f2f8c",
+        "size_in_bytes": 362
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/conf.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "b4b89f38f11ff19c7cf114ae537580ff9f3c6c56f8185e5c58660ead4f81b5a9",
+        "sha256_in_prefix": "b4b89f38f11ff19c7cf114ae537580ff9f3c6c56f8185e5c58660ead4f81b5a9",
+        "size_in_bytes": 7778
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/console.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3f16a4a8876eace09a168fc8825f6e38a334a88db50d0a2d3c947f378544fdc5",
+        "sha256_in_prefix": "3f16a4a8876eace09a168fc8825f6e38a334a88db50d0a2d3c947f378544fdc5",
+        "size_in_bytes": 2978
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/curl.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "6df71a01dd6eb431ce8e647adcb620a20b9096488b2782d5e0a84c55c4bd4b56",
+        "sha256_in_prefix": "6df71a01dd6eb431ce8e647adcb620a20b9096488b2782d5e0a84c55c4bd4b56",
+        "size_in_bytes": 2821
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/datatypes.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "03dcd4735b9490279af474382a81af575636f0d76fbe1b8a53ca73f7f922748e",
+        "sha256_in_prefix": "03dcd4735b9490279af474382a81af575636f0d76fbe1b8a53ca73f7f922748e",
+        "size_in_bytes": 5485
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/decorators.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "92f1c0dbe5ad17367fd1002559844fedf08a713f26b7bdf5209064436468a23b",
+        "sha256_in_prefix": "92f1c0dbe5ad17367fd1002559844fedf08a713f26b7bdf5209064436468a23b",
+        "size_in_bytes": 1764
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/defer.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "ca47a031b123e7d139e561cfad56bacc4f7505890be3bf061421703ca5f6af1b",
+        "sha256_in_prefix": "ca47a031b123e7d139e561cfad56bacc4f7505890be3bf061421703ca5f6af1b",
+        "size_in_bytes": 13905
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/deprecate.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d39141d0229803dd26fd1a1b525c2ad5d287ece775b05ab2f20e586876a2da60",
+        "sha256_in_prefix": "d39141d0229803dd26fd1a1b525c2ad5d287ece775b05ab2f20e586876a2da60",
+        "size_in_bytes": 6251
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/display.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "fa40cbee4f2b0d559090490586b5125ef40bd17840a15e8942e6eedc02da7404",
+        "sha256_in_prefix": "fa40cbee4f2b0d559090490586b5125ef40bd17840a15e8942e6eedc02da7404",
+        "size_in_bytes": 1498
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/engine.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "8d6c9947fdd6ac8a6adbd92a9cef1cfd0ca572d9c7fc1b0e64ee85386185ab90",
+        "sha256_in_prefix": "8d6c9947fdd6ac8a6adbd92a9cef1cfd0ca572d9c7fc1b0e64ee85386185ab90",
+        "size_in_bytes": 1412
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/ftp.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d5abe2c9874b451c67d10719e5fb14070839f11cf3a7b9906d1a6468fe9d9374",
+        "sha256_in_prefix": "d5abe2c9874b451c67d10719e5fb14070839f11cf3a7b9906d1a6468fe9d9374",
+        "size_in_bytes": 1389
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/gz.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "02d7c66bbc65b5325edf57f2bfb20887b3ba2118150a2e0f6b0eff8640c7fc61",
+        "sha256_in_prefix": "02d7c66bbc65b5325edf57f2bfb20887b3ba2118150a2e0f6b0eff8640c7fc61",
+        "size_in_bytes": 914
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/httpobj.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "b09271322561b40c843079cba395e432dd878a8f706065737f7b9e7329517f81",
+        "sha256_in_prefix": "b09271322561b40c843079cba395e432dd878a8f706065737f7b9e7329517f81",
+        "size_in_bytes": 863
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/iterators.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "fd04435ff87f637133f0ce79a6cd7c7775af99bfeb93b1638c65875232021b28",
+        "sha256_in_prefix": "fd04435ff87f637133f0ce79a6cd7c7775af99bfeb93b1638c65875232021b28",
+        "size_in_bytes": 5430
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/job.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "73b26ce49408445c94f4dd1661ff2c6b38404a6d57fde6daef2a21bdace3323a",
+        "sha256_in_prefix": "73b26ce49408445c94f4dd1661ff2c6b38404a6d57fde6daef2a21bdace3323a",
+        "size_in_bytes": 498
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/log.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "f1118b44a010992109e2730d017c6e05faff019c1e4709b2f3077b89626dab71",
+        "sha256_in_prefix": "f1118b44a010992109e2730d017c6e05faff019c1e4709b2f3077b89626dab71",
+        "size_in_bytes": 7792
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/misc.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d40a63c4e589a82fc726816afc717f0a9f704d3ea02f95bbaf2beb3d2e34ecf5",
+        "sha256_in_prefix": "d40a63c4e589a82fc726816afc717f0a9f704d3ea02f95bbaf2beb3d2e34ecf5",
+        "size_in_bytes": 8863
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/ossignal.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "217994f23c75cbc9d6102e7cf53043939a2bfccf73ca5f3d254e4dac0cd471ab",
+        "sha256_in_prefix": "217994f23c75cbc9d6102e7cf53043939a2bfccf73ca5f3d254e4dac0cd471ab",
+        "size_in_bytes": 974
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/project.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3b028ee00bf28d85b9665771fe44dc665f78c34c66375fb9461e7cd5658cd19d",
+        "sha256_in_prefix": "3b028ee00bf28d85b9665771fe44dc665f78c34c66375fb9461e7cd5658cd19d",
+        "size_in_bytes": 2557
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/python.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "f11077f71ed70b5adbbff6a8ed14510f7b1698f9637f7962a41cbef3b06c7cd8",
+        "sha256_in_prefix": "f11077f71ed70b5adbbff6a8ed14510f7b1698f9637f7962a41cbef3b06c7cd8",
+        "size_in_bytes": 11226
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/reactor.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "e212c401aabc4f43b816d40b60e129c0ebd21d3455183d3531b66f6455fa42c1",
+        "sha256_in_prefix": "e212c401aabc4f43b816d40b60e129c0ebd21d3455183d3531b66f6455fa42c1",
+        "size_in_bytes": 4982
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/reqser.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "764a26d318537ca84a4ff14988bcf586ac96d23019bd4ca11a21d88c1425637b",
+        "sha256_in_prefix": "764a26d318537ca84a4ff14988bcf586ac96d23019bd4ca11a21d88c1425637b",
+        "size_in_bytes": 941
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/request.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "f30230ec379976d1a5c005df71306b9878a31c59f415ba20851ef6e54d42df16",
+        "sha256_in_prefix": "f30230ec379976d1a5c005df71306b9878a31c59f415ba20851ef6e54d42df16",
+        "size_in_bytes": 12478
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/response.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3332e9413c959759aa0ef19384535cdc987b4866ba46d12083c54a63e33a9ce0",
+        "sha256_in_prefix": "3332e9413c959759aa0ef19384535cdc987b4866ba46d12083c54a63e33a9ce0",
+        "size_in_bytes": 3498
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/serialize.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "28727f8ec128e1d5fe1ca28fef836a9b5dbebe1336b8fe742bfb1e3eb82bf0ee",
+        "sha256_in_prefix": "28727f8ec128e1d5fe1ca28fef836a9b5dbebe1336b8fe742bfb1e3eb82bf0ee",
+        "size_in_bytes": 1402
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/signal.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "1bc97db364c4d9168177174e07870405b43a13d80a25fec112370280a39fce6f",
+        "sha256_in_prefix": "1bc97db364c4d9168177174e07870405b43a13d80a25fec112370280a39fce6f",
+        "size_in_bytes": 3247
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/sitemap.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "f32d6c86b5174ce08f512f0aaecdce4dc0e272375e7b906e6f46a286d62189ce",
+        "sha256_in_prefix": "f32d6c86b5174ce08f512f0aaecdce4dc0e272375e7b906e6f46a286d62189ce",
+        "size_in_bytes": 1827
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/spider.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "b44a10023435794a6e0afe4b5cc1f034d75d33084d3cabdacb754a1e10b0c244",
+        "sha256_in_prefix": "b44a10023435794a6e0afe4b5cc1f034d75d33084d3cabdacb754a1e10b0c244",
+        "size_in_bytes": 2189
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/ssl.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3a56b35936021c37eb7191d092a4d26c6f3fa8ef20c7c2fa8b598ba96f75c8ad",
+        "sha256_in_prefix": "3a56b35936021c37eb7191d092a4d26c6f3fa8ef20c7c2fa8b598ba96f75c8ad",
+        "size_in_bytes": 1804
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/template.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "46946521cfe4a9f42318c656cd9e07d649f6c5f51dc821f88ad608f4a8732091",
+        "sha256_in_prefix": "46946521cfe4a9f42318c656cd9e07d649f6c5f51dc821f88ad608f4a8732091",
+        "size_in_bytes": 1135
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/test.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "27364125e209b376549d1ff49c08876ca6d299f56b98c72ddf56149e36991e21",
+        "sha256_in_prefix": "27364125e209b376549d1ff49c08876ca6d299f56b98c72ddf56149e36991e21",
+        "size_in_bytes": 4410
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/testproc.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "271cc2f69b3a5708b133af208d623c90729f480ee938969d53be1195f4792681",
+        "sha256_in_prefix": "271cc2f69b3a5708b133af208d623c90729f480ee938969d53be1195f4792681",
+        "size_in_bytes": 2168
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/testsite.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "ac823c0073e439345c959c031b2c33cbf07b0452a9a323b22e1b81ff083e7c10",
+        "sha256_in_prefix": "ac823c0073e439345c959c031b2c33cbf07b0452a9a323b22e1b81ff083e7c10",
+        "size_in_bytes": 2286
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/trackref.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "303b7b1caf8f7b2ccad595f075517ad65bc4f0f13cb43a98ff5b06b705d938b1",
+        "sha256_in_prefix": "303b7b1caf8f7b2ccad595f075517ad65bc4f0f13cb43a98ff5b06b705d938b1",
+        "size_in_bytes": 2588
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/url.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7a3e6113ee826416aaff1266f93230f8c9ac1c4a09a57b1b3d26eb0137779415",
+        "sha256_in_prefix": "7a3e6113ee826416aaff1266f93230f8c9ac1c4a09a57b1b3d26eb0137779415",
+        "size_in_bytes": 6011
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/__pycache__/versions.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "581bbb1d9702303d643527f29526540eca5cf23664a76ed5dd3527912ecaf43c",
+        "sha256_in_prefix": "581bbb1d9702303d643527f29526540eca5cf23664a76ed5dd3527912ecaf43c",
+        "size_in_bytes": 927
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/asyncgen.py",
+        "path_type": "hardlink",
+        "sha256": "41a3bd6111db5a650c15252656b6b88af7474bc02fbc14b4fe93c699f3c7cfd1",
+        "sha256_in_prefix": "41a3bd6111db5a650c15252656b6b88af7474bc02fbc14b4fe93c699f3c7cfd1",
+        "size_in_bytes": 507
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/benchserver.py",
+        "path_type": "hardlink",
+        "sha256": "f45f5a2a7434b293bbd13bf42bb0bd7bf24cb2fd8da8226870a57ce30dce3970",
+        "sha256_in_prefix": "f45f5a2a7434b293bbd13bf42bb0bd7bf24cb2fd8da8226870a57ce30dce3970",
+        "size_in_bytes": 1300
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/boto.py",
+        "path_type": "hardlink",
+        "sha256": "442472f29c75de24e23b6e1c6edc6008a0d8a64133241ac72f79c5371037f815",
+        "sha256_in_prefix": "442472f29c75de24e23b6e1c6edc6008a0d8a64133241ac72f79c5371037f815",
+        "size_in_bytes": 172
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/conf.py",
+        "path_type": "hardlink",
+        "sha256": "5a8601086fca6c342e274de17e7fa1326b39491da21902a8147bc01f3bf398ce",
+        "sha256_in_prefix": "5a8601086fca6c342e274de17e7fa1326b39491da21902a8147bc01f3bf398ce",
+        "size_in_bytes": 8088
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/console.py",
+        "path_type": "hardlink",
+        "sha256": "4b3ed4662ef7fa8c9bcfdcfaa1a4b092deb6155eeba30aab76b84654aee7f7ea",
+        "sha256_in_prefix": "4b3ed4662ef7fa8c9bcfdcfaa1a4b092deb6155eeba30aab76b84654aee7f7ea",
+        "size_in_bytes": 3390
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/curl.py",
+        "path_type": "hardlink",
+        "sha256": "3189adfdffa34bc2e9dc709f45859e8a423e6cba8423e3e22bdb045ddbe5f7fc",
+        "sha256_in_prefix": "3189adfdffa34bc2e9dc709f45859e8a423e6cba8423e3e22bdb045ddbe5f7fc",
+        "size_in_bytes": 3323
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/datatypes.py",
+        "path_type": "hardlink",
+        "sha256": "67886e230b196eb174d7c7d2797395b79b042553799eec24f175c0c3f25561be",
+        "sha256_in_prefix": "67886e230b196eb174d7c7d2797395b79b042553799eec24f175c0c3f25561be",
+        "size_in_bytes": 3351
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/decorators.py",
+        "path_type": "hardlink",
+        "sha256": "bb8f003497d605ccbd2759ebd738e665985da19e2f7f09a0a12b29e2c715d5a0",
+        "sha256_in_prefix": "bb8f003497d605ccbd2759ebd738e665985da19e2f7f09a0a12b29e2c715d5a0",
+        "size_in_bytes": 1275
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/defer.py",
+        "path_type": "hardlink",
+        "sha256": "ca40416107de4615b123967bc1cf0394dde7876545f76721da082ee9c5b9270c",
+        "sha256_in_prefix": "ca40416107de4615b123967bc1cf0394dde7876545f76721da082ee9c5b9270c",
+        "size_in_bytes": 13863
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/deprecate.py",
+        "path_type": "hardlink",
+        "sha256": "28b7140a74c5f2539cb655730eb64a944ce4cd8ec07301639d15b3911bd473d6",
+        "sha256_in_prefix": "28b7140a74c5f2539cb655730eb64a944ce4cd8ec07301639d15b3911bd473d6",
+        "size_in_bytes": 6369
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/display.py",
+        "path_type": "hardlink",
+        "sha256": "ce0ee09b71f344130addb33107139ae43137a03d906d952951773c3848725026",
+        "sha256_in_prefix": "ce0ee09b71f344130addb33107139ae43137a03d906d952951773c3848725026",
+        "size_in_bytes": 1321
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/engine.py",
+        "path_type": "hardlink",
+        "sha256": "5549c10262a95937954f48d83430d5456c173cdbd449bfc956c17354b54d7fa8",
+        "sha256_in_prefix": "5549c10262a95937954f48d83430d5456c173cdbd449bfc956c17354b54d7fa8",
+        "size_in_bytes": 1302
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/ftp.py",
+        "path_type": "hardlink",
+        "sha256": "eb34d693cd642964b4ec4f89a9047f671e3f16e9c5e5a459af778e016bd8b284",
+        "sha256_in_prefix": "eb34d693cd642964b4ec4f89a9047f671e3f16e9c5e5a459af778e016bd8b284",
+        "size_in_bytes": 1221
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/gz.py",
+        "path_type": "hardlink",
+        "sha256": "cbc2418eb7a70355b150d0270aef8b9a96f036b3ddddd57e4b259ddb85cb0a60",
+        "sha256_in_prefix": "cbc2418eb7a70355b150d0270aef8b9a96f036b3ddddd57e4b259ddb85cb0a60",
+        "size_in_bytes": 1040
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/httpobj.py",
+        "path_type": "hardlink",
+        "sha256": "54f21955d152a60d4b37909a52eed6943b60acb8fd00c4c1084fe85f5a9c35ba",
+        "sha256_in_prefix": "54f21955d152a60d4b37909a52eed6943b60acb8fd00c4c1084fe85f5a9c35ba",
+        "size_in_bytes": 712
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/iterators.py",
+        "path_type": "hardlink",
+        "sha256": "f8f236ba8ba4079cf571122a37819b0a6f0d52d14eb910e03151af1925aef371",
+        "sha256_in_prefix": "f8f236ba8ba4079cf571122a37819b0a6f0d52d14eb910e03151af1925aef371",
+        "size_in_bytes": 5431
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/job.py",
+        "path_type": "hardlink",
+        "sha256": "77a004d5d0d449c1430366f5c6ad05a2f0cdceb000fe2b9c2df92edcb486dd99",
+        "sha256_in_prefix": "77a004d5d0d449c1430366f5c6ad05a2f0cdceb000fe2b9c2df92edcb486dd99",
+        "size_in_bytes": 277
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/log.py",
+        "path_type": "hardlink",
+        "sha256": "1502af9bc6f3eb4afd53920939cbdb6d996bcda522c3ac531b6e9b595896291e",
+        "sha256_in_prefix": "1502af9bc6f3eb4afd53920939cbdb6d996bcda522c3ac531b6e9b595896291e",
+        "size_in_bytes": 7174
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/misc.py",
+        "path_type": "hardlink",
+        "sha256": "5f69cb759f64b28def5a9f90b8a1cfde439bdb6251dec651a1723a5b6cf87850",
+        "sha256_in_prefix": "5f69cb759f64b28def5a9f90b8a1cfde439bdb6251dec651a1723a5b6cf87850",
+        "size_in_bytes": 9277
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/ossignal.py",
+        "path_type": "hardlink",
+        "sha256": "ede13ea95e1cae7800baa51ebc7dbe2a23dbe07f964528489c0b25e012de102d",
+        "sha256_in_prefix": "ede13ea95e1cae7800baa51ebc7dbe2a23dbe07f964528489c0b25e012de102d",
+        "size_in_bytes": 943
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/project.py",
+        "path_type": "hardlink",
+        "sha256": "4f261ead5ccac24ba2d771259e475e5eea741bbfb33c5d47db99fcf37429c81b",
+        "sha256_in_prefix": "4f261ead5ccac24ba2d771259e475e5eea741bbfb33c5d47db99fcf37429c81b",
+        "size_in_bytes": 2569
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/python.py",
+        "path_type": "hardlink",
+        "sha256": "1f8c3272ee54d30cfb1fdbabe3ed37a290f101c3301cbd1b12cf817a2237fd6c",
+        "sha256_in_prefix": "1f8c3272ee54d30cfb1fdbabe3ed37a290f101c3301cbd1b12cf817a2237fd6c",
+        "size_in_bytes": 9590
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/reactor.py",
+        "path_type": "hardlink",
+        "sha256": "c9b4a5f48d3ace098fc1cd25530129bcc4186da0e97723769a970d73222de292",
+        "sha256_in_prefix": "c9b4a5f48d3ace098fc1cd25530129bcc4186da0e97723769a970d73222de292",
+        "size_in_bytes": 5819
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/reqser.py",
+        "path_type": "hardlink",
+        "sha256": "8c6ff2fa84c85984fce0468f0024faf5005e10d7f469d4eddd76b3d2d096278b",
+        "sha256_in_prefix": "8c6ff2fa84c85984fce0468f0024faf5005e10d7f469d4eddd76b3d2d096278b",
+        "size_in_bytes": 708
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/request.py",
+        "path_type": "hardlink",
+        "sha256": "901fbdb5c24ff1edb836a735bda8c60cc75463e9d5dd848f952bf0e1507c4167",
+        "sha256_in_prefix": "901fbdb5c24ff1edb836a735bda8c60cc75463e9d5dd848f952bf0e1507c4167",
+        "size_in_bytes": 13698
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/response.py",
+        "path_type": "hardlink",
+        "sha256": "07e61c97d4c90ed0efe221057d56c4d96762442a59dc5d56418345345be183b1",
+        "sha256_in_prefix": "07e61c97d4c90ed0efe221057d56c4d96762442a59dc5d56418345345be183b1",
+        "size_in_bytes": 3537
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/serialize.py",
+        "path_type": "hardlink",
+        "sha256": "a3e32bb2de1953a9571169ff920bd232427ffcc4a46f74ef53008a770626eaee",
+        "sha256_in_prefix": "a3e32bb2de1953a9571169ff920bd232427ffcc4a46f74ef53008a770626eaee",
+        "size_in_bytes": 1137
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/signal.py",
+        "path_type": "hardlink",
+        "sha256": "fa83b56569887ae39e9dd33bfb27b93b9fd5394c1ad41482573b874ebd6fbc26",
+        "sha256_in_prefix": "fa83b56569887ae39e9dd33bfb27b93b9fd5394c1ad41482573b874ebd6fbc26",
+        "size_in_bytes": 3297
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/sitemap.py",
+        "path_type": "hardlink",
+        "sha256": "e3957b61976d95a3b817627075348cfbc478b25bff9dbd7678dac397c3225856",
+        "sha256_in_prefix": "e3957b61976d95a3b817627075348cfbc478b25bff9dbd7678dac397c3225856",
+        "size_in_bytes": 1523
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/spider.py",
+        "path_type": "hardlink",
+        "sha256": "e4a1b79ea456d0967356403f72364ddbb00cdf14a092d28b4a16d199b99be079",
+        "sha256_in_prefix": "e4a1b79ea456d0967356403f72364ddbb00cdf14a092d28b4a16d199b99be079",
+        "size_in_bytes": 2173
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/ssl.py",
+        "path_type": "hardlink",
+        "sha256": "34151495f3de80c7e2933dd09085ea98f78d77b3fd6656ff1aa3323fb86dd6d0",
+        "sha256_in_prefix": "34151495f3de80c7e2933dd09085ea98f78d77b3fd6656ff1aa3323fb86dd6d0",
+        "size_in_bytes": 2095
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/template.py",
+        "path_type": "hardlink",
+        "sha256": "9038336e54c6cecbc5760e1eea01fb2ba154389b73d352b6567c9c8bba167d30",
+        "sha256_in_prefix": "9038336e54c6cecbc5760e1eea01fb2ba154389b73d352b6567c9c8bba167d30",
+        "size_in_bytes": 888
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/test.py",
+        "path_type": "hardlink",
+        "sha256": "52d9d7a53e8f54b0992fb311c410266b5704772cf27c4183e34a6a23cca0a68f",
+        "sha256_in_prefix": "52d9d7a53e8f54b0992fb311c410266b5704772cf27c4183e34a6a23cca0a68f",
+        "size_in_bytes": 3735
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/testproc.py",
+        "path_type": "hardlink",
+        "sha256": "694619f99e90e14d14900784d04e00d28aa2d4379ddee992131d1b909fc87444",
+        "sha256_in_prefix": "694619f99e90e14d14900784d04e00d28aa2d4379ddee992131d1b909fc87444",
+        "size_in_bytes": 1487
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/testsite.py",
+        "path_type": "hardlink",
+        "sha256": "e36f82a25b69314e24b7ab701030ad4943a7fd0bd4d7d6debe6c7e75fd714af7",
+        "sha256_in_prefix": "e36f82a25b69314e24b7ab701030ad4943a7fd0bd4d7d6debe6c7e75fd714af7",
+        "size_in_bytes": 1611
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/trackref.py",
+        "path_type": "hardlink",
+        "sha256": "dac52478b75981cfc96798fd8e99801b1d11a1b8a2241b98e53d3f7abaffa1c5",
+        "sha256_in_prefix": "dac52478b75981cfc96798fd8e99801b1d11a1b8a2241b98e53d3f7abaffa1c5",
+        "size_in_bytes": 1989
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/url.py",
+        "path_type": "hardlink",
+        "sha256": "fd0edc3811129b3b9c181bb065df8862765ff58130271214afb9b29b4cd61e37",
+        "sha256_in_prefix": "fd0edc3811129b3b9c181bb065df8862765ff58130271214afb9b29b4cd61e37",
+        "size_in_bytes": 5595
+      },
+      {
+        "_path": "lib/python3.10/site-packages/scrapy/utils/versions.py",
+        "path_type": "hardlink",
+        "sha256": "33394fe3dea11b183061f310d03d8ef8ed4e1bdf268f32e148af3cb78fff8eb6",
+        "sha256_in_prefix": "33394fe3dea11b183061f310d03d8ef8ed4e1bdf268f32e148af3cb78fff8eb6",
+        "size_in_bytes": 850
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "scrapy==2.8.0=py310h06a4308_0",
+  "sha256": "28a1a1dfbca3526357165763a52f6814afcf06ce06aca101b849759aef369283",
+  "size": 417985,
+  "subdir": "linux-64",
+  "timestamp": 1677738262394,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/scrapy-2.8.0-py310h06a4308_0.conda",
+  "version": "2.8.0"
+}
