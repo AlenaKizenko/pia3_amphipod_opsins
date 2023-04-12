@@ -27,13 +27,13 @@ workdir: out_dir
 #refs_sub = [re.sub(fasta_names, '', ref) for ref in refs]
 
 rule all:
-    input: "db_align.fasta.contree", expand("{query}/{query}_blast_hits.fasta", query=queries, out_dir=out_dir)
+    input: "db_align.fasta.contree", expand("{query}/{query}_blast_hits_clust.fasta", query=queries, out_dir=out_dir)
 
 rule mafft_align_db_seqs:
     input: db,
     output: "db_align.fasta"
     benchmark: "benchmarks/mafft_align_db_seqs.txt"
-    conda: "/home/akizenko/Apps/pia3_amphipod_opsins/PIA3/pia3.yml"
+    conda: "pia3.yml"
     log: "logs/mafft_align_db_seqs.txt"
     threads: 8
     shell: "mafft --thread {threads} --auto {input} > {output}"
@@ -42,20 +42,20 @@ rule iqtree_build_db_tree:
     input: "db_align.fasta"
     output: "db_align.fasta.contree"
     benchmark: "benchmarks/iqtree_build_db_tree.txt"
-    conda: "/home/akizenko/Apps/pia3_amphipod_opsins/PIA3/pia3.yml"
+    conda: "pia3.yml"
     log: "logs/iqtree_build_db_tree.txt"
-    params: bb=1000,
-            mode="TEST",
+    params: bb=100,
+            model="'LG+F+G4'",
             nt="AUTO",
             t="RANDOM"
     threads: 8
-    shell: "iqtree -s {input} -nt {params.nt} -t {params.t} -bb {params.bb} -m {params.mode} 2> {log}"
+    shell: "iqtree -s {input} -nt {params.nt} -t {params.t} -bb {params.bb} -m {params.model} 2> {log}"
 
 rule transdecoder_find_cds:
     input: lambda wildcards: f"{in_dir}/{wildcards.query}"
     output: "{query}/{query}.transdecoder_underscores.pep"
     benchmark: "benchmarks/transdecoder_find_cds_{query}.txt"
-    conda: "/home/akizenko/Apps/pia3_amphipod_opsins/PIA3/pia3.yml"
+    conda: "pia3.yml"
     log: "logs/transdecoder_find_cds_{query}.txt"
     threads: 2
     shell: """
@@ -73,19 +73,27 @@ rule blast_search_hits:
     log: "logs/blast_search_hits_{query}.txt"
     threads: 8
     shell: """
+            cd {wildcards.query}
             makeblastdb -in {input} -out {wildcards.query}_blast_db -parse_seqids -dbtype prot
             blastp -query {db} -db {wildcards.query}_blast_db -num_threads {threads} -outfmt 6 -out {wildcards.query}_blast_hits.tsv -threshold {bit_score}
             awk '{{print $2}}' {wildcards.query}_blast_hits.tsv > {wildcards.query}_blast_hits_ids.txt
-            blastdbcmd -db {wildcards.query}_blast_db -entry_batch {wildcards.query}_blast_hits_ids.txt > {output}
+            blastdbcmd -db {wildcards.query}_blast_db -entry_batch {wildcards.query}_blast_hits_ids.txt > {wildcards.query}_blast_hits.fasta
            """
 
-# rule cd_hit_cluster_hits:
-#     input: {out_dir}/{basename}_blast_hits_ids.fasta
-#     output: {out_dir}/{basename}_blast_hits_ids_clust.fasta
-#     benchmark: "{out_dir}/{query}/benchmarks/cd_hit_cluster_hits.txt"
-#     conda: "pia3.yml"
-#     log: "{out_dir}/{query}/logs/cd_hit_cluster_hits.txt"
-#     threads: 8
+rule cd_hit_cluster_hits:
+    input: lambda wildcards: f"{wildcards.query}/{wildcards.query}_blast_hits.fasta"
+    output: "{query}/{query}_blast_hits_clust.fasta"
+    benchmark: "benchmarks/cd_hit_cluster_hits_{query}.txt"
+    conda: "pia3.yml"
+    log: "logs/cd_hit_cluster_hits_{query}.txt"
+    threads: 8
+    params: c=5,
+            n=cd_h,
+            M=2000
+    shell: """
+            cd {wildcards.query}
+            cd-hit -i {wildcards.query}_blast_hits.fasta -o {wildcards.query}_blast_hits_clust.fasta -c {params.c} -n {params.n} -M {params.M} -T {threads}
+            """
 
 # rule pia_analysis:
 #     input: ref=lambda wildcards: f"{in_dir}/{wildcards.reference}",

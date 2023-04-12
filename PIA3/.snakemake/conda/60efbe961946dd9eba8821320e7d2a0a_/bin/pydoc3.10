@@ -1,5 +1,0 @@
-#!/home/akizenko/Apps/pia3_amphipod_opsins/PIA3/.snakemake/conda/60efbe961946dd9eba8821320e7d2a0a_/bin/python3.10
-
-import pydoc
-if __name__ == '__main__':
-    pydoc.cli()

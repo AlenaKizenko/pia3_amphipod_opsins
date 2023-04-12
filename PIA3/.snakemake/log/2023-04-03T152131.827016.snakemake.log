@@ -1,6 +1,0 @@
-Building DAG of jobs...
-MissingInputException in rule all in file /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/Snakefile, line 40:
-Missing input files for rule all:
-    affected files:
-        test_out/test_Hyalella_azteca.fasta
-        test_out/Parhyale_hawaiensis_test.fasta

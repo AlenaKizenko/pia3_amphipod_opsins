@@ -1,3 +1,0 @@
-Exception in file /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/Snakefile, line 14:
-No /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/classification_opsins_full_aa2.fasta was detected!
-  File "/home/akizenko/Apps/pia3_amphipod_opsins/PIA3/Snakefile", line 14, in <module>

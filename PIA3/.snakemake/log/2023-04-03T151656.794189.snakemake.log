@@ -1,3 +1,0 @@
-NameError in file /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/Snakefile, line 26:
-name 'e_val' is not defined
-  File "/home/akizenko/Apps/pia3_amphipod_opsins/PIA3/Snakefile", line 26, in <module>
