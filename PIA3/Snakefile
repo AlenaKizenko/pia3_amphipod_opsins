@@ -53,7 +53,7 @@ rule iqtree_build_db_tree:
 
 rule transdecoder_find_cds:
     input: lambda wildcards: f"{in_dir}/{wildcards.query}"
-    output: "{query}/{query}.transdecoder.pep"
+    output: "{query}/{query}.transdecoder_underscores.pep"
     benchmark: "benchmarks/transdecoder_find_cds_{query}.txt"
     conda: "/home/akizenko/Apps/pia3_amphipod_opsins/PIA3/pia3.yml"
     log: "logs/transdecoder_find_cds_{query}.txt"
@@ -62,21 +62,22 @@ rule transdecoder_find_cds:
             cd {wildcards.query}
             TransDecoder.LongOrfs -t {input}
             TransDecoder.Predict -t {input} --single_best_only
+            sed 's/[|,~,/,\,]/_/g' {wildcards.query}.transdecoder.pep > {wildcards.query}.transdecoder_underscores.pep
             """
 
-# rule blast_search_hits:
-#     input: lambda wildcards: f"{wildcards.query}/{wildcards.query}.transdecoder.pep"
-#     output: "{query}_blast_hits.fasta"
-#     benchmark: "benchmarks/blast_search_hits_{query}.txt"
-#     conda: "pia3.yml"
-#     log: "logs/blast_search_hits_{query}.txt"
-#     threads: 8
-#     shell: """
-#             makeblastdb -in {input} -out {wildcards.query}_blast_db -parse_seqids -dbtype prot
-#             blastp -query {db} -db {wildcards.query}_blast_db -num_threads {threads} -outfmt 6 -out {wildcards.query}_blast_hits.tsv -threshold {bit_score}
-#             awk '{print $2}' {wildcards.query}_blast_hits.tsv > {wildcards.query}_blast_hits_ids.txt
-#             blastdbcmd -db {wildcards.query}_blast_db -entry_batch {wildcards.query}_blast_hits_ids.txt > {output}
-#            """
+rule blast_search_hits:
+    input: lambda wildcards: f"{wildcards.query}/{wildcards.query}.transdecoder_underscores.pep"
+    output: "{query}/{query}_blast_hits.fasta"
+    benchmark: "benchmarks/blast_search_hits_{query}.txt"
+    conda: "pia3.yml"
+    log: "logs/blast_search_hits_{query}.txt"
+    threads: 8
+    shell: """
+            makeblastdb -in {input} -out {wildcards.query}_blast_db -parse_seqids -dbtype prot
+            blastp -query {db} -db {wildcards.query}_blast_db -num_threads {threads} -outfmt 6 -out {wildcards.query}_blast_hits.tsv -threshold {bit_score}
+            awk '{{print $2}}' {wildcards.query}_blast_hits.tsv > {wildcards.query}_blast_hits_ids.txt
+            blastdbcmd -db {wildcards.query}_blast_db -entry_batch {wildcards.query}_blast_hits_ids.txt > {output}
+           """
 
 # rule cd_hit_cluster_hits:
 #     input: {out_dir}/{basename}_blast_hits_ids.fasta
