@@ -27,7 +27,7 @@ workdir: out_dir
 #refs_sub = [re.sub(fasta_names, '', ref) for ref in refs]
 
 rule all:
-    input: "db_align.fasta.contree", expand("{query}/{query}.transdecoder.pep", query=queries, out_dir=out_dir)
+    input: "db_align.fasta.contree", expand("{query}/{query}_blast_hits.fasta", query=queries, out_dir=out_dir)
 
 rule mafft_align_db_seqs:
     input: db,
@@ -53,10 +53,10 @@ rule iqtree_build_db_tree:
 
 rule transdecoder_find_cds:
     input: lambda wildcards: f"{in_dir}/{wildcards.query}"
-    output: "{wildcards.query}/{wildcards.query}.transdecoder.pep"
-    benchmark: "benchmarks/transdecoder_find_cds_{wildcards.query}.txt"
+    output: "{query}/{query}.transdecoder.pep"
+    benchmark: "benchmarks/transdecoder_find_cds_{query}.txt"
     conda: "/home/akizenko/Apps/pia3_amphipod_opsins/PIA3/pia3.yml"
-    log: "logs/transdecoder_find_cds_{wildcards.query}.txt"
+    log: "logs/transdecoder_find_cds_{query}.txt"
     threads: 2
     shell: """
             cd {wildcards.query}
@@ -66,10 +66,10 @@ rule transdecoder_find_cds:
 
 # rule blast_search_hits:
 #     input: lambda wildcards: f"{wildcards.query}/{wildcards.query}.transdecoder.pep"
-#     output: "{wildcards.query}_blast_hits.fasta"
-#     benchmark: "benchmarks/blast_search_hits_{wildcards.query}.txt"
+#     output: "{query}_blast_hits.fasta"
+#     benchmark: "benchmarks/blast_search_hits_{query}.txt"
 #     conda: "pia3.yml"
-#     log: "logs/blast_search_hits_{wildcards.query}.txt"
+#     log: "logs/blast_search_hits_{query}.txt"
 #     threads: 8
 #     shell: """
 #             makeblastdb -in {input} -out {wildcards.query}_blast_db -parse_seqids -dbtype prot
