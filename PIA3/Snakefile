@@ -44,7 +44,7 @@ rule iqtree_build_db_tree:
     benchmark: "benchmarks/iqtree_build_db_tree.txt"
     conda: "pia3.yml"
     log: "logs/iqtree_build_db_tree.txt"
-    params: bb=100,
+    params: bb=1000,
             model="'LG+F+G4'",
             nt="AUTO",
             t="RANDOM"
@@ -74,7 +74,7 @@ rule blast_search_hits:
     threads: 8
     shell: """
             cd {wildcards.query}
-            makeblastdb -in {input} -out {wildcards.query}_blast_db -parse_seqids -dbtype prot
+            makeblastdb -in {wildcards.query}.transdecoder_underscores.pep -out {wildcards.query}_blast_db -parse_seqids -dbtype prot
             blastp -query {db} -db {wildcards.query}_blast_db -num_threads {threads} -outfmt 6 -out {wildcards.query}_blast_hits.tsv -threshold {bit_score}
             awk '{{print $2}}' {wildcards.query}_blast_hits.tsv > {wildcards.query}_blast_hits_ids.txt
             blastdbcmd -db {wildcards.query}_blast_db -entry_batch {wildcards.query}_blast_hits_ids.txt > {wildcards.query}_blast_hits.fasta
@@ -87,13 +87,15 @@ rule cd_hit_cluster_hits:
     conda: "pia3.yml"
     log: "logs/cd_hit_cluster_hits_{query}.txt"
     threads: 8
-    params: c=5,
-            n=cd_h,
+    params: c=cd_h,
+            n=5,
             M=2000
     shell: """
             cd {wildcards.query}
             cd-hit -i {wildcards.query}_blast_hits.fasta -o {wildcards.query}_blast_hits_clust.fasta -c {params.c} -n {params.n} -M {params.M} -T {threads}
             """
+
+
 
 # rule pia_analysis:
 #     input: ref=lambda wildcards: f"{in_dir}/{wildcards.reference}",
