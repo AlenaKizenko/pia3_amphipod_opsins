@@ -1,11 +1,10 @@
-db: "classification_opsins_full_aa.fasta"
-in_dir: "test_data"
-out_dir: "test_out"
+db: "/home/akizenko/Apps/pia3_amphipod_opsins/PIA3/classification_opsins_full_aa.fasta"
+in_dir: "/home/akizenko/Apps/pia3_amphipod_opsins/PIA3/test_data"
+out_dir: "/home/akizenko/Apps/pia3_amphipod_opsins/PIA3/test_out"
 model: "LG+F+G4"
 outgroup: ""
-aligner: "BLAST"
 cd_h: 0.95
 opsin: False
-e_val: 1e-10
-del: True
+bit_score: 40
+clean: True
 cds: True

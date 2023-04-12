@@ -1,5 +1,5 @@
 import os
-#import pathlib
+import pathlib
 from snakemake.utils import validate
 
 configfile: "config.yaml"
@@ -10,42 +10,81 @@ configfile: "config.yaml"
 #workdir: out_dir
 
 #fasta_names ='\.fasta|\.fna|\.ffn|\.fa|\.fsa_nt'
+out_dir = config["out_dir"]
+in_dir = config["in_dir"]
+db = config["db"]
+model = config["model"]
+outgroup = config["outgroup"]
+cd_h = config["cd_h"]
+opsin = config["opsin"]
+bit_score = config["bit_score"]
+clean = config['clean']
+cds = ["cds"]
 
-#refs = os.listdir(in_dir)
+queries = os.listdir(in_dir)
+
+workdir: out_dir
 #refs_sub = [re.sub(fasta_names, '', ref) for ref in refs]
 
-#rule all:
-#    input: expand("{out_dir}/{reference}", reference=refs_sub, out_dir=out_dir)
-
-out_dir = config["out_dir"]
-
 rule all:
-    input: f"{out_dir}/db_align.fasta"
+    input: "db_align.fasta.contree", expand("{query}/{query}.transdecoder.pep", query=queries, out_dir=out_dir)
 
 rule mafft_align_db_seqs:
-    input: config["db"],
-    output: "{out_dir}/db_align.fasta"
-    benchmark: "{out_dir}/benchmarks/build_initial_tree.txt"
-    conda: "pia3.yml"
-    log: "{out_dir}/logs/build_initial_tree.txt"
+    input: db,
+    output: "db_align.fasta"
+    benchmark: "benchmarks/mafft_align_db_seqs.txt"
+    conda: "/home/akizenko/Apps/pia3_amphipod_opsins/PIA3/pia3.yml"
+    log: "logs/mafft_align_db_seqs.txt"
     threads: 8
     shell: "mafft --thread {threads} --auto {input} > {output}"
 
-# rule iqtree_build_db_tree:
-#     input:
-#     output:
-#         db_tree="{out_dir}/{db}_align.fasta.contree"
-#     benchmark:
-#     conda:
-#     log:
-#         "{out_dir}/logs/iqtree_build_db_tree.txt"
-#     params: bb=1000,
-#             mode="TEST",
-#             nt="AUTO",
-#             t="RANDOM"
-#     threads:
-#     shell:
-#         "iqtree -s {output.db_align} -nt {params.nt} -t {params.t} -bb {params.bb} -m {params.mode} 2> {log.iqtree_log}"
+rule iqtree_build_db_tree:
+    input: "db_align.fasta"
+    output: "db_align.fasta.contree"
+    benchmark: "benchmarks/iqtree_build_db_tree.txt"
+    conda: "/home/akizenko/Apps/pia3_amphipod_opsins/PIA3/pia3.yml"
+    log: "logs/iqtree_build_db_tree.txt"
+    params: bb=1000,
+            mode="TEST",
+            nt="AUTO",
+            t="RANDOM"
+    threads: 8
+    shell: "iqtree -s {input} -nt {params.nt} -t {params.t} -bb {params.bb} -m {params.mode} 2> {log}"
+
+rule transdecoder_find_cds:
+    input: lambda wildcards: f"{in_dir}/{wildcards.query}"
+    output: "{wildcards.query}/{wildcards.query}.transdecoder.pep"
+    benchmark: "benchmarks/transdecoder_find_cds_{wildcards.query}.txt"
+    conda: "/home/akizenko/Apps/pia3_amphipod_opsins/PIA3/pia3.yml"
+    log: "logs/transdecoder_find_cds_{wildcards.query}.txt"
+    threads: 2
+    shell: """
+            cd {wildcards.query}
+            TransDecoder.LongOrfs -t {input}
+            TransDecoder.Predict -t {input} --single_best_only
+            """
+
+# rule blast_search_hits:
+#     input: lambda wildcards: f"{wildcards.query}/{wildcards.query}.transdecoder.pep"
+#     output: "{wildcards.query}_blast_hits.fasta"
+#     benchmark: "benchmarks/blast_search_hits_{wildcards.query}.txt"
+#     conda: "pia3.yml"
+#     log: "logs/blast_search_hits_{wildcards.query}.txt"
+#     threads: 8
+#     shell: """
+#             makeblastdb -in {input} -out {wildcards.query}_blast_db -parse_seqids -dbtype prot
+#             blastp -query {db} -db {wildcards.query}_blast_db -num_threads {threads} -outfmt 6 -out {wildcards.query}_blast_hits.tsv -threshold {bit_score}
+#             awk '{print $2}' {wildcards.query}_blast_hits.tsv > {wildcards.query}_blast_hits_ids.txt
+#             blastdbcmd -db {wildcards.query}_blast_db -entry_batch {wildcards.query}_blast_hits_ids.txt > {output}
+#            """
+
+# rule cd_hit_cluster_hits:
+#     input: {out_dir}/{basename}_blast_hits_ids.fasta
+#     output: {out_dir}/{basename}_blast_hits_ids_clust.fasta
+#     benchmark: "{out_dir}/{query}/benchmarks/cd_hit_cluster_hits.txt"
+#     conda: "pia3.yml"
+#     log: "{out_dir}/{query}/logs/cd_hit_cluster_hits.txt"
+#     threads: 8
 
 # rule pia_analysis:
 #     input: ref=lambda wildcards: f"{in_dir}/{wildcards.reference}",
