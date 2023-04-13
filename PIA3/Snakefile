@@ -19,15 +19,14 @@ cd_h = config["cd_h"]
 opsin = config["opsin"]
 bit_score = config["bit_score"]
 clean = config['clean']
-cds = ["cds"]
+transcripts = config["transcripts"]
 
-queries = os.listdir(in_dir)
+queries = [os.path.splitext(i)[0] for i in os.listdir(in_dir)]
 
 workdir: out_dir
-#refs_sub = [re.sub(fasta_names, '', ref) for ref in refs]
 
 rule all:
-    input: "db_align.fasta.contree", expand("{query}/{query}_blast_hits_clust.fasta", query=queries, out_dir=out_dir)
+    input: "mad_distances_db_contree.txt", expand("{query}/{query}_blast_hits_clust_renamed.fasta", query=queries, out_dir=out_dir)
 
 rule mafft_align_db_seqs:
     input: db,
@@ -52,8 +51,8 @@ rule iqtree_build_db_tree:
     shell: "iqtree -s {input} -nt {params.nt} -t {params.t} -bb {params.bb} -m {params.model} 2> {log}"
 
 rule transdecoder_find_cds:
-    input: lambda wildcards: f"{in_dir}/{wildcards.query}"
-    output: "{query}/{query}.transdecoder_underscores.pep"
+    input: lambda wildcards: f"{in_dir}/{wildcards.query}.fasta"
+    output: "{query}/{query}.fasta.transdecoder_underscores.pep"
     benchmark: "benchmarks/transdecoder_find_cds_{query}.txt"
     conda: "pia3.yml"
     log: "logs/transdecoder_find_cds_{query}.txt"
@@ -62,11 +61,11 @@ rule transdecoder_find_cds:
             cd {wildcards.query}
             TransDecoder.LongOrfs -t {input}
             TransDecoder.Predict -t {input} --single_best_only
-            sed 's/[|,~,/,\,]/_/g' {wildcards.query}.transdecoder.pep > {wildcards.query}.transdecoder_underscores.pep
+            sed 's/[|,~,/,\,]/_/g' {wildcards.query}.fasta.transdecoder.pep > {wildcards.query}.fasta.transdecoder_underscores.pep
             """
 
 rule blast_search_hits:
-    input: lambda wildcards: f"{wildcards.query}/{wildcards.query}.transdecoder_underscores.pep"
+    input: lambda wildcards: f"{wildcards.query}/{wildcards.query}.fasta.transdecoder_underscores.pep"
     output: "{query}/{query}_blast_hits.fasta"
     benchmark: "benchmarks/blast_search_hits_{query}.txt"
     conda: "pia3.yml"
@@ -74,7 +73,7 @@ rule blast_search_hits:
     threads: 8
     shell: """
             cd {wildcards.query}
-            makeblastdb -in {wildcards.query}.transdecoder_underscores.pep -out {wildcards.query}_blast_db -parse_seqids -dbtype prot
+            makeblastdb -in {wildcards.query}.fasta.transdecoder_underscores.pep -out {wildcards.query}_blast_db -parse_seqids -dbtype prot
             blastp -query {db} -db {wildcards.query}_blast_db -num_threads {threads} -outfmt 6 -out {wildcards.query}_blast_hits.tsv -threshold {bit_score}
             awk '{{print $2}}' {wildcards.query}_blast_hits.tsv > {wildcards.query}_blast_hits_ids.txt
             blastdbcmd -db {wildcards.query}_blast_db -entry_batch {wildcards.query}_blast_hits_ids.txt > {wildcards.query}_blast_hits.fasta
@@ -95,6 +94,24 @@ rule cd_hit_cluster_hits:
             cd-hit -i {wildcards.query}_blast_hits.fasta -o {wildcards.query}_blast_hits_clust.fasta -c {params.c} -n {params.n} -M {params.M} -T {threads}
             """
 
+rule rename_and_filter_hits:
+    input: lambda wildcards: f"{wildcards.query}/{wildcards.query}_blast_hits_clust.fasta"
+    output: "{query}/{query}_blast_hits_clust_renamed.fasta"
+    benchmark: "benchmarks/rename_and_filter_hits_{query}.txt"
+    conda: "pia3.yml"
+    log: "logs/rename_and_filter_hits_{query}.txt"
+    threads: 2
+    shell: "python3 /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/scripts/rename_hits.py {db} {input} {output} {wildcards.query} {transcripts}"
+
+
+rule calculate_mad_distances:
+    input: "db_align.fasta.contree"
+    output: "mad_distances_db_contree.txt"
+    benchmark: "benchmarks/calculate_mad_distances.txt"
+    conda: "pia3.yml"
+    log: "logs/calculate_mad_distances.txt"
+    threads: 1
+    shell: "python3 /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/scripts/calc_mean_dist.py {input} {output}"
 
 
 # rule pia_analysis:
