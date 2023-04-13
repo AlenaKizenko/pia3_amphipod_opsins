@@ -26,10 +26,10 @@ queries = [os.path.splitext(i)[0] for i in os.listdir(in_dir)]
 workdir: out_dir
 
 rule all:
-    input: "mad_distances_db_contree.txt", expand("{query}/{query}_blast_hits_clust_renamed.fasta", query=queries, out_dir=out_dir)
+    input: "mad_distances_db_contree.txt", expand("{query}/{query}_db_align.fasta", query=queries)
 
 rule mafft_align_db_seqs:
-    input: db,
+    input: db
     output: "db_align.fasta"
     benchmark: "benchmarks/mafft_align_db_seqs.txt"
     conda: "pia3.yml"
@@ -113,6 +113,31 @@ rule calculate_mad_distances:
     threads: 1
     shell: "python3 /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/scripts/calc_mean_dist.py {input} {output}"
 
+
+rule mafft_align_db_query_seqs:
+    input: db = db, query_seqs = "{query}/{query}_blast_hits_clust_renamed.fasta"
+    output: "{query}/{query}_db_align.fasta"
+    #benchmark: "benchmarks/mafft_align_query_seqs_{query}.txt"
+    conda: "pia3.yml"
+    #log: "logs/mafft_align_query_seqs_{query}.txt"
+    threads: 8
+    shell: """
+        cat {input.db} {input.query_seqs} > {wildcards.query}/db_query.fasta
+        mafft --thread {threads} --auto {wildcards.query}/db_query.fasta > {output}
+        """
+
+# rule iqtree_build_db_query_tree:
+#     input: "db_align.fasta"
+#     output: "db_align.fasta.contree"
+#     benchmark: "benchmarks/iqtree_build_db_tree.txt"
+#     conda: "pia3.yml"
+#     log: "logs/iqtree_build_db_tree.txt"
+#     params: bb=1000,
+#             model="'LG+F+G4'",
+#             nt="AUTO",
+#             t="RANDOM"
+#     threads: 8
+#     shell: "iqtree -s {input} -nt {params.nt} -t {params.t} -bb {params.bb} -m {params.model} 2> {log}"
 
 # rule pia_analysis:
 #     input: ref=lambda wildcards: f"{in_dir}/{wildcards.reference}",
