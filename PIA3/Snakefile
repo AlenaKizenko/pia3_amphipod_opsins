@@ -26,7 +26,7 @@ queries = [os.path.splitext(i)[0] for i in os.listdir(in_dir)]
 workdir: out_dir
 
 rule all:
-    input: "mad_distances_db_contree.txt", expand("{query}/{query}_db_align.fasta", query=queries)
+    input: expand("{query}/{query}_pia3_pep.fasta", query=queries)
 
 rule mafft_align_db_seqs:
     input: db
@@ -44,14 +44,14 @@ rule iqtree_build_db_tree:
     conda: "pia3.yml"
     log: "logs/iqtree_build_db_tree.txt"
     params: bb=1000,
-            model="'LG+F+G4'",
+            model=model,
             nt="AUTO",
             t="RANDOM"
     threads: 8
     shell: "iqtree -s {input} -nt {params.nt} -t {params.t} -bb {params.bb} -m {params.model} 2> {log}"
 
 rule transdecoder_find_cds:
-    input: lambda wildcards: f"{in_dir}/{wildcards.query}.fasta"
+    input: f"{in_dir}/{{query}}.fasta"
     output: "{query}/{query}.fasta.transdecoder_underscores.pep"
     benchmark: "benchmarks/transdecoder_find_cds_{query}.txt"
     conda: "pia3.yml"
@@ -65,7 +65,7 @@ rule transdecoder_find_cds:
             """
 
 rule blast_search_hits:
-    input: lambda wildcards: f"{wildcards.query}/{wildcards.query}.fasta.transdecoder_underscores.pep"
+    input: "{query}/{query}.fasta.transdecoder_underscores.pep"
     output: "{query}/{query}_blast_hits.fasta"
     benchmark: "benchmarks/blast_search_hits_{query}.txt"
     conda: "pia3.yml"
@@ -80,7 +80,7 @@ rule blast_search_hits:
            """
 
 rule cd_hit_cluster_hits:
-    input: lambda wildcards: f"{wildcards.query}/{wildcards.query}_blast_hits.fasta"
+    input: "{query}/{query}_blast_hits.fasta"
     output: "{query}/{query}_blast_hits_clust.fasta"
     benchmark: "benchmarks/cd_hit_cluster_hits_{query}.txt"
     conda: "pia3.yml"
@@ -95,7 +95,7 @@ rule cd_hit_cluster_hits:
             """
 
 rule rename_and_filter_hits:
-    input: lambda wildcards: f"{wildcards.query}/{wildcards.query}_blast_hits_clust.fasta"
+    input: "{query}/{query}_blast_hits_clust.fasta"
     output: "{query}/{query}_blast_hits_clust_renamed.fasta"
     benchmark: "benchmarks/rename_and_filter_hits_{query}.txt"
     conda: "pia3.yml"
@@ -117,27 +117,58 @@ rule calculate_mad_distances:
 rule mafft_align_db_query_seqs:
     input: db = db, query_seqs = "{query}/{query}_blast_hits_clust_renamed.fasta"
     output: "{query}/{query}_db_align.fasta"
-    #benchmark: "benchmarks/mafft_align_query_seqs_{query}.txt"
+    benchmark: "benchmarks/mafft_align_query_seqs_{query}.txt"
     conda: "pia3.yml"
-    #log: "logs/mafft_align_query_seqs_{query}.txt"
+    log: "logs/mafft_align_query_seqs_{query}.txt"
     threads: 8
     shell: """
         cat {input.db} {input.query_seqs} > {wildcards.query}/db_query.fasta
         mafft --thread {threads} --auto {wildcards.query}/db_query.fasta > {output}
         """
 
-# rule iqtree_build_db_query_tree:
-#     input: "db_align.fasta"
-#     output: "db_align.fasta.contree"
-#     benchmark: "benchmarks/iqtree_build_db_tree.txt"
+rule iqtree_build_db_query_tree:
+    input: "{query}/{query}_db_align.fasta"
+    output: "{query}/{query}_db_align.fasta.contree"
+    benchmark: "benchmarks/iqtree_build_db_query_tree_{query}.txt"
+    conda: "pia3.yml"
+    log: "logs/iqtree_build_db_query_tree_{query}.txt"
+    params: bb=1000,
+            model=model,
+            nt="AUTO",
+            t="RANDOM"
+    threads: 8
+    shell: "iqtree -s {input} -nt {params.nt} -t {params.t} -bb {params.bb} -m {params.model} 2> {log}"
+
+
+rule filter_distant_seqs:
+    input: 
+        tree = "{query}/{query}_db_align.fasta.contree",
+        hits_file = "{query}/{query}_blast_hits_clust_renamed.fasta",
+        dist_file = "mad_distances_db_contree.txt"
+    output: "{query}/{query}_pia3_pep.fasta"
+    benchmark: "benchmarks/filter_distant_seqs_{query}.txt"
+    conda: "pia3.yml"
+    log: "benchmarks/filter_distant_seqs_{query}.txt"
+    threads: 8
+    shell: "python3 /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/scripts/filter_distant_seqs.py {input.tree} {input.hits_file} {input.dist_file} {wildcards.query} {output}"
+
+
+# rule write_cds_and_contigs:
+#     input:
+#         pep_file = "{query}/{query}_pia3_pep.fasta",
+#         transcriptome = "{query}/{query}.fasta",
+#         cds_file = "{query}/{query}.fasta.transdecoder.cds"
+#     output:
+#         cds = "{query}/{query}_pia3_cds.fasta",
+#         contigs = "{query}/{query}_pia3_contigs.fasta"
+#     benchmark: "benchmarks/write_cds_and_contigs_{query}.txt"
 #     conda: "pia3.yml"
-#     log: "logs/iqtree_build_db_tree.txt"
-#     params: bb=1000,
-#             model="'LG+F+G4'",
-#             nt="AUTO",
-#             t="RANDOM"
-#     threads: 8
-#     shell: "iqtree -s {input} -nt {params.nt} -t {params.t} -bb {params.bb} -m {params.model} 2> {log}"
+#     log: "logs/write_cds_and_contigs_{query}.txt"
+#     threads: 2
+#     shell: """
+#         python3 /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/scripts/match_amino_contig.py {input.pep_file} {transcriptome} {output.contigs}
+#         python3 /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/scripts/match_amino_nucl.py {input.pep_file} {cds_file} {output.cds}
+#        """
 
 # rule pia_analysis:
 #     input: ref=lambda wildcards: f"{in_dir}/{wildcards.reference}",

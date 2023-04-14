@@ -1,11 +1,19 @@
-def filter_distant_seqs(input_file, tree_query, dist_dev, query_file):
-    print('Filtering distinct hits')
+import sys
+import ete3
+from Bio import SeqIO
+from Bio.SeqIO.FastaIO import SimpleFastaParser
+from Bio.SeqRecord import SeqRecord
+
+
+def filter_distant_seqs(tree_query, query_file, dist_dev, input_file, output):
     tree_query = ete3.Tree(tree_query)  # assign Ete3 tree object
     lst_seqs = []  # create list for selected leaves (distance less than 4*absolute mean deviation)
     my_records = []  # create list for selected sequences
+    with open(dist_dev) as dist:
+        dist = float(dist.readline())
     for leaf in tree_query.iter_leaves():  # iterate on leaves of query tree
         if input_file in str(
-                leaf.name) and leaf.dist < dist_dev:  # if seq name from file == seq name from tree and distance is OK
+                leaf.name) and leaf.dist < dist:  # if seq name from file == seq name from tree and distance is OK
             lst_seqs.append(str(leaf.name))  # append lst_seqs by name of selected leaf
     for seq_record in SeqIO.parse(query_file, "fasta"):  # parse .fasta file with hits
         for seq_name in lst_seqs:
@@ -14,5 +22,13 @@ def filter_distant_seqs(input_file, tree_query, dist_dev, query_file):
             if seq_record.id in seq_name:  # if seq name from file == selected name
                 rec = SeqRecord(seq_record.seq, seq_record.id, description='')  # create SeqRecord object
                 my_records.append(rec)  # append list with seq records
-    SeqIO.write(my_records, f'{input_file}_PIA3_aa.fasta', 'fasta')  # write seq records to file
-    print('Filtering is completed')
+    SeqIO.write(my_records, output, 'fasta')  # write seq records to file
+
+tree = sys.argv[1]
+query_file = sys.argv[2]
+dist_dev = sys.argv[3]
+input_file = sys.argv[4]
+output = sys.argv[5]
+
+result_filtering = filter_distant_seqs(tree, query_file, dist_dev, input_file, output)
+
