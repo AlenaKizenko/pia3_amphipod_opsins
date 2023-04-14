@@ -2,21 +2,15 @@ import os
 import pathlib
 from snakemake.utils import validate
 
+
 configfile: "config.yaml"
 
-
-#validate(config, 'config.schema.yaml')
-
-#workdir: out_dir
-
-#fasta_names ='\.fasta|\.fna|\.ffn|\.fa|\.fsa_nt'
 out_dir = config["out_dir"]
 in_dir = config["in_dir"]
 db = config["db"]
 model = config["model"]
 outgroup = config["outgroup"]
 cd_h = config["cd_h"]
-opsin = config["opsin"]
 bit_score = config["bit_score"]
 clean = config['clean']
 transcripts = config["transcripts"]
@@ -26,7 +20,7 @@ queries = [os.path.splitext(i)[0] for i in os.listdir(in_dir)]
 workdir: out_dir
 
 rule all:
-    input: expand("{query}/{query}_pia3_pep.fasta", query=queries)
+    input: expand("{query}/{query}_pia3_cds.fasta", query=queries), expand("{query}/{query}_pia3_contigs.fasta", query=queries)
 
 rule mafft_align_db_seqs:
     input: db
@@ -153,37 +147,20 @@ rule filter_distant_seqs:
     shell: "python3 /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/scripts/filter_distant_seqs.py {input.tree} {input.hits_file} {input.dist_file} {wildcards.query} {output}"
 
 
-# rule write_cds_and_contigs:
-#     input:
-#         pep_file = "{query}/{query}_pia3_pep.fasta",
-#         transcriptome = "{query}/{query}.fasta",
-#         cds_file = "{query}/{query}.fasta.transdecoder.cds"
-#     output:
-#         cds = "{query}/{query}_pia3_cds.fasta",
-#         contigs = "{query}/{query}_pia3_contigs.fasta"
-#     benchmark: "benchmarks/write_cds_and_contigs_{query}.txt"
-#     conda: "pia3.yml"
-#     log: "logs/write_cds_and_contigs_{query}.txt"
-#     threads: 2
-#     shell: """
-#         python3 /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/scripts/match_amino_contig.py {input.pep_file} {transcriptome} {output.contigs}
-#         python3 /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/scripts/match_amino_nucl.py {input.pep_file} {cds_file} {output.cds}
-#        """
+rule write_cds_and_contigs:
+    input:
+        pep_file = "{query}/{query}_pia3_pep.fasta",
+        transcriptome = f"{in_dir}/{{query}}.fasta",
+        cds_file = "{query}/{query}.fasta.transdecoder.cds"
+    output:
+        cds = "{query}/{query}_pia3_cds.fasta",
+        contigs = "{query}/{query}_pia3_contigs.fasta"
+    benchmark: "benchmarks/write_cds_and_contigs_{query}.txt"
+    conda: "pia3.yml"
+    log: "logs/write_cds_and_contigs_{query}.txt"
+    threads: 2
+    shell: """
+        python3 /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/scripts/match_amino_contig.py {input.pep_file} {input.transcriptome} {output.contigs}
+        python3 /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/scripts/match_amino_nucl.py {input.pep_file} {input.cds_file} {output.cds}
+       """
 
-# rule pia_analysis:
-#     input: ref=lambda wildcards: f"{in_dir}/{wildcards.reference}",
-#            tree=rules.build_initial_tree.output.tree
-#     output: ref_out_dir=directory("{out_dir}/{reference}")
-#     conda: "config/opsins.yml"
-#     benchmark: "{out_dir}/benchmarks/pia_{reference}.txt"
-#     log: "{out_dir}/logs/pia_{reference}.txt"
-#     params: args=' '.join(pia_args), db=db, model=model, outgroup=outgroup, cd_h=cd_h, aligner=aligner
-#     threads: 8
-#     message: """
-#              Start PIA analysis, input reference: {input.ref}, input tree: {input.tree},
-#              db = {params.db}, parameters: {params.args}, model: {params.model}, outgroup: {outgroup}, aligner: {aligner}, cd_h: {params.cd_h}
-#              """
-#     shell: """
-#            python3 PIA3.py -i {input.ref} -o {output.ref_out_dir} -db {params.db} \
-#            -in_phylo {input.tree} -model {params.model} -outgroup {params.outgroup} -aligner {params.aligner} -cd_h {params.cd_h} {params.args} 2> {log}
-#            """

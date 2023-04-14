@@ -1,8 +1,11 @@
 import sys
+from Bio import SeqIO
+from Bio.SeqIO.FastaIO import SimpleFastaParser
+from Bio.SeqRecord import SeqRecord
 
 def match_amino_nucl(input_file, cds_file, output_file):
     file_hits_set = {title for title, seq in SimpleFastaParser(
-            open(input_file)}  # create set from seq names from classified opsins' file
+            open(input_file))}  # create set from seq names from classified opsins' file
     my_records = []  # create list for
     for seq_record in SeqIO.parse(cds_file, "fasta"):  # parse file with clustered blast hits
         for hit in file_hits_set:  # iterate on names from classified opsins' file

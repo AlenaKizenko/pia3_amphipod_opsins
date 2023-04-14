@@ -1,6 +1,11 @@
+import sys
+from Bio import SeqIO
+from Bio.SeqIO.FastaIO import SimpleFastaParser
+from Bio.SeqRecord import SeqRecord
+
 def match_amino_contig(input_file, transcriptome, output_file):
     file_hits_set = {title for title, seq in SimpleFastaParser(
-            open(input_file)}  # create set from seq names from classified opsins' file
+            open(input_file))}  # create set from seq names from classified opsins' file
     my_records = []  # create list for
     for seq_record in SeqIO.parse(transcriptome, "fasta"):  # parse transcriptome file
         for hit in file_hits_set:  # iterate on names from classified opsins' file

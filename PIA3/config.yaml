@@ -4,7 +4,6 @@ out_dir: "/home/akizenko/Apps/pia3_amphipod_opsins/PIA3/test_out"
 model: "'LG+F+G4'"
 outgroup: ""
 cd_h: 0.95
-opsin: False
 bit_score: 40
 clean: True
 transcripts: "cds"
