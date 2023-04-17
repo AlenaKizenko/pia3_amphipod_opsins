@@ -30,13 +30,15 @@ source ~/.bashrc
 Install conda environment named *smk* from the `smk.yml` file.
 
 ```commandline
-conda env create -n smk --file smk.yml
+conda install -n base -c conda-forge mamba
+conda create -n snakemake python=3.10.8
+conda install -c conda-forge -c bioconda snakemake=7.25.0
 ```
 Please be patient, if solving environment takes some time.
 
 Activate *smk* conda environment.
 ```commandline
-conda activate smk
+conda activate snakemake
 ```
 
 ### Testing

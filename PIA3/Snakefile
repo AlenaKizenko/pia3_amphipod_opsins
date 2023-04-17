@@ -15,6 +15,8 @@ bit_score = config["bit_score"]
 clean = config['clean']
 transcripts = config["transcripts"]
 
+scripts_folder = os.path.abspath('scripts')
+
 queries = [os.path.splitext(i)[0] for i in os.listdir(in_dir)]
 
 workdir: out_dir
@@ -46,7 +48,7 @@ rule iqtree_build_db_tree:
 
 rule transdecoder_find_cds:
     input: f"{in_dir}/{{query}}.fasta"
-    output: "{query}/{query}.fasta.transdecoder_underscores.pep"
+    output: "{query}/{query}.fasta.transdecoder_underscores.pep", "{query}/{query}.fasta.transdecoder.cds"
     benchmark: "benchmarks/transdecoder_find_cds_{query}.txt"
     conda: "pia3.yml"
     log: "logs/transdecoder_find_cds_{query}.txt"
@@ -95,7 +97,7 @@ rule rename_and_filter_hits:
     conda: "pia3.yml"
     log: "logs/rename_and_filter_hits_{query}.txt"
     threads: 2
-    shell: "python3 /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/scripts/rename_hits.py {db} {input} {output} {wildcards.query} {transcripts}"
+    shell: "python3 {scripts_folder}/rename_hits.py {db} {input} {output} {wildcards.query} {transcripts}"
 
 
 rule calculate_mad_distances:
@@ -105,7 +107,7 @@ rule calculate_mad_distances:
     conda: "pia3.yml"
     log: "logs/calculate_mad_distances.txt"
     threads: 1
-    shell: "python3 /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/scripts/calc_mean_dist.py {input} {output}"
+    shell: "python3 {scripts_folder}/calc_mean_dist.py {input} {output}"
 
 
 rule mafft_align_db_query_seqs:
@@ -144,7 +146,7 @@ rule filter_distant_seqs:
     conda: "pia3.yml"
     log: "benchmarks/filter_distant_seqs_{query}.txt"
     threads: 8
-    shell: "python3 /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/scripts/filter_distant_seqs.py {input.tree} {input.hits_file} {input.dist_file} {wildcards.query} {output}"
+    shell: "python3 {scripts_folder}/filter_distant_seqs.py {input.tree} {input.hits_file} {input.dist_file} {wildcards.query} {output}"
 
 
 rule write_cds_and_contigs:
@@ -160,7 +162,7 @@ rule write_cds_and_contigs:
     log: "logs/write_cds_and_contigs_{query}.txt"
     threads: 2
     shell: """
-        python3 /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/scripts/match_amino_contig.py {input.pep_file} {input.transcriptome} {output.contigs}
-        python3 /home/akizenko/Apps/pia3_amphipod_opsins/PIA3/scripts/match_amino_nucl.py {input.pep_file} {input.cds_file} {output.cds}
+        python3 {scripts_folder}/match_amino_contig.py {input.pep_file} {input.transcriptome} {output.contigs}
+        python3 {scripts_folder}/match_amino_nucl.py {input.pep_file} {input.cds_file} {output.cds}
        """
 
