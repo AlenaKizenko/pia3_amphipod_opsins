@@ -52,7 +52,7 @@ cd PIA3
 ```
 
 ```commandline
-snakemake --bash-completion -j 8 --use-conda --conda-prefix PIA3 --config in_dir=/ABS_PATH_TO_DIR/test_data out_dir=/ABS_PATH_TO_DIR/test_out db=/ABS_PATH_TO_FILE/classification_opsins_full_aa.fasta cds=True del=False opsin=True model=LG+F+G4 outgroup=RHO_Bos_taurus_AAA30674.1
+snakemake --cores 8 --use-conda --conda-prefix PATH/TO/PIA_ENV --configfile PATH/TO/CONFIGFILE 
 ```
 **2.** Run unit test.
 

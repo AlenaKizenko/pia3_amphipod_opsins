@@ -1,9 +1,8 @@
 import os
 import pathlib
 from snakemake.utils import validate
+import sys
 
-
-configfile: "config.yaml"
 
 out_dir = config["out_dir"]
 in_dir = config["in_dir"]
@@ -12,7 +11,7 @@ model = config["model"]
 outgroup = config["outgroup"]
 cd_h = config["cd_h"]
 bit_score = config["bit_score"]
-clean = config['clean']
+#clean = config['clean']
 transcripts = config["transcripts"]
 
 scripts_folder = os.path.abspath('scripts')
