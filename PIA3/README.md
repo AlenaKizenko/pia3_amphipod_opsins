@@ -3,7 +3,7 @@
 Modified from PIA2 (https://github.com/xibalbanus/PIA2).
 Only tested in Ubuntu-based Linux systems but should work anywhere else with minimum adjustments in the installation process.
 
-### Installation and environment settings
+### Creating conda environment
 
 This pipeline requires `Conda`. If it is not installed on your computer, you need to:
 
@@ -25,9 +25,7 @@ source ~/.bashrc
 ```
 
 **4.**
-`Snakemake` is also required for pipeline running. There are two options; use whichever works for you:
-
-Install conda environment named *smk* from the `smk.yml` file.
+`Mamba` and `Snakemake` are also required for pipeline running.
 
 ```commandline
 conda install -n base -c conda-forge mamba
@@ -36,43 +34,32 @@ conda install -c conda-forge -c bioconda snakemake=7.25.0
 ```
 Please be patient, if solving environment takes some time.
 
-Activate *smk* conda environment.
+Activate *snakemake* conda environment.
 ```commandline
 conda activate snakemake
 ```
 
-### Testing
-
-We recommend that you test your PIA3 installation.
-
-**1.** Run PIA3 on test data.
+**5.**
+PIA3 is installed as a separate conda environment during its first run. We recommend to run it on our test data.
 
 ```commandline
-cd PIA3
+cd pia3_amphipod_opsins/PIA3
 ```
 
+Replace PATH/TO/PIA_ENV with preferred **full** path for your PIA3 environment.
 ```commandline
-snakemake --cores 8 --use-conda --conda-prefix PATH/TO/PIA_ENV --configfile PATH/TO/CONFIGFILE 
+snakemake --cores 8 --use-conda --conda-prefix PATH/TO/PIA_ENV --conda-frontend conda --configfile config.yaml 
 ```
-**2.** Run unit test.
+**6.** Run unit test.
 
 ```commandline
  python -m unittest test_PIA3.py
 ```
 
-Intended for own use. Please feel free to use, reuse, modify and contact us if you need help.
-
-
 ### Run the pipeline
+For PIA3 run, you need to provide config.yaml file, in which all the requied parameters are stored. Please use only absolute paths to avoid an error.
 
-```commandline
-cd PIA3
-```
-```commandline
-snakemake -j 8 --use-conda --conda-prefix PIA3 --config in_dir=/ABS_PATH_TO_DIR/data_folder out_dir=/ABS_PATH_TO_DIR/out_foldet db=/ABS_PATH_TO_DIR/sequences.fasta.fasta cds=True del=True opsins=False
-```
-
-* `conda-prefix`: where do you want to install env with all required packages **required**
+Explanation of config-file fields:
 
 * `in_dir`: path to folder with input reference `.fasta` file(s) **required**
 
@@ -80,28 +67,15 @@ snakemake -j 8 --use-conda --conda-prefix PIA3 --config in_dir=/ABS_PATH_TO_DIR/
 
 * `db`: path to database **required**
 
-* `cds`: perform BLAST search only on coding sequences (longer than 1/2 of mean database sequence and starting fron methionine) **default True**
+* `transcripts`: **cds** - perform BLAST search only on coding sequences (longer than 1/2 of mean database sequence and starting with methionine); **all** use all sequences
 
-* `del`: delete intermediate files **default True**
+* `clean`: delete intermediate files **default True**
 
-* `aligner`: use BLAST or DIAMOND for database search **default blast**
-
-* `model`: model for IQ-Tree maximum likelihood tree building (if known) **default TEST**
+* `model`: model for IQ-Tree maximum likelihood tree building (put **TEST** if not known)
 
 * `outgroup`: outgroup for phylogenetic tree building; if not defined by user, first sequence from database FASTA file is taken
 
-* `opsin`: searching for opsin sequences (MWS, LWS, UV, Vertebrate-like) **default True**
-
-* `cd_h`: CH-HIT clustering treshhold (if choose 1, CH-HIT clusters only identical sequences) **default 0.95**
-
- 
-
-### Understanding output files
-
-* initial tree built on the db file: `/path/diversity_of_opsins_in_amphipods/PIA3/test_out/class_align.fasta.contree`
-
-* results correspond to `test_data/header.fasta` file: `/path/diversity_of_opsins_in_amphipods/PIA3/test_out/header`
-
-* results correspond to `test_data/Parhyale_hawaiensis_test.fasta` file: `/path/diversity_of_opsins_in_amphipods/PIA3/test_out/Parhyale_hawaiensis_test`
+* `cd_h`: CH-HIT clustering treshhold (if 1 is chosen, CH-HIT clusters only identical sequences)
 
 
+Intended for own use. Please feel free to use, reuse, modify and contact us if you need help.

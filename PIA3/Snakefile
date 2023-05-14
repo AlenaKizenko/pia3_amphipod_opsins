@@ -4,9 +4,9 @@ from snakemake.utils import validate
 import sys
 
 
-out_dir = config["out_dir"]
-in_dir = config["in_dir"]
-db = config["db"]
+out_dir = os.path.abspath(config["out_dir"])
+in_dir = os.path.abspath(config["in_dir"])
+db = os.path.abspath(config["db"])
 model = config["model"]
 outgroup = config["outgroup"]
 cd_h = config["cd_h"]
@@ -55,7 +55,7 @@ rule transdecoder_find_cds:
     shell: """
             cd {wildcards.query}
             TransDecoder.LongOrfs -t {input}
-            TransDecoder.Predict -t {input} --single_best_only
+            TransDecoder.Predict -t {input} --single_best_only --no_refine_starts
             sed 's/[|,~,/,\,]/_/g' {wildcards.query}.fasta.transdecoder.pep > {wildcards.query}.fasta.transdecoder_underscores.pep
             """
 
@@ -69,8 +69,8 @@ rule blast_search_hits:
     shell: """
             cd {wildcards.query}
             makeblastdb -in {wildcards.query}.fasta.transdecoder_underscores.pep -out {wildcards.query}_blast_db -parse_seqids -dbtype prot
-            blastp -query {db} -db {wildcards.query}_blast_db -num_threads {threads} -outfmt 6 -out {wildcards.query}_blast_hits.tsv -threshold {bit_score}
-            awk '{{print $2}}' {wildcards.query}_blast_hits.tsv > {wildcards.query}_blast_hits_ids.txt
+            blastp -query {db} -db {wildcards.query}_blast_db -num_threads {threads} -outfmt 6 -out {wildcards.query}_blast_hits.tsv
+            awk '$12 > {bit_score} {{print $2}}' {wildcards.query}_blast_hits.tsv > {wildcards.query}_blast_hits_ids.txt
             blastdbcmd -db {wildcards.query}_blast_db -entry_batch {wildcards.query}_blast_hits_ids.txt > {wildcards.query}_blast_hits.fasta
            """
 

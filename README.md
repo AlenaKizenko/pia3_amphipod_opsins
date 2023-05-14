@@ -41,13 +41,12 @@
             'c,. 
 
 
-Companion scripts to the manuscript "One class to see them all: The diversity of opsins in Lake Baikal amphipods (Amphipoda: Gammaridae)" submitted to RSPB.
+Companion scripts to the manuscript Drozdova, P., Kizenko, A., Saranchina, A. et al. The diversity of opsins in Lake Baikal amphipods (Amphipoda: Gammaridae). BMC Ecol Evo 21, 81 (2021). https://doi.org/10.1186/s12862-021-01806-9
 
 ## Content
     
 * `PIA3`: modified phylogenetically-informed annotation pipeline. **All (dependencies) included!**
 * `other_scripts`: other useful pieces of code for the analysis.
-* docker files for Travis testing
 * packed pia3 versions.
 
 ## Credits
