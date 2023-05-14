@@ -3,7 +3,7 @@
 Modified from PIA2 (https://github.com/xibalbanus/PIA2).
 Only tested in Ubuntu-based Linux systems but should work anywhere else with minimum adjustments in the installation process.
 
-### Creating conda environment
+### Installation
 
 This pipeline requires `Conda`. If it is not installed on your computer, you need to:
 
@@ -40,9 +40,10 @@ conda activate snakemake
 ```
 
 **5.**
-PIA3 is installed as a separate conda environment during its first run. We recommend to run it on our test data.
+Download and unpack or clone PIA3 directory on your computer. PIA3 is installed as a separate conda environment during its first run. We recommend to run it on our test data.
 
 ```commandline
+git clone https://github.com/AlenaKizenko/pia3_amphipod_opsins.git
 cd pia3_amphipod_opsins/PIA3
 ```
 
@@ -53,7 +54,7 @@ snakemake --cores 8 --use-conda --conda-prefix PATH/TO/PIA_ENV --conda-frontend 
 **6.** Run unit test.
 
 ```commandline
- python -m unittest test_PIA3.py
+ python3 -m unittest test_PIA3.py
 ```
 
 ### Run the pipeline
@@ -76,6 +77,8 @@ Explanation of config-file fields:
 * `outgroup`: outgroup for phylogenetic tree building; if not defined by user, first sequence from database FASTA file is taken
 
 * `cd_h`: CH-HIT clustering treshhold (if 1 is chosen, CH-HIT clusters only identical sequences)
+
+* `opsins`: 
 
 
 Intended for own use. Please feel free to use, reuse, modify and contact us if you need help.

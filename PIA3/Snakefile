@@ -13,6 +13,7 @@ cd_h = config["cd_h"]
 bit_score = config["bit_score"]
 #clean = config['clean']
 transcripts = config["transcripts"]
+opsins = config['opsins']
 
 scripts_folder = os.path.abspath('scripts')
 
@@ -51,7 +52,7 @@ rule transdecoder_find_cds:
     benchmark: "benchmarks/transdecoder_find_cds_{query}.txt"
     conda: "pia3.yml"
     log: "logs/transdecoder_find_cds_{query}.txt"
-    threads: 2
+    threads: 8
     shell: """
             cd {wildcards.query}
             TransDecoder.LongOrfs -t {input}
@@ -139,13 +140,14 @@ rule filter_distant_seqs:
     input: 
         tree = "{query}/{query}_db_align.fasta.contree",
         hits_file = "{query}/{query}_blast_hits_clust_renamed.fasta",
-        dist_file = "mad_distances_db_contree.txt"
+        dist_file = "mad_distances_db_contree.txt",
+        alignment = "{query}/{query}_db_align.fasta"
     output: "{query}/{query}_pia3_pep.fasta"
     benchmark: "benchmarks/filter_distant_seqs_{query}.txt"
     conda: "pia3.yml"
     log: "benchmarks/filter_distant_seqs_{query}.txt"
-    threads: 8
-    shell: "python3 {scripts_folder}/filter_distant_seqs.py {input.tree} {input.hits_file} {input.dist_file} {wildcards.query} {output}"
+    threads: 2
+    shell: "python3 {scripts_folder}/filter_distant_seqs.py {input.tree} {input.hits_file} {input.dist_file} {wildcards.query} {output} {input.alignment} {opsins}"
 
 
 rule write_cds_and_contigs:

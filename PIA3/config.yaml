@@ -7,3 +7,4 @@ cd_h: 0.95
 bit_score: 40
 clean: True
 transcripts: "cds"
+opsins: True
