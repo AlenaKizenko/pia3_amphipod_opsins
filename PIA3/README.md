@@ -78,7 +78,7 @@ Explanation of config-file fields:
 
 * `cd_h`: CH-HIT clustering treshhold (if 1 is chosen, CH-HIT clusters only identical sequences)
 
-* `opsins`: 
+* `opsins`: check for retinal lysine in found sequences and output only opsins; NOTE: **RHO_Bos_taurus_AAA30674.1** sequence needs to be in the database file (can be found in `classification_opsins_full_aa.fasta`)
 
 
 Intended for own use. Please feel free to use, reuse, modify and contact us if you need help.
