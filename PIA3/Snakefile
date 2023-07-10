@@ -28,7 +28,7 @@ rule mafft_align_db_seqs:
     input: db
     output: "db_align.fasta"
     benchmark: "benchmarks/mafft_align_db_seqs.txt"
-    conda: "pia3.yml"
+    conda: "pia3.yaml"
     log: "logs/mafft_align_db_seqs.txt"
     threads: 8
     shell: "mafft --thread {threads} --auto {input} > {output}"
@@ -37,7 +37,7 @@ rule iqtree_build_db_tree:
     input: "db_align.fasta"
     output: "db_align.fasta.contree"
     benchmark: "benchmarks/iqtree_build_db_tree.txt"
-    conda: "pia3.yml"
+    conda: "pia3.yaml"
     log: "logs/iqtree_build_db_tree.txt"
     params: bb=1000,
             model=model,
@@ -50,21 +50,18 @@ rule transdecoder_find_cds:
     input: f"{in_dir}/{{query}}.fasta"
     output: "{query}/{query}.fasta.transdecoder_underscores.pep", "{query}/{query}.fasta.transdecoder.cds"
     benchmark: "benchmarks/transdecoder_find_cds_{query}.txt"
-    conda: "pia3.yml"
+    conda: "pia3.yaml"
     log: "logs/transdecoder_find_cds_{query}.txt"
     threads: 8
     shell: """
-            cd {wildcards.query}
-            TransDecoder.LongOrfs -t {input}
-            TransDecoder.Predict -t {input} --single_best_only --no_refine_starts
-            sed 's/[|,~,/,\,]/_/g' {wildcards.query}.fasta.transdecoder.pep > {wildcards.query}.fasta.transdecoder_underscores.pep
+            python3 {scripts_folder}/run_transdecoder.py {input} {wildcards.query}
             """
 
 rule blast_search_hits:
     input: "{query}/{query}.fasta.transdecoder_underscores.pep"
     output: "{query}/{query}_blast_hits.fasta"
     benchmark: "benchmarks/blast_search_hits_{query}.txt"
-    conda: "pia3.yml"
+    conda: "pia3.yaml"
     log: "logs/blast_search_hits_{query}.txt"
     threads: 8
     shell: """
@@ -79,7 +76,7 @@ rule cd_hit_cluster_hits:
     input: "{query}/{query}_blast_hits.fasta"
     output: "{query}/{query}_blast_hits_clust.fasta"
     benchmark: "benchmarks/cd_hit_cluster_hits_{query}.txt"
-    conda: "pia3.yml"
+    conda: "pia3.yaml"
     log: "logs/cd_hit_cluster_hits_{query}.txt"
     threads: 8
     params: c=cd_h,
@@ -94,7 +91,7 @@ rule rename_and_filter_hits:
     input: "{query}/{query}_blast_hits_clust.fasta"
     output: "{query}/{query}_blast_hits_clust_renamed.fasta"
     benchmark: "benchmarks/rename_and_filter_hits_{query}.txt"
-    conda: "pia3.yml"
+    conda: "pia3.yaml"
     log: "logs/rename_and_filter_hits_{query}.txt"
     threads: 2
     shell: "python3 {scripts_folder}/rename_hits.py {db} {input} {output} {wildcards.query} {transcripts}"
@@ -104,7 +101,7 @@ rule calculate_mad_distances:
     input: "db_align.fasta.contree"
     output: "mad_distances_db_contree.txt"
     benchmark: "benchmarks/calculate_mad_distances.txt"
-    conda: "pia3.yml"
+    conda: "pia3.yaml"
     log: "logs/calculate_mad_distances.txt"
     threads: 1
     shell: "python3 {scripts_folder}/calc_mean_dist.py {input} {output}"
@@ -114,7 +111,7 @@ rule mafft_align_db_query_seqs:
     input: db = db, query_seqs = "{query}/{query}_blast_hits_clust_renamed.fasta"
     output: "{query}/{query}_db_align.fasta"
     benchmark: "benchmarks/mafft_align_query_seqs_{query}.txt"
-    conda: "pia3.yml"
+    conda: "pia3.yaml"
     log: "logs/mafft_align_query_seqs_{query}.txt"
     threads: 8
     shell: """
@@ -126,7 +123,7 @@ rule iqtree_build_db_query_tree:
     input: "{query}/{query}_db_align.fasta"
     output: "{query}/{query}_db_align.fasta.contree"
     benchmark: "benchmarks/iqtree_build_db_query_tree_{query}.txt"
-    conda: "pia3.yml"
+    conda: "pia3.yaml"
     log: "logs/iqtree_build_db_query_tree_{query}.txt"
     params: bb=1000,
             model=model,
@@ -144,7 +141,7 @@ rule filter_distant_seqs:
         alignment = "{query}/{query}_db_align.fasta"
     output: "{query}/{query}_pia3_pep.fasta"
     benchmark: "benchmarks/filter_distant_seqs_{query}.txt"
-    conda: "pia3.yml"
+    conda: "pia3.yaml"
     log: "benchmarks/filter_distant_seqs_{query}.txt"
     threads: 2
     shell: "python3 {scripts_folder}/filter_distant_seqs.py {input.tree} {input.hits_file} {input.dist_file} {wildcards.query} {output} {input.alignment} {opsins}"
@@ -159,7 +156,7 @@ rule write_cds_and_contigs:
         cds = "{query}/{query}_pia3_cds.fasta",
         contigs = "{query}/{query}_pia3_contigs.fasta"
     benchmark: "benchmarks/write_cds_and_contigs_{query}.txt"
-    conda: "pia3.yml"
+    conda: "pia3.yaml"
     log: "logs/write_cds_and_contigs_{query}.txt"
     threads: 2
     shell: """

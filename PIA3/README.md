@@ -30,7 +30,7 @@ source ~/.bashrc
 ```commandline
 conda install -n base -c conda-forge mamba
 conda create -n snakemake python=3.10.8
-conda install -c conda-forge -c bioconda snakemake=7.25.0
+conda install -c conda-forge -c bioconda snakemake=7.25.0 biopython=1.81
 ```
 Please be patient, if solving environment takes some time.
 
@@ -49,7 +49,7 @@ cd pia3_amphipod_opsins/PIA3
 
 Replace PATH/TO/PIA_ENV with preferred **full** path for your PIA3 environment.
 ```commandline
-snakemake --cores 8 --use-conda --conda-prefix PATH/TO/PIA_ENV --conda-frontend conda --configfile config.yaml 
+snakemake --cores 8 --use-conda --conda-prefix PATH/TO/PIA_ENV --configfile config.yaml 
 ```
 **6.** Run unit test.
 
