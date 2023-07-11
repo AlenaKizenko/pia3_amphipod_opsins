@@ -1,5 +1,5 @@
 import sys
-import ete3
+from ete3 import Tree
 from Bio import SeqIO
 from Bio.SeqIO.FastaIO import SimpleFastaParser
 from Bio.SeqRecord import SeqRecord
@@ -20,11 +20,11 @@ def check_lysine(alignment, ref_seq_name = 'RHO_Bos_taurus_AAA30674.1', n=296): 
                             letter_counter += 1
                 break
 
-    number_position = gap_counter + letter_counter
+        number_position = gap_counter + letter_counter
 
     all_opsins = []
     with open(alignment) as aln:
-        for seq_record in AlignIO.read(alignment, "fasta"):
+        for seq_record in AlignIO.read(aln, "fasta"):
             if str(seq_record.seq)[number_position] == 'K':
                 seq_record.id = seq_record.id.replace(":", "_")  # replacement because of IQ-Tree specificity
                 seq_record.id = seq_record.id.replace("|", "_")
@@ -33,7 +33,7 @@ def check_lysine(alignment, ref_seq_name = 'RHO_Bos_taurus_AAA30674.1', n=296): 
 
 
 def filter_distant_seqs(tree_query, query_file, dist_dev, input_file, output, opsins):
-    tree_query = ete3.Tree(tree_query)  # assign Ete3 tree object
+    tree_query = Tree(tree_query)  # assign Ete3 Tree object
     lst_seqs = []  # create list for selected leaves (distance less than 4*absolute mean deviation)
     my_records = []  # create list for selected sequences
     with open(dist_dev) as dist:
@@ -43,7 +43,7 @@ def filter_distant_seqs(tree_query, query_file, dist_dev, input_file, output, op
                 leaf.name) and leaf.dist < dist:  # if seq name from file == seq name from tree and distance is OK
             lst_seqs.append(str(leaf.name))  # append lst_seqs by name of selected leaf
     if opsins:
-        opsins_lst = check_lysine(alignment)
+        opsins_lst = check_lysine(alignment, ref_seq_name='RHO_Bos_taurus_AAA30674.1', n=296)
         lst_seqs = set(lst_seqs).intersection(opsins_lst)
     
     for seq_record in SeqIO.parse(query_file, "fasta"):  # parse .fasta file with hits
@@ -61,7 +61,7 @@ dist_dev = sys.argv[3]
 input_file = sys.argv[4]
 output = sys.argv[5]
 alignment = sys.argv[6]
-opsins = sys.argv[7]
+opsins = bool(sys.argv[7])
 
 result_filtering = filter_distant_seqs(tree, query_file, dist_dev, input_file, output, opsins)
 
