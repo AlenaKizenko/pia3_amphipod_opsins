@@ -1,4 +1,7 @@
-PIA3/pia3
+PIA3/pia3_env
 PIA3/test_out
 PIA3/.snakemake
 .vscode
+PIA3/dag.svg
+PIA3/.vscode
+PIA3/__pycache__

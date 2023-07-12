@@ -20,7 +20,7 @@ def check_lysine(alignment, ref_seq_name = 'RHO_Bos_taurus_AAA30674.1', n=296): 
                             letter_counter += 1
                 break
 
-        number_position = gap_counter + letter_counter
+    number_position = gap_counter + letter_counter
 
     all_opsins = []
     with open(alignment) as aln:
@@ -42,7 +42,7 @@ def filter_distant_seqs(tree_query, query_file, dist_dev, input_file, output, op
         if input_file in str(
                 leaf.name) and leaf.dist < dist:  # if seq name from file == seq name from tree and distance is OK
             lst_seqs.append(str(leaf.name))  # append lst_seqs by name of selected leaf
-    if opsins:
+    if opsins == 'True':
         opsins_lst = check_lysine(alignment, ref_seq_name='RHO_Bos_taurus_AAA30674.1', n=296)
         lst_seqs = set(lst_seqs).intersection(opsins_lst)
     
@@ -61,7 +61,7 @@ dist_dev = sys.argv[3]
 input_file = sys.argv[4]
 output = sys.argv[5]
 alignment = sys.argv[6]
-opsins = bool(sys.argv[7])
+opsins = sys.argv[7]
 
 result_filtering = filter_distant_seqs(tree, query_file, dist_dev, input_file, output, opsins)
 
