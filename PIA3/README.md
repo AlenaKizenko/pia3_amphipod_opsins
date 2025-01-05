@@ -30,14 +30,11 @@ source ~/.bashrc
 ```commandline
 conda install -n base -c conda-forge mamba
 conda create -n snakemake python=3.10.8
+conda activate snakemake
 conda install -c conda-forge -c bioconda snakemake=7.25.0 biopython=1.81
 ```
 Please be patient, if solving environment takes some time.
 
-Activate *snakemake* conda environment.
-```commandline
-conda activate snakemake
-```
 
 **5.**
 Download and unpack or clone PIA3 directory on your computer. PIA3 is installed as a separate conda environment during its first run. We recommend to run it on our test data.
